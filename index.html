@@ -4,86 +4,128 @@
 
 <title>BullBear Market – Learn Trading & Stock Market App</title>
 
-<meta name="description" content="Learn stock market trading with BullBear Market app. Practice trading, track portfolio, and master strategies.">
+<meta name="description" content="Learn stock market trading with BullBear Market app. Practice trading, track portfolio, and master strategies step by step.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
+/* GLOBAL */
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0B1220;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #0B1220, #05080f);
   color: white;
 }
 
-.container {
-  padding: 20px;
+a {
+  text-decoration: none;
 }
 
 /* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
 }
 
 .logo {
-  font-size: 24px;
-  color: #00ffcc;
+  font-size: 22px;
+  font-weight: bold;
+  color: gold;
+}
+
+.nav a {
+  margin: 0 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: gold;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  margin-top: 40px;
+  padding: 80px 20px;
+  animation: fadeIn 1.5s ease;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 36px;
+  background: linear-gradient(90deg, gold, #00e6ff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .hero p {
-  color: #aaa;
+  color: #bbb;
+  margin-top: 10px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 20px;
-  background: #4CAF50;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  margin: 10px;
+  margin: 15px 10px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, gold, #00e6ff);
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* CARD */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* CARDS */
+.section {
+  padding: 40px 20px;
+}
+
 .card {
   background: #111827;
+  border-radius: 15px;
   padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
 }
 
-/* FEATURES GRID */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FEATURES */
 .features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
 }
 
 .feature {
   background: #1f2937;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 10px;
   text-align: center;
 }
 
 /* FOOTER */
 .footer {
   text-align: center;
-  margin-top: 40px;
+  padding: 20px;
   color: #777;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 </style>
@@ -92,62 +134,100 @@ body {
 
 <body>
 
-<div class="container">
-
 <!-- HEADER -->
 <div class="header">
   <div class="logo">BullBear</div>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="learning.html">Learning</a>
+    <a href="blog/">Blog</a>
+    <a href="faq.html">FAQ</a>
+  </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <h1>Learn. Practice. Earn.</h1>
-  <p>Master Stock Market Trading with BullBear Market App</p>
+  <p>Master Stock Market Trading with BullBear Market</p>
 
   <a class="btn">Download App</a>
   <a class="btn" href="learning.html">Start Learning</a>
 </div>
 
 <!-- FEATURES -->
-<div class="card">
-  <h2>🚀 Features</h2>
+<div class="section">
+  <div class="card">
+    <h2>🚀 App Features</h2>
 
-  <div class="features">
-    <div class="feature">📊 Live Market</div>
-    <div class="feature">📈 Buy/Sell</div>
-    <div class="feature">💼 Portfolio</div>
-    <div class="feature">🏆 Leaderboard</div>
-    <div class="feature">💬 Community</div>
-    <div class="feature">📚 Learning</div>
+    <div class="features">
+      <div class="feature">📊 Live Market</div>
+      <div class="feature">📈 Buy/Sell</div>
+      <div class="feature">💼 Portfolio</div>
+      <div class="feature">🏆 Leaderboard</div>
+      <div class="feature">💬 Community</div>
+      <div class="feature">📚 Learning</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div class="section">
+  <div class="card">
+    <h2>⭐ Why BullBear Market?</h2>
+
+    <p>✔ Beginner Friendly</p>
+    <p>✔ Real Trading Simulation</p>
+    <p>✔ Free Learning Content</p>
+    <p>✔ Active Community</p>
   </div>
 </div>
 
 <!-- LEARNING -->
-<div class="card">
-  <h2>📘 Learn Stock Market</h2>
-  <p>Start from basics to advanced trading strategies</p>
-  <a class="btn" href="learning.html">Explore Learning</a>
+<div class="section">
+  <div class="card">
+    <h2>📘 Learn Stock Market</h2>
+    <p>Start from basics to advanced trading strategies</p>
+
+    <a class="btn" href="learning.html">Explore Learning</a>
+  </div>
 </div>
 
 <!-- BLOG -->
-<div class="card">
-  <h2>📰 Latest Articles</h2>
-  <p>Read beginner guides and trading tips</p>
-  <a class="btn" href="blog/">Read Blog</a>
+<div class="section">
+  <div class="card">
+    <h2>📰 Latest Articles</h2>
+    <p>Read beginner guides and trading tips</p>
+
+    <a class="btn" href="blog/">Read Blog</a>
+  </div>
 </div>
 
 <!-- FAQ -->
-<div class="card">
-  <h2>❓ FAQ</h2>
-  <p>Best app to learn stock market?</p>
-  <p>BullBear Market is beginner friendly and easy to use.</p>
+<div class="section">
+  <div class="card">
+    <h2>❓ FAQ</h2>
+
+    <p><b>Is BullBear Market free?</b></p>
+    <p>Yes, you can learn and practice trading for free.</p>
+
+    <p><b>Can beginners use it?</b></p>
+    <p>Yes, it is beginner friendly.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="card" style="text-align:center;">
+    <h2>📲 Start Your Trading Journey</h2>
+    <p>Join now and master trading skills</p>
+
+    <a class="btn">Download App</a>
+  </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2026 BullBear Market
-</div>
-
+  © 2026 BullBear Market | All Rights Reserved
 </div>
 
 </body>
