@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
 body {
   margin: 0;
   font-family: Arial;
@@ -20,29 +21,69 @@ body {
   padding: 20px;
 }
 
-h1 {
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
   color: #00ffcc;
 }
 
-.card {
-  background: #111827;
-  padding: 15px;
-  border-radius: 12px;
-  margin: 10px 0;
+/* HERO */
+.hero {
+  text-align: center;
+  margin-top: 40px;
 }
 
-.button {
+.hero h1 {
+  font-size: 32px;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+.btn {
   display: inline-block;
   padding: 12px 20px;
   background: #4CAF50;
   border-radius: 8px;
   color: white;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 10px;
+}
+
+/* CARD */
+.card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* FEATURES GRID */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .feature {
-  margin: 10px 0;
+  background: #1f2937;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
 }
 
 </style>
@@ -53,38 +94,58 @@ h1 {
 
 <div class="container">
 
-<h1>📈 BullBear Market</h1>
-
-<p>Learn, Practice & Master Stock Market Trading</p>
-
-<div class="card">
-<h2>🚀 Features</h2>
-
-<div class="feature">📊 Live Market Data</div>
-<div class="feature">📈 Buy/Sell Trading Simulation</div>
-<div class="feature">💼 Portfolio Tracking</div>
-<div class="feature">🏆 Leaderboard</div>
-<div class="feature">💬 Trading Community</div>
-<div class="feature">📚 Learning Hub</div>
-
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">BullBear</div>
 </div>
 
-<div class="card">
-<h2>📥 Download App</h2>
-<p>Coming Soon on Google Play Store</p>
-<a class="button">Download App</a>
+<!-- HERO -->
+<div class="hero">
+  <h1>Learn. Practice. Earn.</h1>
+  <p>Master Stock Market Trading with BullBear Market App</p>
+
+  <a class="btn">Download App</a>
+  <a class="btn" href="learning.html">Start Learning</a>
 </div>
 
+<!-- FEATURES -->
 <div class="card">
-<h2>📘 Learn Stock Market</h2>
-<p>Start your journey with our beginner guides</p>
-<a href="#">Read Guide</a>
+  <h2>🚀 Features</h2>
+
+  <div class="features">
+    <div class="feature">📊 Live Market</div>
+    <div class="feature">📈 Buy/Sell</div>
+    <div class="feature">💼 Portfolio</div>
+    <div class="feature">🏆 Leaderboard</div>
+    <div class="feature">💬 Community</div>
+    <div class="feature">📚 Learning</div>
+  </div>
 </div>
 
+<!-- LEARNING -->
 <div class="card">
-<h2>❓ FAQ</h2>
-<p><b>Best app to learn stock market?</b></p>
-<p>BullBear Market is a beginner-friendly trading learning app.</p>
+  <h2>📘 Learn Stock Market</h2>
+  <p>Start from basics to advanced trading strategies</p>
+  <a class="btn" href="learning.html">Explore Learning</a>
+</div>
+
+<!-- BLOG -->
+<div class="card">
+  <h2>📰 Latest Articles</h2>
+  <p>Read beginner guides and trading tips</p>
+  <a class="btn" href="blog/">Read Blog</a>
+</div>
+
+<!-- FAQ -->
+<div class="card">
+  <h2>❓ FAQ</h2>
+  <p>Best app to learn stock market?</p>
+  <p>BullBear Market is beginner friendly and easy to use.</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 BullBear Market
 </div>
 
 </div>
