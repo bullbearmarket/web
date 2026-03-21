@@ -3,104 +3,69 @@
 <head>
 
 <meta charset="UTF-8">
-
 <title>BullBear Market – Learn Trading & Earn Rewards</title>
 
 <meta name="description" content="India's smart stock market learning app with rewards. Learn trading, practice with simulation and earn by performance.">
-<meta name="keywords" content="stock market learning app, trading app india, learn trading, stock market simulator, trading for beginners, bullbear market">
-<meta name="author" content="BullBear Market">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- FAVICON -->
 <link rel="icon" href="favicon.png">
-
-<!-- OPEN GRAPH (SOCIAL SHARE) -->
-<meta property="og:title" content="BullBear Market – Learn Trading & Earn Rewards">
-<meta property="og:description" content="Learn trading, practice in real-time simulation & earn rewards with BullBear Market.">
-<meta property="og:image" content="favicon.png">
-<meta property="og:url" content="https://bullbearmarket.in">
-<meta property="og:type" content="website">
-
-<!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BullBear Market">
-<meta name="twitter:description" content="India’s Smart Trading Learning App">
-<meta name="twitter:image" content="favicon.png">
-
-<!-- SCHEMA (GOOGLE SEO BOOST) -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "name": "BullBear Market",
- "url": "https://bullbearmarket.in",
- "description": "Learn trading and stock market with simulation and rewards",
- "publisher": {
-   "@type": "Organization",
-   "name": "BullBear Market"
- }
-}
-</script>
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* ===== BODY ===== */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #05080f;
   color: white;
-  overflow-x: hidden;
 }
 
-/* ===== SMOOTH SCROLL ===== */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ===== ANIMATED BACKGROUND ===== */
+/* ===== CANDLE BACKGROUND ===== */
 .bg {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: radial-gradient(circle at 20% 20%, rgba(0,255,150,0.08), transparent),
-              radial-gradient(circle at 80% 80%, rgba(255,200,0,0.08), transparent);
-  animation: moveBg 10s infinite alternate;
+  overflow: hidden;
 }
 
-@keyframes moveBg {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-50px); }
+.candle {
+  position: absolute;
+  bottom: -100px;
+  width: 6px;
+  border-radius: 3px;
+  animation: rise 6s linear infinite;
 }
 
-/* ===== TOP STRIP ===== */
+.green {
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.red {
+  background: #ff3b3b;
+  box-shadow: 0 0 10px #ff3b3b;
+}
+
+@keyframes rise {
+  from { transform: translateY(0); opacity: 0.2; }
+  to { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* ===== TOPBAR (WHITE) ===== */
 .topbar {
-  background: linear-gradient(90deg, white, #00ff9d);
-  padding: 5px;
+  background: white;
+  padding: 8px;
+  text-align: center;
 }
 
 /* ===== HEADER ===== */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px 25px;
   background: rgba(0,0,0,0.85);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img { height: 40px; }
 
 .logo span {
   color: gold;
@@ -108,43 +73,35 @@ html {
   font-weight: bold;
 }
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .nav a {
   margin: 0 10px;
-  color: #aaa;
-  transition: 0.3s;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .nav a:hover {
   color: gold;
-  text-shadow: 0 0 10px gold;
 }
 
 /* ===== HERO ===== */
 .hero {
   text-align: center;
   padding: 120px 20px;
-  animation: fadeIn 1.5s ease;
 }
 
 .hero img {
-  width: 120px;
+  width: 110px;
 }
 
 .hero h1 {
   font-size: 48px;
-  background: linear-gradient(90deg, gold, #00e6ff);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: gold;
+  text-shadow: 0 0 15px gold;
 }
 
 .hero p {
-  color: #aaa;
-  font-size: 18px;
+  color: #ccc;
 }
 
 .btn {
@@ -152,15 +109,14 @@ html {
   margin: 12px;
   padding: 14px 30px;
   border-radius: 30px;
-  background: linear-gradient(90deg, gold, #00e6ff);
+  background: linear-gradient(90deg, gold, #00ffcc);
   color: black;
   font-weight: bold;
   box-shadow: 0 0 20px gold;
-  transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 /* ===== SECTION ===== */
@@ -173,8 +129,6 @@ html {
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 25px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  animation: fadeInUp 1s ease;
 }
 
 .card h2 {
@@ -193,12 +147,10 @@ html {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  transition: 0.3s;
 }
 
 .feature:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px #00e6ff;
+  box-shadow: 0 0 20px #00ffcc;
 }
 
 /* ===== GALLERY ===== */
@@ -213,45 +165,11 @@ html {
   border-radius: 10px;
 }
 
-/* ===== FLOATING ICONS ===== */
-.floating {
-  position: absolute;
-  animation: float 6s infinite ease-in-out;
-  opacity: 0.3;
-}
-
-.floating1 { top: 20%; left: 10%; }
-.floating2 { top: 60%; right: 10%; }
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
-}
-
-/* ===== ANIMATION ===== */
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1;}
-}
-
-@keyframes fadeInUp {
-  from {opacity:0; transform:translateY(40px);}
-  to {opacity:1;}
-}
-
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding: 20px;
   color: #777;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .nav {
-    flex-direction: column;
-  }
 }
 
 </style>
@@ -260,19 +178,23 @@ html {
 
 <body>
 
-<div class="bg"></div>
+<!-- BACKGROUND -->
+<div class="bg">
 
-<!-- TOP STRIP -->
-<div class="topbar"></div>
+<!-- RANDOM CANDLES -->
+<div class="candle green" style="left:10%; height:40px; animation-delay:0s;"></div>
+<div class="candle red" style="left:20%; height:60px; animation-delay:1s;"></div>
+<div class="candle green" style="left:30%; height:80px; animation-delay:2s;"></div>
+<div class="candle red" style="left:40%; height:50px; animation-delay:3s;"></div>
+<div class="candle green" style="left:50%; height:70px; animation-delay:1.5s;"></div>
+<div class="candle red" style="left:60%; height:60px; animation-delay:2.5s;"></div>
+<div class="candle green" style="left:70%; height:90px; animation-delay:3.5s;"></div>
+<div class="candle red" style="left:80%; height:50px; animation-delay:4s;"></div>
 
-<!-- HEADER -->
-<div class="header">
+</div>
 
-  <div class="logo">
-    <img src="favicon.png">
-    <span>BullBear Market</span>
-  </div>
-
+<!-- TOPBAR -->
+<div class="topbar">
   <div class="nav">
     <a href="index.html">Home</a>
     <a href="learning.html">Learning</a>
@@ -282,7 +204,13 @@ html {
     <a href="terms.html">Terms</a>
     <a href="support.html">Support</a>
   </div>
+</div>
 
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <span>BullBear Market</span>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -299,10 +227,6 @@ html {
 
 </div>
 
-<!-- FLOATING ICONS -->
-<div class="floating floating1">📈</div>
-<div class="floating floating2">💹</div>
-
 <!-- ABOUT -->
 <div class="section">
 <div class="card">
@@ -310,15 +234,14 @@ html {
 <h2>🔥 About BullBear Market</h2>
 
 <p>
-BullBear Market is India's most powerful trading learning platform where users can learn, practice and earn.
+BullBear Market is a powerful trading learning platform where you can learn, practice and earn.
 </p>
 
 <p>
-✔ Live Market Simulation  
-✔ Leaderboard Competition  
-✔ Reward System  
+✔ Real Market Simulation  
+✔ Leaderboard System  
+✔ Reward Earning  
 ✔ Belt Ranking System  
-✔ Performance Based Growth  
 </p>
 
 </div>
@@ -333,11 +256,11 @@ BullBear Market is India's most powerful trading learning platform where users c
 <div class="features">
 
 <div class="feature">📊 Live Market</div>
-<div class="feature">📈 Trading Practice</div>
+<div class="feature">📈 Practice Trading</div>
 <div class="feature">🏆 Leaderboard</div>
 <div class="feature">🎯 Rewards</div>
-<div class="feature">🥋 Belt System</div>
-<div class="feature">📚 Learning Hub</div>
+<div class="feature">🥋 Belt Rank</div>
+<div class="feature">📚 Learning</div>
 
 </div>
 
@@ -367,7 +290,7 @@ BullBear Market is India's most powerful trading learning platform where users c
 
 <h2>📰 Learn from Blog</h2>
 
-<p>Explore trading strategies & guides</p>
+<p>Explore trading guides and strategies</p>
 
 <a class="btn" href="blog/">Read Blog</a>
 
