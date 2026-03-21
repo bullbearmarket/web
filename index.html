@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
+<meta charset="UTF-8">
 <title>BullBear Market – Learn Trading & Stock Market App</title>
 
 <meta name="description" content="Learn stock market trading with BullBear Market app. Practice trading, track portfolio, and master strategies step by step.">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
@@ -14,35 +17,44 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #0B1220, #05080f);
+  background: #0b1220;
   color: white;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 /* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: rgba(0,0,0,0.3);
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.6);
   position: sticky;
   top: 0;
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 20px;
   font-weight: bold;
   color: gold;
 }
 
 .nav a {
-  margin: 0 10px;
-  color: white;
-  transition: 0.3s;
+  margin: 0 12px;
+  color: #ccc;
 }
 
 .nav a:hover {
@@ -52,59 +64,54 @@ a {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  animation: fadeIn 1.5s ease;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 42px;
   background: linear-gradient(90deg, gold, #00e6ff);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .hero p {
-  color: #bbb;
+  color: #aaa;
   margin-top: 10px;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
-  margin: 15px 10px;
-  padding: 12px 25px;
-  border-radius: 25px;
+  margin: 10px;
+  padding: 12px 28px;
+  border-radius: 30px;
   background: linear-gradient(90deg, gold, #00e6ff);
   color: black;
   font-weight: bold;
-  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
 }
 
 .btn:hover {
   transform: scale(1.05);
 }
 
-/* CARDS */
+/* SECTION */
 .section {
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
+/* CARD */
 .card {
   background: #111827;
+  padding: 25px;
   border-radius: 15px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  transition: 0.3s;
+  margin-bottom: 25px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* FEATURES */
+/* FEATURES GRID */
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
   gap: 15px;
 }
 
@@ -115,17 +122,23 @@ a {
   text-align: center;
 }
 
+/* APP IMAGES */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
-  color: #777;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+  color: #888;
 }
 
 </style>
@@ -136,25 +149,40 @@ a {
 
 <!-- HEADER -->
 <div class="header">
-  <div class="logo">BullBear</div>
+  <div class="logo">
+    <img src="favicon.png">
+    <span>BullBear Market</span>
+  </div>
+
   <div class="nav">
     <a href="index.html">Home</a>
     <a href="learning.html">Learning</a>
     <a href="blog/">Blog</a>
     <a href="faq.html">FAQ</a>
-    <a href="privacy-policy.html">Privacy Policy</a><br>
-<a href="terms.html">Terms of Service</a><br>
-<a href="support.html">Help & Support</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <h1>Learn. Practice. Earn.</h1>
-  <p>Master Stock Market Trading with BullBear Market</p>
+  <p>India's Smart Stock Market Learning App</p>
 
   <a class="btn">Download App</a>
   <a class="btn" href="learning.html">Start Learning</a>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="card">
+    <h2>🔥 About BullBear Market</h2>
+    <p>
+      BullBear Market is a powerful stock market learning platform designed for beginners and traders. 
+      Learn trading step by step, practice with simulation, and track your performance like real traders.
+    </p>
+  </div>
 </div>
 
 <!-- FEATURES -->
@@ -173,25 +201,18 @@ a {
   </div>
 </div>
 
-<!-- WHY US -->
+<!-- APP SCREENSHOTS -->
 <div class="section">
   <div class="card">
-    <h2>⭐ Why BullBear Market?</h2>
+    <h2>📱 App Preview</h2>
 
-    <p>✔ Beginner Friendly</p>
-    <p>✔ Real Trading Simulation</p>
-    <p>✔ Free Learning Content</p>
-    <p>✔ Active Community</p>
-  </div>
-</div>
-
-<!-- LEARNING -->
-<div class="section">
-  <div class="card">
-    <h2>📘 Learn Stock Market</h2>
-    <p>Start from basics to advanced trading strategies</p>
-
-    <a class="btn" href="learning.html">Explore Learning</a>
+    <div class="gallery">
+      <img src="photo1.png">
+      <img src="photo2.png">
+      <img src="photo3.png">
+      <img src="photo4.png">
+      <img src="photo5.png">
+    </div>
   </div>
 </div>
 
@@ -199,7 +220,7 @@ a {
 <div class="section">
   <div class="card">
     <h2>📰 Latest Articles</h2>
-    <p>Read beginner guides and trading tips</p>
+    <p>Learn from our latest guides</p>
 
     <a class="btn" href="blog/">Read Blog</a>
   </div>
@@ -210,19 +231,16 @@ a {
   <div class="card">
     <h2>❓ FAQ</h2>
 
-    <p><b>Is BullBear Market free?</b></p>
-    <p>Yes, you can learn and practice trading for free.</p>
-
-    <p><b>Can beginners use it?</b></p>
-    <p>Yes, it is beginner friendly.</p>
+    <p><b>Is it free?</b><br>Yes, learning is free.</p>
+    <p><b>Beginner friendly?</b><br>Yes, 100% beginner friendly.</p>
   </div>
 </div>
 
 <!-- CTA -->
 <div class="section">
   <div class="card" style="text-align:center;">
-    <h2>📲 Start Your Trading Journey</h2>
-    <p>Join now and master trading skills</p>
+    <h2>🚀 Start Trading Journey</h2>
+    <p>Join now and become a smart trader</p>
 
     <a class="btn">Download App</a>
   </div>
