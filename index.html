@@ -3,151 +3,131 @@
 <head>
 
 <meta charset="UTF-8">
+<title>BullBear Market – Learn Trading & Earn Rewards</title>
 
-<title>BullBear Market – Learn Trading, Practice & Earn Rewards</title>
-
-<meta name="description" content="Learn stock market trading with BullBear Market. Practice trading with real-time simulation, compete in leaderboard and earn rewards. Best trading learning app in India.">
-
-<meta name="keywords" content="stock market learning app, trading simulator india, learn trading, bullbear market, trading practice app">
-
+<meta name="description" content="Learn trading with BullBear Market. Practice in live simulation, join leaderboard and earn rewards.">
+<meta name="keywords" content="stock market learning app, trading simulator india, learn trading">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="canonical" href="https://bullbearmarket.in/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B1220">
+
 <link rel="icon" href="favicon.png">
 
-<!-- OG -->
-<meta property="og:title" content="BullBear Market – Learn Trading & Earn">
-<meta property="og:image" content="favicon.png">
-<meta property="og:url" content="https://bullbearmarket.in">
+<!-- GOOGLE SEARCH CONSOLE -->
+<meta name="google-site-verification" content="PUT_YOUR_CODE_HERE">
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* GLOBAL */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #05080f;
-  color: white;
+  margin:0;
+  font-family:Segoe UI;
+  background:#05080f;
+  color:white;
+  overflow-x:hidden;
 }
 
-/* ===== TOPBAR ===== */
-.topbar {
-  background: white;
-  padding: 10px;
-  text-align: center;
+/* NAV */
+.topbar{
+  background:white;
+  padding:10px;
+  text-align:center;
+}
+.topbar a{
+  margin:0 10px;
+  color:black;
+  font-weight:bold;
+}
+.topbar a:hover{color:gold}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  padding:80px 40px;
+  align-items:center;
+}
+.hero h1{
+  font-size:50px;
+  background:linear-gradient(90deg,gold,#00ffcc);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-.topbar a {
-  margin: 0 10px;
-  color: black;
-  font-weight: bold;
+.btn{
+  position:relative;
+  overflow:hidden;
+  padding:12px 25px;
+  background:linear-gradient(gold,#00ffcc);
+  border-radius:30px;
+  color:black;
+  display:inline-block;
+  margin:10px;
 }
 
-.topbar a:hover {
-  color: gold;
+/* RIPPLE */
+.btn span {
+  position:absolute;
+  border-radius:50%;
+  transform:scale(0);
+  background:rgba(255,255,255,0.5);
+  animation:ripple 0.6s linear;
+}
+@keyframes ripple {
+  to { transform:scale(4); opacity:0; }
 }
 
-/* ===== HEADER ===== */
-.header {
-  display: flex;
-  align-items: center;
-  padding: 15px 25px;
+/* SECTION */
+.section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+h2{color:gold}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+.feature{
+  background:#111827;
+  padding:20px;
+  border-radius:10px;
 }
 
-.logo img {
-  height: 40px;
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  border-radius:10px;
 }
 
-.logo span {
-  color: gold;
-  font-size: 22px;
-  margin-left: 10px;
+/* FAQ */
+.faq{
+  background:#111827;
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
 }
 
-/* ===== HERO ===== */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  padding: 80px 40px;
-  align-items: center;
+/* CTA */
+.cta{
+  text-align:center;
+  padding:60px;
 }
 
-.hero-left {
-  width: 50%;
-}
-
-.hero h1 {
-  font-size: 50px;
-  background: linear-gradient(90deg,gold,#00ffcc);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  color: #ccc;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 30px;
-  margin: 10px;
-  border-radius: 30px;
-  background: linear-gradient(90deg,gold,#00ffcc);
-  color: black;
-  font-weight: bold;
-  box-shadow: 0 0 20px gold;
-}
-
-/* ===== FEATURES ===== */
-.section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  color: gold;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 20px;
-}
-
-.feature {
-  background: #111827;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-/* ===== GALLERY ===== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* ===== CTA ===== */
-.cta {
-  text-align: center;
-  padding: 60px;
-}
-
-.cta h2 {
-  font-size: 35px;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: #777;
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:20px;
+  color:#777;
 }
 
 </style>
@@ -156,45 +136,42 @@ h2 {
 
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <a href="index.html">Home</a>
-  <a href="learning.html">Learning</a>
-  <a href="blog/">Blog</a>
-  <a href="faq.html">FAQ</a>
-  <a href="privacy-policy.html">Privacy</a>
-  <a href="terms.html">Terms</a>
-  <a href="support.html">Support</a>
-</div>
+<!-- BACKGROUND CANDLES -->
+<canvas id="candleCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;"></canvas>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="logo">
-    <img src="favicon.png">
-    <span>BullBear Market</span>
-  </div>
+<!-- NAV -->
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="learning.html">Learning</a>
+<a href="blog/">Blog</a>
+<a href="faq.html">FAQ</a>
+<a href="privacy-policy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="support.html">Support</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
 
-<div class="hero-left">
-
+<div>
 <h1>Learn • Practice • Earn Rewards</h1>
-
-<p>
-India’s most powerful stock market learning platform where you can learn trading, practice in real-time market and earn rewards based on performance.
-</p>
+<p>India’s Smart Trading Learning Platform</p>
 
 <div class="btn">Download App</div>
 <div class="btn">Start Learning</div>
+</div>
+
+<img src="photo1.png" width="250">
 
 </div>
 
-<div class="hero-right">
-<img src="photo1.png" width="300">
-</div>
+<!-- LIVE CHART -->
+<canvas id="chart" style="width:100%;height:200px;"></canvas>
 
+<!-- PROFIT -->
+<div style="text-align:center;margin:20px;">
+<h2 style="color:#00ff88;">💰 Live Earnings</h2>
+<h1 style="color:#00ff88;">₹ <span id="profit">0</span></h1>
 </div>
 
 <!-- ABOUT -->
@@ -203,23 +180,41 @@ India’s most powerful stock market learning platform where you can learn tradi
 <h2>About BullBear Market</h2>
 
 <p>
-BullBear Market is designed to make trading learning simple, practical and rewarding. यह एक ऐसा प्लेटफॉर्म है जहां beginners और experienced traders दोनों अपने skills improve कर सकते हैं।
+BullBear Market is India's advanced stock market learning platform designed to help beginners and traders learn, practice, and grow. यह platform users को step-by-step trading सिखाता है और उन्हें real market experience देता है बिना किसी risk के।
 </p>
 
 <p>
-आज के समय में लोग stock market में आते हैं लेकिन knowledge के बिना loss कर देते हैं। BullBear Market इस problem को solve करता है by providing structured learning + real-time practice.
+आज के समय में लाखों लोग stock market में enter करते हैं लेकिन knowledge के बिना loss करते हैं। BullBear Market इस problem को solve करता है।
 </p>
 
 <p>
-आप यहां:
-✔ Live market simulation में trade कर सकते हो  
-✔ Leaderboard में compete कर सकते हो  
-✔ Rewards जीत सकते हो  
-✔ Belt system से अपना level upgrade कर सकते हो  
+👉 Users यहां सीख सकते हैं:
+Stock market basics, technical analysis, candlestick patterns, indicators और strategies।
 </p>
 
 <p>
-यह platform सिर्फ learning नहीं बल्कि growth platform है जहां आप beginner से professional trader बन सकते हो।
+👉 Practice:
+Users virtual money के साथ trading कर सकते हैं।
+</p>
+
+<p>
+👉 Earn:
+Leaderboard और rewards system के जरिए users अपने performance के आधार पर grow कर सकते हैं।
+</p>
+
+<p>
+👉 Internal Learning:
+<a href="learning.html">Learning Hub</a> और <a href="blog/">Blog</a> के जरिए deep knowledge मिलता है।
+</p>
+
+<p>
+👉 Vision:
+हमारा goal है कि हर beginner trader loss से बचे और smart trader बने।
+</p>
+
+<p>
+👉 System:
+Learn → Practice → Compete → Earn
 </p>
 
 </section>
@@ -234,11 +229,11 @@ BullBear Market is designed to make trading learning simple, practical and rewar
 <div class="feature">📊 Live Market</div>
 <div class="feature">📈 Practice Trading</div>
 <div class="feature">🏆 Leaderboard</div>
-<div class="feature">🎯 Rewards System</div>
-<div class="feature">📰 Market News</div>
-<div class="feature">💬 Trading Community</div>
-<div class="feature">📉 Charts & Analysis</div>
-<div class="feature">📚 Learning Hub</div>
+<div class="feature">🎯 Rewards</div>
+<div class="feature">📰 News</div>
+<div class="feature">💬 Community</div>
+<div class="feature">📉 Charts</div>
+<div class="feature">📚 Learning</div>
 
 </div>
 
@@ -250,14 +245,12 @@ BullBear Market is designed to make trading learning simple, practical and rewar
 <h2>App Preview</h2>
 
 <div class="gallery">
-
 <img src="photo1.png">
 <img src="photo2.png">
 <img src="photo3.png">
 <img src="photo4.png">
 <img src="photo5.png">
 <img src="photo6.png">
-
 </div>
 
 </section>
@@ -265,11 +258,28 @@ BullBear Market is designed to make trading learning simple, practical and rewar
 <!-- BLOG -->
 <section class="section">
 
-<h2>Learn from Blog</h2>
+<h2>📚 Learn from Blog</h2>
 
-<p>Read powerful trading strategies and guides</p>
+<ul>
+<li><a href="blog/stock-market-guide.html">Stock Market Guide</a></li>
+<li><a href="blog/learn-trading.html">Learn Trading</a></li>
+<li><a href="blog/trading-for-beginners.html">Trading for Beginners</a></li>
+</ul>
 
-<div class="btn">Read Blog</div>
+<div class="btn">Explore All Blogs</div>
+
+</section>
+
+<!-- FAQ -->
+<section class="section">
+
+<h2>FAQ</h2>
+
+<div class="faq"><b>क्या यह ऐप free है?</b><p>हाँ</p></div>
+<div class="faq"><b>क्या real money लगता है?</b><p>नहीं</p></div>
+<div class="faq"><b>क्या beginners use कर सकते हैं?</b><p>हाँ</p></div>
+<div class="faq"><b>क्या earning possible है?</b><p>Skill based</p></div>
+<div class="faq"><b>क्या risk है?</b><p>No</p></div>
 
 </section>
 
@@ -277,17 +287,102 @@ BullBear Market is designed to make trading learning simple, practical and rewar
 <div class="cta">
 
 <h2>🚀 Start Your Trading Journey Today</h2>
-
-<p>Learn, practice and grow your money skills with BullBear Market</p>
+<p>Learn trading & improve your financial skills 💰</p>
 
 <div class="btn">Download App</div>
 
 </div>
 
+<!-- DISCLAIMER -->
+<section class="section">
+
+<h2>Disclaimer</h2>
+
+<p>यह platform educational purpose के लिए है।</p>
+<p>No real money trading.</p>
+<p>We are not SEBI registered.</p>
+
+</section>
+
 <!-- FOOTER -->
 <div class="footer">
-© 2026 BullBear Market | All Rights Reserved
+© 2026 BullBear Market
 </div>
+
+<!-- SCRIPTS -->
+<script>
+
+/* CANDLES */
+const canvas=document.getElementById("candleCanvas");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let candles=[];
+for(let i=0;i<40;i++){
+candles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+h:Math.random()*100,
+s:Math.random()*2+1,
+t:Math.random()>0.5
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+candles.forEach(c=>{
+ctx.fillStyle=c.t?"#00ff88":"#ff3b3b";
+ctx.fillRect(c.x,c.y,6,c.h);
+c.y-=c.s;
+if(c.y<-50){c.y=canvas.height;}
+});
+requestAnimationFrame(draw);
+}
+draw();
+
+/* CHART */
+const chart=document.getElementById("chart");
+const c=chart.getContext("2d");
+chart.width=window.innerWidth;
+chart.height=200;
+
+let p=Array.from({length:50},()=>Math.random()*200);
+
+function chartDraw(){
+c.clearRect(0,0,chart.width,chart.height);
+c.beginPath();
+c.moveTo(0,p[0]);
+for(let i=1;i<p.length;i++){
+c.lineTo(i*(chart.width/50),p[i]);
+}
+c.strokeStyle="#00ffcc";
+c.stroke();
+p.shift();
+p.push(Math.random()*200);
+requestAnimationFrame(chartDraw);
+}
+chartDraw();
+
+/* PROFIT */
+let profit=0;
+setInterval(()=>{
+profit+=Math.floor(Math.random()*100);
+document.getElementById("profit").innerText=profit;
+},1000);
+
+/* RIPPLE */
+document.querySelectorAll(".btn").forEach(btn=>{
+btn.addEventListener("click",function(e){
+let s=document.createElement("span");
+s.style.left=e.offsetX+"px";
+s.style.top=e.offsetY+"px";
+this.appendChild(s);
+setTimeout(()=>s.remove(),600);
+});
+});
+
+</script>
 
 </body>
 </html>
