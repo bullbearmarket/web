@@ -5,28 +5,27 @@
 <meta charset="UTF-8">
 <title>BullBear Market – Learn Trading & Earn Rewards</title>
 
-<meta name="description" content="India's smart stock market learning app with rewards. Learn trading, practice with simulation and earn by performance.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" href="favicon.png">
 
 <style>
 
-/* ===== BODY ===== */
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #05080f;
   color: white;
+  overflow-x: hidden;
 }
 
-/* ===== CANDLE BACKGROUND ===== */
+/* ===== ANIMATED CANDLE BG ===== */
 .bg {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
-  overflow: hidden;
 }
 
 .candle {
@@ -37,51 +36,42 @@ body {
   animation: rise 6s linear infinite;
 }
 
-.green {
-  background: #00ff88;
-  box-shadow: 0 0 10px #00ff88;
-}
-
-.red {
-  background: #ff3b3b;
-  box-shadow: 0 0 10px #ff3b3b;
-}
+.green { background:#00ff88; box-shadow:0 0 10px #00ff88; }
+.red { background:#ff3b3b; box-shadow:0 0 10px #ff3b3b; }
 
 @keyframes rise {
-  from { transform: translateY(0); opacity: 0.2; }
-  to { transform: translateY(-120vh); opacity: 0; }
+  from { transform: translateY(0); opacity:0.2; }
+  to { transform: translateY(-120vh); opacity:0; }
 }
 
-/* ===== TOPBAR (WHITE) ===== */
+/* ===== TOPBAR ===== */
 .topbar {
   background: white;
   padding: 8px;
   text-align: center;
 }
 
-/* ===== HEADER ===== */
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 25px;
-  background: rgba(0,0,0,0.85);
-}
-
-.logo span {
-  color: gold;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav a {
-  margin: 0 10px;
+.topbar a {
+  margin: 0 12px;
   color: black;
   font-weight: bold;
   text-decoration: none;
 }
 
-.nav a:hover {
+.topbar a:hover {
   color: gold;
+}
+
+/* ===== HEADER ===== */
+.header {
+  padding: 15px;
+  text-align: center;
+}
+
+.logo {
+  color: gold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 /* ===== HERO ===== */
@@ -95,16 +85,20 @@ body {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
   color: gold;
-  text-shadow: 0 0 15px gold;
+  text-shadow: 0 0 20px gold;
 }
 
 .hero p {
   color: #ccc;
+  font-size: 18px;
 }
 
+/* ===== NEON BUTTON ===== */
 .btn {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   margin: 12px;
   padding: 14px 30px;
@@ -113,10 +107,29 @@ body {
   color: black;
   font-weight: bold;
   box-shadow: 0 0 20px gold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ffcc, 0 0 60px gold;
+}
+
+/* RIPPLE */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background: rgba(255,255,255,0.5);
+  animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 /* ===== SECTION ===== */
@@ -129,6 +142,7 @@ body {
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .card h2 {
@@ -147,22 +161,12 @@ body {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
+  transition: 0.3s;
 }
 
 .feature:hover {
+  transform: translateY(-10px);
   box-shadow: 0 0 20px #00ffcc;
-}
-
-/* ===== GALLERY ===== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 /* ===== FOOTER ===== */
@@ -179,38 +183,22 @@ body {
 <body>
 
 <!-- BACKGROUND -->
-<div class="bg">
-
-<!-- RANDOM CANDLES -->
-<div class="candle green" style="left:10%; height:40px; animation-delay:0s;"></div>
-<div class="candle red" style="left:20%; height:60px; animation-delay:1s;"></div>
-<div class="candle green" style="left:30%; height:80px; animation-delay:2s;"></div>
-<div class="candle red" style="left:40%; height:50px; animation-delay:3s;"></div>
-<div class="candle green" style="left:50%; height:70px; animation-delay:1.5s;"></div>
-<div class="candle red" style="left:60%; height:60px; animation-delay:2.5s;"></div>
-<div class="candle green" style="left:70%; height:90px; animation-delay:3.5s;"></div>
-<div class="candle red" style="left:80%; height:50px; animation-delay:4s;"></div>
-
-</div>
+<div class="bg" id="bg"></div>
 
 <!-- TOPBAR -->
 <div class="topbar">
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="learning.html">Learning</a>
-    <a href="blog/">Blog</a>
-    <a href="faq.html">FAQ</a>
-    <a href="privacy-policy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="support.html">Support</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="learning.html">Learning</a>
+  <a href="blog/">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="privacy-policy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="support.html">Support</a>
 </div>
 
 <!-- HEADER -->
 <div class="header">
-  <div class="logo">
-    <span>BullBear Market</span>
-  </div>
+  <div class="logo">BullBear Market</div>
 </div>
 
 <!-- HERO -->
@@ -220,10 +208,10 @@ body {
 
 <h1>Learn. Practice. Earn Rewards.</h1>
 
-<p>India’s Smart Stock Market Learning App with Rewards</p>
+<p>India’s Smart Stock Market Learning trading App with paper money and win real Rewards</p>
 
-<a class="btn">Download App</a>
-<a class="btn" href="learning.html">Start Learning</a>
+<div class="btn">Download App</div>
+<div class="btn" onclick="scrollToSection()">Start Learning</div>
 
 </div>
 
@@ -234,14 +222,7 @@ body {
 <h2>🔥 About BullBear Market</h2>
 
 <p>
-BullBear Market is a powerful trading learning platform where you can learn, practice and earn.
-</p>
-
-<p>
-✔ Real Market Simulation  
-✔ Leaderboard System  
-✔ Reward Earning  
-✔ Belt Ranking System  
+Learn trading with real market simulation, compete in leaderboard and earn rewards.
 </p>
 
 </div>
@@ -259,40 +240,10 @@ BullBear Market is a powerful trading learning platform where you can learn, pra
 <div class="feature">📈 Practice Trading</div>
 <div class="feature">🏆 Leaderboard</div>
 <div class="feature">🎯 Rewards</div>
-<div class="feature">🥋 Belt Rank</div>
+<div class="feature">🥋 Belt System</div>
 <div class="feature">📚 Learning</div>
 
 </div>
-
-</div>
-</div>
-
-<!-- APP PREVIEW -->
-<div class="section">
-<div class="card">
-
-<h2>📱 App Preview</h2>
-
-<div class="gallery">
-<img src="photo1.png">
-<img src="photo2.png">
-<img src="photo3.png">
-<img src="photo4.png">
-<img src="photo5.png">
-</div>
-
-</div>
-</div>
-
-<!-- BLOG -->
-<div class="section">
-<div class="card">
-
-<h2>📰 Learn from Blog</h2>
-
-<p>Explore trading guides and strategies</p>
-
-<a class="btn" href="blog/">Read Blog</a>
 
 </div>
 </div>
@@ -303,17 +254,52 @@ BullBear Market is a powerful trading learning platform where you can learn, pra
 
 <h2>🚀 Start Your Trading Journey</h2>
 
-<p>Become a smart trader with BullBear Market</p>
-
-<a class="btn">Download App</a>
+<div class="btn">Download App</div>
 
 </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 BullBear Market | All Rights Reserved
+© 2026 BullBear Market
 </div>
+
+<script>
+
+/* ===== RANDOM CANDLES ===== */
+const bg = document.getElementById("bg");
+
+for (let i = 0; i < 25; i++) {
+  let candle = document.createElement("div");
+  candle.className = "candle " + (Math.random() > 0.5 ? "green" : "red");
+  candle.style.left = Math.random() * 100 + "%";
+  candle.style.height = (30 + Math.random() * 80) + "px";
+  candle.style.animationDelay = Math.random() * 5 + "s";
+  bg.appendChild(candle);
+}
+
+/* ===== RIPPLE EFFECT ===== */
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("click", function(e) {
+    let ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+    ripple.style.left = e.offsetX + "px";
+    ripple.style.top = e.offsetY + "px";
+    this.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+
+/* ===== SCROLL ===== */
+function scrollToSection() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+  });
+}
+
+</script>
 
 </body>
 </html>
