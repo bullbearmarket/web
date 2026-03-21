@@ -6,16 +6,59 @@
 
 <title>FAQ – BullBear Market | Trading Questions Answered</title>
 
-<meta name="description" content="Frequently asked questions about stock market, trading, and BullBear Market app. Learn everything step by step.">
+<meta name="description" content="Top trading questions answered. Learn stock market basics, trading strategies, and BullBear Market app features.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ✅ GOOGLE FAQ SCHEMA (ALREADY ADDED) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+
+{"@type": "Question","name": "What is BullBear Market?","acceptedAnswer": {"@type": "Answer","text": "BullBear Market is a stock market learning and simulation platform for beginners."}},
+
+{"@type": "Question","name": "Is BullBear Market free?","acceptedAnswer": {"@type": "Answer","text": "Yes, it is completely free for learning and practice."}},
+
+{"@type": "Question","name": "Can beginners use this app?","acceptedAnswer": {"@type": "Answer","text": "Yes, it is designed specifically for beginners."}},
+
+{"@type": "Question","name": "What is trading?","acceptedAnswer": {"@type": "Answer","text": "Trading is buying and selling stocks to earn profit."}},
+
+{"@type": "Question","name": "Is trading risky?","acceptedAnswer": {"@type": "Answer","text": "Yes, but proper knowledge reduces risk."}},
+
+{"@type": "Question","name": "How to start trading?","acceptedAnswer": {"@type": "Answer","text": "Start with basics, practice, and use simulation apps."}},
+
+{"@type": "Question","name": "What is intraday trading?","acceptedAnswer": {"@type": "Answer","text": "Buying and selling stocks in the same day."}},
+
+{"@type": "Question","name": "What is swing trading?","acceptedAnswer": {"@type": "Answer","text": "Holding stocks for a few days."}},
+
+{"@type": "Question","name": "Can I learn trading without money?","acceptedAnswer": {"@type": "Answer","text": "Yes, using virtual trading platforms."}},
+
+{"@type": "Question","name": "What is stop loss?","acceptedAnswer": {"@type": "Answer","text": "A tool to limit your loss in trading."}},
+
+{"@type": "Question","name": "What is chart analysis?","acceptedAnswer": {"@type": "Answer","text": "Reading price charts to predict movement."}},
+
+{"@type": "Question","name": "What is bull market?","acceptedAnswer": {"@type": "Answer","text": "Market where prices go up."}},
+
+{"@type": "Question","name": "What is bear market?","acceptedAnswer": {"@type": "Answer","text": "Market where prices go down."}},
+
+{"@type": "Question","name": "Can I earn money from trading?","acceptedAnswer": {"@type": "Answer","text": "Yes, with proper skills and discipline."}},
+
+{"@type": "Question","name": "Why traders lose money?","acceptedAnswer": {"@type": "Answer","text": "Due to lack of knowledge and emotions."}},
+
+{"@type": "Question","name": "Is BullBear useful?","acceptedAnswer": {"@type": "Answer","text": "Yes, it helps beginners learn safely."}}
+
+]
+}
+</script>
 
 <style>
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
+  background: linear-gradient(180deg,#0B1220,#05080f);
   color: white;
 }
 
@@ -28,38 +71,54 @@ body {
 h1 {
   text-align: center;
   color: gold;
+  margin-bottom: 30px;
 }
 
 .faq {
   background: #111827;
-  margin: 10px 0;
-  border-radius: 10px;
+  margin: 12px 0;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.faq:hover {
+  transform: scale(1.02);
 }
 
 .question {
-  padding: 15px;
+  padding: 16px;
   cursor: pointer;
   font-weight: bold;
-  border-bottom: 1px solid #222;
+  position: relative;
 }
 
-.question:hover {
-  background: #1f2937;
+.question::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
 }
 
 .answer {
   display: none;
   padding: 15px;
-  color: #ccc;
+  color: #bbb;
+  border-top: 1px solid #222;
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from {opacity:0;}
+  to {opacity:1;}
 }
 
 </style>
 
 <script>
-function toggleFAQ(e){
-  let ans = e.nextElementSibling;
-  ans.style.display = (ans.style.display === "block") ? "none" : "block";
+function toggleFAQ(el){
+  let ans = el.nextElementSibling;
+  ans.style.display = ans.style.display === "block" ? "none" : "block";
 }
 </script>
 
@@ -71,77 +130,67 @@ function toggleFAQ(e){
 
 <h1>📊 Frequently Asked Questions</h1>
 
-<!-- FAQ ITEMS -->
+<!-- 35+ FAQ -->
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">1. What is BullBear Market?</div><div class="answer">BullBear Market is a stock market learning and trading simulation platform designed for beginners.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is BullBear Market?</div><div class="answer">A trading learning and simulation app.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">2. Is BullBear Market free?</div><div class="answer">Yes, you can learn and practice trading for free.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Is BullBear Market free?</div><div class="answer">Yes, completely free.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">3. Can beginners use this app?</div><div class="answer">Yes, it is designed especially for beginners.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Can beginners use it?</div><div class="answer">Yes, it is beginner friendly.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">4. What is trading?</div><div class="answer">Trading is buying and selling stocks to earn profit.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is trading?</div><div class="answer">Buying and selling stocks for profit.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">5. Is trading risky?</div><div class="answer">Yes, but with proper knowledge and risk management, it can be controlled.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Is trading risky?</div><div class="answer">Yes, but manageable with knowledge.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">6. Can I earn money from trading?</div><div class="answer">Yes, but it requires skill, patience, and discipline.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">How to start trading?</div><div class="answer">Learn basics and practice.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">7. How to start trading?</div><div class="answer">Start by learning basics, practicing, and using simulation apps.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is intraday trading?</div><div class="answer">Same day trading.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">8. What is intraday trading?</div><div class="answer">Buying and selling stocks within the same day.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is swing trading?</div><div class="answer">Holding for few days.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">9. What is swing trading?</div><div class="answer">Holding stocks for a few days to earn profit.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Can I earn money?</div><div class="answer">Yes, with proper strategy.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">10. What is long-term investing?</div><div class="answer">Holding stocks for months or years.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is stop loss?</div><div class="answer">Limits your losses.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">11. What is risk management?</div><div class="answer">Managing your losses using stop-loss and proper planning.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is chart reading?</div><div class="answer">Analyzing price movement.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">12. What is stop loss?</div><div class="answer">It limits your loss by automatically exiting a trade.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is support?</div><div class="answer">Price level where stock stops falling.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">13. Can I learn trading without money?</div><div class="answer">Yes, you can use simulation trading.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is resistance?</div><div class="answer">Price level where stock stops rising.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">14. What is chart analysis?</div><div class="answer">Reading price charts to predict market movement.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is bull market?</div><div class="answer">Market going up.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">15. What are candlesticks?</div><div class="answer">They show price movement in chart form.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is bear market?</div><div class="answer">Market going down.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">16. What is support & resistance?</div><div class="answer">Key levels where price stops or reverses.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is portfolio?</div><div class="answer">Your investments collection.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">17. What is bull market?</div><div class="answer">A market where prices are rising.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is diversification?</div><div class="answer">Spreading investments.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">18. What is bear market?</div><div class="answer">A market where prices are falling.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is overtrading?</div><div class="answer">Too much trading.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">19. What is portfolio?</div><div class="answer">A collection of your investments.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is FOMO?</div><div class="answer">Fear of missing out.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">20. What is diversification?</div><div class="answer">Investing in different assets to reduce risk.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Can I trade daily?</div><div class="answer">Yes, with strategy.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">21. What is market trend?</div><div class="answer">The overall direction of the market.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is technical analysis?</div><div class="answer">Chart-based analysis.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">22. What is overtrading?</div><div class="answer">Trading too frequently without strategy.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is fundamental analysis?</div><div class="answer">Company-based analysis.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">23. What is FOMO?</div><div class="answer">Fear of missing out, leading to bad trades.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">How long to learn?</div><div class="answer">Few months to years.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">24. Can I trade daily?</div><div class="answer">Yes, but only with proper strategy.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Is trading a career?</div><div class="answer">Yes, if done properly.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">25. What is technical analysis?</div><div class="answer">Analyzing charts and patterns.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">What is paper trading?</div><div class="answer">Practice trading.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">26. What is fundamental analysis?</div><div class="answer">Analyzing company performance.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Can I trade part-time?</div><div class="answer">Yes.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">27. How long to learn trading?</div><div class="answer">It depends, but usually a few months to years.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Why traders fail?</div><div class="answer">Lack of discipline.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">28. Is trading a good career?</div><div class="answer">Yes, if done properly.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">How to succeed?</div><div class="answer">Practice + patience.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">29. What is paper trading?</div><div class="answer">Practicing trading without real money.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Does BullBear help?</div><div class="answer">Yes, for beginners.</div></div>
 
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">30. Can I trade part-time?</div><div class="answer">Yes, many traders do part-time trading.</div></div>
-
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">31. What is trading strategy?</div><div class="answer">A plan to enter and exit trades.</div></div>
-
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">32. Why traders lose money?</div><div class="answer">Because of lack of knowledge and discipline.</div></div>
-
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">33. How to become a profitable trader?</div><div class="answer">Practice, discipline, and risk management.</div></div>
-
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">34. Does BullBear help in real trading?</div><div class="answer">Yes, it prepares you for real trading.</div></div>
-
-<div class="faq"><div class="question" onclick="toggleFAQ(this)">35. Is this app safe?</div><div class="answer">Yes, it is completely safe to use.</div></div>
+<div class="faq"><div class="question" onclick="toggleFAQ(this)">Is it safe?</div><div class="answer">Yes.</div></div>
 
 </div>
 
