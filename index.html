@@ -248,77 +248,6 @@ margin-bottom:10px;
 }
 </script>
 
-<script>
-const canvas = document.createElement("canvas");
-document.body.appendChild(canvas);
-
-canvas.style.position = "fixed";
-canvas.style.top = 0;
-canvas.style.left = 0;
-canvas.style.zIndex = "-1";
-
-const ctx = canvas.getContext("2d");
-
-function resize(){
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener("resize", resize);
-
-let candles = [];
-
-for(let i=0;i<80;i++){
-candles.push({
-x: Math.random()*canvas.width,
-y: Math.random()*canvas.height,
-height: Math.random()*80+20,
-speed: Math.random()*1+0.3,
-green: Math.random()>0.5,
-depth: Math.random(), // 3D feel
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-candles.forEach(c=>{
-
-let scale = 0.5 + c.depth; // 3D size
-let width = 4 * scale;
-let height = c.height * scale;
-
-ctx.globalAlpha = 0.3 + c.depth*0.7;
-
-ctx.fillStyle = c.green ? "#00ff88" : "#ff3b3b";
-
-/* glow */
-ctx.shadowBlur = 20 * c.depth;
-ctx.shadowColor = c.green ? "#00ff88" : "#ff3b3b";
-
-/* body */
-ctx.fillRect(c.x, c.y, width, height);
-
-/* wick */
-ctx.fillRect(c.x + width/2 - 1, c.y - 10*scale, 2, height + 20*scale);
-
-/* move */
-c.y -= c.speed * (0.5 + c.depth);
-
-if(c.y < -100){
-c.y = canvas.height;
-c.x = Math.random()*canvas.width;
-c.depth = Math.random();
-}
-});
-
-ctx.globalAlpha = 1;
-requestAnimationFrame(draw);
-}
-
-draw();
-</script>
-
 </head>
 
 
@@ -611,6 +540,74 @@ let p=el.querySelector("p");
 p.style.display=p.style.display==="block"?"none":"block";
 }
 
+const canvas = document.createElement("canvas");
+document.body.appendChild(canvas);
+
+canvas.style.position = "fixed";
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.zIndex = "-1";
+
+const ctx = canvas.getContext("2d");
+
+function resize(){
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+let candles = [];
+
+for(let i=0;i<80;i++){
+candles.push({
+x: Math.random()*canvas.width,
+y: Math.random()*canvas.height,
+height: Math.random()*80+20,
+speed: Math.random()*1+0.3,
+green: Math.random()>0.5,
+depth: Math.random(), // 3D feel
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+candles.forEach(c=>{
+
+let scale = 0.5 + c.depth; // 3D size
+let width = 4 * scale;
+let height = c.height * scale;
+
+ctx.globalAlpha = 0.3 + c.depth*0.7;
+
+ctx.fillStyle = c.green ? "#00ff88" : "#ff3b3b";
+
+/* glow */
+ctx.shadowBlur = 20 * c.depth;
+ctx.shadowColor = c.green ? "#00ff88" : "#ff3b3b";
+
+/* body */
+ctx.fillRect(c.x, c.y, width, height);
+
+/* wick */
+ctx.fillRect(c.x + width/2 - 1, c.y - 10*scale, 2, height + 20*scale);
+
+/* move */
+c.y -= c.speed * (0.5 + c.depth);
+
+if(c.y < -100){
+c.y = canvas.height;
+c.x = Math.random()*canvas.width;
+c.depth = Math.random();
+}
+});
+
+ctx.globalAlpha = 1;
+requestAnimationFrame(draw);
+}
+
+draw();
 </script>
 
 </body>
