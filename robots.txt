@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Important pages
+Allow: /index.html
+Allow: /learning.html
+Allow: /blog/
+Allow: /faq.html
+Allow: /about.html
+
+# Block unnecessary
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?replytocom
+
+# Sitemap
 Sitemap: https://bullbearmarket.in/sitemap.xml
