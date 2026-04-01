@@ -2,23 +2,92 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BullBear Market Rewards</title>
+<title>BullBear Rewards</title>
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+const app = initializeApp({
+  databaseURL: "https://bullbearmarket7-default-rtdb.asia-southeast1.firebasedatabase.app"
+});
+
+const db = getDatabase(app);
+
+window.loadData = async function(type){
+
+  document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));
+  document.getElementById(type).classList.add("active");
+
+  const snapshot = await get(ref(db, "contestRewards/" + type));
+
+  if(!snapshot.exists()){
+    document.getElementById("list").innerHTML = "<p style='text-align:center'>No data found</p>";
+    return;
+  }
+
+  const data = snapshot.val();
+
+  let arr = [];
+
+  for(let r in data){
+    arr.push({
+      rank: parseInt(r),
+      reward: data[r]
+    });
+  }
+
+  arr.sort((a,b)=>a.rank-b.rank);
+
+  render(arr);
+}
+
+function render(data){
+
+  let top3 = "";
+  let list = "";
+
+  data.slice(0,3).forEach((u,i)=>{
+
+    let cls = ["gold","silver","bronze"][i];
+
+    top3 += `
+    <div class="card ${cls}">
+      <h2>#${u.rank}</h2>
+      <h3>₹${u.reward}</h3>
+    </div>`;
+  });
+
+  document.getElementById("top3").innerHTML = top3;
+
+  data.slice(0,50).forEach(u=>{
+    list += `
+    <div class="row">
+      <span>#${u.rank}</span>
+      <span>₹${u.reward}</span>
+    </div>`;
+  });
+
+  document.getElementById("list").innerHTML = list;
+}
+
+window.onload = ()=>loadData("monthly");
+
+</script>
 
 <style>
 
 body{
-  background:#0D1117;
-  color:white;
-  font-family:sans-serif;
   margin:0;
+  font-family:sans-serif;
+  background:linear-gradient(180deg,#0D1117,#000);
+  color:white;
 }
 
 h1{
   text-align:center;
-  padding:15px;
+  padding:20px;
 }
 
 .tabs{
@@ -27,12 +96,10 @@ h1{
   gap:10px;
 }
 
-.tabs button{
-  padding:10px 20px;
-  border:none;
-  border-radius:10px;
+.tab{
+  padding:12px 20px;
+  border-radius:20px;
   background:#161B22;
-  color:white;
   cursor:pointer;
 }
 
@@ -43,16 +110,22 @@ h1{
 
 .top3{
   display:flex;
-  justify-content:space-around;
-  margin:20px;
+  justify-content:center;
+  gap:15px;
+  margin:25px;
 }
 
 .card{
-  background:#161B22;
-  padding:15px;
+  padding:20px;
   border-radius:15px;
+  width:100px;
   text-align:center;
-  width:28%;
+  animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(0.8);opacity:0;}
+  to{transform:scale(1);opacity:1;}
 }
 
 .gold{background:#FFD700;color:black;}
@@ -67,9 +140,14 @@ h1{
   display:flex;
   justify-content:space-between;
   background:#161B22;
+  padding:14px;
   margin:8px;
-  padding:12px;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.row:hover{
+  background:#1f2937;
 }
 
 </style>
@@ -80,83 +158,12 @@ h1{
 <h1>🏆 Rewards</h1>
 
 <div class="tabs">
-  <button id="monthlyBtn" class="active">Monthly</button>
-  <button id="weeklyBtn">Weekly</button>
+  <div id="monthly" class="tab active" onclick="loadData('monthly')">Monthly</div>
+  <div id="weekly" class="tab" onclick="loadData('weekly')">Weekly</div>
 </div>
 
 <div id="top3" class="top3"></div>
 <div id="list" class="list"></div>
-
-<script>
-
-const firebaseConfig = {
-  databaseURL: "https://bullbearmarket7-default-rtdb.asia-southeast1.firebasedatabase.app"
-};
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-
-function load(type){
-
-  document.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
-  document.getElementById(type+"Btn").classList.add("active");
-
-  db.ref("contestRewards/"+type).once("value", snap=>{
-
-    let data = snap.val();
-
-    let arr = [];
-
-    for(let rank in data){
-      arr.push({
-        rank: parseInt(rank),
-        reward: data[rank]
-      });
-    }
-
-    arr.sort((a,b)=>a.rank - b.rank);
-
-    render(arr);
-
-  });
-}
-
-function render(data){
-
-  let top3HTML="";
-  let listHTML="";
-
-  data.slice(0,3).forEach((u,i)=>{
-
-    let cls = i==0?"gold":i==1?"silver":"bronze";
-
-    top3HTML += `
-    <div class="card ${cls}">
-      <h3>#${u.rank}</h3>
-      <b>₹${u.reward}</b>
-    </div>`;
-  });
-
-  document.getElementById("top3").innerHTML = top3HTML;
-
-  data.slice(0,50).forEach(u=>{
-
-    listHTML += `
-    <div class="row">
-      <div>#${u.rank}</div>
-      <div>₹${u.reward}</div>
-    </div>`;
-  });
-
-  document.getElementById("list").innerHTML = listHTML;
-}
-
-document.getElementById("monthlyBtn").onclick = ()=>load("monthly");
-document.getElementById("weeklyBtn").onclick = ()=>load("weekly");
-
-load("monthly");
-
-</script>
 
 </body>
 </html>
