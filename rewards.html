@@ -75,63 +75,124 @@ function render(data){
 window.onload = ()=>loadData("monthly");
 
 </script>
-
 <style>
 
 body{
   margin:0;
   font-family:sans-serif;
-  background:linear-gradient(180deg,#0D1117,#000);
+  background:#020617;
   color:white;
+  overflow-x:hidden;
 }
 
-h1{
+/* 🔥 ANIMATED BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  top:-50%;
+  left:-50%;
+  background: radial-gradient(circle,#FFD70022,transparent 40%),
+              radial-gradient(circle,#3b82f622,transparent 40%);
+  animation: moveBg 12s linear infinite;
+  z-index:-1;
+}
+
+@keyframes moveBg{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+/* HERO */
+.hero{
   text-align:center;
-  padding:20px;
+  padding:35px 10px 10px;
 }
 
+.hero h1{
+  font-size:34px;
+  background:linear-gradient(45deg,#FFD700,#ffffff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.tagline{
+  color:#FFD700;
+  font-weight:bold;
+  margin-top:5px;
+}
+
+.sub{
+  color:#9ca3af;
+  font-size:14px;
+}
+
+/* TABS */
 .tabs{
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:12px;
+  margin-top:20px;
 }
 
 .tab{
-  padding:12px 20px;
-  border-radius:20px;
-  background:#161B22;
+  padding:12px 24px;
+  border-radius:40px;
+  background:#111827;
   cursor:pointer;
+  transition:0.3s;
+}
+
+.tab:hover{
+  transform:scale(1.08);
 }
 
 .active{
-  background:#FFD700;
+  background:linear-gradient(45deg,#FFD700,#ffb300);
   color:black;
+  box-shadow:0 0 15px #FFD700;
 }
 
+/* TOP 3 */
 .top3{
   display:flex;
   justify-content:center;
-  gap:15px;
-  margin:25px;
+  gap:18px;
+  margin:30px;
 }
 
 .card{
-  padding:20px;
-  border-radius:15px;
-  width:100px;
+  padding:22px;
+  border-radius:20px;
+  width:120px;
   text-align:center;
   animation:pop 0.5s ease;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.05);
 }
 
 @keyframes pop{
-  from{transform:scale(0.8);opacity:0;}
+  from{transform:scale(0.6);opacity:0;}
   to{transform:scale(1);opacity:1;}
 }
 
-.gold{background:#FFD700;color:black;}
-.silver{background:#C0C0C0;color:black;}
-.bronze{background:#CD7F32;}
+.gold{
+  background:linear-gradient(45deg,#FFD700,#ffcc00);
+  color:black;
+  box-shadow:0 0 25px #FFD700;
+}
 
+.silver{
+  background:linear-gradient(45deg,#C0C0C0,#e5e5e5);
+  color:black;
+}
+
+.bronze{
+  background:linear-gradient(45deg,#CD7F32,#ff9f43);
+}
+
+/* LIST */
 .list{
   padding:10px;
 }
@@ -139,27 +200,58 @@ h1{
 .row{
   display:flex;
   justify-content:space-between;
-  background:#161B22;
-  padding:14px;
+  padding:15px;
   margin:8px;
-  border-radius:10px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(8px);
   transition:0.3s;
 }
 
 .row:hover{
-  background:#1f2937;
+  transform:scale(1.02);
+  background:rgba(255,255,255,0.08);
+}
+
+/* GLOW ANIMATION */
+.row span:last-child{
+  color:#22c55e;
+  font-weight:bold;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+  from{opacity:0.6;}
+  to{opacity:1;}
+}
+
+/* FOOTER */
+.footer-note{
+  text-align:center;
+  margin:25px;
+  color:#6b7280;
+  font-size:13px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1>🏆 Rewards</h1>
+<div class="hero">
+  <h1>🏆 Rewards</h1>
+  <p class="tagline">Compete • Win • Earn Real Rewards</p>
+  <p class="sub">Top 50 traders win rewards every week and every month 🚀</p>
+</div>
 
 <div class="tabs">
   <div id="monthly" class="tab active" onclick="loadData('monthly')">Monthly</div>
   <div id="weekly" class="tab" onclick="loadData('weekly')">Weekly</div>
+  <div class="footer-note">
+  Rewards are distributed at the end of each month and every sunday 5 pm.<br>
+  Stay active, trade smart & climb leaderboard 🚀
+</div>
 </div>
 
 <div id="top3" class="top3"></div>
