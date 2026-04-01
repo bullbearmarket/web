@@ -2,37 +2,38 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BullBear Leaderboard</title>
+<title>BullBear Market Rewards</title>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
 
 <style>
 
-body {
+body{
   background:#0D1117;
   color:white;
   font-family:sans-serif;
   margin:0;
 }
 
-h1 {
+h1{
   text-align:center;
   padding:15px;
 }
 
-.tabs {
+.tabs{
   display:flex;
   justify-content:center;
   gap:10px;
 }
 
 .tabs button{
-  padding:10px 15px;
+  padding:10px 20px;
   border:none;
   border-radius:10px;
   background:#161B22;
   color:white;
+  cursor:pointer;
 }
 
 .active{
@@ -40,7 +41,7 @@ h1 {
   color:black;
 }
 
-.top3 {
+.top3{
   display:flex;
   justify-content:space-around;
   margin:20px;
@@ -54,9 +55,9 @@ h1 {
   width:28%;
 }
 
-.gold{background:gold;color:black;}
-.silver{background:silver;color:black;}
-.bronze{background:#cd7f32;}
+.gold{background:#FFD700;color:black;}
+.silver{background:#C0C0C0;color:black;}
+.bronze{background:#CD7F32;}
 
 .list{
   padding:10px;
@@ -66,13 +67,9 @@ h1 {
   display:flex;
   justify-content:space-between;
   background:#161B22;
-  margin:8px 0;
+  margin:8px;
   padding:12px;
   border-radius:10px;
-}
-
-.pro{
-  color:gold;
 }
 
 </style>
@@ -80,7 +77,7 @@ h1 {
 
 <body>
 
-<h1>🏆 Leaderboard</h1>
+<h1>🏆 Rewards</h1>
 
 <div class="tabs">
   <button id="monthlyBtn" class="active">Monthly</button>
@@ -99,29 +96,28 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-let mode = "monthly";
-
-document.getElementById("monthlyBtn").onclick = ()=>load("monthly");
-document.getElementById("weeklyBtn").onclick = ()=>load("weekly");
-
 function load(type){
-  mode = type;
 
   document.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
   document.getElementById(type+"Btn").classList.add("active");
 
-  db.ref("leaderboardCache/"+type).once("value", snap=>{
-    let arr=[];
+  db.ref("contestRewards/"+type).once("value", snap=>{
 
-    snap.forEach(s=>{
-      let val=s.val();
-      val.uid=s.val().uid;
-      arr.push(val);
-    });
+    let data = snap.val();
 
-    arr.sort((a,b)=>b.profit-a.profit);
+    let arr = [];
+
+    for(let rank in data){
+      arr.push({
+        rank: parseInt(rank),
+        reward: data[rank]
+      });
+    }
+
+    arr.sort((a,b)=>a.rank - b.rank);
 
     render(arr);
+
   });
 }
 
@@ -136,44 +132,27 @@ function render(data){
 
     top3HTML += `
     <div class="card ${cls}">
-      <h3>#${i+1}</h3>
-      <p id="name${i}">Loading...</p>
-      <b>₹${u.profit}</b>
+      <h3>#${u.rank}</h3>
+      <b>₹${u.reward}</b>
     </div>`;
   });
 
   document.getElementById("top3").innerHTML = top3HTML;
 
-  data.slice(0,50).forEach((u,i)=>{
+  data.slice(0,50).forEach(u=>{
 
     listHTML += `
     <div class="row">
-      <div>#${i+1} <span id="nameList${i}">Loading...</span></div>
-      <div>₹${u.profit}</div>
+      <div>#${u.rank}</div>
+      <div>₹${u.reward}</div>
     </div>`;
   });
 
   document.getElementById("list").innerHTML = listHTML;
-
-  // 🔥 NAME + PRO FETCH
-  data.slice(0,50).forEach((u,i)=>{
-
-    db.ref("users/"+u.uid).once("value",snap=>{
-      let name = snap.val()?.name || "Trader";
-      let pro = snap.val()?.isPro;
-
-      let finalName = name + (pro ? " 👑" : "");
-
-      if(i<3){
-        document.getElementById("name"+i).innerText = finalName;
-      }
-
-      document.getElementById("nameList"+i).innerText = finalName;
-    });
-
-  });
-
 }
+
+document.getElementById("monthlyBtn").onclick = ()=>load("monthly");
+document.getElementById("weeklyBtn").onclick = ()=>load("weekly");
 
 load("monthly");
 
