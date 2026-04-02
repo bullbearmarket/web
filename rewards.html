@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BullBear Rewards</title>
+<title>BullBear Market Rewards</title>
 
 <script type="module">
 
@@ -45,21 +45,30 @@ window.loadData = async function(type){
 
 function render(data){
 
-  let top3 = "";
+  // 🔥 FIXED TOP 3 (center winner)
+  let top3HTML = `
+    <div class="card silver">
+      🥈
+      <h2>#2</h2>
+      <h3>₹${data[1]?.reward || 0}</h3>
+    </div>
+
+    <div class="card gold">
+      👑 🥇
+      <h2>#1</h2>
+      <h3>₹${data[0]?.reward || 0}</h3>
+    </div>
+
+    <div class="card bronze">
+      🥉
+      <h2>#3</h2>
+      <h3>₹${data[2]?.reward || 0}</h3>
+    </div>
+  `;
+
+  document.getElementById("top3").innerHTML = top3HTML;
+
   let list = "";
-
-  data.slice(0,3).forEach((u,i)=>{
-
-    let cls = ["gold","silver","bronze"][i];
-
-    top3 += `
-    <div class="card ${cls}">
-      <h2>#${u.rank}</h2>
-      <h3>₹${u.reward}</h3>
-    </div>`;
-  });
-
-  document.getElementById("top3").innerHTML = top3;
 
   data.slice(0,50).forEach(u=>{
     list += `
@@ -75,6 +84,7 @@ function render(data){
 window.onload = ()=>loadData("monthly");
 
 </script>
+
 <style>
 
 body{
@@ -82,10 +92,9 @@ body{
   font-family:sans-serif;
   background:#020617;
   color:white;
-  overflow-x:hidden;
 }
 
-/* 🔥 ANIMATED BACKGROUND */
+/* 🔥 FAST ANIMATION */
 body::before{
   content:"";
   position:fixed;
@@ -93,91 +102,87 @@ body::before{
   height:200%;
   top:-50%;
   left:-50%;
-  background: radial-gradient(circle,#FFD70022,transparent 40%),
-              radial-gradient(circle,#3b82f622,transparent 40%);
-  animation: moveBg 12s linear infinite;
+  background: radial-gradient(circle,#FFD70033,transparent 40%),
+              radial-gradient(circle,#3b82f633,transparent 40%);
+  animation: moveBg 6s linear infinite;
   z-index:-1;
 }
 
 @keyframes moveBg{
-  0%{transform:rotate(0deg);}
   100%{transform:rotate(360deg);}
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:35px 10px 10px;
+  padding:30px 10px;
 }
 
 .hero h1{
-  font-size:34px;
+  font-size:36px;
   background:linear-gradient(45deg,#FFD700,#ffffff);
   -webkit-background-clip:text;
   color:transparent;
 }
 
 .tagline{
+  font-size:18px;
   color:#FFD700;
-  font-weight:bold;
-  margin-top:5px;
 }
 
 .sub{
+  font-size:15px;
   color:#9ca3af;
-  font-size:14px;
 }
 
 /* TABS */
 .tabs{
   display:flex;
   justify-content:center;
-  gap:12px;
-  margin-top:20px;
+  gap:10px;
+  margin:15px;
 }
 
 .tab{
-  padding:12px 24px;
-  border-radius:40px;
+  padding:8px 18px;
+  border-radius:25px;
   background:#111827;
   cursor:pointer;
+  font-size:14px;
   transition:0.3s;
 }
 
 .tab:hover{
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
 .active{
   background:linear-gradient(45deg,#FFD700,#ffb300);
   color:black;
-  box-shadow:0 0 15px #FFD700;
+  box-shadow:0 0 10px #FFD700;
 }
 
 /* TOP 3 */
 .top3{
   display:flex;
   justify-content:center;
-  gap:18px;
-  margin:30px;
+  align-items:flex-end;
+  gap:15px;
+  margin:25px;
 }
 
 .card{
-  padding:22px;
-  border-radius:20px;
-  width:120px;
+  padding:20px;
+  border-radius:18px;
+  width:110px;
   text-align:center;
-  animation:pop 0.5s ease;
   backdrop-filter:blur(10px);
   background:rgba(255,255,255,0.05);
-}
-
-@keyframes pop{
-  from{transform:scale(0.6);opacity:0;}
-  to{transform:scale(1);opacity:1;}
+  animation:pop 0.5s ease;
 }
 
 .gold{
+  transform:scale(1.15);
   background:linear-gradient(45deg,#FFD700,#ffcc00);
   color:black;
   box-shadow:0 0 25px #FFD700;
@@ -200,29 +205,20 @@ body::before{
 .row{
   display:flex;
   justify-content:space-between;
-  padding:15px;
+  padding:14px;
   margin:8px;
-  border-radius:14px;
+  border-radius:12px;
   background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(8px);
   transition:0.3s;
 }
 
 .row:hover{
-  transform:scale(1.02);
-  background:rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.1);
 }
 
-/* GLOW ANIMATION */
 .row span:last-child{
   color:#22c55e;
   font-weight:bold;
-  animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow{
-  from{opacity:0.6;}
-  to{opacity:1;}
 }
 
 /* FOOTER */
@@ -232,7 +228,25 @@ body::before{
   color:#6b7280;
   font-size:13px;
 }
+.why-box{
+  margin:20px;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(8px);
+  text-align:center;
+}
 
+.why-box h3{
+  color:#FFD700;
+  margin-bottom:10px;
+}
+
+.why-box p{
+  font-size:14px;
+  color:#9ca3af;
+  margin-bottom:8px;
+  }
 </style>
 
 </head>
@@ -248,14 +262,30 @@ body::before{
 <div class="tabs">
   <div id="monthly" class="tab active" onclick="loadData('monthly')">Monthly</div>
   <div id="weekly" class="tab" onclick="loadData('weekly')">Weekly</div>
-  <div class="footer-note">
-  Rewards are distributed at the end of each month and every sunday 5 pm.<br>
-  Stay active, trade smart & climb leaderboard 🚀
-</div>
 </div>
 
 <div id="top3" class="top3"></div>
+  
+<div class="why-box">
+  <h3>Why We Give Rewards?</h3>
+
+  <p>
+    Our goal is to help beginners learn stock market with real experience.
+    By competing on leaderboard, traders earn rewards that can be used
+    as starting capital for real trading.
+  </p>
+
+  <p>
+    After months of practice, users can use these rewards to enter
+    real market confidently without wasting time.
+  </p>
+</div>
 <div id="list" class="list"></div>
+
+<div class="footer-note">
+Rewards are distributed at the end of each month and every Sunday 5 PM.<br>
+Stay active, trade smart & climb leaderboard 🚀
+</div>
 
 </body>
 </html>
