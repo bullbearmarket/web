@@ -1,198 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Terms of Service – BullBear Market | Platform Usage Rules & User Responsibilities</title>
+<meta name="description" content="BullBear Market Terms of Service — platform usage rules, virtual trading policy, leaderboard & rewards terms, user responsibilities and account policies. Educational platform only."/>
+<meta name="keywords" content="BullBear Market terms of service, trading app terms India, stock market app terms, virtual trading platform rules India, BullBear Market user agreement"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="BullBear Market"/>
+<meta name="geo.region" content="IN"/>
+<link rel="canonical" href="https://bullbearmarket.in/terms.html"/>
+<link rel="icon" href="https://bullbearmarket.in/favicon.png"/>
+<meta property="og:title" content="Terms of Service – BullBear Market"/>
+<meta property="og:description" content="BullBear Market Terms of Service — understand platform rules, virtual trading policy, rewards terms and user responsibilities."/>
+<meta property="og:url" content="https://bullbearmarket.in/terms.html"/>
+<meta property="og:type" content="website"/>
 
-<meta charset="UTF-8">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"Terms of Service – BullBear Market",
+  "url":"https://bullbearmarket.in/terms.html",
+  "description":"Terms and conditions for using BullBear Market — India's free stock market learning and virtual trading platform.",
+  "inLanguage":"en",
+  "breadcrumb":{
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://bullbearmarket.in/"},
+      {"@type":"ListItem","position":2,"name":"Terms of Service","item":"https://bullbearmarket.in/terms.html"}
+    ]
+  }
+}
+</script>
 
-<title>Terms of Service – BullBear Market</title>
-
-<meta name="description" content="Terms of Service for BullBear Market. Learn about platform usage, virtual trading rules, and user responsibilities.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
 <style>
+:root{
+  --bg:#050810;
+  --bg2:#080d1a;
+  --card:#0d1526;
+  --card2:#111d30;
+  --border:#182038;
+  --border2:#1f2d48;
+  --gold:#FFD700;
+  --gold2:#e6a800;
+  --gold-glow:rgba(255,215,0,.12);
+  --cyan:#00e6ff;
+  --cyan-dim:rgba(0,230,255,.09);
+  --blue:#3b82f6;
+  --blue-dim:rgba(59,130,246,.1);
+  --green:#22c55e;
+  --green-dim:rgba(34,197,94,.1);
+  --red:#f43f5e;
+  --red-dim:rgba(244,63,94,.08);
+  --text:#e8edf8;
+  --muted:#6b7fa0;
+  --dim:#2d3d5c;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1.7;}
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #0B1220, #05080f);
-  color: white;
-  line-height: 1.8;
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 20%,rgba(59,130,246,.04) 0%,transparent 65%),
+    radial-gradient(ellipse 55% 38% at 90% 80%,rgba(255,215,0,.04) 0%,transparent 65%),
+    radial-gradient(ellipse 45% 35% at 50% 50%,rgba(0,230,255,.03) 0%,transparent 70%);
+}
+.grid-bg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(59,130,246,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(59,130,246,.018) 1px,transparent 1px);
+  background-size:52px 52px;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 20px;
+/* ══ NAV ══ */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:#ffffff;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 2px 20px rgba(0,0,0,.18);
+  padding:0 16px;
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:2px;padding:8px 0;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:8px;
+  text-decoration:none;margin-right:16px;flex-shrink:0;
+}
+.nav-logo img{height:38px;width:38px;border-radius:8px;object-fit:contain;}
+.nav-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:#111;}
+nav a.nav-link{
+  color:#333;text-decoration:none;font-size:.82rem;font-weight:600;
+  padding:5px 10px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap;
+}
+nav a.nav-link:hover{color:#000;background:#f5f5f5;}
+nav a.nav-link.active{color:var(--gold2);font-weight:700;}
+nav a.nav-link.support{color:var(--gold2);}
+
+/* ══ BREADCRUMB ══ */
+.breadcrumb{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;
+  padding:12px 24px;display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--muted);
+}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb .sep{color:var(--dim);}
+.breadcrumb .cur{color:var(--text);}
+
+/* ══ HERO ══ */
+.hero{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;
+  padding:50px 24px 24px;text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--blue-dim);border:1px solid rgba(59,130,246,.3);
+  color:var(--blue);font-size:.72rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 18px;border-radius:100px;margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:14px;
+  background:linear-gradient(135deg,var(--blue) 0%,#ffffff 50%,var(--gold) 100%);
+  background-size:200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 4s linear infinite;
+}
+@keyframes shimmer{to{background-position:200% center;}}
+.hero-sub{color:var(--muted);font-size:.95rem;max-width:520px;margin:0 auto 24px;line-height:1.7;}
+
+.effective-bar{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--card);border:1px solid var(--border2);
+  padding:10px 20px;border-radius:12px;margin-bottom:16px;
+  font-size:.82rem;color:var(--muted);
+}
+.effective-bar strong{color:var(--text);}
+
+/* agree banner */
+.agree-banner{
+  background:var(--blue-dim);border:1px solid rgba(59,130,246,.22);
+  border-radius:14px;padding:14px 18px;margin:0 auto 40px;
+  max-width:600px;font-size:.86rem;color:var(--muted);
+  display:flex;align-items:flex-start;gap:10px;
+}
+.agree-banner .ab-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+.agree-banner strong{color:var(--text);}
+
+/* ══ QUICK SUMMARY ══ */
+.summary-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 40px;
+}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;}
+.summary-pill{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:18px 14px;text-align:center;transition:border-color .25s,transform .25s;
+}
+.summary-pill:hover{border-color:rgba(59,130,246,.3);transform:translateY(-3px);}
+.sp-icon{font-size:1.5rem;margin-bottom:8px;}
+.sp-title{font-family:'Syne',sans-serif;font-size:.8rem;font-weight:700;color:var(--cyan);margin-bottom:4px;}
+.sp-desc{font-size:.7rem;color:var(--muted);line-height:1.5;}
+
+/* ══ SEC LABEL ══ */
+.sec-label{
+  font-family:'Syne',sans-serif;font-size:.67rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  display:flex;align-items:center;gap:12px;margin-bottom:24px;
+}
+.sec-label::before,.sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ══ TOC ══ */
+.toc-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 40px;
+}
+.toc-card{
+  background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:22px 24px;
+}
+.toc-card h3{
+  font-family:'Syne',sans-serif;font-size:.82rem;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;
+}
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;}
+.toc-item{
+  display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;
+  text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:500;
+  transition:background .2s,color .2s;
+}
+.toc-item:hover{background:var(--bg2);color:var(--cyan);}
+.toc-item .ti-num{
+  font-family:'Syne',sans-serif;font-size:.65rem;font-weight:800;
+  color:var(--dim);min-width:20px;
 }
 
-h1 {
-  text-align: center;
-  color: gold;
-  margin-bottom: 30px;
+/* ══ TERMS CARDS ══ */
+.terms-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 60px;
 }
-
-.card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  transition: 0.3s;
+.terms-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:18px;padding:28px 26px;margin-bottom:14px;
+  transition:border-color .25s,box-shadow .25s;
+  position:relative;overflow:hidden;
+  scroll-margin-top:80px;
 }
-
-.card:hover {
-  transform: translateY(-5px);
+.terms-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--blue),var(--cyan));
+  border-radius:3px 0 0 3px;opacity:0;transition:opacity .3s;
 }
+.terms-card:hover{border-color:rgba(59,130,246,.22);box-shadow:0 8px 32px rgba(0,0,0,.4);}
+.terms-card:hover::before{opacity:1;}
 
-h2 {
-  color: #00e6ff;
+.tc-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px;}
+.tc-num{
+  width:36px;height:36px;border-radius:10px;flex-shrink:0;
+  background:var(--blue-dim);border:1px solid rgba(59,130,246,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-size:.75rem;font-weight:800;color:var(--blue);
 }
+.tc-header-text{}
+.tc-section-num{font-family:'Syne',sans-serif;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:4px;}
+.terms-card h2{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--cyan);}
 
-p {
-  color: #ccc;
+.terms-card p{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:10px;}
+.terms-card p:last-child{margin-bottom:0;}
+.terms-card ul{margin:10px 0 10px 20px;}
+.terms-card ul li{color:var(--muted);font-size:.88rem;margin-bottom:7px;line-height:1.6;}
+.terms-card ul li strong{color:var(--text);}
+
+/* info boxes */
+.info-box{
+  border-radius:10px;padding:14px 16px;margin:12px 0;
+  font-size:.86rem;font-weight:600;
+  display:flex;align-items:flex-start;gap:10px;line-height:1.6;
 }
+.info-box .ib-icon{flex-shrink:0;margin-top:1px;}
+.box-blue{background:var(--blue-dim);border:1px solid rgba(59,130,246,.2);color:var(--blue);}
+.box-green{background:var(--green-dim);border:1px solid rgba(34,197,94,.2);color:var(--green);}
+.box-gold{background:var(--gold-glow);border:1px solid rgba(255,215,0,.2);color:var(--gold);}
+.box-red{background:var(--red-dim);border:1px solid rgba(244,63,94,.18);color:#f87171;}
 
-ul {
-  color: #ccc;
+/* do-dont grid */
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;}
+@media(max-width:500px){.do-dont{grid-template-columns:1fr;}}
+.do-box,.dont-box{border-radius:12px;padding:14px 16px;}
+.do-box{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);}
+.dont-box{background:rgba(244,63,94,.06);border:1px solid rgba(244,63,94,.18);}
+.dd-title{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
+.do-box .dd-title{color:var(--green);}
+.dont-box .dd-title{color:#f87171;}
+.dd-item{font-size:.8rem;color:var(--muted);margin-bottom:6px;display:flex;gap:8px;align-items:flex-start;line-height:1.5;}
+.dd-icon{flex-shrink:0;}
+
+/* ══ CONTACT ══ */
+.contact-card{
+  background:linear-gradient(135deg,rgba(59,130,246,.07),rgba(0,230,255,.05));
+  border:1px solid rgba(59,130,246,.2);border-radius:18px;padding:28px 26px;margin-bottom:14px;
 }
+.contact-card h2{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--cyan);margin-bottom:14px;}
+.contact-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+.contact-row:last-child{border-bottom:none;}
+.cr-icon{font-size:1.2rem;flex-shrink:0;}
+.cr-label{font-size:.72rem;color:var(--muted);margin-bottom:2px;}
+.cr-val{font-size:.9rem;font-weight:600;color:var(--text);}
+.cr-val a{color:var(--cyan);text-decoration:none;}
+.cr-val a:hover{text-decoration:underline;}
 
-.footer {
-  text-align: center;
-  margin-top: 30px;
-  color: #777;
+/* ══ INTERLINKS ══ */
+.links-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 60px;
 }
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px;}
+.link-card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:16px;text-decoration:none;color:var(--text);
+  transition:all .25s;display:flex;gap:12px;align-items:center;
+}
+.link-card:hover{background:var(--card2);border-color:rgba(59,130,246,.28);transform:translateY(-2px);}
+.lc-icon{font-size:1.3rem;flex-shrink:0;}
+.lc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.84rem;margin-bottom:3px;}
+.lc-desc{font-size:.7rem;color:var(--muted);}
 
+/* ══ CTA ══ */
+.cta-wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 70px;}
+.cta-inner{
+  background:linear-gradient(135deg,rgba(59,130,246,.07),rgba(0,230,255,.04));
+  border:1px solid rgba(59,130,246,.2);border-radius:20px;
+  padding:42px 28px;text-align:center;position:relative;overflow:hidden;
+}
+.cta-inner::before{
+  content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);
+  width:260px;height:120px;
+  background:radial-gradient(ellipse,rgba(59,130,246,.12),transparent 70%);pointer-events:none;
+}
+.cta-inner h2{
+  font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:10px;
+  background:linear-gradient(135deg,var(--cyan),#ffffff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.cta-inner p{color:var(--muted);max-width:460px;margin:0 auto 22px;font-size:.88rem;}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-blue{
+  background:linear-gradient(135deg,#1d4ed8,var(--blue));color:#fff;font-weight:700;
+  font-size:.88rem;padding:12px 26px;border-radius:10px;text-decoration:none;
+  transition:opacity .2s,transform .2s;font-family:'DM Sans',sans-serif;
+}
+.btn-blue:hover{opacity:.88;transform:translateY(-2px);}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;font-weight:700;
+  font-size:.88rem;padding:12px 26px;border-radius:10px;text-decoration:none;
+  transition:opacity .2s,transform .2s;font-family:'DM Sans',sans-serif;
+}
+.btn-gold:hover{opacity:.88;transform:translateY(-2px);}
+.btn-outline{
+  background:transparent;color:var(--text);font-weight:600;font-size:.88rem;
+  padding:12px 26px;border-radius:10px;border:1px solid var(--border2);
+  text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;
+}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);}
+
+/* ══ FOOTER ══ */
+footer{
+  position:relative;z-index:1;border-top:1px solid var(--border);
+  text-align:center;padding:26px 20px;color:var(--dim);font-size:.78rem;
+}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:2px;margin-bottom:12px;}
+.footer-links a{color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:6px;}
+.footer-links a:hover{color:var(--gold);}
+
+/* ══ ANIM ══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.hero{animation:fadeUp .55s ease both;}
+.summary-pill{animation:fadeUp .45s ease both;}
+.summary-pill:nth-child(2){animation-delay:.06s;}
+.summary-pill:nth-child(3){animation-delay:.12s;}
+.summary-pill:nth-child(4){animation-delay:.18s;}
+.summary-pill:nth-child(5){animation-delay:.24s;}
+.summary-pill:nth-child(6){animation-delay:.30s;}
+
+@media(max-width:500px){.terms-card{padding:20px 16px;}.toc-grid{grid-template-columns:1fr;}}
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
+<div class="grid-bg"></div>
 
-<h1>📜 Terms of Service</h1>
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://bullbearmarket.in/index.html">
+      <img src="https://bullbearmarket.in/favicon.png" alt="BullBear Market Logo"/>
+      <span class="nav-logo-text">BullBear Market</span>
+    </a>
+    <a href="https://bullbearmarket.in/index.html"           class="nav-link">Home</a>
+    <a href="https://bullbearmarket.in/learning.html"        class="nav-link">Learning</a>
+    <a href="https://bullbearmarket.in/rewards.html"         class="nav-link">Rewards</a>
+    <a href="https://bullbearmarket.in/blog/"                class="nav-link">Blog</a>
+    <a href="https://bullbearmarket.in/faq.html"             class="nav-link">FAQ</a>
+    <a href="https://bullbearmarket.in/about.html"           class="nav-link">About</a>
+    <a href="https://bullbearmarket.in/privacy-policy.html"  class="nav-link">Privacy</a>
+    <a href="https://bullbearmarket.in/terms.html"           class="nav-link active">Terms</a>
+    <a href="https://bullbearmarket.in/support.html"         class="nav-link support">Support</a>
+  </div>
+</nav>
 
-<div class="card">
-<p>
-By using BullBear Market, you agree to these terms and conditions. Please read them carefully before using our platform.
-</p>
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="https://bullbearmarket.in/">Home</a>
+  <span class="sep">›</span>
+  <span class="cur">Terms of Service</span>
 </div>
 
-<div class="card">
-<h2>1. Educational Purpose</h2>
-<p>
-BullBear Market is designed strictly for educational and learning purposes.  
-It provides a simulated trading environment to help users understand how the stock market works.
-</p>
-<p>
-We do not provide financial, investment, or trading advice.
-</p>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">📜 Platform Rules & User Agreement</div>
+  <h1>📜 Terms of Service</h1>
+  <p class="hero-sub">By using BullBear Market, you agree to these terms. Please read them carefully — they are written in clear, simple language so you understand your rights and responsibilities.</p>
+  <div class="effective-bar">
+    📅 <strong>Effective Date:</strong> January 1, 2026 &nbsp;|&nbsp; 🇮🇳 Applicable in all world 
+  </div>
+  <div class="agree-banner">
+    <span class="ab-icon">ℹ️</span>
+    <span><strong>By accessing or using BullBear Market</strong> — website, app, or any feature — you confirm that you have read, understood and agree to be bound by these Terms of Service.</span>
+  </div>
+</section>
 
-<div class="card">
-<h2>2. No Real Money Trading</h2>
-<ul>
-<li>No real money trading is involved on this platform</li>
-<li>No guaranteed profits or returns</li>
-<li>This platform is not a financial advisory service</li>
-</ul>
-<p>
-All activities on this platform are purely virtual and for practice purposes only.
-</p>
-</div>
+<!-- QUICK SUMMARY -->
+<section class="summary-wrap">
+  <div class="sec-label">⚡ Key Points At a Glance</div>
+  <div class="summary-grid">
+    <div class="summary-pill">
+      <div class="sp-icon">🎓</div>
+      <div class="sp-title">Education Only</div>
+      <div class="sp-desc">Platform is strictly for learning — no financial advice given</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">💰</div>
+      <div class="sp-title">No Real Money</div>
+      <div class="sp-desc">All trading is virtual — zero real money involved ever</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">🪙</div>
+      <div class="sp-title">Virtual Coins</div>
+      <div class="sp-desc">Platform coins have no real monetary value, non-withdrawable</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">🏆</div>
+      <div class="sp-title">Rewards Policy</div>
+      <div class="sp-desc">Rewards can be modified or cancelled anytime — no legal claim</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">⚖️</div>
+      <div class="sp-title">Fair Play</div>
+      <div class="sp-desc">Cheating or manipulation = instant account termination</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">🔄</div>
+      <div class="sp-title">Terms May Change</div>
+      <div class="sp-desc">We may update terms — continued use means acceptance</div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h2>3. Virtual Coins</h2>
-<p>
-All coins, points, or balances used within the platform are virtual and have no real-world monetary value.
-</p>
-<p>
-They cannot be withdrawn, transferred, or exchanged for real money.
-</p>
-</div>
+<!-- TABLE OF CONTENTS -->
+<section class="toc-wrap">
+  <div class="sec-label">📋 Table of Contents</div>
+  <div class="toc-card">
+    <h3>Jump to Section</h3>
+    <div class="toc-grid">
+      <a href="#sec1" class="toc-item"><span class="ti-num">01</span>Educational Purpose</a>
+      <a href="#sec2" class="toc-item"><span class="ti-num">02</span>No Real Money Trading</a>
+      <a href="#sec3" class="toc-item"><span class="ti-num">03</span>Virtual Coins & Balance</a>
+      <a href="#sec4" class="toc-item"><span class="ti-num">04</span>Leaderboard & Rewards</a>
+      <a href="#sec5" class="toc-item"><span class="ti-num">05</span>Premium Subscription</a>
+      <a href="#sec6" class="toc-item"><span class="ti-num">06</span>User Responsibility</a>
+      <a href="#sec7" class="toc-item"><span class="ti-num">07</span>Account Termination</a>
+      <a href="#sec8" class="toc-item"><span class="ti-num">08</span>Updates & Changes</a>
+      <a href="#sec9" class="toc-item"><span class="ti-num">09</span>Limitation of Liability</a>
+      <a href="#sec10" class="toc-item"><span class="ti-num">10</span>Intellectual Property</a>
+      <a href="#sec11" class="toc-item"><span class="ti-num">11</span>Contact Us</a>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h2>4. Leaderboard & Rewards</h2>
-<ul>
-<li>Leaderboard rankings are based on performance in simulation</li>
-<li>Rewards (if any) are subject to change</li>
-<li>We reserve the right to modify or cancel rewards anytime</li>
-<li>No legal claim can be made on rewards</li>
-</ul>
-</div>
+<!-- TERMS SECTIONS -->
+<section class="terms-wrap">
+  <div class="sec-label">📜 Full Terms of Service</div>
 
-<div class="card">
-<h2>5. Premium Subscription</h2>
-<ul>
-<li>Premium features are optional</li>
-<li>No guaranteed success or profit</li>
-<li>No unfair advantage over other users</li>
-</ul>
-<p>
-Subscription benefits are limited to features and learning enhancements only.
-</p>
-</div>
+  <!-- 1 -->
+  <div class="terms-card" id="sec1">
+    <div class="tc-header">
+      <div class="tc-num">01</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 01</div>
+        <h2>🎓 Educational Purpose Only</h2>
+      </div>
+    </div>
+    <p>BullBear Market is designed and operated <strong>strictly for educational and learning purposes.</strong> Our platform exists to help beginners understand the stock market through structured learning and simulated practice — nothing more.</p>
+    <p>We provide a safe, risk-free environment where users can learn stock market concepts, practice trading with virtual money, and develop skills before entering real markets.</p>
+    <div class="info-box box-blue">
+      <span class="ib-icon">ℹ️</span>
+      <span><strong>Important:</strong> BullBear Market does NOT provide financial advice, investment recommendations, or trading signals. Any educational content on our platform is for learning purposes only and should NOT be treated as professional financial advice.</span>
+    </div>
+    <p>Users are solely responsible for their real-world investment decisions. Always consult a SEBI-registered financial advisor before investing real money.</p>
+  </div>
 
-<div class="card">
-<h2>6. User Responsibility</h2>
-<p>
-Users are responsible for their actions, decisions, and how they use the platform.
-</p>
-<ul>
-<li>Do not misuse the platform</li>
-<li>Do not attempt to manipulate leaderboard or system</li>
-<li>Use the platform ethically</li>
-</ul>
-</div>
+  <!-- 2 -->
+  <div class="terms-card" id="sec2">
+    <div class="tc-header">
+      <div class="tc-num">02</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 02</div>
+        <h2>💰 No Real Money Trading</h2>
+      </div>
+    </div>
+    <p>BullBear Market is a <strong>100% simulation and learning platform.</strong> There is absolutely no real money involvement at any stage of using this platform.</p>
+    <ul>
+      <li><strong>No real money trading</strong> — all buy/sell actions are purely virtual simulations</li>
+      <li><strong>No guaranteed profits or returns</strong> — virtual performance does not guarantee real market results</li>
+      <li><strong>Not a financial advisory service</strong> — we do not advise on real investments</li>
+      <li><strong>No deposits required</strong> — you never need to deposit, pay or transfer money to trade here</li>
+    </ul>
+    <div class="info-box box-green">
+      <span class="ib-icon">✅</span>
+      <span>All trading activities on BullBear Market are purely virtual and for practice and learning purposes only. Your financial safety is our priority.</span>
+    </div>
+  </div>
 
-<div class="card">
-<h2>7. Account Termination</h2>
-<p>
-We reserve the right to suspend or terminate any account if:
-</p>
-<ul>
-<li>Suspicious activity is detected</li>
-<li>Terms are violated</li>
-<li>Platform misuse occurs</li>
-</ul>
-</div>
+  <!-- 3 -->
+  <div class="terms-card" id="sec3">
+    <div class="tc-header">
+      <div class="tc-num">03</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 03</div>
+        <h2>🪙 Virtual Coins & Balance</h2>
+      </div>
+    </div>
+    <p>BullBear Market uses a virtual coin and balance system to simulate trading. You must clearly understand the nature of these virtual assets:</p>
+    <ul>
+      <li><strong>No real monetary value</strong> — virtual coins, points and balances are purely in-platform units with no real-world financial worth</li>
+      <li><strong>Non-withdrawable</strong> — virtual coins cannot be transferred to bank accounts, wallets or any real payment method</li>
+      <li><strong>Non-transferable</strong> — virtual balance cannot be sent to other users or external platforms</li>
+      <li><strong>Non-exchangeable</strong> — virtual coins cannot be converted to real currency, cryptocurrency, or any other asset</li>
+      <li><strong>Platform-specific</strong> — virtual balance exists only within BullBear Market and has no value outside it</li>
+    </ul>
+    <div class="info-box box-gold">
+      <span class="ib-icon">⚠️</span>
+      <span>Any attempt to sell, trade or monetise virtual coins outside the platform is not sanctioned by BullBear Market and may lead to account termination.</span>
+    </div>
+  </div>
 
-<div class="card">
-<h2>8. Updates & Changes</h2>
-<p>
-We may update or modify these Terms of Service at any time without prior notice.
-</p>
-<p>
-Continued use of the platform means you accept the updated terms.
-</p>
-</div>
+  <!-- 4 -->
+  <div class="terms-card" id="sec4">
+    <div class="tc-header">
+      <div class="tc-num">04</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 04</div>
+        <h2>🏆 Leaderboard & Rewards</h2>
+      </div>
+    </div>
+    <p>BullBear Market hosts weekly and monthly leaderboard contests where top virtual traders may receive rewards. Please understand these important terms regarding rewards:</p>
+    <ul>
+      <li><strong>Performance-based</strong> — leaderboard rankings are based solely on virtual trading performance in simulation</li>
+      <li><strong>Subject to change</strong> — reward amounts, structure and distribution methods may be modified at any time</li>
+      <li><strong>No legal claim</strong> — users cannot make any legal claim or demand on any reward, prize or incentive</li>
+      <li><strong>Right to cancel</strong> — BullBear Market reserves the right to modify, postpone or permanently cancel any reward programme without prior notice</li>
+      <li><strong>Disqualification</strong> — suspected manipulation, cheating or gaming of the leaderboard results in immediate disqualification and account ban</li>
+      <li><strong>Distribution timing</strong> — weekly rewards every Sunday 5 PM, monthly rewards at month end (subject to change)</li>
+    </ul>
+    <div class="info-box box-red">
+      <span class="ib-icon">🚫</span>
+      <span>Any form of leaderboard manipulation, use of bots, multiple accounts, or coordinated cheating will result in <strong>permanent account ban</strong> and forfeiture of all rewards.</span>
+    </div>
+  </div>
 
-<div class="card">
-<h2>9. Limitation of Liability</h2>
-<p>
-BullBear Market is not responsible for:
-</p>
-<ul>
-<li>Any financial losses in real trading</li>
-<li>Decisions made based on learning content</li>
-<li>Technical issues or temporary downtime</li>
-</ul>
-</div>
+  <!-- 5 -->
+  <div class="terms-card" id="sec5">
+    <div class="tc-header">
+      <div class="tc-num">05</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 05</div>
+        <h2>⭐ Premium Subscription</h2>
+      </div>
+    </div>
+    <p>BullBear Market may offer optional premium subscription features. The following terms apply to any premium offering:</p>
+    <ul>
+      <li><strong>Completely optional</strong> — the core learning and virtual trading platform remains 100% free forever</li>
+      <li><strong>No guaranteed success</strong> — premium subscription does not guarantee improved trading results, profits or leaderboard rankings</li>
+      <li><strong>No unfair advantage</strong> — premium features are limited to enhanced learning experience; they do not provide unfair leaderboard or simulation advantages</li>
+      <li><strong>Feature-only</strong> — subscription benefits are restricted to platform features and educational enhancements</li>
+      <li><strong>Refund policy</strong> — refund eligibility subject to terms communicated at point of subscription</li>
+    </ul>
+    <div class="info-box box-blue">
+      <span class="ib-icon">ℹ️</span>
+      <span>Premium is purely for a better learning experience — it does not involve real trading, guarantee profits, or provide any financial returns of any kind.</span>
+    </div>
+  </div>
 
-<div class="card">
-<h2>10. Contact</h2>
-<p>
-If you have any questions, you can contact us at:
-</p>
-<p><b>Email:</b> moneymaker.earnmoney@gmail.com</p>
-</div>
+  <!-- 6 -->
+  <div class="terms-card" id="sec6">
+    <div class="tc-header">
+      <div class="tc-num">06</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 06</div>
+        <h2>👤 User Responsibility</h2>
+      </div>
+    </div>
+    <p>As a user of BullBear Market, you are fully responsible for your actions, behaviour and decisions on the platform. You agree to use BullBear Market only for its intended educational purpose.</p>
+    <div class="do-dont">
+      <div class="do-box">
+        <div class="dd-title">✅ You Should</div>
+        <div class="dd-item"><span class="dd-icon">✅</span>Use the platform for learning and practice</div>
+        <div class="dd-item"><span class="dd-icon">✅</span>Compete fairly on leaderboard</div>
+        <div class="dd-item"><span class="dd-icon">✅</span>Respect other community members</div>
+        <div class="dd-item"><span class="dd-icon">✅</span>Report bugs or issues to support</div>
+        <div class="dd-item"><span class="dd-icon">✅</span>Use one account per person</div>
+      </div>
+      <div class="dont-box">
+        <div class="dd-title">🚫 You Must Not</div>
+        <div class="dd-item"><span class="dd-icon">❌</span>Attempt to manipulate leaderboard or system</div>
+        <div class="dd-item"><span class="dd-icon">❌</span>Create multiple accounts to gain advantage</div>
+        <div class="dd-item"><span class="dd-icon">❌</span>Use bots, scripts or automation tools</div>
+        <div class="dd-item"><span class="dd-icon">❌</span>Share or sell your account credentials</div>
+        <div class="dd-item"><span class="dd-icon">❌</span>Attempt to hack, reverse-engineer or exploit platform</div>
+      </div>
+    </div>
+    <p>Violation of these responsibilities may result in immediate account suspension or permanent termination without prior notice or appeal.</p>
+  </div>
 
-<div class="footer">
-© 2026 BullBear Market – All Rights Reserved
-</div>
+  <!-- 7 -->
+  <div class="terms-card" id="sec7">
+    <div class="tc-header">
+      <div class="tc-num">07</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 07</div>
+        <h2>🚫 Account Termination</h2>
+      </div>
+    </div>
+    <p>BullBear Market reserves the right to <strong>suspend, restrict or permanently terminate</strong> any user account without prior notice under the following circumstances:</p>
+    <ul>
+      <li><strong>Suspicious or fraudulent activity</strong> detected on the account</li>
+      <li><strong>Violation of these Terms of Service</strong> — any clause herein</li>
+      <li><strong>Leaderboard manipulation</strong> — use of bots, scripts, multiple accounts or cheating</li>
+      <li><strong>Platform misuse</strong> — using the platform for any purpose other than educational learning</li>
+      <li><strong>Harassment or abusive behaviour</strong> — towards other users, community or support team</li>
+      <li><strong>Providing false information</strong> — fake accounts, impersonation or identity fraud</li>
+    </ul>
+    <div class="info-box box-gold">
+      <span class="ib-icon">⚠️</span>
+      <span>Upon account termination, all virtual coins, leaderboard ranking, contest entries and associated rewards are permanently forfeited with no right to appeal or recovery.</span>
+    </div>
+    <p>Users may also voluntarily request account deletion at any time by emailing support. Refer to our <a href="https://bullbearmarket.in/privacy-policy.html" style="color:var(--cyan);">Privacy Policy</a> for data deletion details.</p>
+  </div>
 
-</div>
+  <!-- 8 -->
+  <div class="terms-card" id="sec8">
+    <div class="tc-header">
+      <div class="tc-num">08</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 08</div>
+        <h2>🔄 Updates & Changes to Terms</h2>
+      </div>
+    </div>
+    <p>BullBear Market reserves the right to update, modify or replace these Terms of Service at any time. Changes may be made for reasons including:</p>
+    <ul>
+      <li>New platform features or services being added</li>
+      <li>Changes in applicable laws or regulations</li>
+      <li>Improvements in clarity or user understanding</li>
+      <li>Business or operational requirements</li>
+    </ul>
+    <div class="info-box box-blue">
+      <span class="ib-icon">📅</span>
+      <span>Significant changes will be communicated via email or platform notification where possible. The effective date at the top of this page will be updated with each revision.</span>
+    </div>
+    <p><strong>Continued use of BullBear Market after any updates to these Terms constitutes your acceptance of the revised Terms.</strong> If you do not agree with updated terms, please discontinue use of the platform.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="terms-card" id="sec9">
+    <div class="tc-header">
+      <div class="tc-num">09</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 09</div>
+        <h2>⚖️ Limitation of Liability</h2>
+      </div>
+    </div>
+    <p>BullBear Market is an educational platform only. To the maximum extent permitted by applicable law, BullBear Market shall not be liable for:</p>
+    <ul>
+      <li><strong>Financial losses in real markets</strong> — any real-world investment decisions made after using our platform</li>
+      <li><strong>Decisions based on educational content</strong> — our content is for learning, not professional financial advice</li>
+      <li><strong>Technical issues or downtime</strong> — temporary unavailability, bugs or errors on the platform</li>
+      <li><strong>Data loss</strong> — loss of virtual coins, rankings or progress due to technical failures</li>
+      <li><strong>Third-party services</strong> — actions or failures of third-party analytics, advertising or infrastructure providers</li>
+      <li><strong>Indirect or consequential damages</strong> — any indirect loss arising from use or inability to use the platform</li>
+    </ul>
+    <div class="info-box box-red">
+      <span class="ib-icon">⚠️</span>
+      <span>BullBear Market provides the platform "as is" — we make no warranties about uninterrupted availability or error-free operation. Use at your own discretion.</span>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="terms-card" id="sec10">
+    <div class="tc-header">
+      <div class="tc-num">10</div>
+      <div class="tc-header-text">
+        <div class="tc-section-num">Section 10</div>
+        <h2>🔐 Intellectual Property</h2>
+      </div>
+    </div>
+    <p>All content on BullBear Market — including but not limited to text, graphics, logos, course content, blog articles, UI design, images and branding — is the intellectual property of BullBear Market.</p>
+    <ul>
+      <li><strong>No copying</strong> — platform content may not be copied, reproduced or republished without written permission</li>
+      <li><strong>No redistribution</strong> — course content and educational material may not be redistributed or sold</li>
+      <li><strong>Personal use only</strong> — all content is licensed for personal, non-commercial educational use only</li>
+      <li><strong>User-generated content</strong> — by contributing content (if applicable), you grant BullBear Market a non-exclusive license to use it on the platform</li>
+    </ul>
+    <div class="info-box box-blue">
+      <span class="ib-icon">ℹ️</span>
+      <span>Sharing our blog articles or educational content for non-commercial purposes with proper credit to BullBear Market is welcome and appreciated.</span>
+    </div>
+  </div>
+
+  <!-- 11: CONTACT -->
+  <div class="contact-card" id="sec11">
+    <h2>📩 Contact — Terms Questions</h2>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:16px;">If you have any questions about these Terms of Service or need clarification on any clause, please reach out:</p>
+    <div class="contact-row">
+      <span class="cr-icon">📧</span>
+      <div><div class="cr-label">Email</div><div class="cr-val"><a href="mailto:moneymaker.earnmoney@gmail.com">moneymaker.earnmoney@gmail.com</a></div></div>
+    </div>
+    <div class="contact-row">
+      <span class="cr-icon">⏰</span>
+      <div><div class="cr-label">Response Time</div><div class="cr-val">Within 24–48 hours</div></div>
+    </div>
+    <div class="contact-row">
+      <span class="cr-icon">🌐</span>
+      <div><div class="cr-label">Support Page</div><div class="cr-val"><a href="https://bullbearmarket.in/support.html">bullbearmarket.in/support.html</a></div></div>
+    </div>
+    <div class="contact-row">
+      <span class="cr-icon">🇮🇳</span>
+      <div><div class="cr-label">Jurisdiction</div><div class="cr-val">India — Educational Platform, Not SEBI Registered</div></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- INTERLINKS -->
+<section class="links-wrap">
+  <div class="sec-label">🔗 Related Pages</div>
+  <div class="links-grid">
+    <a href="https://bullbearmarket.in/privacy-policy.html" class="link-card">
+      <span class="lc-icon">🔒</span>
+      <div><div class="lc-title">Privacy Policy</div><div class="lc-desc">How we protect and handle your data</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/support.html" class="link-card">
+      <span class="lc-icon">💬</span>
+      <div><div class="lc-title">Support</div><div class="lc-desc">Contact us — reply within 24–48h</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/faq.html" class="link-card">
+      <span class="lc-icon">❓</span>
+      <div><div class="lc-title">FAQ</div><div class="lc-desc">25 detailed questions answered</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/about.html" class="link-card">
+      <span class="lc-icon">ℹ️</span>
+      <div><div class="lc-title">About BullBear</div><div class="lc-desc">Our mission and platform values</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/rewards.html" class="link-card">
+      <span class="lc-icon">🏆</span>
+      <div><div class="lc-title">Rewards Policy</div><div class="lc-desc">Full leaderboard & rewards details</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/learning.html" class="link-card">
+      <span class="lc-icon">📚</span>
+      <div><div class="lc-title">Start Learning</div><div class="lc-desc">Free stock market course — 20+ topics</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap">
+  <div class="cta-inner">
+    <h2>Learn Safely. Trade Smart. 🚀</h2>
+    <p>BullBear Market is India's safest free stock market learning platform. No real money, no risk — just learning, practice and rewards.</p>
+    <div class="btn-row">
+      <a href="https://bullbearmarket.in/learning.html" class="btn-blue">📚 Start Learning Free</a>
+      <a href="https://bullbearmarket.in/rewards.html" class="btn-gold">🏆 View Rewards</a>
+      <a href="https://bullbearmarket.in/support.html" class="btn-outline">📩 Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://bullbearmarket.in/index.html">Home</a>
+    <a href="https://bullbearmarket.in/learning.html">Learning</a>
+    <a href="https://bullbearmarket.in/rewards.html">Rewards</a>
+    <a href="https://bullbearmarket.in/blog/">Blog</a>
+    <a href="https://bullbearmarket.in/faq.html">FAQ</a>
+    <a href="https://bullbearmarket.in/about.html">About</a>
+    <a href="https://bullbearmarket.in/privacy-policy.html">Privacy Policy</a>
+    <a href="https://bullbearmarket.in/terms.html">Terms</a>
+    <a href="https://bullbearmarket.in/support.html">Support</a>
+  </div>
+  <p>© 2026 BullBear Market. All rights reserved. | 🇮🇳 Made in India | Educational Platform – No Real Money Trading</p>
+</footer>
 
 </body>
-</html>
+      </html>
