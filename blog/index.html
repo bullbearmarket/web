@@ -1,225 +1,872 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Stock Market Blog India – Free Trading Guides | BullBear Market</title>
+<meta name="description" content="Free stock market blog for Indian beginners — trading guides, technical analysis, risk management, candlestick patterns, strategies and more in Hindi & English. Learn trading free."/>
+<meta name="keywords" content="stock market blog india, trading for beginners india, free stock market course, technical analysis guide india, learn trading hindi, share market blog, bullbear market blog, intraday trading guide india"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="BullBear Market"/>
+<meta name="geo.region" content="IN"/>
+<meta name="geo.placename" content="India"/>
+<meta name="language" content="English, Hindi"/>
+<link rel="canonical" href="https://bullbearmarket.in/blog/"/>
+<link rel="icon" href="https://bullbearmarket.in/favicon.png"/>
+<meta property="og:title" content="Stock Market Blog India – Free Trading Guides | BullBear Market"/>
+<meta property="og:description" content="Free stock market learning blog for Indian beginners — guides, strategies, technical analysis in Hindi & English."/>
+<meta property="og:image" content="https://bullbearmarket.in/photo1.png"/>
+<meta property="og:url" content="https://bullbearmarket.in/blog/"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Blog",
+  "name":"BullBear Market Blog",
+  "url":"https://bullbearmarket.in/blog/",
+  "description":"Free stock market learning blog for Indian beginners covering trading strategies, technical analysis, risk management and more in Hindi and English.",
+  "publisher":{"@type":"Organization","name":"BullBear Market","url":"https://bullbearmarket.in","logo":"https://bullbearmarket.in/favicon.png"},
+  "inLanguage":["en","hi"],
+  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://bullbearmarket.in/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://bullbearmarket.in/blog/"}
+  ]}
+}
+</script>
 
-<title>Stock Market Blog India | Free Trading Learning – BullBear Market</title>
-
-<meta name="description" content="Learn stock market trading for free in India. Beginner to advanced trading guides, technical analysis, risk management, and strategies in Hindi & English.">
-<meta name="keywords" content="stock market blog india, trading for beginners india, learn trading free, stock market course india, technical analysis guide, bullbear market blog">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://bullbearmarket.in/blog/">
-
-<!-- GEO -->
-<meta name="geo.region" content="IN">
-<meta name="geo.country" content="India">
-<meta name="language" content="English, Hindi">
-
-<!-- Open Graph -->
-<meta property="og:title" content="BullBear Market Blog – Learn Trading Free India">
-<meta property="og:description" content="Free stock market learning blog for Indian beginners.">
-<meta property="og:image" content="https://bullbearmarket.in/photo1.png">
-<meta property="og:url" content="https://bullbearmarket.in/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
 <style>
+:root{
+  --bg:#050810;
+  --bg2:#080d1a;
+  --card:#0d1526;
+  --card2:#111d30;
+  --border:#182038;
+  --border2:#1f2d48;
+  --gold:#FFD700;
+  --gold2:#e6a800;
+  --gold-glow:rgba(255,215,0,.12);
+  --cyan:#00e6ff;
+  --cyan-dim:rgba(0,230,255,.09);
+  --green:#22c55e;
+  --green-dim:rgba(34,197,94,.1);
+  --text:#e8edf8;
+  --muted:#6b7fa0;
+  --dim:#2d3d5c;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
-  color: white;
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 65% 45% at 15% 20%,rgba(255,215,0,.04) 0%,transparent 65%),
+    radial-gradient(ellipse 55% 40% at 85% 75%,rgba(0,230,255,.04) 0%,transparent 65%),
+    radial-gradient(ellipse 45% 35% at 50% 50%,rgba(34,197,94,.03) 0%,transparent 70%);
+}
+.grid-bg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,215,0,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,215,0,.018) 1px,transparent 1px);
+  background-size:52px 52px;
 }
 
-/* HEADER */
-.header {
-  padding: 15px 20px;
-  background: #111827;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ══ NAV ══ */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:#ffffff;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 2px 20px rgba(0,0,0,.18);
+  padding:0 16px;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:2px;padding:8px 0;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:8px;
+  text-decoration:none;margin-right:16px;flex-shrink:0;
+}
+.nav-logo img{height:38px;width:38px;border-radius:8px;object-fit:contain;}
+.nav-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:#111;}
+nav a.nav-link{
+  color:#333;text-decoration:none;font-size:.82rem;font-weight:600;
+  padding:5px 10px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap;
+}
+nav a.nav-link:hover{color:#000;background:#f5f5f5;}
+nav a.nav-link.active{color:var(--gold2);font-weight:700;}
+nav a.nav-link.support{color:var(--gold2);}
+
+/* ══ BREADCRUMB ══ */
+.breadcrumb{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;
+  padding:12px 24px;display:flex;align-items:center;gap:6px;
+  font-size:.75rem;color:var(--muted);
+}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb .sep{color:var(--dim);}
+.breadcrumb .cur{color:var(--text);}
+
+/* ══ HERO ══ */
+.hero{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;
+  padding:50px 24px 36px;
+  display:grid;grid-template-columns:1fr 420px;gap:52px;align-items:center;
+}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px;padding:36px 20px 28px;}}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold-glow);border:1px solid rgba(255,215,0,.3);
+  color:var(--gold);font-size:.72rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 16px;border-radius:100px;margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2rem,4.5vw,3.2rem);
+  font-weight:800;line-height:1.12;margin-bottom:14px;
+  background:linear-gradient(135deg,var(--gold) 0%,#ffffff 55%,var(--cyan) 100%);
+  background-size:200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 4s linear infinite;
+}
+@keyframes shimmer{to{background-position:200% center;}}
+.hero-sub{color:var(--muted);font-size:1rem;line-height:1.72;margin-bottom:24px;max-width:540px;}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.hero-tag{
+  background:var(--card);border:1px solid var(--border2);
+  padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:500;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* hero image card */
+.hero-img-card{
+  position:relative;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(255,215,0,.2);
+  box-shadow:0 0 60px rgba(255,215,0,.08);
+}
+.hero-img-card img{
+  width:100%;display:block;border-radius:22px;
+  object-fit:cover;aspect-ratio:4/3;
+}
+.hero-img-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(5,8,16,.85) 0%,transparent 55%);
+  border-radius:22px;
+}
+.hero-img-badge{
+  position:absolute;bottom:16px;left:16px;right:16px;
+  background:rgba(5,8,16,.7);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,215,0,.2);border-radius:12px;
+  padding:12px 16px;display:flex;align-items:center;justify-content:space-between;
+}
+.hib-left{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--gold);}
+.hib-sub{font-size:.72rem;color:var(--muted);}
+.hib-right{font-size:1.5rem;}
+@media(max-width:900px){.hero-img-card{max-width:420px;margin:0 auto;}}
+
+/* ══ BUTTONS ══ */
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#000;font-weight:700;font-size:.88rem;
+  padding:12px 26px;border-radius:12px;text-decoration:none;
+  transition:opacity .2s,transform .2s;font-family:'DM Sans',sans-serif;
+  display:inline-block;
+}
+.btn-gold:hover{opacity:.88;transform:translateY(-2px);}
+.btn-outline{
+  background:transparent;color:var(--text);font-weight:600;font-size:.88rem;
+  padding:12px 26px;border-radius:12px;border:1px solid var(--border2);
+  text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;
+  display:inline-block;
+}
+.btn-outline:hover{border-color:var(--gold2);color:var(--gold);}
+
+/* ══ STATS ══ */
+.stats-strip{
+  position:relative;z-index:1;
+  background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.stats-inner{
+  max-width:1200px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+@media(max-width:600px){.stats-inner{grid-template-columns:repeat(2,1fr);}}
+.stat-cell{padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
+.stat-cell:last-child{border-right:none;}
+.stat-val{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--gold);}
+.stat-key{font-size:.7rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.06em;}
+
+/* ══ FILTER ══ */
+.filter-wrap{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;
+  padding:40px 24px 20px;
+  display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+.filter-btn{
+  background:var(--card);border:1px solid var(--border2);
+  color:var(--muted);padding:8px 20px;border-radius:100px;
+  font-size:.82rem;font-weight:500;cursor:pointer;
+  transition:all .22s;font-family:'DM Sans',sans-serif;
+}
+.filter-btn:hover{border-color:var(--gold);color:var(--gold);}
+.filter-btn.active{
+  background:var(--gold-glow);border-color:rgba(255,215,0,.45);
+  color:var(--gold);font-weight:700;
 }
 
-.header a {
-  color: gold;
-  text-decoration: none;
-  font-weight: bold;
+/* ══ SEARCH ══ */
+.search-wrap{
+  position:relative;z-index:1;
+  max-width:480px;margin:0 auto 8px;padding:0 24px;
+}
+.search-wrap input{
+  width:100%;background:var(--card);border:1px solid var(--border2);
+  border-radius:12px;padding:13px 44px 13px 18px;
+  color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.search-wrap input::placeholder{color:var(--dim);}
+.search-wrap input:focus{border-color:var(--gold2);box-shadow:0 0 0 3px var(--gold-glow);}
+.s-icon{
+  position:absolute;right:36px;top:50%;transform:translateY(-50%);
+  color:var(--dim);font-size:1rem;pointer-events:none;
 }
 
-/* TITLE */
-.title {
-  text-align: center;
-  padding: 40px 20px;
+/* ══ SEC LABEL ══ */
+.sec-label{
+  font-family:'Syne',sans-serif;font-size:.67rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  display:flex;align-items:center;gap:12px;margin-bottom:24px;
+}
+.sec-label::before,.sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ══ BLOG GRID ══ */
+.blogs-wrap{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;padding:16px 24px 60px;
+}
+.blogs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:18px;
 }
 
-.title h1 {
-  font-size: 34px;
-  background: linear-gradient(90deg, gold, #00e6ff);
-  -webkit-background-clip: text;
-  color: transparent;
+/* BLOG CARD */
+.blog-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;overflow:hidden;
+  text-decoration:none;color:var(--text);
+  transition:all .28s;position:relative;display:flex;flex-direction:column;
 }
-
-.title p {
-  color: #aaa;
+.blog-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--cyan));
+  opacity:0;transition:opacity .3s;
 }
-
-/* GRID */
-.blogs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 20px;
-  padding: 20px;
+.blog-card:hover{
+  border-color:rgba(255,215,0,.3);
+  background:var(--card2);
+  transform:translateY(-5px);
+  box-shadow:0 16px 48px rgba(0,0,0,.55);
 }
+.blog-card:hover::before{opacity:1;}
 
-/* CARD */
-.card {
-  background: #111827;
-  border-radius: 18px;
-  padding: 22px;
-  transition: 0.3s;
-  cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.05);
+.card-img{
+  width:100%;aspect-ratio:16/9;overflow:hidden;
+  background:linear-gradient(135deg,rgba(255,215,0,.1),rgba(0,230,255,.08));
+  display:flex;align-items:center;justify-content:center;
+  font-size:3.5rem;border-bottom:1px solid var(--border);
+  flex-shrink:0;position:relative;
 }
+.card-img img{width:100%;height:100%;object-fit:cover;}
+.card-img .emoji-fallback{font-size:3rem;}
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px;}
+.card-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.card-tag{
+  font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 10px;border-radius:100px;
 }
+.tag-beginner{background:rgba(34,197,94,.1);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.tag-strategy{background:rgba(255,215,0,.1);color:var(--gold);border:1px solid rgba(255,215,0,.2);}
+.tag-advanced{background:rgba(244,63,94,.1);color:#f87171;border:1px solid rgba(244,63,94,.2);}
+.tag-tips{background:rgba(0,230,255,.1);color:var(--cyan);border:1px solid rgba(0,230,255,.2);}
+.tag-app{background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.2);}
 
-.card h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
+.card-read-time{font-size:.7rem;color:var(--dim);}
+.card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.97rem;line-height:1.35;}
+.card-desc{font-size:.81rem;color:var(--muted);line-height:1.65;flex:1;}
+.card-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.78rem;font-weight:700;
+  color:var(--gold);margin-top:6px;
+  transition:gap .2s;
 }
+.blog-card:hover .card-cta{gap:10px;}
+.card-cta::after{content:'→';}
 
-.card p {
-  color: #aaa;
-  font-size: 14px;
+/* featured card */
+.blog-card.featured{
+  grid-column:span 2;
 }
+@media(max-width:700px){.blog-card.featured{grid-column:span 1;}}
+.blog-card.featured .card-img{aspect-ratio:21/9;font-size:5rem;}
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 9px 18px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, gold, #00e6ff);
-  color: black;
-  font-weight: bold;
+/* coming soon card */
+.card-coming{
+  background:linear-gradient(135deg,rgba(255,215,0,.05),rgba(0,230,255,.03));
+  border:1px dashed var(--border2);border-radius:20px;
+  padding:32px 20px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
 }
+.card-coming .cs-icon{font-size:2.5rem;}
+.card-coming .cs-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--gold);}
+.card-coming .cs-desc{font-size:.78rem;color:var(--muted);}
 
+/* hidden */
+.blog-card.hidden,.card-coming.hidden{display:none;}
+
+/* no result */
+.no-result{
+  text-align:center;padding:60px 20px;color:var(--muted);
+  display:none;grid-column:1/-1;
+}
+.no-result .nr-icon{font-size:2.5rem;margin-bottom:12px;}
+
+/* ══ FEATURED ARTICLE ══ */
+.featured-wrap{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;padding:0 24px 50px;
+}
+.featured-big{
+  background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(0,230,255,.05));
+  border:1px solid rgba(255,215,0,.2);border-radius:22px;
+  overflow:hidden;display:grid;grid-template-columns:1fr 1fr;
+}
+@media(max-width:800px){.featured-big{grid-template-columns:1fr;}}
+.fb-img{
+  background:linear-gradient(135deg,rgba(255,215,0,.12),rgba(0,230,255,.08));
+  display:flex;align-items:center;justify-content:center;font-size:6rem;
+  min-height:220px;border-right:1px solid rgba(255,215,0,.1);
+}
+@media(max-width:800px){.fb-img{border-right:none;border-bottom:1px solid rgba(255,215,0,.1);min-height:160px;}}
+.fb-img img{width:100%;height:100%;object-fit:cover;}
+.fb-body{padding:32px 28px;}
+.fb-label{
+  font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.fb-title{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;line-height:1.25;margin-bottom:12px;}
+.fb-desc{color:var(--muted);font-size:.88rem;line-height:1.72;margin-bottom:20px;}
+
+/* ══ TOPICS QUICK LINKS ══ */
+.topics-wrap{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;padding:0 24px 60px;
+}
+.topics-scroll{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
+  gap:12px;
+}
+.topic-pill{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:14px 16px;text-decoration:none;color:var(--text);
+  transition:all .25s;display:flex;align-items:center;gap:10px;
+}
+.topic-pill:hover{border-color:rgba(0,230,255,.3);background:var(--card2);transform:translateY(-2px);}
+.tp-icon{font-size:1.2rem;flex-shrink:0;}
+.tp-text{font-family:'Syne',sans-serif;font-weight:700;font-size:.8rem;line-height:1.3;}
+
+/* ══ INTERLINKS ══ */
+.links-wrap{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;padding:0 24px 60px;
+}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+.link-card{
+  background:var(--card);border:1px solid var(--border);border-radius:16px;
+  padding:18px;text-decoration:none;color:var(--text);
+  transition:all .25s;display:flex;gap:12px;align-items:center;
+}
+.link-card:hover{background:var(--card2);border-color:rgba(255,215,0,.28);transform:translateY(-2px);}
+.lc-icon{font-size:1.4rem;flex-shrink:0;}
+.lc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.86rem;margin-bottom:3px;}
+.lc-desc{font-size:.7rem;color:var(--muted);}
+
+/* ══ CTA ══ */
+.cta-wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 24px 70px;}
+.cta-inner{
+  background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(0,230,255,.04));
+  border:1px solid rgba(255,215,0,.2);border-radius:22px;
+  padding:48px 28px;text-align:center;position:relative;overflow:hidden;
+}
+.cta-inner::before{
+  content:'';position:absolute;top:-70px;left:50%;transform:translateX(-50%);
+  width:300px;height:140px;
+  background:radial-gradient(ellipse,rgba(255,215,0,.12),transparent 70%);
+  pointer-events:none;
+}
+.cta-inner h2{
+  font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;
+  margin-bottom:10px;
+  background:linear-gradient(135deg,var(--gold),#ffffff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.cta-inner p{color:var(--muted);max-width:500px;margin:0 auto 24px;font-size:.9rem;}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+/* ══ FOOTER ══ */
+footer{
+  position:relative;z-index:1;
+  border-top:1px solid var(--border);
+  text-align:center;padding:26px 20px;
+  color:var(--dim);font-size:.78rem;
+}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:2px;margin-bottom:12px;}
+.footer-links a{color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:6px;}
+.footer-links a:hover{color:var(--gold);}
+
+/* ══ ANIM ══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero{animation:fadeUp .55s ease both;}
+.blog-card{animation:fadeUp .4s ease both;}
+.blog-card:nth-child(2){animation-delay:.05s;}
+.blog-card:nth-child(3){animation-delay:.10s;}
+.blog-card:nth-child(4){animation-delay:.15s;}
+.blog-card:nth-child(5){animation-delay:.20s;}
+.blog-card:nth-child(6){animation-delay:.25s;}
 </style>
-
 </head>
-
 <body>
 
-<div class="header">
-  <a href="../index.html">⬅ Back</a>
-  <div>BullBear Blog</div>
+<div class="grid-bg"></div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://bullbearmarket.in/index.html">
+      <img src="https://bullbearmarket.in/favicon.png" alt="BullBear Market Logo"/>
+      <span class="nav-logo-text">BullBear Market</span>
+    </a>
+    <a href="https://bullbearmarket.in/index.html"            class="nav-link">Home</a>
+    <a href="https://bullbearmarket.in/learning.html"         class="nav-link">Learning</a>
+    <a href="https://bullbearmarket.in/rewards.html"          class="nav-link">Rewards</a>
+    <a href="https://bullbearmarket.in/blog/"                 class="nav-link active">Blog</a>
+    <a href="https://bullbearmarket.in/faq.html"              class="nav-link">FAQ</a>
+    <a href="https://bullbearmarket.in/about.html"            class="nav-link">About</a>
+    <a href="https://bullbearmarket.in/privacy-policy.html"   class="nav-link">Privacy</a>
+    <a href="https://bullbearmarket.in/terms.html"            class="nav-link">Terms</a>
+    <a href="https://bullbearmarket.in/support.html"          class="nav-link support">Support</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="https://bullbearmarket.in/">Home</a>
+  <span class="sep">›</span>
+  <span class="cur">Blog</span>
 </div>
 
-<div class="title">
-  <h1>📚 Learn Stock Market</h1>
-  <p>Simple guides for beginners & traders</p>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div>
+    <div class="hero-badge">📝 Free Trading Education · Hindi & English</div>
+    <h1>Stock Market Blog<br/>— Learn Free</h1>
+    <p class="hero-sub">India के beginner traders के लिए free stock market guides — technical analysis, strategies, risk management और बहुत कुछ। Simple Hindi & English में।</p>
+    <div class="hero-tags">
+      <span class="hero-tag">✅ 100% Free</span>
+      <span class="hero-tag">🇮🇳 Hindi + English</span>
+      <span class="hero-tag">📊 14 Articles</span>
+      <span class="hero-tag">🎯 Beginner to Advanced</span>
+    </div>
+    <div class="hero-btns">
+      <a href="https://bullbearmarket.in/blog/trading-for-beginners.html" class="btn-gold">🚀 Start Reading</a>
+      <a href="https://bullbearmarket.in/learning.html" class="btn-outline">📚 Full Learning Hub</a>
+    </div>
+  </div>
+
+  <div class="hero-img-card">
+    <img src="https://bullbearmarket.in/photo1.png" alt="BullBear Market – Free Stock Market Blog India" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+    <div style="display:none;width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,rgba(255,215,0,.1),rgba(0,230,255,.08));align-items:center;justify-content:center;font-size:5rem;">📊</div>
+    <div class="hero-img-overlay"></div>
+    <div class="hero-img-badge">
+      <div><div class="hib-left">Free Stock Market Blog</div><div class="hib-sub">India's best free trading guides</div></div>
+      <div class="hib-right">📝</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-cell"><div class="stat-val">14</div><div class="stat-key">Articles</div></div>
+    <div class="stat-cell"><div class="stat-val">4</div><div class="stat-key">Categories</div></div>
+    <div class="stat-cell"><div class="stat-val">₹0</div><div class="stat-key">Cost</div></div>
+    <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">Languages</div></div>
+  </div>
 </div>
 
-<div class="blogs">
+<!-- FEATURED ARTICLE -->
+<section class="featured-wrap">
+  <div class="sec-label">⭐ Featured Article</div>
+  <div class="featured-big">
+    <div class="fb-img">
+      <img src="https://bullbearmarket.in/photo2.png" alt="Ultimate Trading Guide" onerror="this.style.display='none';this.parentElement.innerHTML='📈'"/>
+    </div>
+    <div class="fb-body">
+      <div class="fb-label">🏆 Most Popular · Beginner to Advanced</div>
+      <div class="fb-title">Ultimate Stock Market Trading Guide — Beginner to Advanced</div>
+      <p class="fb-desc">India's most complete free stock market guide. Covers everything from what is a stock to advanced technical analysis, risk management, trading psychology and complete strategy building. Hindi & English both.</p>
+      <a href="https://bullbearmarket.in/blog/trading-for-beginners.html" class="btn-gold">📖 Read Full Guide →</a>
+    </div>
+  </div>
+</section>
 
-<!-- 14 BLOG CARDS -->
-
-<div class="card" onclick="location.href='stock-market-guide.html'">
-<h2>📊 Stock Market Guide</h2>
-<p>Understand basics of stock market</p>
-<div class="btn">Read</div>
+<!-- SEARCH -->
+<div class="search-wrap">
+  <input type="text" id="searchInput" placeholder="Search articles…" autocomplete="off"/>
+  <span class="s-icon">🔍</span>
 </div>
 
-<div class="card" onclick="location.href='learn-trading.html'">
-<h2>📈 Learn Trading</h2>
-<p>Start trading step by step</p>
-<div class="btn">Read</div>
+<!-- FILTER TABS -->
+<div class="filter-wrap">
+  <button class="filter-btn active" data-cat="all">All Articles</button>
+  <button class="filter-btn" data-cat="beginner">🌱 Beginner</button>
+  <button class="filter-btn" data-cat="strategy">🎯 Strategy</button>
+  <button class="filter-btn" data-cat="advanced">🔥 Advanced</button>
+  <button class="filter-btn" data-cat="app">📱 Platform</button>
 </div>
 
-<div class="card" onclick="location.href='trading-for-beginners.html'">
-<h2>🚀 Trading for Beginners</h2>
-<p>Complete beginner guide</p>
-<div class="btn">Read</div>
-</div>
+<!-- ══ BLOG CARDS ══ -->
+<section class="blogs-wrap">
+  <div class="sec-label">📚 All Articles</div>
+  <div class="blogs-grid" id="blogsGrid">
 
-<div class="card" onclick="location.href='best-stock-market-learning-app.html'">
-<h2>📱 Best Stock Market Learning App</h2>
-<p>Why BullBear is best</p>
-<div class="btn">Read</div>
-</div>
+    <a href="stock-market-guide.html" class="blog-card featured" data-cat="beginner" data-title="stock market guide understand basics share market">
+      <div class="card-img"><span class="emoji-fallback">📊</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-beginner">Beginner</span>
+          <span class="card-read-time">⏱ 8 min read</span>
+        </div>
+        <div class="card-title">📊 Complete Stock Market Guide for Beginners India</div>
+        <div class="card-desc">Everything you need to start learning share market from zero — what is NSE, BSE, Nifty, Sensex, how stocks are bought and sold, demat account basics. Hindi & English.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='how-to-learn-trading-for-beginners.html'">
-<h2>🎯 How to Learn Trading</h2>
-<p>Step-by-step roadmap</p>
-<div class="btn">Read</div>
-</div>
+    <a href="learn-trading.html" class="blog-card" data-cat="beginner" data-title="learn trading step by step basics">
+      <div class="card-img"><span class="emoji-fallback">📈</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-beginner">Beginner</span>
+          <span class="card-read-time">⏱ 6 min read</span>
+        </div>
+        <div class="card-title">📈 How to Learn Stock Market Trading</div>
+        <div class="card-desc">A structured step-by-step guide to learn trading from absolute zero. What to learn first, what to avoid, and how to build real skills.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='trading-for-beginners-part2.html'">
-<h2>📘 Trading for Beginners Part 2</h2>
-<p>Advanced concepts</p>
-<div class="btn">Read</div>
-</div>
+    <a href="trading-for-beginners.html" class="blog-card" data-cat="beginner" data-title="trading for beginners complete guide india hindi english">
+      <div class="card-img"><span class="emoji-fallback">🚀</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-beginner">Beginner</span>
+          <span class="card-read-time">⏱ 10 min read</span>
+        </div>
+        <div class="card-title">🚀 Trading for Beginners — Complete Guide India</div>
+        <div class="card-desc">Complete beginner's guide to stock market trading — types of trading, how market works, candlestick basics, risk management. Hindi & English both included.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='risk-management.html'">
-<h2>🛡️ Risk Management</h2>
-<p>Protect your capital</p>
-<div class="btn">Read</div>
-</div>
+    <a href="best-stock-market-learning-app.html" class="blog-card" data-cat="app" data-title="best stock market learning app india bullbear virtual trading">
+      <div class="card-img"><span class="emoji-fallback">📱</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-app">Platform</span>
+          <span class="card-read-time">⏱ 5 min read</span>
+        </div>
+        <div class="card-title">📱 Best Stock Market Learning App India 2026</div>
+        <div class="card-desc">Why BullBear Market is India's best free stock market learning and virtual trading app — features, benefits and how it compares to paid alternatives.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='risk-management-part2.html'">
-<h2>🛡️ Risk Management Part 2</h2>
-<p>Advanced risk strategies</p>
-<div class="btn">Read</div>
-</div>
+    <a href="how-to-learn-trading-for-beginners.html" class="blog-card" data-cat="beginner" data-title="how to learn trading for beginners roadmap step by step">
+      <div class="card-img"><span class="emoji-fallback">🎯</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-beginner">Beginner</span>
+          <span class="card-read-time">⏱ 7 min read</span>
+        </div>
+        <div class="card-title">🎯 How to Learn Trading — Step-by-Step Roadmap</div>
+        <div class="card-desc">A complete month-by-month learning roadmap from complete beginner to confident trader. What to study, how to practice, and when to go live.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='ultimate-guide.html'">
-<h2>🔥 Ultimate Guide</h2>
-<p>Complete roadmap</p>
-<div class="btn">Read</div>
-</div>
+    <a href="trading-for-beginners-part2.html" class="blog-card" data-cat="advanced" data-title="trading for beginners part 2 advanced concepts technical analysis">
+      <div class="card-img"><span class="emoji-fallback">📘</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-advanced">Advanced</span>
+          <span class="card-read-time">⏱ 9 min read</span>
+        </div>
+        <div class="card-title">📘 Trading for Beginners Part 2 — Advanced Concepts</div>
+        <div class="card-desc">Level up your knowledge — technical indicators, chart patterns, multi-timeframe analysis, volume and more advanced concepts explained simply.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='ultimate-trading-guide.html'">
-<h2>🚀 Ultimate Trading Guide</h2>
-<p>Master trading</p>
-<div class="btn">Read</div>
-</div>
+    <a href="risk-management.html" class="blog-card" data-cat="strategy" data-title="risk management stop loss position sizing capital protection">
+      <div class="card-img"><span class="emoji-fallback">🛡️</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-strategy">Strategy</span>
+          <span class="card-read-time">⏱ 8 min read</span>
+        </div>
+        <div class="card-title">🛡️ Risk Management — Protect Your Capital</div>
+        <div class="card-desc">The most important skill in trading. Stop loss, position sizing, risk-reward ratio, drawdown limits — the rules that keep you in the game long term.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='best-stock-market-learning-app.html'">
-<h2>📱 Best App India</h2>
-<p>Top trading learning app</p>
-<div class="btn">Read</div>
-</div>
+    <a href="risk-management-part2.html" class="blog-card" data-cat="advanced" data-title="risk management part 2 advanced strategies portfolio protection">
+      <div class="card-img"><span class="emoji-fallback">🔒</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-advanced">Advanced</span>
+          <span class="card-read-time">⏱ 8 min read</span>
+        </div>
+        <div class="card-title">🛡️ Risk Management Part 2 — Advanced Strategies</div>
+        <div class="card-desc">Advanced risk techniques — portfolio diversification, correlation risk, drawdown recovery, scaling in/out and building a complete risk framework.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='stock-market-guide.html'">
-<h2>📊 Share Market Guide</h2>
-<p>Complete guide India</p>
-<div class="btn">Read</div>
-</div>
+    <a href="ultimate-guide.html" class="blog-card" data-cat="strategy" data-title="ultimate trading guide complete roadmap india beginners advanced">
+      <div class="card-img"><span class="emoji-fallback">🔥</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-strategy">Strategy</span>
+          <span class="card-read-time">⏱ 12 min read</span>
+        </div>
+        <div class="card-title">🔥 Ultimate Trading Guide — Complete Roadmap</div>
+        <div class="card-desc">The most comprehensive trading guide on BullBear — covers every aspect of becoming a profitable trader from scratch. A must-read for every beginner.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='learn-trading.html'">
-<h2>📈 Trading Basics</h2>
-<p>Learn from zero</p>
-<div class="btn">Read</div>
-</div>
+    <a href="ultimate-trading-guide.html" class="blog-card" data-cat="advanced" data-title="ultimate trading guide master trading professional level">
+      <div class="card-img"><span class="emoji-fallback">🏆</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-advanced">Advanced</span>
+          <span class="card-read-time">⏱ 11 min read</span>
+        </div>
+        <div class="card-title">🚀 Ultimate Trading Guide — Master Trading</div>
+        <div class="card-desc">Professional-level trading guide — Smart Money Concepts, order flow, institutional trading patterns, and how to build a complete edge in the market.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<div class="card" onclick="location.href='trading-for-beginners.html'">
-<h2>🚀 Beginner Strategy</h2>
-<p>Start smart trading</p>
-<div class="btn">Read</div>
-</div>
+    <a href="best-stock-market-learning-app.html" class="blog-card" data-cat="app" data-title="best trading app india free stock market practice app">
+      <div class="card-img"><span class="emoji-fallback">⭐</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-app">Platform</span>
+          <span class="card-read-time">⏱ 5 min read</span>
+        </div>
+        <div class="card-title">⭐ Best Free Trading Learning App India</div>
+        <div class="card-desc">Detailed review of why BullBear Market beats all other trading apps — free course, virtual simulator, leaderboard rewards, Hindi support.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-<!-- FUTURE -->
-<div class="card">
-<h2>🔥 Coming Soon</h2>
-<p>More powerful guides are coming</p>
-</div>
+    <a href="stock-market-guide.html" class="blog-card" data-cat="beginner" data-title="share market guide india nse bse nifty sensex complete">
+      <div class="card-img"><span class="emoji-fallback">🌐</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-beginner">Beginner</span>
+          <span class="card-read-time">⏱ 7 min read</span>
+        </div>
+        <div class="card-title">📊 Share Market Guide — Complete India 2026</div>
+        <div class="card-desc">Everything about Indian share market — NSE, BSE, Nifty 50, Sensex, how to open demat account, what are SEBI regulations, and how market hours work.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
 
-</div>
+    <a href="learn-trading.html" class="blog-card" data-cat="beginner" data-title="trading basics learn from zero india hindi">
+      <div class="card-img"><span class="emoji-fallback">📖</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-beginner">Beginner</span>
+          <span class="card-read-time">⏱ 6 min read</span>
+        </div>
+        <div class="card-title">📈 Trading Basics — Learn from Zero</div>
+        <div class="card-desc">Start from absolute zero and learn trading fundamentals — what is a trade, types of orders, how to read price, what causes market moves.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
+
+    <a href="trading-for-beginners.html" class="blog-card" data-cat="strategy" data-title="beginner trading strategy smart start discipline">
+      <div class="card-img"><span class="emoji-fallback">💡</span></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag tag-strategy">Strategy</span>
+          <span class="card-read-time">⏱ 7 min read</span>
+        </div>
+        <div class="card-title">💡 Beginner Trading Strategy — Start Smart</div>
+        <div class="card-desc">The smartest way to start trading as a beginner — what strategy to learn first, how to build discipline, and how to avoid the most common costly mistakes.</div>
+        <div class="card-cta">Read Article</div>
+      </div>
+    </a>
+
+    <!-- COMING SOON -->
+    <div class="card-coming" data-cat="all">
+      <div class="cs-icon">🔥</div>
+      <div class="cs-title">More Articles Coming Soon</div>
+      <div class="cs-desc">New in-depth trading guides, market analysis, and strategy articles launching soon. Subscribe to our YouTube for updates.</div>
+    </div>
+
+    <div class="no-result" id="noResult">
+      <div class="nr-icon">🔍</div>
+      <p>No articles found.<br/>Try different keywords or category.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUICK TOPIC LINKS -->
+<section class="topics-wrap">
+  <div class="sec-label">⚡ Learn These Topics Free</div>
+  <div class="topics-scroll">
+    <a href="https://bullbearmarket.in/candlestick.html" class="topic-pill"><span class="tp-icon">🕯️</span><span class="tp-text">Candlestick Patterns</span></a>
+    <a href="https://bullbearmarket.in/indicators.html"  class="topic-pill"><span class="tp-icon">📉</span><span class="tp-text">Indicators (RSI, MACD)</span></a>
+    <a href="https://bullbearmarket.in/patterns.html"    class="topic-pill"><span class="tp-icon">📐</span><span class="tp-text">Chart Patterns</span></a>
+    <a href="https://bullbearmarket.in/risk.html"        class="topic-pill"><span class="tp-icon">🛡️</span><span class="tp-text">Risk Management</span></a>
+    <a href="https://bullbearmarket.in/psychology.html"  class="topic-pill"><span class="tp-icon">🧠</span><span class="tp-text">Trading Psychology</span></a>
+    <a href="https://bullbearmarket.in/intraday.html"    class="topic-pill"><span class="tp-icon">⏱️</span><span class="tp-text">Intraday Trading</span></a>
+    <a href="https://bullbearmarket.in/swing.html"       class="topic-pill"><span class="tp-icon">🔄</span><span class="tp-text">Swing Trading</span></a>
+    <a href="https://bullbearmarket.in/options.html"     class="topic-pill"><span class="tp-icon">⚡</span><span class="tp-text">Options Basics</span></a>
+  </div>
+</section>
+
+<!-- INTERLINKS -->
+<section class="links-wrap">
+  <div class="sec-label">🔗 Explore More</div>
+  <div class="links-grid">
+    <a href="https://bullbearmarket.in/learning.html" class="link-card">
+      <span class="lc-icon">📚</span>
+      <div><div class="lc-title">Full Learning Hub</div><div class="lc-desc">20+ topics — candlestick to options</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/rewards.html" class="link-card">
+      <span class="lc-icon">🏆</span>
+      <div><div class="lc-title">Rewards & Leaderboard</div><div class="lc-desc">Win real prizes — top 50 every week</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/faq.html" class="link-card">
+      <span class="lc-icon">❓</span>
+      <div><div class="lc-title">FAQ</div><div class="lc-desc">25 detailed questions answered</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/about.html" class="link-card">
+      <span class="lc-icon">ℹ️</span>
+      <div><div class="lc-title">About BullBear</div><div class="lc-desc">Our mission and platform story</div></div>
+    </a>
+    <a href="https://www.youtube.com/@BullBearMarket" target="_blank" class="link-card">
+      <span class="lc-icon">▶️</span>
+      <div><div class="lc-title">YouTube Channel</div><div class="lc-desc">Free videos — Hindi & English daily</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/support.html" class="link-card">
+      <span class="lc-icon">💬</span>
+      <div><div class="lc-title">Support</div><div class="lc-desc">Get help — 24–48h reply</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap">
+  <div class="cta-inner">
+    <h2>Ready to Learn Trading? 🚀</h2>
+    <p>Start with our most popular guide or explore the full free learning hub. Everything is free, in Hindi & English, with zero real money risk.</p>
+    <div class="btn-row">
+      <a href="https://bullbearmarket.in/blog/trading-for-beginners.html" class="btn-gold">📖 Start Reading</a>
+      <a href="https://bullbearmarket.in/learning.html" class="btn-outline">📚 Full Learning Hub</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://bullbearmarket.in/index.html">Home</a>
+    <a href="https://bullbearmarket.in/learning.html">Learning</a>
+    <a href="https://bullbearmarket.in/rewards.html">Rewards</a>
+    <a href="https://bullbearmarket.in/blog/">Blog</a>
+    <a href="https://bullbearmarket.in/faq.html">FAQ</a>
+    <a href="https://bullbearmarket.in/about.html">About</a>
+    <a href="https://bullbearmarket.in/privacy-policy.html">Privacy Policy</a>
+    <a href="https://bullbearmarket.in/terms.html">Terms</a>
+    <a href="https://bullbearmarket.in/support.html">Support</a>
+  </div>
+  <p>© 2026 BullBear Market. All rights reserved. | 🇮🇳 Made in India | Educational Platform – No Real Money Trading</p>
+</footer>
+
+<!-- FILTER + SEARCH JS -->
+<script>
+// Category filter
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat=btn.getAttribute('data-cat');
+    document.getElementById('searchInput').value='';
+    let v=0;
+    document.querySelectorAll('.blog-card').forEach(card=>{
+      const cats=card.getAttribute('data-cat')||'';
+      const show=cat==='all'||cats.split(' ').includes(cat);
+      card.classList.toggle('hidden',!show);
+      if(show)v++;
+    });
+    document.querySelectorAll('.card-coming').forEach(c=>{
+      c.classList.toggle('hidden',cat!=='all');
+    });
+    document.getElementById('noResult').style.display=v===0?'block':'none';
+  });
+});
+
+// Search
+document.getElementById('searchInput').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('[data-cat="all"]').classList.add('active');
+  let v=0;
+  document.querySelectorAll('.blog-card').forEach(card=>{
+    const t=(card.getAttribute('data-title')||'').toLowerCase();
+    const txt=card.innerText.toLowerCase();
+    const show=!q||t.includes(q)||txt.includes(q);
+    card.classList.toggle('hidden',!show);
+    if(show)v++;
+  });
+  document.querySelectorAll('.card-coming').forEach(c=>c.classList.toggle('hidden',!!q));
+  document.getElementById('noResult').style.display=v===0?'block':'none';
+});
+</script>
 
 </body>
 </html>
