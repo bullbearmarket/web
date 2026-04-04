@@ -1,234 +1,649 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Privacy Policy – BullBear Market | How We Protect Your Data</title>
+<meta name="description" content="BullBear Market Privacy Policy — learn how we collect, use, protect and never sell your personal data. India's safest free stock market learning platform."/>
+<meta name="keywords" content="BullBear Market privacy policy, trading app data privacy India, stock market app privacy, user data protection India"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="BullBear Market"/>
+<meta name="geo.region" content="IN"/>
+<link rel="canonical" href="https://bullbearmarket.in/privacy-policy.html"/>
+<link rel="icon" href="https://bullbearmarket.in/favicon.png"/>
+<meta property="og:title" content="Privacy Policy – BullBear Market"/>
+<meta property="og:description" content="How BullBear Market collects, uses and protects your personal data. We never sell user data. 100% safe platform."/>
+<meta property="og:url" content="https://bullbearmarket.in/privacy-policy.html"/>
+<meta property="og:type" content="website"/>
 
-<meta charset="UTF-8">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"Privacy Policy – BullBear Market",
+  "url":"https://bullbearmarket.in/privacy-policy.html",
+  "description":"Privacy policy of BullBear Market explaining data collection, usage and protection practices.",
+  "inLanguage":"en",
+  "breadcrumb":{
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://bullbearmarket.in/"},
+      {"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://bullbearmarket.in/privacy-policy.html"}
+    ]
+  }
+}
+</script>
 
-<title>Privacy Policy – BullBear Market</title>
-
-<meta name="description" content="Privacy Policy of BullBear Market. Learn how we collect, use, and protect your personal data.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
 <style>
+:root{
+  --bg:#050810;
+  --bg2:#080d1a;
+  --card:#0d1526;
+  --card2:#111d30;
+  --border:#182038;
+  --border2:#1f2d48;
+  --gold:#FFD700;
+  --gold2:#e6a800;
+  --gold-glow:rgba(255,215,0,.12);
+  --green:#22c55e;
+  --green-dim:rgba(34,197,94,.1);
+  --cyan:#00e6ff;
+  --cyan-dim:rgba(0,230,255,.08);
+  --blue:#3b82f6;
+  --text:#e8edf8;
+  --muted:#6b7fa0;
+  --dim:#2d3d5c;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1.7;}
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #0B1220, #05080f);
-  color: white;
-  line-height: 1.8;
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 20%,rgba(34,197,94,.04) 0%,transparent 65%),
+    radial-gradient(ellipse 55% 38% at 90% 80%,rgba(59,130,246,.05) 0%,transparent 65%),
+    radial-gradient(ellipse 45% 35% at 50% 50%,rgba(255,215,0,.03) 0%,transparent 70%);
+}
+.grid-bg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(34,197,94,.018) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(34,197,94,.018) 1px,transparent 1px);
+  background-size:52px 52px;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 20px;
+/* ══════ NAV ══════ */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:#ffffff;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 2px 20px rgba(0,0,0,.18);
+  padding:0 16px;
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:2px;padding:8px 0;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:8px;
+  text-decoration:none;margin-right:16px;flex-shrink:0;
+}
+.nav-logo img{height:38px;width:38px;border-radius:8px;object-fit:contain;}
+.nav-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:#111;}
+nav a.nav-link{
+  color:#333;text-decoration:none;font-size:.82rem;font-weight:600;
+  padding:5px 10px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap;
+}
+nav a.nav-link:hover{color:#000;background:#f5f5f5;}
+nav a.nav-link.active{color:var(--gold2);font-weight:700;}
+nav a.nav-link.support{color:var(--gold2);}
+
+/* ══════ BREADCRUMB ══════ */
+.breadcrumb{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;
+  padding:12px 24px;display:flex;align-items:center;gap:6px;
+  font-size:.75rem;color:var(--muted);
+}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb .sep{color:var(--dim);}
+.breadcrumb .cur{color:var(--text);}
+
+/* ══════ HERO ══════ */
+.hero{
+  position:relative;z-index:1;
+  max-width:900px;margin:0 auto;
+  padding:48px 24px 20px;text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green-dim);border:1px solid rgba(34,197,94,.28);
+  color:var(--green);font-size:.72rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 18px;border-radius:100px;margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:14px;
+  background:linear-gradient(135deg,var(--green) 0%,#ffffff 50%,var(--gold) 100%);
+  background-size:200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 4s linear infinite;
+}
+@keyframes shimmer{to{background-position:200% center;}}
+.hero-sub{color:var(--muted);font-size:.95rem;max-width:520px;margin:0 auto 28px;line-height:1.7;}
+
+/* effective date */
+.effective-bar{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--card);border:1px solid var(--border2);
+  padding:10px 20px;border-radius:12px;margin-bottom:40px;
+  font-size:.82rem;color:var(--muted);
+}
+.effective-bar strong{color:var(--text);}
+
+/* ══════ QUICK SUMMARY ══════ */
+.summary-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 40px;
+}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;}
+.summary-pill{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:18px 16px;text-align:center;transition:border-color .25s,transform .25s;
+}
+.summary-pill:hover{border-color:rgba(34,197,94,.3);transform:translateY(-3px);}
+.sp-icon{font-size:1.6rem;margin-bottom:8px;}
+.sp-title{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--green);margin-bottom:4px;}
+.sp-desc{font-size:.72rem;color:var(--muted);line-height:1.5;}
+
+/* ══════ SECTION LABEL ══════ */
+  .sec-label{
+  font-family:'Syne',sans-serif;font-size:.67rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  display:flex;align-items:center;gap:12px;margin-bottom:24px;
+}
+.sec-label::before,.sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ══════ POLICY SECTIONS ══════ */
+.policy-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 60px;
+}
+.policy-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:18px;padding:28px 26px;margin-bottom:14px;
+  transition:border-color .25s,box-shadow .25s;position:relative;overflow:hidden;
+}
+.policy-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--green),var(--cyan));
+  border-radius:3px 0 0 3px;opacity:0;transition:opacity .3s;
+}
+.policy-card:hover{border-color:rgba(34,197,94,.22);box-shadow:0 8px 32px rgba(0,0,0,.4);}
+.policy-card:hover::before{opacity:1;}
+
+.policy-num{
+  font-family:'Syne',sans-serif;font-size:.65rem;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:8px;
+}
+.policy-card h2{
+  font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;
+  color:var(--cyan);margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.policy-card p{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:10px;}
+.policy-card p:last-child{margin-bottom:0;}
+.policy-card ul{
+  margin:10px 0 10px 18px;
+}
+.policy-card ul li{color:var(--muted);font-size:.88rem;margin-bottom:6px;line-height:1.6;}
+.policy-card ul li strong{color:var(--text);}
+
+/* highlight box */
+.highlight-box{
+  background:var(--green-dim);border:1px solid rgba(34,197,94,.2);
+  border-radius:10px;padding:14px 16px;margin:12px 0;
+  font-size:.87rem;color:var(--green);font-weight:600;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.highlight-box .hi-icon{flex-shrink:0;font-size:1rem;}
+
+.warning-box{
+  background:rgba(255,215,0,.07);border:1px solid rgba(255,215,0,.2);
+  border-radius:10px;padding:14px 16px;margin:12px 0;
+  font-size:.87rem;color:var(--gold);font-weight:600;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.warning-box .hi-icon{flex-shrink:0;}
+
+.not-collect{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:12px 0;
+}
+.nc-item{
+  background:rgba(244,63,94,.06);border:1px solid rgba(244,63,94,.15);
+  border-radius:8px;padding:10px 12px;font-size:.78rem;color:#f87171;
+  display:flex;align-items:center;gap:8px;
 }
 
-h1 {
-  text-align: center;
-  color: gold;
-  margin-bottom: 30px;
+/* ══════ CONTACT ══════ */
+.contact-card{
+  background:linear-gradient(135deg,rgba(34,197,94,.07),rgba(59,130,246,.05));
+  border:1px solid rgba(34,197,94,.2);border-radius:18px;padding:28px 26px;
+  margin-bottom:14px;
 }
+.contact-card h2{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--green);margin-bottom:14px;}
+.contact-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+.contact-row:last-child{border-bottom:none;}
+.cr-icon{font-size:1.2rem;flex-shrink:0;}
+.cr-label{font-size:.75rem;color:var(--muted);margin-bottom:2px;}
+.cr-val{font-size:.9rem;font-weight:600;color:var(--text);}
+.cr-val a{color:var(--cyan);text-decoration:none;}
+.cr-val a:hover{text-decoration:underline;}
 
-.card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  transition: 0.3s;
+/* ══════ INTERLINKS ══════ */
+.links-wrap{
+  position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 60px;
 }
-
-.card:hover {
-  transform: translateY(-5px);
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px;}
+.link-card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:16px;text-decoration:none;color:var(--text);
+  transition:all .25s;display:flex;gap:12px;align-items:center;
 }
+.link-card:hover{background:var(--card2);border-color:rgba(34,197,94,.25);transform:translateY(-2px);}
+.lc-icon{font-size:1.3rem;flex-shrink:0;}
+.lc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.84rem;margin-bottom:3px;}
+.lc-desc{font-size:.7rem;color:var(--muted);}
 
-h2 {
-  color: #00e6ff;
+/* ══════ CTA ══════ */
+.cta-wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 70px;}
+.cta-inner{
+  background:linear-gradient(135deg,rgba(34,197,94,.07),rgba(255,215,0,.04));
+  border:1px solid rgba(34,197,94,.2);border-radius:20px;
+  padding:40px 28px;text-align:center;position:relative;overflow:hidden;
 }
-
-p {
-  color: #ccc;
+.cta-inner::before{
+  content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);
+  width:260px;height:120px;
+  background:radial-gradient(ellipse,rgba(34,197,94,.12),transparent 70%);
+  pointer-events:none;
 }
-
-ul {
-  color: #ccc;
+.cta-inner h2{
+  font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:10px;
+  background:linear-gradient(135deg,#22c55e,#ffffff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-
-.highlight {
-  color: #00ffae;
-  font-weight: bold;
+.cta-inner p{color:var(--muted);max-width:460px;margin:0 auto 22px;font-size:.88rem;}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-green{
+  background:linear-gradient(135deg,#16a34a,var(--green));color:#000;font-weight:700;
+  font-size:.88rem;padding:12px 26px;border-radius:10px;text-decoration:none;
+  transition:opacity .2s,transform .2s;font-family:'DM Sans',sans-serif;
 }
-
-.footer {
-  text-align: center;
-  margin-top: 30px;
-  color: #777;
+.btn-green:hover{opacity:.88;transform:translateY(-2px);}
+.btn-outline{
+  background:transparent;color:var(--text);font-weight:600;font-size:.88rem;
+  padding:12px 26px;border-radius:10px;border:1px solid var(--border2);
+  text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;
 }
+.btn-outline:hover{border-color:var(--green);color:var(--green);}
 
+/* ══════ FOOTER ══════ */
+footer{
+  position:relative;z-index:1;
+  border-top:1px solid var(--border);
+  text-align:center;padding:26px 20px;
+  color:var(--dim);font-size:.78rem;
+}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:2px;margin-bottom:12px;}
+.footer-links a{color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:6px;}
+.footer-links a:hover{color:var(--gold);}
+
+/* ══════ ANIM ══════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.hero{animation:fadeUp .55s ease both;}
+.summary-pill{animation:fadeUp .45s ease both;}
+.summary-pill:nth-child(2){animation-delay:.06s;}
+.summary-pill:nth-child(3){animation-delay:.12s;}
+.summary-pill:nth-child(4){animation-delay:.18s;}
+.summary-pill:nth-child(5){animation-delay:.24s;}
+
+@media(max-width:500px){
+  .policy-card{padding:20px 16px;}
+  .not-collect{grid-template-columns:1fr 1fr;}
+}
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
+<div class="grid-bg"></div>
 
-<h1>🔒 Privacy Policy</h1>
-
-<div class="card">
-<p>
-BullBear Market respects your privacy and is committed to protecting your personal information.  
-This policy explains how we collect, use, and safeguard your data.
-</p>
+<!-- ══════════════════════════════
+     NAV — Homepage style (white)
+══════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://bullbearmarket.in/index.html">
+      <img src="https://bullbearmarket.in/favicon.png" alt="BullBear Market Logo"/>
+      <span class="nav-logo-text">BullBear Market</span>
+    </a>
+    <a href="https://bullbearmarket.in/index.html"           class="nav-link">Home</a>
+    <a href="https://bullbearmarket.in/learning.html"        class="nav-link">Learning</a>
+    <a href="https://bullbearmarket.in/rewards.html"         class="nav-link">Rewards</a>
+    <a href="https://bullbearmarket.in/blog/"                class="nav-link">Blog</a>
+    <a href="https://bullbearmarket.in/faq.html"             class="nav-link">FAQ</a>
+    <a href="https://bullbearmarket.in/about.html"           class="nav-link">About</a>
+    <a href="https://bullbearmarket.in/privacy-policy.html"  class="nav-link active">Privacy</a>
+    <a href="https://bullbearmarket.in/terms.html"           class="nav-link">Terms</a>
+    <a href="https://bullbearmarket.in/support.html"         class="nav-link support">Support</a>
+  </div>
+</nav>
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="https://bullbearmarket.in/">Home</a>
+  <span class="sep">›</span>
+  <span class="cur">Privacy Policy</span>
 </div>
 
-<div class="card">
-<h2>1. Information We Collect</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🔒 Your Data Is Safe With Us</div>
+  <h1>🔒 Privacy Policy</h1>
+  <p class="hero-sub">BullBear Market deeply respects your privacy. This policy clearly explains what data we collect, how we use it, and most importantly — what we will <strong>never</strong> do with it.</p>
+  <div class="effective-bar">
+    📅 <strong>Effective Date:</strong> January 1, 2026 &nbsp;|&nbsp; 🇮🇳 Applicable in India
+  </div>
+</section>
 
-<ul>
-<li>Name (for profile display)</li>
-<li>Email address (for login and communication)</li>
-<li>Phone number (optional, for account verification)</li>
-</ul>
+<!-- QUICK SUMMARY -->
+<section class="summary-wrap">
+  <div class="sec-label">⚡ Quick Summary</div>
+  <div class="summary-grid">
+    <div class="summary-pill">
+      <div class="sp-icon">✅</div>
+      <div class="sp-title">We Collect Minimal Data</div>
+      <div class="sp-desc">Only name, email & optional phone — nothing more</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">🚫</div>
+      <div class="sp-title">No Data Selling</div>
+      <div class="sp-desc">We never sell, rent or trade your personal data</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">💰</div>
+      <div class="sp-title">No Financial Data</div>
+      <div class="sp-desc">No bank details, UPI, cards or government ID ever</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">🗑️</div>
+      <div class="sp-title">Delete Anytime</div>
+      <div class="sp-desc">Request full account & data deletion at any time</div>
+    </div>
+    <div class="summary-pill">
+      <div class="sp-icon">🔐</div>
+      <div class="sp-title">Encrypted & Secure</div>
+      <div class="sp-desc">Encrypted servers, secure communication, regular monitoring</div>
+    </div>
+  </div>
+</section>
 
-<p class="highlight">We DO NOT collect:</p>
+<!-- POLICY SECTIONS -->
+<section class="policy-wrap">
+  <div class="sec-label">📋 Full Privacy Policy</div>
 
-<ul>
-<li>User photos</li>
-<li>Bank details</li>
-<li>Government ID</li>
-</ul>
-</div>
+  <!-- 1 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 01</div>
+    <h2>👤 Information We Collect</h2>
+    <p>We collect the minimum information needed to provide you with a great learning experience on BullBear Market:</p>
+    <ul>
+      <li><strong>Name</strong> — used for profile display and personalisation</li>
+      <li><strong>Email address</strong> — used for account login and platform communication</li>
+      <li><strong>Phone number</strong> — optional, used only for account verification if provided</li>
+    </ul>
+    <div class="highlight-box">
+      <span class="hi-icon">✅</span>
+      That's it. We keep data collection to an absolute minimum.
+    </div>
+    <p>We <strong>DO NOT</strong> collect any of the following — ever:</p>
+    <div class="not-collect">
+      <div class="nc-item">❌ User photos</div>
+      <div class="nc-item">❌ Bank details</div>
+      <div class="nc-item">❌ UPI / card info</div>
+      <div class="nc-item">❌ Government ID</div>
+      <div class="nc-item">❌ Aadhaar / PAN</div>
+      <div class="nc-item">❌ Location data</div>
+    </div>
+  </div>
 
-<div class="card">
-<h2>2. Data Usage</h2>
+  <!-- 2 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 02</div>
+    <h2>🔧 How We Use Your Data</h2>
+    <p>Your data is used exclusively to improve your experience on BullBear Market. Specifically:</p>
+    <ul>
+      <li><strong>Account creation and management</strong> — to create and maintain your profile</li>
+      <li><strong>Platform improvement</strong> — to analyse how users interact with the platform and improve features</li>
+      <li><strong>Customer support</strong> — to respond to your queries and resolve issues efficiently</li>
+      <li><strong>Contest & leaderboard participation</strong> — to track your virtual trading performance</li>
+      <li><strong>Communication</strong> — important platform updates, policy changes, contest results</li>
+    </ul>
+    <div class="highlight-box">
+      <span class="hi-icon">🔒</span>
+      We use your data ONLY to enhance your experience. Nothing else.
+    </div>
+  </div>
 
-<ul>
-<li>Account creation and management</li>
-<li>Improving app performance and experience</li>
-<li>Customer support and communication</li>
-</ul>
+  <!-- 3 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 03</div>
+    <h2>🚫 No Data Selling — Ever</h2>
+    <p>BullBear Market will <strong>never</strong> sell, rent, lease or otherwise transfer your personal data to any third party for commercial or profit purposes.</p>
+    <div class="highlight-box">
+      <span class="hi-icon">✅</span>
+      Your data belongs to you. It stays private within our platform — period.
+    </div>
+    <p>We are not in the business of selling user data. Our platform is monetised through advertising shown to users, not through selling user information to advertisers or data brokers.</p>
+  </div>
 
-<p>
-We use data only to enhance your experience and improve platform performance.
-</p>
-</div>
+  <!-- 4 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 04</div>
+    <h2>🔐 Data Security</h2>
+    <p>We implement strong, industry-standard security practices to protect your personal data from unauthorised access, loss or misuse:</p>
+    <ul>
+      <li><strong>Secure servers</strong> — data stored on protected, access-controlled servers</li>
+      <li><strong>Encrypted communication</strong> — all data transmitted via HTTPS/SSL encryption</li>
+      <li><strong>Regular security monitoring</strong> — systems monitored continuously for threats</li>
+      <li><strong>Limited access</strong> — only authorised personnel can access user data</li>
+      <li><strong>No third-party data sales</strong> — no backdoors or data sharing for profit</li>
+    </ul>
+    <div class="warning-box">
+      <span class="hi-icon">⚠️</span>
+      While we implement strong security, no system is 100% breach-proof. We recommend using a strong, unique password for your account.
+    </div>
+  </div>
 
-<div class="card">
-<h2>3. No Data Selling</h2>
+  <!-- 5 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 05</div>
+    <h2>🗑️ Account Deletion</h2>
+    <p>You have full control over your data. You can request complete account deletion at any time by contacting our support team.</p>
+    <ul>
+      <li><strong>All personal data permanently deleted</strong> — name, email, phone, profile info</li>
+      <li><strong>No data retained</strong> — nothing is kept after deletion is processed</li>
+      <li><strong>Virtual coins & leaderboard history</strong> — also permanently deleted</li>
+      <li><strong>Irreversible</strong> — this action cannot be undone once processed</li>
+    </ul>
+    <div class="highlight-box">
+      <span class="hi-icon">📩</span>
+      To delete your account, email us at <strong>moneymaker.earnmoney@gmail.com</strong> with subject "Account Deletion Request" and your registered email.
+    </div>
+  </div>
 
-<p>
-We do <b>NOT</b> sell, rent, or share user data with any third party for profit.
-</p>
+  <!-- 6 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 06</div>
+    <h2>💰 No Real Money Involvement</h2>
+    <p>BullBear Market is a purely educational and simulation platform. This means:</p>
+    <ul>
+      <li><strong>No real money trading</strong> — all trades are simulated with virtual coins</li>
+      <li><strong>No financial transactions</strong> — no payments, deposits or withdrawals inside the simulation</li>
+      <li><strong>No real monetary value</strong> — virtual coins cannot be withdrawn or exchanged for real money</li>
+      <li><strong>No payment data collected</strong> — we do not store any credit card, debit card, UPI or banking information</li>
+    </ul>
+    <div class="highlight-box">
+      <span class="hi-icon">🛡️</span>
+      BullBear Market is 100% safe — no real money, no financial risk at any point.
+    </div>
+  </div>
 
-<p>
-Your data remains private and secure within our platform.
-</p>
-</div>
+  <!-- 7 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 07</div>
+    <h2>⭐ Premium Subscription</h2>
+    <p>BullBear Market may offer optional premium features. Important points to understand:</p>
+    <ul>
+      <li><strong>Completely optional</strong> — the core platform is 100% free, premium is a choice</li>
+      <li><strong>No guaranteed returns</strong> — premium features do not guarantee trading profits</li>
+      <li><strong>No unfair advantage</strong> — premium gives access to additional features, not leaderboard advantages</li>
+      <li><strong>For features only</strong> — premium is designed for enhanced learning experience, not financial gain</li>
+    </ul>
+    <div class="warning-box">
+      <span class="hi-icon">⚠️</span>
+      Premium subscription does not involve real trading or guaranteed profits of any kind.
+    </div>
+  </div>
 
-<div class="card">
-<h2>4. Data Security</h2>
+  <!-- 8 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 08</div>
+    <h2>🔗 Third Party Services</h2>
+    <p>To operate and improve BullBear Market, we may use certain third-party services. These may include:</p>
+    <ul>
+      <li><strong>Analytics tools</strong> — to understand how users interact with the platform (e.g., page views, feature usage) — this helps us improve the platform</li>
+      <li><strong>Advertising services</strong> — to display relevant ads that help keep the platform free (e.g., Google AdSense)</li>
+      <li><strong>Firebase (Google)</strong> — for real-time database, authentication and app performance</li>
+    </ul>
+    <p>These third-party services operate under their own privacy policies and may collect limited technical data such as device type, browser, IP address for their internal purposes.</p>
+    <div class="highlight-box">
+      <span class="hi-icon">✅</span>
+      We do NOT share your personal profile data (name, email, phone) with any of these services.
+    </div>
+  </div>
 
-<p>
-We implement strong security measures to protect your personal data from unauthorized access.
-</p>
+  <!-- 9 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 09</div>
+    <h2>👶 Children's Privacy</h2>
+    <p>BullBear Market is designed as an educational platform suitable for users of all ages who want to learn about the stock market. However:</p>
+    <ul>
+      <li>Users under 13 years of age should use the platform only with parental supervision</li>
+      <li>We do not knowingly collect personal data from children under 13</li>
+      <li>If we become aware that a child under 13 has provided personal information, we will delete it promptly</li>
+    </ul>
+    <p>Parents or guardians with concerns may contact us at <strong>moneymaker.earnmoney@gmail.com</strong>.</p>
+  </div>
 
-<ul>
-<li>Secure servers</li>
-<li>Encrypted communication</li>
-<li>Regular monitoring</li>
-</ul>
-</div>
+  <!-- 10 -->
+  <div class="policy-card">
+    <div class="policy-num">Section 10</div>
+    <h2>📝 Policy Updates</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, platform features or legal requirements.</p>
+    <ul>
+      <li><strong>Notice of changes</strong> — significant changes will be communicated via email or platform notification</li>
+      <li><strong>Effective date</strong> — updated policy will show a new effective date at the top</li>
+      <li><strong>Continued use</strong> — using the platform after a policy update means you accept the revised policy</li>
+    </ul>
+    <div class="warning-box">
+      <span class="hi-icon">📅</span>
+      We recommend reviewing this policy periodically. Last updated: January 1, 2026.
+    </div>
+  </div>
 
-<div class="card">
-<h2>5. Account Deletion</h2>
+  <!-- 11: CONTACT -->
+  <div class="contact-card">
+    <h2>📩 Contact Us — Privacy Questions</h2>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:16px;">If you have any questions, concerns or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+    <div class="contact-row">
+      <span class="cr-icon">📧</span>
+      <div><div class="cr-label">Email Support</div><div class="cr-val"><a href="mailto:moneymaker.earnmoney@gmail.com">moneymaker.earnmoney@gmail.com</a></div></div>
+    </div>
+    <div class="contact-row">
+      <span class="cr-icon">⏰</span>
+      <div><div class="cr-label">Response Time</div><div class="cr-val">Within 24–48 hours</div></div>
+    </div>
+    <div class="contact-row">
+      <span class="cr-icon">🌐</span>
+      <div><div class="cr-label">Support Page</div><div class="cr-val"><a href="https://bullbearmarket.in/support.html">bullbearmarket.in/support.html</a></div></div>
+    </div>
+    <div class="contact-row">
+      <span class="cr-icon">🇮🇳</span>
+      <div><div class="cr-label">Platform Jurisdiction</div><div class="cr-val">India — Educational Platform, Not SEBI Registered</div></div>
+    </div>
+  </div>
 
-<p>
-Users can request account deletion at any time.
-</p>
+</section>
 
-<ul>
-<li>All user data will be permanently deleted</li>
-<li>No data will be stored after deletion</li>
-<li>This process is irreversible</li>
-</ul>
-</div>
+<!-- INTERLINKS -->
+<section class="links-wrap">
+  <div class="sec-label">🔗 Related Pages</div>
+  <div class="links-grid">
+    <a href="https://bullbearmarket.in/terms.html" class="link-card">
+      <span class="lc-icon">📜</span>
+      <div><div class="lc-title">Terms of Service</div><div class="lc-desc">Platform rules and user responsibilities</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/support.html" class="link-card">
+      <span class="lc-icon">💬</span>
+      <div><div class="lc-title">Support</div><div class="lc-desc">Contact us — reply in 24–48h</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/faq.html" class="link-card">
+      <span class="lc-icon">❓</span>
+      <div><div class="lc-title">FAQ</div><div class="lc-desc">25 common questions answered in detail</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/about.html" class="link-card">
+      <span class="lc-icon">ℹ️</span>
+      <div><div class="lc-title">About Us</div><div class="lc-desc">Our mission and platform story</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/learning.html" class="link-card">
+      <span class="lc-icon">📚</span>
+      <div><div class="lc-title">Start Learning</div><div class="lc-desc">20+ free stock market topics</div></div>
+    </a>
+    <a href="https://bullbearmarket.in/rewards.html" class="link-card">
+      <span class="lc-icon">🏆</span>
+      <div><div class="lc-title">Rewards</div><div class="lc-desc">Win real prizes on leaderboard</div></div>
+    </a>
+  </div>
+  </section>
+  <!-- CTA -->
+<section class="cta-wrap">
+  <div class="cta-inner">
+    <h2>Your Privacy is Our Priority 🔒</h2>
+    <p>BullBear Market is built on trust. We keep your data safe, never sell it, and you can delete it any time. Start learning safely today.</p>
+    <div class="btn-row">
+      <a href="https://bullbearmarket.in/learning.html" class="btn-green">📚 Start Learning Free</a>
+      <a href="https://bullbearmarket.in/support.html" class="btn-outline">📩 Contact Us</a>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h2>6. No Real Money Involvement</h2>
-
-<ul>
-<li>No real money trading</li>
-<li>No financial transactions inside simulation</li>
-<li>All coins are virtual</li>
-</ul>
-
-<p>
-BullBear Market is a learning platform only.
-</p>
-</div>
-
-<div class="card">
-<h2>7. Premium Subscription</h2>
-
-<ul>
-<li>Optional feature</li>
-<li>No guaranteed profit</li>
-<li>No unfair trading advantage</li>
-</ul>
-
-<p>
-Premium is only for additional features and better experience.
-</p>
-</div>
-
-<div class="card">
-<h2>8. Third Party Services</h2>
-
-<p>
-We may use third-party services such as:
-</p>
-
-<ul>
-<li>Analytics tools (to improve performance)</li>
-<li>Advertising services (to support platform)</li>
-</ul>
-
-<p>
-These services may collect limited technical data as per their own policies.
-</p>
-</div>
-
-<div class="card">
-<h2>9. Policy Updates</h2>
-
-<p>
-We may update this Privacy Policy at any time.
-</p>
-
-<p>
-Continued use of the platform means you accept the updated policy.
-</p>
-</div>
-
-<div class="card">
-<h2>10. Contact</h2>
-
-<p>
-If you have any questions regarding this Privacy Policy:
-</p>
-
-<p><b>Email:</b> moneymaker.earnmoney@gmail.com</p>
-</div>
-
-<div class="footer">
-© 2026 BullBear Market – All Rights Reserved
-</div>
-
-</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://bullbearmarket.in/index.html">Home</a>
+    <a href="https://bullbearmarket.in/learning.html">Learning</a>
+    <a href="https://bullbearmarket.in/rewards.html">Rewards</a>
+    <a href="https://bullbearmarket.in/blog/">Blog</a>
+    <a href="https://bullbearmarket.in/faq.html">FAQ</a>
+    <a href="https://bullbearmarket.in/about.html">About</a>
+    <a href="https://bullbearmarket.in/privacy-policy.html">Privacy Policy</a>
+    <a href="https://bullbearmarket.in/terms.html">Terms</a>
+    <a href="https://bullbearmarket.in/support.html">Support</a>
+  </div>
+  <p>© 2026 BullBear Market. All rights reserved. | 🇮🇳 Made in India | Educational Platform – No Real Money Trading</p>
+</footer>
 
 </body>
 </html>
