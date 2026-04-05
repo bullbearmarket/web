@@ -1,258 +1,1125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Swing Trading Strategy – Complete Guide for Beginners to Advanced (2026)</title>
+<!-- Primary SEO -->
+<title>Swing Trading – Complete Beginner to Advanced Guide 2026 | BullBear Market</title>
+<meta name="description" content="Swing trading सीखो step by step — strategies, best indicators, risk management, real stock examples और pro tips के साथ। Working professionals के लिए perfect trading style। Free Hindi & English guide.">
+<meta name="keywords" content="swing trading guide India, swing trading strategies, swing trading for beginners Hindi, swing trading vs intraday, best swing trading indicators, pullback strategy, swing trading NSE, BullBear Market swing trading">
+<meta name="author" content="BullBear Market">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bullbearmarket.in/swing.html">
 
-<meta name="description" content="Learn swing trading strategy step by step. Best swing trading setups, indicators, psychology, risk management and real examples.">
+<!-- Geo Tags -->
+<meta name="geo.region" content="IN">
+<meta name="geo.country" content="India">
+<meta name="language" content="en-IN">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swing Trading – Complete Guide Beginners to Advanced | BullBear Market">
+<meta property="og:description" content="Learn swing trading strategies, indicators, risk management with real examples. Best for beginners and working professionals. Free on BullBear Market.">
+<meta property="og:url" content="https://bullbearmarket.in/swing.html">
+<meta property="og:site_name" content="BullBear Market">
+<meta property="og:image" content="https://bullbearmarket.in/images/29_rsi-swing-trading-strategy.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Swing Trading Complete Guide | BullBear Market">
+<meta name="twitter:description" content="Swing trading strategies, indicators and real examples for Indian stock market. Free Hindi & English guide.">
+<meta name="twitter:image" content="https://bullbearmarket.in/images/29_rsi-swing-trading-strategy.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Swing Trading – Complete Guide for Beginners to Advanced 2026",
+  "description": "Complete swing trading guide covering strategies, indicators, risk management, psychology and real examples for Indian stock market beginners.",
+  "image": "https://bullbearmarket.in/images/29_rsi-swing-trading-strategy.png",
+  "author": {"@type": "Organization", "name": "BullBear Market"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BullBear Market",
+    "logo": {"@type": "ImageObject", "url": "https://bullbearmarket.in/favicon.png"}
+  },
+  "url": "https://bullbearmarket.in/swing.html",
+  "inLanguage": "en-IN",
+  "dateModified": "2026-04-05"
+}
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    --gold: #FFD700;
+    --gold-light: #FFE44D;
+    --cyan: #00e6ff;
+    --green: #00ff88;
+    --red: #ff5050;
+    --purple: #a78bfa;
+    --dark: #0B1220;
+    --dark3: #1a2235;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: rgba(255,215,0,0.15);
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
-  color: white;
-  line-height: 1.8;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
 
-h1 { color: gold; }
-h2 { color: #00e6ff; margin-top: 30px; }
-h3 { color: #00ffaa; }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none; z-index: 0;
+  }
 
-p { color: #ccc; }
+  /* ── NAVBAR ── */
+  nav {
+    position: sticky; top: 0;
+    background: #ffffff;
+    border-bottom: 2.5px solid var(--gold);
+    z-index: 1000; padding: 0 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: auto;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 10px 0; flex-wrap: wrap; gap: 8px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { width: 40px; height: 40px; border-radius: 8px; }
+  .nav-logo span { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: #111; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .nav-links a {
+    text-decoration: none; color: #333;
+    font-size: 0.85rem; font-weight: 600;
+    padding: 5px 10px; border-radius: 6px;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .nav-links a:hover, .nav-links a.active { background: var(--gold); color: #000; }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 20px 0;
-}
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 24px auto 0;
+    padding: 0 20px; font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
 
-a { color: gold; }
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 20px auto 0;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(167,139,250,0.1);
+    border: 1px solid rgba(167,139,250,0.3);
+    color: var(--purple);
+    padding: 6px 18px; border-radius: 30px;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800; color: var(--gold);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 20px; }
+  .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .hero-tags span {
+    background: rgba(0,230,255,0.08);
+    border: 1px solid rgba(0,230,255,0.2);
+    color: var(--cyan); padding: 4px 14px;
+    border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+  }
 
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 14px; margin: 30px 0;
+  }
+  .stat-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 16px; text-align: center;
+  }
+  .stat-card .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem; font-weight: 800;
+    color: var(--gold); display: block;
+  }
+  .stat-card .stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+  /* ── CONTENT ── */
+  .content {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--cyan); margin: 50px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,230,255,0.15);
+  }
+  .content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: #00ffaa; margin: 28px 0 10px;
+  }
+  .content p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.97rem; }
+  .content b, .content strong { color: var(--text); }
+  .content ul { padding-left: 0; list-style: none; margin-bottom: 16px; }
+  .content ul li {
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative; font-size: 0.97rem;
+  }
+  .content ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+  .content img {
+    width: 100%; border-radius: 12px;
+    margin: 24px 0; border: 1px solid var(--border); display: block;
+  }
+
+  /* ── BOXES ── */
+  .highlight-box {
+    background: rgba(255,215,0,0.06);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .highlight-box p { color: var(--text); margin: 0; }
+
+  .info-box {
+    background: rgba(0,230,255,0.05);
+    border: 1px solid rgba(0,230,255,0.15);
+    border-left: 4px solid var(--cyan);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .info-box p { color: var(--text); margin: 0; }
+
+  .warn-box {
+    background: rgba(255,100,0,0.06);
+    border: 1px solid rgba(255,100,0,0.2);
+    border-left: 4px solid #ff6400;
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .warn-box p { color: var(--text); margin: 0; }
+
+  .success-box {
+    background: rgba(0,255,136,0.05);
+    border: 1px solid rgba(0,255,136,0.15);
+    border-left: 4px solid var(--green);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .success-box p { color: var(--text); margin: 0; }
+
+  /* ── COMPARISON TABLE ── */
+  .comp-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; border-radius: 10px; overflow: hidden;
+  }
+  .comp-table th {
+    background: rgba(255,215,0,0.12);
+    color: var(--gold); font-family: 'Syne', sans-serif;
+    font-size: 0.85rem; padding: 12px 16px;
+    text-align: left; border-bottom: 1px solid var(--border);
+  }
+  .comp-table td {
+    padding: 12px 16px; color: var(--text-muted);
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: var(--dark3);
+  }
+  .comp-table tr:hover td { background: rgba(255,215,0,0.03); }
+  .td-green { color: var(--green) !important; font-weight: 600; }
+  .td-red { color: var(--red) !important; font-weight: 600; }
+  .td-gold { color: var(--gold) !important; font-weight: 600; }
+
+  /* ── STRATEGY CARD ── */
+  .strategy-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px; margin-bottom: 22px;
+    transition: border-color 0.2s;
+  }
+  .strategy-card:hover { border-color: rgba(255,215,0,0.4); }
+  .strategy-card .s-header {
+    display: flex; align-items: center;
+    gap: 14px; margin-bottom: 16px;
+  }
+  .strategy-card .s-num {
+    min-width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--gold), #e6b800);
+    color: #000; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem;
+  }
+  .strategy-card .s-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700; color: var(--gold);
+  }
+  .strategy-card .s-subtitle { font-size: 0.82rem; color: var(--text-muted); }
+  .strategy-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px; }
+  .strategy-card ul li { font-size: 0.92rem; }
+
+  /* ── INDICATOR CARDS ── */
+  .indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .indicator-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .indicator-card:hover { transform: translateY(-3px); border-color: rgba(0,230,255,0.4); }
+  .indicator-card .i-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .indicator-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; color: var(--cyan); margin-bottom: 8px; }
+  .indicator-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+  /* ── STEPS ── */
+  .steps { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .step {
+    display: flex; align-items: flex-start;
+    gap: 16px; background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px;
+  }
+  .step-num {
+    min-width: 36px; height: 36px;
+    background: var(--gold); color: #000;
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+  }
+  .step-text h4 { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.95rem; margin-bottom: 4px; }
+  .step-text p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+  /* ── STOCK SCREENING TABLE ── */
+  .screen-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; overflow: hidden; border-radius: 10px;
+  }
+  .screen-table th {
+    background: rgba(0,230,255,0.1);
+    color: var(--cyan); font-family: 'Syne', sans-serif;
+    font-size: 0.83rem; padding: 12px 14px;
+    text-align: left; border-bottom: 1px solid rgba(0,230,255,0.15);
+  }
+  .screen-table td {
+    padding: 11px 14px; color: var(--text-muted);
+    font-size: 0.86rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: var(--dark3);
+  }
+  .screen-table tr:hover td { background: rgba(0,230,255,0.03); }
+
+  /* ── MISTAKE ITEMS ── */
+  .mistake-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--dark3);
+    border: 1px solid rgba(255,80,80,0.15);
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .mistake-icon { font-size: 1.4rem; }
+  .mistake-text h4 { font-family: 'Syne', sans-serif; color: var(--red); font-size: 0.9rem; margin-bottom: 4px; }
+  .mistake-text p { color: var(--text-muted); font-size: 0.86rem; margin: 0; }
+
+  /* ── CHECKLIST ── */
+  .checklist { margin: 20px 0; }
+  .check-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-icon { color: var(--green); font-size: 1.1rem; margin-top: 2px; }
+  .check-text { font-size: 0.92rem; color: var(--text-muted); }
+  .check-text strong { color: var(--text); }
+
+  /* ── FAQ ── */
+  .faq-item {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 20px 22px; margin-bottom: 12px;
+  }
+  .faq-item h4 { font-family: 'Syne', sans-serif; color: var(--gold); font-size: 0.97rem; margin-bottom: 8px; }
+  .faq-item p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* ── INTERLINKS ── */
+  .interlink-section { margin: 60px 0 40px; border-top: 1px solid var(--border); padding-top: 40px; }
+  .interlink-section h2 {
+    font-family: 'Syne', sans-serif; font-size: 1.3rem;
+    color: var(--gold); margin-bottom: 20px; border: none; padding: 0;
+  }
+  .interlink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .interlink-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 18px;
+    text-decoration: none; transition: all 0.25s; display: block;
+  }
+  .interlink-card:hover { transform: translateY(-4px); border-color: var(--gold); background: rgba(255,215,0,0.05); }
+  .interlink-card .ic-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .interlink-card .ic-title { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+  .interlink-card .ic-desc { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; }
+  .interlink-card .ic-arrow { color: var(--gold); font-size: 0.85rem; margin-top: 10px; font-weight: 600; }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,230,255,0.05));
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 16px; padding: 40px 30px;
+    text-align: center; margin: 50px 0;
+  }
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 1.5rem; margin-bottom: 12px; border: none; padding: 0;
+  }
+  .cta-section p { color: var(--text-muted); margin-bottom: 24px; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: #000; padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--cyan); padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; border: 1.5px solid var(--cyan); transition: all 0.2s;
+  }
+  .btn-outline:hover { background: rgba(0,230,255,0.1); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative; z-index: 1;
+    background: #060d18; border-top: 2px solid var(--gold);
+    padding: 50px 20px 30px; margin-top: 60px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; margin-bottom: 40px;
+  }
+  .footer-brand img { width: 44px; margin-bottom: 12px; border-radius: 8px; }
+  .footer-brand p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 0.9rem; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.5px;
+  }
+  .footer-col a {
+    display: block; color: var(--text-muted); text-decoration: none;
+    font-size: 0.85rem; padding: 4px 0; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1100px; margin: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 20px; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { color: var(--text-muted); font-size: 0.8rem; }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .nav-links a { font-size: 0.78rem; padding: 4px 7px; }
+    .interlink-grid { grid-template-columns: 1fr 1fr; }
+    .cta-section { padding: 30px 20px; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .comp-table th, .comp-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
-
-<a href="learning.html">⬅ Back to Learning</a>
-
-<h1>Swing Trading – Complete Guide for Beginners to Advanced</h1>
-
-<img src="https://via.placeholder.com/800x400">
-
-<p>
-Swing trading stock market का एक powerful trading style है जिसमें trades को कुछ दिनों से लेकर कुछ हफ्तों तक hold किया जाता है।
-</p>
-
-<p>
-यह intraday से कम stressful और long-term investing से ज्यादा active होता है।
-</p>
-
----
-
-<h2>🌐 Learn More</h2>
-
-<p>
-👉 Visit:
-<a href="https://bullbearmarket.in">BullBear Market</a>
-</p>
-
-<p>
-👉 Privacy Policy:
-<a href="https://bullbearmarket.in/privacy.html">Privacy Policy</a>
-</p>
-
----
-
-<h2>📊 What is Swing Trading?</h2>
-
-<p>
-Swing trading में trader short-term trends को पकड़ता है और price swings से profit कमाता है।
-</p>
-
-<ul>
-<li>Holding period: 2 दिन से लेकर 2–3 हफ्ते</li>
-<li>Trend-based trading</li>
-</ul>
-
----
-
-<h2>🔥 Why Swing Trading is Best for Beginners</h2>
-
-<ul>
-<li>कम stress</li>
-<li>Time flexibility</li>
-<li>Clear setups</li>
-</ul>
-
----
-
-<h2>📈 Swing Trading vs Intraday</h2>
-
-<ul>
-<li>Intraday → same day exit</li>
-<li>Swing → multi-day holding</li>
-</ul>
-
----
-
-<h2>💰 Best Swing Trading Strategies</h2>
-
-<h3>1. Trend Following Strategy</h3>
-
-<p>
-Trend के direction में trade लेना सबसे safe तरीका है।
-</p>
-
----
-
-<h3>2. Breakout Strategy</h3>
-
-<p>
-जब price strong resistance तोड़ता है → swing trade entry
-</p>
-
----
-
-<h3>3. Pullback Strategy</h3>
-
-<p>
-Trend में correction आने पर entry लेना।
-</p>
-
----
-
-<h2>📊 Indicators for Swing Trading</h2>
-
-<ul>
-<li>Moving Average (50 EMA, 200 EMA)</li>
-<li>RSI</li>
-<li>MACD</li>
-</ul>
-
-<p>
-👉 Learn:
-<a href="indicators.html">Indicators Guide</a>
-</p>
-
----
-
-<h2>📉 Risk Management</h2>
-
-<p>
-Swing trading में risk control जरूरी है क्योंकि trades overnight रहते हैं।
-</p>
-
-<ul>
-<li>Position sizing</li>
-<li>Stop loss</li>
-<li>Capital protection</li>
-</ul>
-
-<p>
-👉 Full:
-<a href="risk-management.html">Risk Management</a>
-</p>
-
----
-
-<h2>🧠 Psychology in Swing Trading</h2>
-
-<p>
-Swing trading में patience सबसे important है।
-</p>
-
-<ul>
-<li>Fear control</li>
-<li>Greed control</li>
-</ul>
-
-<p>
-👉 Learn:
-<a href="trading-psychology.html">Trading Psychology</a>
-</p>
-
----
-
-<h2>📊 Real Life Example</h2>
-
-<p>
-Stock ₹100 पर support लेता है और trend up है।
-</p>
-
-<ul>
-<li>Entry → ₹105</li>
-<li>Target → ₹120</li>
-<li>Stop Loss → ₹98</li>
-</ul>
-
----
-
-<h2>⚠️ Common Mistakes</h2>
-
-<ul>
-<li>Wrong entry timing</li>
-<li>No stop loss</li>
-<li>Over holding</li>
-</ul>
-
----
-
-<h2>🚀 Pro Tips</h2>
-
-<ul>
-<li>Strong stocks pick करो</li>
-<li>Volume देखो</li>
-<li>Trend confirm करो</li>
-</ul>
-
----
-
-<h2>📊 Best Timeframes</h2>
-
-<ul>
-<li>Daily chart</li>
-<li>4H chart</li>
-</ul>
-
----
-
-<h2>📈 Advanced Concepts</h2>
-
-<h3>1. Multi Timeframe Analysis</h3>
-<p>Higher timeframe trend + lower timeframe entry</p>
-
-<h3>2. Volume Breakout</h3>
-<p>Strong moves confirm करता है</p>
-
----
-
-<h2>🎯 Final Conclusion</h2>
-
-<p>
-Swing trading beginners और working professionals के लिए best trading style है।
-</p>
-
-<p>
-अगर आप सही strategy + patience + risk management follow करते हैं,  
-तो consistent profit possible है।
-</p>
-
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <span>BullBear Market</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning.html" class="active">Learning</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <a href="learning.html">Learning Hub</a>
+  <span>›</span>
+  <span>Swing Trading</span>
 </div>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">🌊 Learning Module</div>
+  <h1>Swing Trading – Complete Guide Beginners to Advanced</h1>
+  <p>कुछ दिनों से कुछ हफ्तों में profit कमाने का तरीका सीखो। Working professionals और beginners के लिए perfect — intraday से कम stress, investing से ज्यादा active।</p>
+  <div class="hero-tags">
+    <span>📊 Trend Following</span>
+    <span>🔄 Pullback Strategy</span>
+    <span>📈 50 & 200 EMA</span>
+    <span>🛡️ Overnight Risk</span>
+    <span>🇮🇳 NSE / BSE Stocks</span>
+  </div>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="content">
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <span class="stat-num">2–21</span>
+      <div class="stat-label">दिन — typical swing trade holding period</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">1:3</span>
+      <div class="stat-label">Risk Reward — swing trades में ideal</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">Daily</span>
+      <div class="stat-label">Chart — swing trading का best timeframe</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">30 min</span>
+      <div class="stat-label">Per day — काफी है swing trading manage करने के लिए</div>
+    </div>
+  </div>
+
+  <!-- WHAT IS SWING -->
+  <h2>🌊 Swing Trading क्या है?</h2>
+
+  <p>Swing trading एक trading style है जिसमें आप stocks या indexes को <strong>कुछ दिनों से लेकर कुछ हफ्तों तक hold करते हो</strong> और price के natural up-down (swings) से profit कमाते हो।</p>
+
+  <p>हर stock एक straight line में नहीं चलता। वह ऊपर जाता है, थोड़ा pullback लेता है, फिर ऊपर जाता है — या नीचे जाता है, थोड़ा bounce करता है, फिर नीचे जाता है। इन swings को पकड़ना ही swing trading है।</p>
+
+  <img src="images/07_trendline-chart.png" alt="Trendline Chart Showing Swing Trading Price Movements" loading="lazy">
+
+  <div class="highlight-box">
+    <p>💡 <strong>Simple Analogy:</strong> सोचो market एक समुद्र है। Waves (swings) आती हैं और जाती हैं। Swing trader एक surfer की तरह है — वह wave शुरू होने पर ride करता है और wave peak पर exit करता है। वह हर छोटी लहर पर नहीं जाता (intraday), लेकिन हर wave का पूरा सफर करता है।</p>
+  </div>
+
+  <h3>Swing Trading किसके लिए Perfect है?</h3>
+  <ul>
+    <li><strong>Working professionals</strong> जो market को हर minute नहीं देख सकते</li>
+    <li><strong>Students</strong> जिनके पास limited time है</li>
+    <li><strong>Beginners</strong> जो intraday pressure से बचना चाहते हैं</li>
+    <li><strong>Part-time traders</strong> जो side income बनाना चाहते हैं</li>
+    <li>कोई भी जो <strong>roz screen से chipka नहीं रहना</strong> चाहता</li>
+  </ul>
+
+  <!-- COMPARISON TABLE -->
+  <h2>📊 Swing vs Intraday vs Long-term — Full Comparison</h2>
+
+  <p>तीनों styles में से कौन सा आपके लिए best है — यह table देखकर decide करो:</p>
+
+  <table class="comp-table">
+    <tr>
+      <th>Parameter</th>
+      <th>🌊 Swing Trading</th>
+      <th>⚡ Intraday</th>
+      <th>📈 Long-term</th>
+    </tr>
+    <tr>
+      <td>Holding Period</td>
+      <td class="td-gold">2 दिन – 4 हफ्ते</td>
+      <td>कुछ मिनट – 1 दिन</td>
+      <td>महीने – साल</td>
+    </tr>
+    <tr>
+      <td>Time Required Daily</td>
+      <td class="td-green">30–60 min</td>
+      <td class="td-red">Full day attention</td>
+      <td class="td-green">Minimal</td>
+    </tr>
+    <tr>
+      <td>Stress Level</td>
+      <td class="td-green">Medium-Low</td>
+      <td class="td-red">Very High</td>
+      <td class="td-green">Low</td>
+    </tr>
+    <tr>
+      <td>Profit Per Trade</td>
+      <td class="td-gold">5–20%</td>
+      <td>0.5–2%</td>
+      <td>50–200%+ (years)</td>
+    </tr>
+    <tr>
+      <td>Overnight Risk</td>
+      <td class="td-gold">✅ होती है (manageable)</td>
+      <td class="td-green">❌ नहीं</td>
+      <td class="td-red">✅ होती है</td>
+    </tr>
+    <tr>
+      <td>Brokerage Fees</td>
+      <td class="td-green">Low (कम trades)</td>
+      <td class="td-red">High (बहुत trades)</td>
+      <td class="td-green">Very Low</td>
+    </tr>
+    <tr>
+      <td>Best For</td>
+      <td class="td-gold">Part-timers, Beginners</td>
+      <td>Full-time traders</td>
+      <td>Investors</td>
+    </tr>
+  </table>
+
+  <div class="success-box">
+    <p>✅ <strong>Verdict:</strong> Swing trading इन तीनों का <strong>best balance</strong> देती है — intraday जितना profit potential, long-term जितनी कम monitoring, और बीच का stress level। यही इसे beginners के लिए ideal बनाता है।</p>
+  </div>
+
+  <!-- STRATEGIES -->
+  <h2>💰 Best Swing Trading Strategies — Detail में</h2>
+
+  <p>Swing trading में success के लिए एक <strong>well-defined strategy</strong> होना जरूरी है। ये 4 strategies beginners से advanced traders तक सब use करते हैं।</p>
+
+  <!-- Strategy 1 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">01</div>
+      <div>
+        <div class="s-title">Trend Following Strategy</div>
+        <div class="s-subtitle">सबसे safe और reliable swing strategy</div>
+      </div>
+    </div>
+    <p><strong>"Trend is your friend"</strong> — यह trading की सबसे पुरानी और proven बात है। Swing trading में trend के direction में trade लेना सबसे high probability approach है।</p>
+    <p><strong>Logic:</strong> जब कोई stock uptrend में होता है (higher highs, higher lows बना रहा है), तो इस trend के साथ buy trades लेना statistically winning approach है। Trend जितनी strong, उतना reliable।</p>
+    <ul>
+      <li>Daily chart पर trend identify करो — Higher Highs + Higher Lows = Uptrend</li>
+      <li>50 EMA या 200 EMA price के ऊपर हो → Bullish bias confirm</li>
+      <li>Trend में correction (pullback) आने पर entry opportunity ढूंढो</li>
+      <li>Pullback 50 EMA के पास आए और candlestick reversal pattern बने → Entry</li>
+      <li>Stop Loss: Pullback का low (last swing low)</li>
+      <li>Target: Previous high या Fibonacci extension levels</li>
+    </ul>
+    <div class="info-box" style="margin-top:16px;">
+      <p>📍 <strong>Key Insight:</strong> Trend following में patience सबसे जरूरी है। अच्छा setup बनने का wait करो — forced entry से बचो। एक महीने में 2-3 perfect setups enough हैं।</p>
+    </div>
+  </div>
+
+  <!-- Strategy 2 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">02</div>
+      <div>
+        <div class="s-title">Pullback Strategy</div>
+        <div class="s-subtitle">Best entry at discounted prices</div>
+      </div>
+    </div>
+    <p>Pullback का मतलब है — uptrend में temporarily नीचे आना। यह नई entry के लिए <strong>सबसे अच्छा opportunity</strong> होती है क्योंकि आप discounted price पर strong stock खरीदते हो।</p>
+    <p><strong>Logic:</strong> अगर एक stock strong uptrend में है और थोड़ा correct करता है — यह weakness नहीं है, यह buying opportunity है। बड़े traders (institutions) यहीं accumulate करते हैं।</p>
+    <ul>
+      <li>Strong uptrend identify करो (strong fundamentals + technical)</li>
+      <li>Pullback observe करो — 38.2% या 50% Fibonacci retracement level देखो</li>
+      <li>Pullback key support या EMA पर आने पर candlestick signal wait करो</li>
+      <li>Bullish engulfing, hammer, या morning star pattern पर entry</li>
+      <li>Volume: Pullback में volume कम होनी चाहिए और bounce पर volume बढ़नी चाहिए</li>
+      <li>Stop Loss: Pullback का recent low</li>
+      <li>Target: Previous high का retest या नया high</li>
+    </ul>
+  </div>
+
+  <!-- Strategy 3 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">03</div>
+      <div>
+        <div class="s-title">Breakout Strategy</div>
+        <div class="s-subtitle">Momentum के साथ बड़े moves पकड़ो</div>
+      </div>
+    </div>
+    <p>जब stock एक consolidation zone या resistance level को <strong>strong volume के साथ break</strong> करता है, तो अक्सर एक बड़ा move आता है। Swing traders इसे capture करते हैं।</p>
+    <ul>
+      <li>Weekly chart पर strong resistance level identify करो (कई महीनों से होल्ड)</li>
+      <li>Stock का breakout candle weekly closing basis पर confirm होना चाहिए</li>
+      <li>Volume breakout week में average volume से 2x+ होनी चाहिए</li>
+      <li>Entry: Breakout candle close के बाद या next day morning</li>
+      <li>Retest entry: Breakout के बाद resistance पर pullback आए → safer entry</li>
+      <li>Stop Loss: Breakout level के नीचे 3-5%</li>
+      <li>Target: Previous swing high या measured move (pattern height)</li>
+    </ul>
+    <div class="warn-box" style="margin-top:16px;">
+      <p>⚠️ <strong>Fake Breakout Alert:</strong> हर breakout successful नहीं होता। Low volume breakout = weak signal। हमेशा weekly candle close confirm होने पर ही entry लो।</p>
+    </div>
+  </div>
+
+  <!-- Strategy 4 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">04</div>
+      <div>
+        <div class="s-title">RSI Swing Strategy</div>
+        <div class="s-subtitle">Oversold stocks में entry — classic setup</div>
+      </div>
+    </div>
+    <p>RSI (Relative Strength Index) swing trading का सबसे popular indicator है। <strong>Oversold stocks में value buy करना</strong> और overbought पर exit करना — यह simple और effective strategy है।</p>
+    <ul>
+      <li>Stock जो uptrend में है उसे watchlist में रखो</li>
+      <li>RSI 30-40 zone में आए (oversold) → potential swing buy opportunity</li>
+      <li>Candlestick reversal pattern wait करो support level पर</li>
+      <li>RSI 30 cross करके ऊपर जाए + bullish candle → Entry signal</li>
+      <li>Target: RSI 60-70 level (overbought zone)</li>
+      <li>Stop Loss: Recent swing low के नीचे</li>
+    </ul>
+  </div>
+
+  <img src="images/29_rsi-swing-trading-strategy.png" alt="RSI Swing Trading Strategy Chart – Oversold Buy Signal" loading="lazy">
+
+  <!-- INDICATORS -->
+  <h2>📊 Best Indicators for Swing Trading</h2>
+
+  <p>Swing trading में intraday से कम indicators की जरूरत होती है। <strong>Daily chart पर ये 4 indicators</strong> बहुत अच्छा काम करते हैं।</p>
+
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">📈</div>
+      <h4>50 EMA & 200 EMA</h4>
+      <p>Trend direction का सबसे reliable indicator। Price 50 EMA के ऊपर = uptrend। 50 EMA 200 EMA के ऊपर = strong bull market। EMA crossovers major signals देते हैं।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">💪</div>
+      <h4>RSI (14 Period)</h4>
+      <p>Momentum measure करता है। Swing trading में RSI 40-60 के बीच रहना healthy trend दिखाता है। 30 से नीचे = oversold buy opportunity। 70 से ऊपर = overbought exit signal।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📉</div>
+      <h4>MACD (12, 26, 9)</h4>
+      <p>Trend change का early signal देता है। MACD bullish crossover + histogram positive होना = buy signal। Weekly chart पर MACD signals बहुत reliable होते हैं।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📊</div>
+      <h4>Volume</h4>
+      <p>हर move को validate करता है। Breakout पर high volume = strong move। Pullback पर low volume = healthy correction। Volume confirmation के बिना कोई trade नहीं।</p>
+    </div>
+  </div>
+
+  <img src="images/03_moving-average-chart.png" alt="Moving Average Chart for Swing Trading – 50 EMA and 200 EMA" loading="lazy">
+
+  <div class="highlight-box">
+    <p>🎯 <strong>Perfect Combination:</strong> 50 EMA (trend) + RSI (momentum) + Volume (confirmation) — यह तीनों मिलकर swing trading का complete system बनाते हैं। बाकी सब optional है।</p>
+  </div>
+
+  <!-- STOCK SELECTION -->
+  <h2>🔍 Swing Trading के लिए Stock Selection कैसे करें?</h2>
+
+  <p>Swing trading में <strong>stock selection सबसे underrated skill</strong> है। Wrong stock में अच्छी strategy भी काम नहीं करती। ये criteria use करो:</p>
+
+  <table class="screen-table">
+    <tr>
+      <th>Criteria</th>
+      <th>What to Look For</th>
+      <th>Why Important</th>
+    </tr>
+    <tr>
+      <td><strong>Liquidity</strong></td>
+      <td>Average daily volume 5 lakh+ shares</td>
+      <td>Easy entry/exit, no slippage</td>
+    </tr>
+    <tr>
+      <td><strong>Trend</strong></td>
+      <td>52-week high के पास या strong uptrend में</td>
+      <td>Trending stocks swing better</td>
+    </tr>
+    <tr>
+      <td><strong>Relative Strength</strong></td>
+      <td>NIFTY से better performance</td>
+      <td>Strong stocks lead the market</td>
+    </tr>
+    <tr>
+      <td><strong>Sector</strong></td>
+      <td>Outperforming sector के stocks</td>
+      <td>Sector rotation drives swings</td>
+    </tr>
+    <tr>
+      <td><strong>Avoid</strong></td>
+      <td>Penny stocks, illiquid stocks, F&O ban stocks</td>
+      <td>Risk बहुत ज्यादा होती है</td>
+    </tr>
+  </table>
+
+  <h3>India में Popular Swing Trading Stocks (Examples):</h3>
+  <ul>
+    <li>NIFTY 50 stocks: Reliance, HDFC Bank, Infosys, TCS, SBI, Tata Motors</li>
+    <li>Midcap leaders: Persistent Systems, Voltas, Crompton, Havells</li>
+    <li>Sector leaders: जो sector outperform कर रहा हो उसके top 2-3 stocks</li>
+    <li><strong>Avoid:</strong> SME stocks, penny stocks, highly volatile B-group stocks</li>
+  </ul>
+
+  <!-- TIMEFRAMES -->
+  <h2>⏱️ Swing Trading के लिए Best Timeframes</h2>
+
+  <p>Multi-timeframe analysis swing trading में game-changer होती है। Top-down approach use करो:</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Weekly Chart — Big Picture (Macro Trend)</h4>
+        <p>पहले weekly chart देखो। Overall market direction क्या है? Stock major uptrend में है या downtrend? Weekly chart का trend ignore करके swing trade नहीं लेते।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Daily Chart — Trading Timeframe (Main Analysis)</h4>
+        <p>Daily chart पर exact strategy apply करो। Support/resistance mark करो, EMA levels देखो, RSI check करो। यहीं से entry और exit plan बनाओ।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>4-Hour Chart — Entry Timing (Fine-Tune)</h4>
+        <p>Daily chart पर setup बन जाए तो 4H chart पर exact entry timing देखो। Candlestick pattern और volume यहाँ देखो। इससे entry और tight stop loss मिलता है।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RISK MANAGEMENT FOR SWING -->
+  <h2>🛡️ Swing Trading में Risk Management</h2>
+
+  <p>Swing trades overnight रहती हैं — इसका मतलब है <strong>additional overnight risk</strong>। Gap down (stock बहुत नीचे open हो) या bad news के कारण अचानक बड़ा loss possible है। इसलिए risk management और जरूरी हो जाती है।</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Position Size Carefully — Max 2% Risk Per Trade</h4>
+        <p>Swing trade में overnight risk की वजह से position size conservative रखो। ₹1,00,000 capital पर एक trade में max ₹2,000 risk। एक साथ 3-5 से ज्यादा positions नहीं।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Stop Loss हमेशा Wider रखो</h4>
+        <p>Intraday के tight SL की तरह swing में नहीं रख सकते। Daily chart पर natural support या swing low के नीचे SL रखो — 5-8% नीचे reasonable है। Tight SL = premature stop out।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Earnings / Results से पहले सावधान रहो</h4>
+        <p>Quarterly results, budget announcements, RBI policy — इन events से पहले swing position hold करना risky होता है। या तो position reduce करो या results के बाद entry लो।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Trailing Stop Loss Use करो</h4>
+        <p>जैसे trade profit में जाए, SL को breakeven पर move करो। फिर last swing low पर। इससे profit lock होता है और downside risk कम होती है।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Diversify — Same Sector में सब नहीं</h4>
+        <p>3-5 open positions हों तो अलग-अलग sectors में रखो। एक sector की bad news सब positions को hit करेगी अगर सब same sector में हैं।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REAL EXAMPLE -->
+  <h2>📊 Real Swing Trade Example — Step by Step</h2>
+
+  <p>Theory समझ लिया — अब एक actual swing trade देखते हैं जो properly planned और executed हो:</p>
+
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num" style="background: linear-gradient(135deg,#00ff88,#00b360);">📈</div>
+      <div>
+        <div class="s-title" style="color:var(--green);">HDFC Bank — Pullback Swing Trade</div>
+        <div class="s-subtitle">Trend Following + Pullback Strategy</div>
+      </div>
+    </div>
+    <ul>
+      <li><strong>Step 1 – Weekly Analysis:</strong> HDFC Bank 3 महीने से uptrend में है। Weekly chart पर higher highs, higher lows बन रहे हैं।</li>
+      <li><strong>Step 2 – Daily Analysis:</strong> Stock ₹1,650 पर strong resistance था, जो 2 हफ्ते पहले break हुआ। अब pullback आ रहा है।</li>
+      <li><strong>Step 3 – Setup:</strong> Stock ₹1,650 (previous resistance = now support) पर आ गया। RSI 42 है (pullback zone)। Volume कम है (healthy correction)।</li>
+      <li><strong>Step 4 – Confirmation:</strong> Daily chart पर Bullish Engulfing candle ₹1,660 पर बनी। Volume average से 1.5x ज्यादा।</li>
+      <li><strong>Entry:</strong> ₹1,665 (next day morning)</li>
+      <li><strong>Stop Loss:</strong> ₹1,620 (swing low के नीचे) → Risk = ₹45 per share</li>
+      <li><strong>Target:</strong> ₹1,780 (previous high retest) → Reward = ₹115 per share</li>
+      <li><strong>RR Ratio:</strong> 1:2.5 ✅</li>
+      <li><strong>Result:</strong> 12 दिन बाद ₹1,780 hit। Exit। Profit per share ₹115।</li>
+    </ul>
+    <div class="success-box" style="margin-top:16px;">
+      <p>✅ <strong>What made this trade work:</strong> Weekly trend aligned था। Pullback support पर confirmation मिली। Volume analysis किया। Entry, SL और Target पहले plan किए। Patience रखी — 12 दिन hold किया।</p>
+    </div>
+  </div>
+
+  <!-- PSYCHOLOGY -->
+  <h2>🧠 Swing Trading Psychology — Patience का Game</h2>
+
+  <p>Swing trading का सबसे बड़ा psychological challenge है — <strong>holding करना।</strong> Trade enter करने के बाद 5-10 दिन wait करना बहुत लोगों के लिए difficult होता है।</p>
+
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">😰</div>
+      <h4>Premature Exit</h4>
+      <p>Target तक पहुँचने से पहले छोटे profit पर exit करना। "Kya pata reverse ho jaye" — यह डर profits को छोटा कर देता है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">👁️</div>
+      <h4>Over Monitoring</h4>
+      <p>हर घंटे price check करना। Swing trade को breathe करने दो। Constant checking से unnecessary panic और exit होती है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🔄</div>
+      <h4>Plan से Deviation</h4>
+      <p>Market में होने पर plan change करना। Entry के बाद SL नीचे move करना — यह discipline break करना है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📱</div>
+      <h4>FOMO Entries</h4>
+      <p>Stock move कर गया, बिना setup entry लेना। Swing में "missed" trades को FOMO से replace मत करो — अगला opportunity आएगा।</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>🧘 <strong>Swing Trader का Mindset:</strong> "मैंने plan के हिसाब से trade लिया। SL set है। Target set है। अब market को काम करने दो।" — यह mindset आने के बाद swing trading बहुत easier हो जाती है।</p>
+  </div>
+
+  <!-- WEEKLY ROUTINE -->
+  <h2>📅 Swing Trader की Weekly Routine</h2>
+
+  <p>Swing trading में daily heavy monitoring की जरूरत नहीं — लेकिन एक structured routine होना चाहिए:</p>
+
+  <div class="checklist">
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>Sunday Evening (30-45 min):</strong> Weekly charts scan करो। New setups identify करो। Watchlist prepare करो। Market outlook plan करो।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>Monday Morning (15 min):</strong> Watchlist stocks check करो। Setup confirm होने पर entry plan करो। Existing positions check करो।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>Daily (10 min — After Market):</strong> Open positions का daily chart देखो। Stop loss adjust करना हो तो करो (trailing SL)। Target hit हुआ? Exit करो।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>Friday Evening (20 min):</strong> Weekly performance review करो। Journal update करो। क्या सीखा? क्या improve करना है?</div>
+    </div>
+  </div>
+
+  <!-- COMMON MISTAKES -->
+  <h2>⚠️ Swing Trading में Common Mistakes</h2>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Counter-Trend Trades लेना</h4>
+      <p>Downtrend में stocks buy करना क्योंकि "सस्ता लग रहा है।" Downtrending stocks और सस्ते हो सकते हैं। Trend के साथ trade करो, against नहीं। "Catching a falling knife" — यह सबसे painful mistake है।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Results से पहले Holding</h4>
+      <p>Quarterly results, budget, या major announcements से पहले heavy position रखना। एक bad news रात को आ सकती है और अगले दिन stock 10-15% gap down खुल सकता है। SL भी काम नहीं करता gap down में।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Too Many Positions एक साथ</h4>
+      <p>10-15 stocks एक साथ hold करना manage करना impossible है। 3-5 quality positions enough हैं। ज्यादा positions = diluted attention = missed opportunities + missed exits।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Volume Ignore करना</h4>
+      <p>Volume confirmation के बिना breakout पर entry लेना। Low volume breakout अक्सर fail होता है और fake-out देता है। Volume हमेशा confirm करो।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Over-Holding — Greed से</h4>
+      <p>Target hit होने के बाद भी hold करना — "और ऊपर जाएगा।" इससे profitable trades loss में बदल जाती हैं। Target reach करे → Exit। Simple।</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>Swing trading के लिए minimum capital कितना चाहिए?</h4>
+    <p>Swing trading के लिए ₹25,000–₹50,000 से शुरू करना reasonable है। इससे आप proper position sizing कर सकते हो, brokerage fees को manage कर सकते हो और 2-3 positions simultaneously रख सकते हो। कम capital में एक बड़ी position लेनी पड़ती है जो risk बढ़ाती है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Swing trading और investing में क्या difference है?</h4>
+    <p>Investing में आप fundamentally strong companies के stocks सालों के लिए रखते हो — business के साथ grow करने के लिए। Swing trading purely technical होती है — आप price patterns और momentum से short-term profit कमाते हो। Investor को company पसंद होती है, swing trader को setup पसंद होता है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Swing trading में per month कितना realistic profit है?</h4>
+    <p>Consistent swing traders monthly 5-15% return target करते हैं। लेकिन beginners के लिए पहले 6 महीने सीखने पर focus करो — profit बाद में naturally आएगा। हर महीने हर trade profitable नहीं होती, लेकिन overall system profitable होना चाहिए। Practice BullBear Market पर virtual trading से शुरू करो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Job करते हुए swing trading कर सकते हैं?</h4>
+    <p>हाँ, swing trading specifically working professionals के लिए designed है। Daily 15-30 minutes — morning में watchlist check, शाम को positions review — enough है। आपको market को continuously देखने की जरूरत नहीं है जैसे intraday में होती है। बस Sunday को अपना weekly analysis करो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Swing trading में कितने trades per month लेने चाहिए?</h4>
+    <p>Quality over quantity। Beginners के लिए 4-8 trades per month enough हैं। Every week 1-2 setups identify करो और उन्हें properly execute करो। Over-trading swing trading में भी उतना ही harmful है जितना intraday में। Wait for A+ setups only।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Swing trading में कौन सा chart timeframe सबसे important है?</h4>
+    <p>Daily chart swing trading का primary timeframe है। Weekly chart overall trend के लिए और 4H chart entry timing के लिए use करो। 15-minute या 5-minute charts swing trading के लिए नहीं होते — यह intraday timeframes हैं। Daily chart पर setup बनने पर ही trade लो।</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>🌊 Swing Trading Practice शुरू करो — Free</h2>
+    <p>Theory समझ लिया — अब BullBear Market पर virtual stocks के साथ swing trading practice करो। Real market data, zero real money risk, real learning experience।</p>
+    <div class="cta-btns">
+      <a href="learning.html" class="btn-primary">📚 Learning Hub जाओ</a>
+      <a href="index.html" class="btn-outline">🏠 Home पर जाओ</a>
+    </div>
+  </div>
+
+  <!-- INTERLINKS -->
+  <div class="interlink-section">
+    <h2>📚 Swing Trading के साथ यह भी सीखो</h2>
+    <div class="interlink-grid">
+      <a href="candlestick.html" class="interlink-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Candlestick Patterns</div>
+        <div class="ic-desc">Swing entry के लिए reversal patterns — Hammer, Engulfing, Morning Star।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="indicators.html" class="interlink-card">
+        <div class="ic-icon">📈</div>
+        <div class="ic-title">Indicators Guide</div>
+        <div class="ic-desc">RSI, MACD, Moving Average — swing trading के लिए complete guide।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="risk.html" class="interlink-card">
+        <div class="ic-icon">🛡️</div>
+        <div class="ic-title">Risk Management</div>
+        <div class="ic-desc">Swing में overnight risk कैसे manage करें — must read।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="patterns.html" class="interlink-card">
+        <div class="ic-icon">🔺</div>
+        <div class="ic-title">Chart Patterns</div>
+        <div class="ic-desc">Cup & Handle, Flag, Triangle — swing setups identify करो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="psychology.html" class="interlink-card">
+        <div class="ic-icon">🧠</div>
+        <div class="ic-title">Trading Psychology</div>
+        <div class="ic-desc">Holding patience और exit discipline — swing का असली challenge।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="intraday.html" class="interlink-card">
+        <div class="ic-icon">⚡</div>
+        <div class="ic-title">Intraday Trading</div>
+        <div class="ic-desc">Swing vs Intraday — दोनों styles compare करो और decide करो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- end .content -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <p>India's #1 free stock market learning & virtual trading platform. Learn, Practice, Compete, Grow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning Hub</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <h4>Learn Free</h4>
+      <a href="swing.html">Swing Trading</a>
+      <a href="intraday.html">Intraday Trading</a>
+      <a href="risk.html">Risk Management</a>
+      <a href="psychology.html">Trading Psychology</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BullBear Market. All rights reserved. | Made with ❤️ in India</p>
+    <p>Educational Platform – No Real Money Trading | <a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</footer>
 
 </body>
 </html>
