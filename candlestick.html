@@ -1,932 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Candlestick Patterns Explained – Learn Trading Step by Step</title>
+<!-- Primary SEO -->
+<title>Candlestick Patterns – Complete Guide for Beginners | BullBear Market</title>
+<meta name="description" content="Learn candlestick patterns in stock market. Complete guide covering Doji, Hammer, Engulfing, Morning Star with trading strategies. Hindi & English. Free on BullBear Market.">
+<meta name="keywords" content="candlestick patterns, candlestick chart, stock market candlestick, doji pattern, hammer pattern, engulfing pattern, trading patterns India, candlestick patterns Hindi, BullBear Market">
+<meta name="author" content="BullBear Market">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bullbearmarket.in/candlestick.html">
 
-<meta name="description" content="Learn candlestick patterns in stock market. Complete guide for beginners with examples, strategies and trading tips.">
+<!-- Geo Tags -->
+<meta name="geo.region" content="IN">
+<meta name="geo.country" content="India">
+<meta name="language" content="en-IN">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Candlestick Patterns – Complete Guide for Beginners | BullBear Market">
+<meta property="og:description" content="Learn all candlestick patterns with trading strategies. Free stock market education in Hindi & English on BullBear Market.">
+<meta property="og:url" content="https://bullbearmarket.in/candlestick.html">
+<meta property="og:site_name" content="BullBear Market">
+<meta property="og:image" content="https://bullbearmarket.in/images/01_candlestick-chart-example.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Candlestick Patterns – Complete Guide | BullBear Market">
+<meta name="twitter:description" content="Free candlestick patterns guide for Indian stock market beginners. Hindi & English.">
+<meta name="twitter:image" content="https://bullbearmarket.in/images/01_candlestick-chart-example.png">
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Candlestick Patterns – Complete Guide for Beginners",
+  "description": "Complete guide to candlestick patterns in stock market trading. Learn Doji, Hammer, Engulfing and more with strategies.",
+  "image": "https://bullbearmarket.in/images/01_candlestick-chart-example.png",
+  "author": {"@type": "Organization", "name": "BullBear Market"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BullBear Market",
+    "logo": {"@type": "ImageObject", "url": "https://bullbearmarket.in/favicon.png"}
+  },
+  "url": "https://bullbearmarket.in/candlestick.html",
+  "inLanguage": "en-IN",
+  "dateModified": "2026-04-05"
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    --gold: #FFD700;
+    --gold-light: #FFE44D;
+    --cyan: #00e6ff;
+    --dark: #0B1220;
+    --dark2: #111827;
+    --dark3: #1a2235;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: rgba(255,215,0,0.15);
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
-  color: white;
-  line-height: 1.8;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
 
-h1 { color: gold; }
-h2 { color: #00e6ff; margin-top: 30px; }
-h3 { color: #00ffaa; }
+  /* ── GRID OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-p { color: #ccc; }
+  /* ── NAVBAR ── */
+  nav {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 2.5px solid var(--gold);
+    z-index: 1000;
+    padding: 0 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 20px 0;
-}
+  .nav-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
-a { color: gold; }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
 
+  .nav-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  .nav-logo span {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #111;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: var(--gold);
+    color: #000;
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 0 20px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { color: var(--text-muted); }
+
+  /* ── HERO SECTION ── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,215,0,0.1);
+    border: 1px solid rgba(255,215,0,0.3);
+    color: var(--gold);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto 20px;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .hero-tags span {
+    background: rgba(0,230,255,0.08);
+    border: 1px solid rgba(0,230,255,0.2);
+    color: var(--cyan);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  /* ── SECTION HEADINGS ── */
+  .content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cyan);
+    margin: 50px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,230,255,0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00ffaa;
+    margin: 28px 0 10px;
+  }
+
+  .content p {
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    font-size: 0.97rem;
+  }
+
+  .content b, .content strong { color: var(--text); }
+
+  .content ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 16px;
+  }
+
+  .content ul li {
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative;
+    font-size: 0.97rem;
+  }
+
+  .content ul li::before {
+    content: '▸';
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+  }
+
+  /* ── IMAGES ── */
+  .content img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    display: block;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: rgba(255,215,0,0.06);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+
+  .highlight-box p { color: var(--text); margin: 0; font-size: 0.95rem; }
+
+  /* ── INFO BOX ── */
+  .info-box {
+    background: rgba(0,230,255,0.05);
+    border: 1px solid rgba(0,230,255,0.15);
+    border-left: 4px solid var(--cyan);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+
+  .info-box p { color: var(--text); margin: 0; font-size: 0.95rem; }
+
+  /* ── WARNING BOX ── */
+  .warn-box {
+    background: rgba(255,100,0,0.06);
+    border: 1px solid rgba(255,100,0,0.2);
+    border-left: 4px solid #ff6400;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+
+  .warn-box p { color: var(--text); margin: 0; font-size: 0.95rem; }
+
+  /* ── PATTERN GRID ── */
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .pattern-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .pattern-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,215,0,0.4);
+  }
+
+  .pattern-card .icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .pattern-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .pattern-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .pattern-card .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .badge-bull { background: rgba(0,255,100,0.12); color: #00ff64; border: 1px solid rgba(0,255,100,0.2); }
+  .badge-bear { background: rgba(255,60,60,0.12); color: #ff5050; border: 1px solid rgba(255,60,60,0.2); }
+  .badge-neutral { background: rgba(255,215,0,0.12); color: var(--gold); border: 1px solid rgba(255,215,0,0.2); }
+
+  /* ── STRATEGY STEPS ── */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 24px 0;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .step-num {
+    min-width: 36px;
+    height: 36px;
+    background: var(--gold);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  .step-text h4 {
+    font-family: 'Syne', sans-serif;
+    color: var(--text);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .step-text p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+  /* ── FAQ SECTION ── */
+  .faq-item {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 12px;
+  }
+
+  .faq-item h4 {
+    font-family: 'Syne', sans-serif;
+    color: var(--gold);
+    font-size: 0.97rem;
+    margin-bottom: 8px;
+  }
+
+  .faq-item p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+  /* ── INTERLINK CARDS ── */
+  .interlink-section {
+    margin: 60px 0 40px;
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+  }
+
+  .interlink-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    border: none;
+    padding: 0;
+  }
+
+  .interlink-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .interlink-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 18px;
+    text-decoration: none;
+    transition: all 0.25s;
+    display: block;
+  }
+
+  .interlink-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    background: rgba(255,215,0,0.05);
+  }
+
+  .interlink-card .ic-icon { font-size: 1.6rem; margin-bottom: 10px; }
+
+  .interlink-card .ic-title {
+    font-family: 'Syne', sans-serif;
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .interlink-card .ic-desc {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .interlink-card .ic-arrow {
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,230,255,0.05));
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif;
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+
+  .cta-section p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-size: 0.97rem;
+  }
+
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--gold);
+    color: #000;
+    padding: 12px 26px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--cyan);
+    padding: 12px 26px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1.5px solid var(--cyan);
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover { background: rgba(0,230,255,0.1); transform: translateY(-2px); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative;
+    z-index: 1;
+    background: #060d18;
+    border-top: 2px solid var(--gold);
+    padding: 50px 20px 30px;
+    margin-top: 60px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand img { width: 44px; margin-bottom: 12px; border-radius: 8px; }
+
+  .footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif;
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-col a {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 4px 0;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .nav-links a { font-size: 0.78rem; padding: 4px 7px; }
+    .interlink-grid { grid-template-columns: 1fr 1fr; }
+    .cta-section { padding: 30px 20px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
-<a href="learning.html">⬅ Back to Learning</a>
-<h1>Candlestick Patterns – Complete Guide for Beginners</h1>
-
-<p>
-Stock market trading सीखने के लिए सबसे powerful और important tool होता है — <b>candlestick patterns</b>।
-यह सिर्फ chart नहीं होता, बल्कि यह market की पूरी psychology को दिखाता है।
-</p>
-
-<p>
-अगर आप beginner हैं और trading सीखना चाहते हैं, तो candlestick patterns आपकी foundation है।
-Without candlestick knowledge, trading करना guesswork बन जाता है।
-</p>
-
-<p>
-In simple words:
-<b>Candlestick = Market की language</b>
-</p>
-
-<p>
-जब आप candlestick समझ लेते हो, तो आप price action को पढ़ सकते हो — और यही trading का real skill है।
-</p>
-
-<h2>📊 What is Candlestick? (Candlestick क्या है)</h2>
-
-<p>
-Candlestick एक graphical representation है जो stock price movement को दिखाता है।
-यह Japanese traders द्वारा develop किया गया था और आज पूरी दुनिया में use होता है।
-</p>
-
-<p>
-हर candle एक specific time period को represent करता है:
-</p>
-
-<ul>
-<li>1 minute candle</li>
-<li>5 minute candle</li>
-<li>15 minute candle</li>
-<li>1 hour candle</li>
-<li>1 day candle</li>
-</ul>
-
-<p>
-👉 मतलब: हर candle उस time frame का पूरा data दिखाता है
-</p>
-
-<h2>📐 Structure of a Candlestick</h2>
-
-<p>
-हर candlestick के 4 main components होते हैं:
-</p>
-
-<ul>
-<li><b>Open Price</b> – candle की शुरुआत</li>
-<li><b>Close Price</b> – candle का अंत</li>
-<li><b>High Price</b> – सबसे ज्यादा price</li>
-<li><b>Low Price</b> – सबसे कम price</li>
-</ul>
-
-<p>
-इन 4 values से मिलकर एक complete candle बनती है।
-</p>
-
-<h3>Body vs Wick</h3>
-
-<ul>
-<li><b>Body</b> → Open और Close के बीच का हिस्सा</li>
-<li><b>Wick (Shadow)</b> → High और Low को दिखाता है</li>
-</ul>
-
-<p>
-👉 Wick बहुत important होता है क्योंकि यह rejection दिखाता है
-</p>
-
-<h2>🟢 Green Candle vs 🔴 Red Candle</h2>
-
-<img src="https://via.placeholder.com/800x400" alt="Green and Red Candle">
-
-<p>
-Green candle का मतलब है:
-<b>Close > Open → Buyers strong</b>
-</p>
-
-<p>
-Red candle का मतलब है:
-<b>Close < Open → Sellers strong</b>
-</p>
-
-<p>
-लेकिन trading में सिर्फ color देखकर decision लेना गलत है।
-</p>
-
-<h2>🧠 Market Psychology (सबसे important concept)</h2>
-
-<p>
-Candlestick patterns असल में buyers और sellers की fight को दिखाते हैं।
-</p>
-
-<p>
-हर candle में ये सवाल छुपा होता है:
-</p>
-
-<ul>
-<li>Market में control किसका है?</li>
-<li>Buyers या Sellers?</li>
-</ul>
-
-<p>
-अगर buyers strong हैं → price ऊपर जाएगा  
-अगर sellers strong हैं → price नीचे जाएगा
-</p>
-
-<p>
-👉 Candlestick = psychology + behavior
-</p>
-
-<h2>📈 Types of Candlestick Patterns</h2>
-
-<p>
-Candlestick patterns को broadly 2 categories में divide किया जाता है:
-</p>
-
-<h3>1. Bullish Patterns</h3>
-<p>
-ये signals देते हैं कि market ऊपर जा सकता है
-</p>
-
-<h3>2. Bearish Patterns</h3>
-<p>
-ये signals देते हैं कि market नीचे जा सकता है
-</p>
-
-<h2>🔥 Why Candlestick Patterns Important?</h2>
-
-<ul>
-<li>Entry point detect करने में help करते हैं</li>
-<li>Exit signal देते हैं</li>
-<li>Trend reversal identify करते हैं</li>
-<li>Market sentiment समझाते हैं</li>
-<li>Risk control करने में मदद करते हैं</li>
-</ul>
-
-<h2>⚠️ Biggest Myth in Trading</h2>
-
-<p>
-बहुत लोग सोचते हैं:
-“Candlestick pattern देखो और trade कर लो”
-</p>
-
-<p>
-👉 यह पूरी तरह गलत है
-</p>
-
-<p>
-Reality:
-<b>Candlestick + Context + Strategy = Profit</b>
-</p>
-
-<h2>📊 Real Example (Simple समझ)</h2>
-
-<p>
-मान लो price support level पर आया और वहाँ hammer candle बना
-</p>
-
-<p>
-👉 इसका मतलब:
-- sellers ने नीचे push किया  
-- buyers ने वापस ऊपर ले आए  
-</p>
-
-<p>
-👉 यह strong reversal signal हो सकता है
-</p>
-
-<h2>🎯 Conclusion (Part 1)</h2>
-
-<p>
-Candlestick patterns trading की foundation हैं।
-अगर आप इसे सही से समझ लेते हैं, तो आपका trading journey बहुत आसान हो जाता है।
-</p>
-
-<p>
-Next part में हम deep candlestick patterns (Doji, Hammer, Engulfing) सीखेंगे।
-</p>
-
-<h2>🔥 Important Candlestick Patterns (Deep Guide)</h2>
-
-<p>
-अब हम सबसे important candlestick patterns को detail में समझेंगे।
-यह patterns trading में सबसे ज्यादा use होते हैं और beginners से लेकर professional traders तक इनका use करते हैं।
-</p>
-
-<p>
-👉 याद रखो:
-Pattern + Location + Confirmation = Strong Trade
-</p>
-
-<h2>1️⃣ Doji Candlestick Pattern</h2>
-
-<p>
-Doji एक ऐसा candlestick pattern है जिसमें open और close लगभग same होते हैं।
-</p>
-
-<p>
-👉 इसका मतलब:
-Market में indecision है (buyers vs sellers बराबर)
-</p>
-
-<h3>Types of Doji</h3>
-
-<ul>
-<li>Standard Doji</li>
-<li>Long-legged Doji</li>
-<li>Dragonfly Doji</li>
-<li>Gravestone Doji</li>
-</ul>
-
-<h3>Trading Logic</h3>
-
-<p>
-अगर Doji support level पर बने → bullish signal  
-अगर resistance पर बने → bearish signal  
-</p>
-
-<p>
-👉 Confirmation जरूरी है (next candle देखो)
-</p>
-
----
-
-<h2>2️⃣ Hammer Pattern</h2>
-
-<p>
-Hammer एक bullish reversal pattern है जो downtrend के बाद बनता है।
-</p>
-
-<p>
-👉 पहचान:
-</p>
-
-<ul>
-<li>छोटी body</li>
-<li>लंबी lower wick</li>
-<li>Upper wick छोटी या नहीं होती</li>
-</ul>
-
-<h3>Meaning</h3>
-
-<p>
-Market नीचे गया लेकिन buyers ने वापस ऊपर push कर दिया।
-</p>
-
-<p>
-👉 Buyers strong हो रहे हैं
-</p>
-
-<h3>Best Use</h3>
-
-<ul>
-<li>Support zone पर</li>
-<li>Downtrend के बाद</li>
-</ul>
-
----
-
-<h2>3️⃣ Shooting Star Pattern</h2>
-
-<img src="https://via.placeholder.com/800x400" alt="Shooting Star Pattern">
-
-<p>
-यह hammer का उल्टा होता है और bearish signal देता है।
-</p>
-
-<ul>
-<li>छोटी body</li>
-<li>लंबी upper wick</li>
-</ul>
-
-<p>
-👉 इसका मतलब:
-Buyers ने push किया लेकिन sellers ने control ले लिया
-</p>
-
-<h3>Best Use</h3>
-
-<ul>
-<li>Resistance पर</li>
-<li>Uptrend के बाद</li>
-</ul>
-
----
-
-<h2>4️⃣ Engulfing Pattern</h2>
-
-<img src="https://via.placeholder.com/800x400" alt="Engulfing Pattern">
-
-<p>
-Engulfing सबसे powerful reversal pattern होता है।
-</p>
-
-<h3>Bullish Engulfing</h3>
-
-<ul>
-<li>पहली candle red</li>
-<li>दूसरी candle green (पूरी previous को cover करे)</li>
-</ul>
-
-<p>
-👉 Strong buying signal
-</p>
-
-<h3>Bearish Engulfing</h3>
-
-<ul>
-<li>पहली candle green</li>
-<li>दूसरी candle red</li>
-</ul>
-
-<p>
-👉 Strong selling signal
-</p>
-
----
-
-<h2>5️⃣ Morning Star Pattern</h2>
-
-<p>
-यह 3 candle pattern होता है जो bullish reversal दिखाता है।
-</p>
-
-<ul>
-<li>1st candle – bearish</li>
-<li>2nd candle – small (indecision)</li>
-<li>3rd candle – strong bullish</li>
-</ul>
-
-<p>
-👉 Trend change signal
-</p>
-
----
-
-<h2>6️⃣ Evening Star Pattern</h2>
-
-<p>
-Morning star का opposite होता है (bearish reversal)
-</p>
-
----
-
-<h2>📊 Single vs Multiple Candle Patterns</h2>
-
-<ul>
-<li>Single → Hammer, Doji</li>
-<li>Double → Engulfing</li>
-<li>Triple → Morning Star</li>
-</ul>
-
-<p>
-👉 Multi-candle patterns ज्यादा reliable होते हैं
-</p>
-
----
-
-<h2>📍 Pattern Location (सबसे important)</h2>
-
-<p>
-Pattern तभी काम करता है जब वह सही जगह पर बने:
-</p>
-
-<ul>
-<li>Support</li>
-<li>Resistance</li>
-<li>Trendline</li>
-<li>Breakout zone</li>
-</ul>
-
-<p>
-👉 गलत जगह pattern = गलत trade
-</p>
-
----
-
-<h2>⚠️ Common Mistakes (Beginners)</h2>
-
-<ul>
-<li>हर candle को pattern समझ लेना</li>
-<li>Confirmation बिना entry लेना</li>
-<li>Trend ignore करना</li>
-<li>Overtrading</li>
-</ul>
-
----
-
-<h2>🎯 Conclusion (Part 2)</h2>
-
-<p>
-Candlestick patterns powerful हैं लेकिन अकेले काम नहीं करते।
-</p>
-
-<p>
-👉 हमेशा:
-Pattern + Level + Confirmation use करो
-</p>
-
-<p>
-Next part में हम:
-👉 Trading strategies + real examples सीखेंगे
-</p>
-
- <h2>🚀 Candlestick Trading Strategies (Professional Guide)</h2>
-
-<p>
-अब तक आपने candlestick patterns को समझ लिया है।
-लेकिन सिर्फ patterns जानना enough नहीं है।
-</p>
-
-<p>
-👉 Real profit तब आता है जब आप patterns को strategy के साथ use करते हो।
-</p>
-
-<p>
-In simple words:
-<b>Pattern + Strategy + Discipline = Success</b>
-</p>
-
----
-
-<h2>📊 Strategy 1: Support & Resistance + Candlestick</h2>
-
-<p>
-यह सबसे powerful और beginner-friendly strategy है।
-</p>
-
-<h3>Step-by-step:</h3>
-
-<ul>
-<li>Chart में support और resistance mark करो</li>
-<li>Price जब support पर आए → bullish pattern wait करो</li>
-<li>Price जब resistance पर जाए → bearish pattern wait करो</li>
-</ul>
-
-<h3>Example:</h3>
-
-<p>
-अगर support पर hammer या bullish engulfing बनता है → BUY signal  
-अगर resistance पर shooting star बनता है → SELL signal  
-</p>
-
-<p>
-👉 यह strategy high accuracy देती है
-</p>
-
----
-
-<h2>📈 Strategy 2: Trend Following Strategy</h2>
-
-<p>
-Trend is your best friend.
-</p>
-
-<h3>Rules:</h3>
-
-<ul>
-<li>Uptrend में सिर्फ BUY trades लो</li>
-<li>Downtrend में सिर्फ SELL trades लो</li>
-</ul>
-
-<p>
-👉 Candlestick pattern trend के direction में use करो
-</p>
-
-<h3>Example:</h3>
-
-<p>
-Uptrend में bullish engulfing → strong buy  
-Downtrend में bearish engulfing → strong sell  
-</p>
-
----
-
-<h2>📉 Strategy 3: Breakout + Retest</h2>
-
-<p>
-यह advanced लेकिन powerful strategy है
-</p>
-
-<h3>Steps:</h3>
-
-<ul>
-<li>Resistance break होने का wait करो</li>
-<li>Retest होने दो</li>
-<li>Retest पर bullish candle → entry</li>
-</ul>
-
-<p>
-👉 Fake breakout से बचने के लिए retest जरूरी है
-</p>
-
----
-
-<h2>💡 Strategy 4: Candlestick + Indicator</h2>
-
-<p>
-Candlestick को indicators के साथ combine करने से accuracy बढ़ती है
-</p>
-
-<ul>
-<li>RSI</li>
-<li>MACD</li>
-<li>Moving Average</li>
-</ul>
-
-<p>
-👉 Example:
-RSI oversold + hammer = strong buy signal
-</p>
-
-<p>
-👉 Indicators सीखने के लिए:
-<a href="indicators.html">Indicators Guide</a>
-</p>
-
----
-
-<h2>🎯 Entry Rules (बहुत important)</h2>
-
-<ul>
-<li>Pattern complete होने के बाद entry लो</li>
-<li>Confirmation candle का wait करो</li>
-<li>Breakout candle पर entry avoid करो</li>
-</ul>
-
-<p>
-👉 जल्दी entry = loss
-</p>
-
----
-
-<h2>🛑 Stop Loss Strategy</h2>
-
-<p>
-Stop loss trading का सबसे important part है
-</p>
-
-<ul>
-<li>Hammer → low के नीचे SL</li>
-<li>Engulfing → pattern low/high के बाहर SL</li>
-</ul>
-
-<p>
-👉 बिना stop loss trading = gambling
-</p>
-
----
-
-<h2>🎯 Target Strategy</h2>
-
-<ul>
-<li>Next resistance तक target</li>
-<li>Risk reward 1:2 minimum</li>
-</ul>
-
-<p>
-👉 Always:
-Risk small, reward big
-</p>
-
----
-
-<h2>⚠️ Risk Management (Golden Rule)</h2>
-
-<p>
-Successful traders हमेशा risk control करते हैं
-</p>
-
-<ul>
-<li>1 trade में 1-2% risk</li>
-<li>Overtrading avoid करो</li>
-<li>Emotions control करो</li>
-</ul>
-
-<p>
-👉 Deep सीखने के लिए:
-<a href="risk-management.html">Risk Management Guide</a>
-</p>
-
----
-
-<h2>🧠 Trading Psychology</h2>
-
-<p>
-Trading 70% psychology और 30% strategy है
-</p>
-
-<ul>
-<li>Fear</li>
-<li>Greed</li>
-<li>FOMO</li>
-</ul>
-
-<p>
-👉 Successful trader वही है जो emotions control करता है
-</p>
-
----
-
-<h2>📊 Real Trade Example (Simple)</h2>
-
-<p>
-Scenario:
-</p>
-
-<ul>
-<li>Price support पर आया</li>
-<li>Hammer बना</li>
-<li>Next candle green</li>
-</ul>
-
-<p>
-👉 Entry = next candle break  
-👉 Stop loss = hammer low  
-👉 Target = resistance  
-</p>
-
----
-
-<h2>🔥 Pro Trading Tips</h2>
-
-<ul>
-<li>हर pattern पर trade मत करो</li>
-<li>Quality trades लो, quantity नहीं</li>
-<li>Always confirmation wait करो</li>
-<li>Backtesting करो</li>
-</ul>
-
----
-
-
-<h2>🎯 Conclusion (Part 3)</h2>
-
-<p>
-Candlestick patterns तभी काम करते हैं जब आप उन्हें strategy के साथ use करते हो।
-</p>
-
-<p>
-👉 बिना strategy के trading करना risk है
-</p>
-
-<p>
-Next part में हम:
-👉 Advanced concepts + professional tricks सीखेंगे
-</p>
-
-<h2>🔥 Advanced Candlestick Concepts (Pro Level)</h2>
-
-<p>
-अब तक आपने basic और intermediate concepts सीख लिए हैं।
-अब हम उन concepts को समझेंगे जो professional traders use करते हैं।
-</p>
-
-<p>
-👉 यही difference है beginner और expert trader में
-</p>
-
----
-
-<h2>🧠 Smart Money Concept (SMC)</h2>
-
-<p>
-Market को बड़े players (banks, institutions, FIIs) control करते हैं।
-इन्हें Smart Money कहा जाता है।
-</p>
-
-<p>
-👉 Retail traders अक्सर इनके खिलाफ trade करते हैं और loss करते हैं
-</p>
-
-<h3>Smart Money कैसे काम करता है?</h3>
-
-<ul>
-<li>Liquidity collect करता है</li>
-<li>Fake breakout बनाता है</li>
-<li>Retail traders को trap करता है</li>
-</ul>
-
-<p>
-👉 Candlestick patterns इन traps को समझने में मदद करते हैं
-</p>
-
----
-
-<h2>📊 Liquidity Concept</h2>
-
-<p>
-Liquidity का मतलब होता है orders का cluster
-</p>
-
-<ul>
-<li>Stop loss liquidity</li>
-<li>Buy side liquidity</li>
-<li>Sell side liquidity</li>
-</ul>
-
-<p>
-👉 Smart money पहले liquidity लेता है फिर move करता है
-</p>
-
----
-
-<h2>📉 Fake Breakout (Trap)</h2>
-
-<p>
-Fake breakout trading में सबसे common trap है
-</p>
-
-<p>
-👉 Example:
-</p>
-
-<ul>
-<li>Price resistance break करता है</li>
-<li>Retail traders buy करते हैं</li>
-<li>Market reverse हो जाता है</li>
-</ul>
-
-<p>
-👉 Solution:
-Always wait for retest + confirmation candle
-</p>
-
----
-
-<h2>📈 Order Block Concept</h2>
-
-<p>
-Order block वह zone होता है जहाँ institutions orders place करते हैं
-</p>
-
-<p>
-👉 Candlestick clusters से पहचान सकते हैं
-</p>
-
-<ul>
-<li>Strong bullish candle before move</li>
-<li>Strong bearish candle before fall</li>
-</ul>
-
----
-
-<h2>🔥 Multi Timeframe Analysis</h2>
-
-<p>
-Professional traders हमेशा multiple timeframe use करते हैं
-</p>
-
-<ul>
-<li>Higher timeframe → trend</li>
-<li>Lower timeframe → entry</li>
-</ul>
-
-<p>
-👉 Example:
-Daily → trend  
-15 min → entry  
-</p>
-
----
-
-<h2>📊 High Probability Setup</h2>
-
-<p>
-Best setup तब बनता है जब ये सभी चीजें मिलती हैं:
-</p>
-
-<ul>
-<li>Support/Resistance</li>
-<li>Candlestick pattern</li>
-<li>Trend direction</li>
-<li>Volume confirmation</li>
-</ul>
-
-<p>
-👉 इसे confluence कहते हैं
-</p>
-
----
-
-<h2>⚠️ Advanced Mistakes</h2>
-
-<ul>
-<li>Overconfidence</li>
-<li>High leverage</li>
-<li>No risk management</li>
-<li>Revenge trading</li>
-</ul>
-
----
-
-<h2>🧠 Professional Mindset</h2>
-
-<p>
-Trading में success mindset पर depend करता है
-</p>
-
-<ul>
-<li>Patience</li>
-<li>Discipline</li>
-<li>Consistency</li>
-</ul>
-
-<p>
-👉 Trading = business, not gambling
-</p>
-
----
-
-<h2>📊 Backtesting (Hidden Secret)</h2>
-
-<p>
-Professional traders हमेशा strategy test करते हैं
-</p>
-
-<ul>
-<li>Past charts analyze करो</li>
-<li>Patterns observe करो</li>
-<li>Result note करो</li>
-</ul>
-
----
-
-
-<h2>📢 FAQs </h2>
-
-<h3>क्या candlestick patterns reliable होते हैं?</h3>
-<p>
-हाँ, लेकिन अकेले नहीं। इन्हें strategy के साथ use करना चाहिए।
-</p>
-
-<h3>क्या सिर्फ candlestick से profit हो सकता है?</h3>
-<p>
-नहीं। Risk management और psychology भी जरूरी है।
-</p>
-
-<h3>Best pattern कौन सा है?</h3>
-<p>
-Engulfing और hammer सबसे popular हैं।
-</p>
-
----
-
-<h2>🎯 Final Conclusion</h2>
-
-<p>
-Candlestick patterns trading की foundation हैं।
-</p>
-
-<p>
-अगर आप इन्हें सही तरीके से सीखते हैं और practice करते हैं, तो आप एक successful trader बन सकते हैं।
-</p>
-
-<p>
-👉 याद रखो:
-</p>
-
-<ul>
-<li>Practice daily</li>
-<li>Risk control</li>
-<li>Emotions control</li>
-</ul>
-
-<p>
-👉 धीरे-धीरे expert बनो
-</p>
-
-<p>
-👉 Start your journey today:
-<a href="learning.html">Start Learning</a>
-</p>
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <span>BullBear Market</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning.html" class="active">Learning</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <a href="learning.html">Learning Hub</a>
+  <span>›</span>
+  <span>Candlestick Patterns</span>
 </div>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">📊 Learning Module</div>
+  <h1>Candlestick Patterns – Complete Guide for Beginners</h1>
+  <p>Market की language सीखो। Candlestick patterns trading की foundation हैं — beginners से लेकर professional traders तक सब इन्हें use करते हैं।</p>
+  <div class="hero-tags">
+    <span>📈 Price Action</span>
+    <span>🔴 Bearish Patterns</span>
+    <span>🟢 Bullish Patterns</span>
+    <span>🇮🇳 Hindi + English</span>
+    <span>💯 Free Learning</span>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="content">
+
+  <!-- PART 1: BASICS -->
+  <h2>📊 Candlestick क्या है? (What is Candlestick)</h2>
+
+  <p>Candlestick एक graphical representation है जो stock price movement को दिखाता है। यह Japanese traders द्वारा develop किया गया था और आज पूरी दुनिया में use होता है।</p>
+
+  <p>Simple words में: <strong>Candlestick = Market की language</strong></p>
+
+  <p>जब आप candlestick समझ लेते हो, तो आप price action को पढ़ सकते हो — और यही trading का real skill है।</p>
+
+  <img src="images/01_candlestick-chart-example.png" alt="Candlestick Chart Example – BullBear Market" loading="lazy">
+
+  <p>हर candle एक specific time period को represent करता है — 1 minute, 5 minute, 15 minute, 1 hour, या 1 day candle।</p>
+
+  <h2>📐 Structure of a Candlestick</h2>
+
+  <p>हर candlestick के <strong>4 main components</strong> होते हैं:</p>
+
+  <div class="pattern-grid">
+    <div class="pattern-card">
+      <div class="icon">🔵</div>
+      <h4>Open Price</h4>
+      <p>Candle की शुरुआत — उस time period में पहली trade price।</p>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">🟡</div>
+      <h4>Close Price</h4>
+      <p>Candle का अंत — उस time period की आखिरी trade price।</p>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">⬆️</div>
+      <h4>High Price</h4>
+      <p>उस time period में सबसे ज्यादा price — upper wick दिखाता है।</p>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">⬇️</div>
+      <h4>Low Price</h4>
+      <p>उस time period में सबसे कम price — lower wick दिखाता है।</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>👉 <strong>Body vs Wick:</strong> Body = Open और Close के बीच का हिस्सा। Wick (Shadow) = High और Low को दिखाता है। Wick बहुत important होती है क्योंकि यह <strong>rejection</strong> दिखाती है।</p>
+  </div>
+
+  <h2>🟢 Green Candle vs 🔴 Red Candle</h2>
+
+  <p><strong>Green candle:</strong> Close &gt; Open → Buyers strong। Market ऊपर गया।</p>
+  <p><strong>Red candle:</strong> Close &lt; Open → Sellers strong। Market नीचे गया।</p>
+
+  <div class="warn-box">
+    <p>⚠️ <strong>Warning:</strong> Trading में सिर्फ candle color देखकर decision लेना गलत है। Context, pattern और location सबसे जरूरी हैं।</p>
+  </div>
+
+  <h2>🧠 Market Psychology</h2>
+
+  <p>Candlestick patterns असल में <strong>buyers और sellers की fight</strong> को दिखाते हैं। हर candle में यह सवाल छुपा होता है:</p>
+
+  <ul>
+    <li>Market में control किसका है — Buyers या Sellers?</li>
+    <li>अगर buyers strong हैं → price ऊपर जाएगा</li>
+    <li>अगर sellers strong हैं → price नीचे जाएगा</li>
+  </ul>
+
+  <div class="info-box">
+    <p>💡 <strong>Golden Rule:</strong> Candlestick = psychology + behavior। Pattern + Context + Strategy = Profit</p>
+  </div>
+
+  <!-- PART 2: PATTERNS -->
+  <h2>🔥 Important Candlestick Patterns</h2>
+
+  <p>अब हम सबसे important candlestick patterns को detail में समझेंगे। <strong>Pattern + Location + Confirmation = Strong Trade</strong></p>
+
+  <img src="images/02_candlestick-patterns-chart.png" alt="Candlestick Patterns Chart – Types and Examples" loading="lazy">
+
+  <h3>1️⃣ Doji Candlestick Pattern</h3>
+  <p>Doji में open और close लगभग same होते हैं। इसका मतलब: Market में <strong>indecision</strong> है (buyers vs sellers बराबर)।</p>
+
+  <ul>
+    <li>Standard Doji</li>
+    <li>Long-legged Doji</li>
+    <li>Dragonfly Doji</li>
+    <li>Gravestone Doji</li>
+  </ul>
+
+  <div class="info-box">
+    <p>📍 Support पर Doji → Bullish signal | Resistance पर Doji → Bearish signal | हमेशा next candle से confirmation लो।</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>2️⃣ Hammer Pattern</h3>
+  <p>Hammer एक <strong>bullish reversal pattern</strong> है जो downtrend के बाद बनता है। Market नीचे गया लेकिन buyers ने वापस ऊपर push कर दिया।</p>
+
+  <ul>
+    <li>छोटी body</li>
+    <li>लंबी lower wick</li>
+    <li>Upper wick छोटी या नहीं होती</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p>✅ <strong>Best Use:</strong> Support zone पर + Downtrend के बाद। Stop loss = Hammer का low।</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>3️⃣ Shooting Star Pattern</h3>
+  <p>Hammer का उल्टा — <strong>bearish signal</strong>। Buyers ने push किया लेकिन sellers ने control ले लिया।</p>
+
+  <ul>
+    <li>छोटी body</li>
+    <li>लंबी upper wick</li>
+    <li>Resistance पर + Uptrend के बाद</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>4️⃣ Engulfing Pattern</h3>
+  <p>Engulfing सबसे <strong>powerful reversal pattern</strong> होता है।</p>
+
+  <div class="pattern-grid">
+    <div class="pattern-card">
+      <div class="icon">🟢</div>
+      <h4>Bullish Engulfing</h4>
+      <p>पहली candle red → दूसरी candle green (पूरी previous को cover करे)</p>
+      <span class="badge badge-bull">BULLISH</span>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">🔴</div>
+      <h4>Bearish Engulfing</h4>
+      <p>पहली candle green → दूसरी candle red (पूरी previous को cover करे)</p>
+      <span class="badge badge-bear">BEARISH</span>
+    </div>
+  </div>
+
+  <img src="images/candlestick-reversal-patterns.png" alt="Candlestick Reversal Patterns – Engulfing, Doji, Hammer" loading="lazy">
+
+  <hr class="divider">
+
+  <h3>5️⃣ Morning Star Pattern</h3>
+  <p>3 candle pattern जो <strong>bullish reversal</strong> दिखाता है:</p>
+  <ul>
+    <li>1st candle – bearish (large red)</li>
+    <li>2nd candle – small (indecision)</li>
+    <li>3rd candle – strong bullish green</li>
+  </ul>
+  <span class="badge badge-bull" style="display:inline-block; margin-bottom: 12px;">BULLISH REVERSAL</span>
+
+  <h3>6️⃣ Evening Star Pattern</h3>
+  <p>Morning star का opposite — <strong>bearish reversal</strong> signal। Uptrend के end में बनता है।</p>
+  <span class="badge badge-bear" style="display:inline-block; margin-bottom: 20px;">BEARISH REVERSAL</span>
+
+  <!-- PART 3: STRATEGIES -->
+  <h2>🚀 Candlestick Trading Strategies</h2>
+
+  <p>Pattern जानना enough नहीं है। <strong>Pattern + Strategy + Discipline = Success</strong></p>
+
+  <h3>Strategy 1: Support & Resistance + Candlestick</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Chart में Support & Resistance mark करो</h4>
+        <p>Key levels identify करो जहाँ price बार-बार react करती है।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Pattern का wait करो</h4>
+        <p>Support पर bullish pattern और Resistance पर bearish pattern wait करो।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Confirmation लो</h4>
+        <p>Next candle से confirmation मिलने पर ही entry लो।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Stop Loss & Target set करो</h4>
+        <p>Pattern का low/high = Stop Loss | Risk Reward minimum 1:2।</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Strategy 2: Trend Following + Candlestick</h3>
+  <ul>
+    <li>Uptrend में सिर्फ BUY trades लो (bullish patterns)</li>
+    <li>Downtrend में सिर्फ SELL trades लो (bearish patterns)</li>
+    <li>Sideways market में trading avoid करो</li>
+  </ul>
+
+  <h3>Strategy 3: Breakout + Retest</h3>
+  <ul>
+    <li>Resistance break होने का wait करो</li>
+    <li>Retest होने दो</li>
+    <li>Retest पर bullish candle → entry लो</li>
+    <li>Fake breakout से बचने के लिए retest जरूरी है</li>
+  </ul>
+
+    <!-- PART 4: ADVANCED -->
+  <h2>🔥 Advanced Concepts (Pro Level)</h2>
+
+  <h3>Smart Money Concept (SMC)</h3>
+  <p>Market को बड़े players (banks, institutions, FIIs) control करते हैं। इन्हें <strong>Smart Money</strong> कहा जाता है। Retail traders अक्सर इनके खिलाफ trade करते हैं।</p>
+
+  <ul>
+    <li>Smart Money liquidity collect करता है</li>
+    <li>Fake breakout बनाता है (retail को trap करने के लिए)</li>
+    <li>Candlestick patterns इन traps को समझने में help करते हैं</li>
+  </ul>
+
+  <h3>Multi Timeframe Analysis</h3>
+  <ul>
+    <li>Higher timeframe (Daily/4H) → Trend identify करो</li>
+    <li>Lower timeframe (15min/5min) → Entry find करो</li>
+    <li>इसे Confluence कहते हैं — यही high probability setup बनाता है</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p>💎 <strong>High Probability Setup:</strong> Support/Resistance + Candlestick Pattern + Trend Direction + Volume Confirmation = Strong Trade</p>
+  </div>
+
+  <!-- PRO TIPS -->
+  <h2>💡 Pro Trading Tips</h2>
+
+  <div class="pattern-grid">
+    <div class="pattern-card">
+      <div class="icon">🎯</div>
+      <h4>Quality Over Quantity</h4>
+      <p>हर pattern पर trade मत करो। सिर्फ high probability setups लो।</p>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">✅</div>
+      <h4>Always Confirmation</h4>
+      <p>Pattern complete होने के बाद entry लो। Breakout candle पर entry avoid करो।</p>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">🛑</div>
+      <h4>Stop Loss Mandatory</h4>
+      <p>बिना stop loss trading = gambling। हमेशा pattern के low/high के नीचे/ऊपर SL रखो।</p>
+    </div>
+    <div class="pattern-card">
+      <div class="icon">📊</div>
+      <h4>Backtesting करो</h4>
+      <p>Past charts पर strategy test करो। इससे confidence और accuracy दोनों बढ़ती है।</p>
+    </div>
+  </div>
+
+  <!-- COMMON MISTAKES -->
+  <h2>⚠️ Common Mistakes (Beginners)</h2>
+
+  <div class="warn-box">
+    <p>❌ हर candle को pattern समझना | ❌ Confirmation के बिना entry लेना | ❌ Trend ignore करना | ❌ Pattern देखकर blindly trade करना | ❌ Wrong location पर pattern trade करना</p>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>क्या candlestick patterns reliable होते हैं?</h4>
+    <p>हाँ, लेकिन अकेले नहीं। Proper confirmation, correct location और risk management के साथ use करने पर 60-70% accuracy मिल सकती है। इन्हें हमेशा strategy के साथ use करना चाहिए।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>क्या सिर्फ candlestick से profit हो सकता है?</h4>
+    <p>नहीं। Risk management, trading psychology और proper strategy भी जरूरी है। Candlestick सिर्फ एक tool है — trading system का पूरा हिस्सा नहीं।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Best candlestick pattern कौन सा है?</h4>
+    <p>Engulfing और Hammer patterns सबसे popular और reliable हैं। लेकिन कोई single "best" pattern नहीं होता — combination और context ज्यादा जरूरी है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Pattern location क्यों important है?</h4>
+    <p>Pattern तभी काम करता है जब वह सही जगह बने — Support, Resistance, Trendline या Breakout zone पर। गलत जगह pattern = गलत trade।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Beginner कहाँ से शुरू करे?</h4>
+    <p>पहले basics सीखो (Doji, Hammer, Engulfing), फिर support-resistance के साथ combine करो, और BullBear Market पर virtual trading में practice करो — zero risk के साथ।</p>
+  </div>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section">
+    <h2>🚀 अब Practice शुरू करो — Zero Risk</h2>
+    <p>Theory पढ़ लिया, अब BullBear Market पर virtual money से practice करो। Real market जैसा experience — बिना एक rupee के risk के।</p>
+    <div class="cta-btns">
+      <a href="learning.html" class="btn-primary">📚 Learning Hub देखो</a>
+      <a href="index.html" class="btn-outline">🏠 Home पर जाओ</a>
+    </div>
+  </div>
+
+  <!-- INTERLINK CARDS -->
+  <div class="interlink-section">
+    <h2>📚 Next – और सीखो</h2>
+    <div class="interlink-grid">
+      <a href="indicators.html" class="interlink-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Indicators Guide</div>
+        <div class="ic-desc">RSI, MACD, Moving Average — complete guide in Hindi & English.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="patterns.html" class="interlink-card">
+        <div class="ic-icon">📈</div>
+        <div class="ic-title">Chart Patterns</div>
+        <div class="ic-desc">Head & Shoulder, Double Top, Triangle patterns — sab kuch.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="support-resistance.html" class="interlink-card">
+        <div class="ic-icon">🎯</div>
+        <div class="ic-title">Support & Resistance</div>
+        <div class="ic-desc">Market के key levels identify karna सीखो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="risk.html" class="interlink-card">
+        <div class="ic-icon">🛡️</div>
+        <div class="ic-title">Risk Management</div>
+        <div class="ic-desc">Capital protect करना सीखो — trading का backbone।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="psychology.html" class="interlink-card">
+        <div class="ic-icon">🧠</div>
+        <div class="ic-title">Trading Psychology</div>
+        <div class="ic-desc">Fear और greed को control करना सीखो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="intraday.html" class="interlink-card">
+        <div class="ic-icon">⚡</div>
+        <div class="ic-title">Intraday Trading</div>
+        <div class="ic-desc">Same day trading strategies for Indian markets.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- end .content -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <p>India's #1 free stock market learning & virtual trading platform. Learn, Practice, Compete, Grow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning Hub</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <h4>Learn Free</h4>
+      <a href="candlestick.html">Candlestick Patterns</a>
+      <a href="indicators.html">Indicators Guide</a>
+      <a href="patterns.html">Chart Patterns</a>
+      <a href="risk.html">Risk Management</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BullBear Market. All rights reserved. | Made with ❤️ in India</p>
+    <p>Educational Platform – No Real Money Trading | <a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</footer>
 
 </body>
 </html>
