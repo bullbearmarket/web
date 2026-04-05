@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<!-- HOME -->
 <url>
-<loc>https://bullbearmarket.in/</loc>
-<priority>1.0</priority>
+  <loc>https://bullbearmarket.in/</loc>
+  <priority>1.0</priority>
 </url>
 
-<url>
-<loc>https://bullbearmarket.in/learning.html</loc>
-</url>
+<!-- MAIN PAGES -->
+<url><loc>https://bullbearmarket.in/learning.html</loc></url>
+<url><loc>https://bullbearmarket.in/investing.html</loc></url>
+<url><loc>https://bullbearmarket.in/intraday.html</loc></url>
+<url><loc>https://bullbearmarket.in/options.html</loc></url>
+<url><loc>https://bullbearmarket.in/futures.html</loc></url>
+<url><loc>https://bullbearmarket.in/orders.html</loc></url>
 
-<url>
-<loc>https://bullbearmarket.in/blog/</loc>
-</url>
+<!-- EDUCATION -->
+<url><loc>https://bullbearmarket.in/candlestick.html</loc></url>
+<url><loc>https://bullbearmarket.in/patterns.html</loc></url>
+<url><loc>https://bullbearmarket.in/indicators.html</loc></url>
+<url><loc>https://bullbearmarket.in/support-resistance.html</loc></url>
+<url><loc>https://bullbearmarket.in/trend.html</loc></url>
+<url><loc>https://bullbearmarket.in/volume.html</loc></url>
+<url><loc>https://bullbearmarket.in/structure.html</loc></url>
+<url><loc>https://bullbearmarket.in/strategy.html</loc></url>
+<url><loc>https://bullbearmarket.in/psychology.html</loc></url>
+<url><loc>https://bullbearmarket.in/risk.html</loc></url>
 
-<url>
-<loc>https://bullbearmarket.in/faq.html</loc>
-</url>
+<!-- TRADING TYPES -->
+<url><loc>https://bullbearmarket.in/scalping.html</loc></url>
+<url><loc>https://bullbearmarket.in/swing.html</loc></url>
+
+<!-- EXTRA -->
+<url><loc>https://bullbearmarket.in/news.html</loc></url>
+<url><loc>https://bullbearmarket.in/gap.html</loc></url>
+<url><loc>https://bullbearmarket.in/breakout.html</loc></url>
+
+<!-- BLOG -->
+<url><loc>https://bullbearmarket.in/blog/</loc></url>
+
+<!-- IMPORTANT PAGES -->
+<url><loc>https://bullbearmarket.in/about.html</loc></url>
+<url><loc>https://bullbearmarket.in/faq.html</loc></url>
+<url><loc>https://bullbearmarket.in/privacy-policy.html</loc></url>
+<url><loc>https://bullbearmarket.in/terms.html</loc></url>
+<url><loc>https://bullbearmarket.in/support.html</loc></url>
+<url><loc>https://bullbearmarket.in/delete-account.html</loc></url>
+<url><loc>https://bullbearmarket.in/reset-password.html</loc></url>
+<url><loc>https://bullbearmarket.in/rewards.html</loc></url>
 
 </urlset>
