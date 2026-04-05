@@ -25,5 +25,9 @@ This project helps users understand stock market concepts like bull and bear tre
 - AI-based trading suggestions
 - Mobile app version
 
+## Screenshots
+![Home](photo1.png)
+![Dashboard](photo2.png)
+
 ## Author
 Aman Kumar
