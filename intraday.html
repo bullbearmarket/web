@@ -1,269 +1,1123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Intraday Trading Strategy – Complete Guide for Beginners to Advanced (2026)</title>
+<!-- Primary SEO -->
+<title>Intraday Trading – Complete Guide for Beginners to Advanced 2026 | BullBear Market</title>
+<meta name="description" content="Intraday trading सीखो step by step — strategies, indicators, risk management, best time slots, real examples और pro tips के साथ। Free Hindi & English guide on BullBear Market.">
+<meta name="keywords" content="intraday trading guide, intraday trading strategies India, intraday trading for beginners, intraday trading tips Hindi, best intraday strategy NSE, NIFTY intraday trading, intraday trading time, BullBear Market intraday">
+<meta name="author" content="BullBear Market">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bullbearmarket.in/intraday.html">
 
-<meta name="description" content="Learn intraday trading step by step with strategies, risk management, psychology, real examples and pro tips. Full beginner to advanced guide.">
+<!-- Geo Tags -->
+<meta name="geo.region" content="IN">
+<meta name="geo.country" content="India">
+<meta name="language" content="en-IN">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intraday Trading – Complete Beginner to Advanced Guide | BullBear Market">
+<meta property="og:description" content="Learn intraday trading strategies, indicators, risk management and psychology. Free Hindi & English guide for Indian stock market beginners.">
+<meta property="og:url" content="https://bullbearmarket.in/intraday.html">
+<meta property="og:site_name" content="BullBear Market">
+<meta property="og:image" content="https://bullbearmarket.in/images/support-resistance-breakout.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Intraday Trading Guide – BullBear Market">
+<meta name="twitter:description" content="Complete intraday trading guide for Indian beginners. Strategies, indicators, real examples — free.">
+<meta name="twitter:image" content="https://bullbearmarket.in/images/support-resistance-breakout.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Intraday Trading – Complete Guide for Beginners to Advanced 2026",
+  "description": "Complete guide to intraday trading with strategies, indicators, risk management, best time slots and real examples for Indian stock market beginners.",
+  "image": "https://bullbearmarket.in/images/support-resistance-breakout.png",
+  "author": {"@type": "Organization", "name": "BullBear Market"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BullBear Market",
+    "logo": {"@type": "ImageObject", "url": "https://bullbearmarket.in/favicon.png"}
+  },
+  "url": "https://bullbearmarket.in/intraday.html",
+  "inLanguage": "en-IN",
+  "dateModified": "2026-04-05"
+}
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    --gold: #FFD700;
+    --gold-light: #FFE44D;
+    --cyan: #00e6ff;
+    --green: #00ff88;
+    --red: #ff5050;
+    --orange: #ff9500;
+    --dark: #0B1220;
+    --dark3: #1a2235;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: rgba(255,215,0,0.15);
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
-  color: white;
-  line-height: 1.8;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
 
-h1 { color: gold; }
-h2 { color: #00e6ff; margin-top: 30px; }
-h3 { color: #00ffaa; }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-p { color: #ccc; }
+  /* ── NAVBAR ── */
+  nav {
+    position: sticky; top: 0;
+    background: #ffffff;
+    border-bottom: 2.5px solid var(--gold);
+    z-index: 1000;
+    padding: 0 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: auto;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 10px 0; flex-wrap: wrap; gap: 8px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { width: 40px; height: 40px; border-radius: 8px; }
+  .nav-logo span { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: #111; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .nav-links a {
+    text-decoration: none; color: #333;
+    font-size: 0.85rem; font-weight: 600;
+    padding: 5px 10px; border-radius: 6px;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .nav-links a:hover, .nav-links a.active { background: var(--gold); color: #000; }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 20px 0;
-}
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 24px auto 0;
+    padding: 0 20px; font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
 
-a { color: gold; }
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 20px auto 0;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,149,0,0.1);
+    border: 1px solid rgba(255,149,0,0.3);
+    color: var(--orange);
+    padding: 6px 18px; border-radius: 30px;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800; color: var(--gold);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 20px; }
+  .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .hero-tags span {
+    background: rgba(0,230,255,0.08);
+    border: 1px solid rgba(0,230,255,0.2);
+    color: var(--cyan); padding: 4px 14px;
+    border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+  }
 
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 14px; margin: 30px 0;
+  }
+  .stat-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 16px; text-align: center;
+  }
+  .stat-card .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem; font-weight: 800;
+    color: var(--gold); display: block;
+  }
+  .stat-card .stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+  /* ── CONTENT ── */
+  .content {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--cyan); margin: 50px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,230,255,0.15);
+  }
+  .content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: #00ffaa; margin: 28px 0 10px;
+  }
+  .content p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.97rem; }
+  .content b, .content strong { color: var(--text); }
+  .content ul { padding-left: 0; list-style: none; margin-bottom: 16px; }
+  .content ul li {
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative; font-size: 0.97rem;
+  }
+  .content ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+  .content img {
+    width: 100%; border-radius: 12px;
+    margin: 24px 0; border: 1px solid var(--border); display: block;
+  }
+
+  /* ── BOXES ── */
+  .highlight-box {
+    background: rgba(255,215,0,0.06);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .highlight-box p { color: var(--text); margin: 0; }
+
+  .info-box {
+    background: rgba(0,230,255,0.05);
+    border: 1px solid rgba(0,230,255,0.15);
+    border-left: 4px solid var(--cyan);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .info-box p { color: var(--text); margin: 0; }
+
+  .warn-box {
+    background: rgba(255,100,0,0.06);
+    border: 1px solid rgba(255,100,0,0.2);
+    border-left: 4px solid #ff6400;
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .warn-box p { color: var(--text); margin: 0; }
+
+  .success-box {
+    background: rgba(0,255,136,0.05);
+    border: 1px solid rgba(0,255,136,0.15);
+    border-left: 4px solid var(--green);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .success-box p { color: var(--text); margin: 0; }
+
+  /* ── TIME SLOTS ── */
+  .time-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .time-card {
+    border-radius: 12px; padding: 22px;
+    border: 1px solid; text-align: center;
+  }
+  .time-card.best {
+    background: rgba(0,255,136,0.05);
+    border-color: rgba(0,255,136,0.25);
+  }
+  .time-card.ok {
+    background: rgba(255,215,0,0.05);
+    border-color: rgba(255,215,0,0.2);
+  }
+  .time-card.avoid {
+    background: rgba(255,80,80,0.05);
+    border-color: rgba(255,80,80,0.2);
+  }
+  .time-card .t-time {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;
+  }
+  .time-card.best .t-time { color: var(--green); }
+  .time-card.ok .t-time { color: var(--gold); }
+  .time-card.avoid .t-time { color: var(--red); }
+  .time-card .t-label { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }
+  .time-card .t-badge {
+    display: inline-block; padding: 3px 12px;
+    border-radius: 12px; font-size: 0.72rem; font-weight: 700;
+  }
+  .time-card.best .t-badge { background: rgba(0,255,136,0.15); color: var(--green); }
+  .time-card.ok .t-badge { background: rgba(255,215,0,0.15); color: var(--gold); }
+  .time-card.avoid .t-badge { background: rgba(255,80,80,0.15); color: var(--red); }
+
+  /* ── STRATEGY CARDS ── */
+  .strategy-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+  .strategy-card:hover { border-color: rgba(255,215,0,0.4); }
+  .strategy-card .s-header {
+    display: flex; align-items: center;
+    gap: 14px; margin-bottom: 16px;
+  }
+  .strategy-card .s-num {
+    min-width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--gold), #ff9500);
+    color: #000; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem;
+  }
+  .strategy-card .s-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700; color: var(--gold);
+  }
+  .strategy-card .s-subtitle { font-size: 0.82rem; color: var(--text-muted); }
+  .strategy-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px; }
+  .strategy-card ul { margin-bottom: 0; }
+  .strategy-card ul li { font-size: 0.92rem; }
+
+  /* ── STEPS ── */
+  .steps { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .step {
+    display: flex; align-items: flex-start;
+    gap: 16px; background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px;
+  }
+  .step-num {
+    min-width: 36px; height: 36px;
+    background: var(--gold); color: #000;
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+  }
+  .step-text h4 { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.95rem; margin-bottom: 4px; }
+  .step-text p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+  /* ── INDICATOR CARDS ── */
+  .indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .indicator-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .indicator-card:hover { transform: translateY(-3px); border-color: rgba(0,230,255,0.4); }
+  .indicator-card .i-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .indicator-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; color: var(--cyan); margin-bottom: 8px; }
+  .indicator-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+  /* ── MISTAKE ITEMS ── */
+  .mistake-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--dark3);
+    border: 1px solid rgba(255,80,80,0.15);
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .mistake-icon { font-size: 1.4rem; }
+  .mistake-text h4 { font-family: 'Syne', sans-serif; color: var(--red); font-size: 0.9rem; margin-bottom: 4px; }
+  .mistake-text p { color: var(--text-muted); font-size: 0.86rem; margin: 0; }
+
+  /* ── COMPARISON TABLE ── */
+  .comp-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; border-radius: 10px; overflow: hidden;
+  }
+  .comp-table th {
+    background: rgba(255,215,0,0.12);
+    color: var(--gold); font-family: 'Syne', sans-serif;
+    font-size: 0.85rem; padding: 12px 16px;
+    text-align: left; border-bottom: 1px solid var(--border);
+  }
+  .comp-table td {
+    padding: 12px 16px; color: var(--text-muted);
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: var(--dark3);
+  }
+  .comp-table tr:hover td { background: rgba(255,215,0,0.03); }
+  .td-green { color: var(--green) !important; font-weight: 600; }
+  .td-red { color: var(--red) !important; font-weight: 600; }
+  .td-gold { color: var(--gold) !important; font-weight: 600; }
+
+  /* ── CHECKLIST ── */
+  .checklist { margin: 20px 0; }
+  .check-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-icon { color: var(--green); font-size: 1.1rem; margin-top: 2px; }
+  .check-text { font-size: 0.92rem; color: var(--text-muted); }
+  .check-text strong { color: var(--text); }
+
+  /* ── FAQ ── */
+  .faq-item {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 20px 22px; margin-bottom: 12px;
+  }
+  .faq-item h4 { font-family: 'Syne', sans-serif; color: var(--gold); font-size: 0.97rem; margin-bottom: 8px; }
+  .faq-item p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* ── INTERLINKS ── */
+  .interlink-section { margin: 60px 0 40px; border-top: 1px solid var(--border); padding-top: 40px; }
+  .interlink-section h2 {
+    font-family: 'Syne', sans-serif; font-size: 1.3rem;
+    color: var(--gold); margin-bottom: 20px; border: none; padding: 0;
+  }
+  .interlink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .interlink-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 18px;
+    text-decoration: none; transition: all 0.25s; display: block;
+  }
+  .interlink-card:hover { transform: translateY(-4px); border-color: var(--gold); background: rgba(255,215,0,0.05); }
+  .interlink-card .ic-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .interlink-card .ic-title { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+  .interlink-card .ic-desc { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; }
+  .interlink-card .ic-arrow { color: var(--gold); font-size: 0.85rem; margin-top: 10px; font-weight: 600; }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,230,255,0.05));
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 16px; padding: 40px 30px;
+    text-align: center; margin: 50px 0;
+  }
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 1.5rem; margin-bottom: 12px; border: none; padding: 0;
+  }
+  .cta-section p { color: var(--text-muted); margin-bottom: 24px; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: #000; padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--cyan); padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; border: 1.5px solid var(--cyan); transition: all 0.2s;
+  }
+  .btn-outline:hover { background: rgba(0,230,255,0.1); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative; z-index: 1;
+    background: #060d18; border-top: 2px solid var(--gold);
+    padding: 50px 20px 30px; margin-top: 60px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; margin-bottom: 40px;
+  }
+  .footer-brand img { width: 44px; margin-bottom: 12px; border-radius: 8px; }
+  .footer-brand p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 0.9rem; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.5px;
+  }
+  .footer-col a {
+    display: block; color: var(--text-muted); text-decoration: none;
+    font-size: 0.85rem; padding: 4px 0; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1100px; margin: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 20px; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { color: var(--text-muted); font-size: 0.8rem; }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .nav-links a { font-size: 0.78rem; padding: 4px 7px; }
+    .interlink-grid { grid-template-columns: 1fr 1fr; }
+    .cta-section { padding: 30px 20px; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .comp-table th, .comp-table td { padding: 10px 10px; font-size: 0.8rem; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
-
-<a href="learning.html">⬅ Back to Learning</a>
-
-<h1>Intraday Trading – Complete Guide for Beginners to Advanced</h1>
-
-<img src="https://via.placeholder.com/800x400">
-
-<p>
-Intraday trading आज के समय में सबसे ज्यादा popular trading style बन चुका है।
-</p>
-
-<p>
-अगर आप सही strategy, risk management और discipline के साथ intraday trading करते हैं,  
-तो यह daily income का strong source बन सकता है।
-</p>
-
----
-
-<h2>📊 What is Intraday Trading?</h2>
-
-<p>
-Intraday trading का मतलब है एक ही दिन के अंदर stock या index को buy और sell करना।
-</p>
-
-<p>
-इसमें trader market open होने के बाद position लेता है और market close होने से पहले exit कर देता है।
-</p>
-
----
-
-<h2>🌐 Learn More About Trading</h2>
-
-<p>
-👉 Visit our official website:
-<a href="https://bullbearmarket.in">BullBear Market</a>
-</p>
-
-<p>
-👉 Privacy Policy:
-<a href="https://bullbearmarket.in/privacy.html">Privacy Policy</a>
-</p>
-
----
-
-<h2>🔥 Why Intraday Trading is Powerful</h2>
-
-<ul>
-<li>Daily earning opportunity</li>
-<li>No overnight risk</li>
-<li>Quick capital rotation</li>
-</ul>
-
----
-
-<h2>📈 Intraday Trading Basic Rules</h2>
-
-<ul>
-<li>Always use stop loss</li>
-<li>Never trade without plan</li>
-<li>Follow trend</li>
-</ul>
-
----
-
-<h2>💰 Best Intraday Trading Strategies</h2>
-
-<h3>1. Breakout Strategy</h3>
-
-<p>
-Breakout intraday trading की सबसे powerful strategy है।
-</p>
-
-<p>
-जब price resistance level को break करता है,  
-तो strong upward move देखने को मिलता है।
-</p>
-
----
-
-<h3>2. Support Resistance Strategy</h3>
-
-<p>
-Support पर buy और resistance पर sell करना।
-</p>
-
----
-
-<h3>3. VWAP Strategy</h3>
-
-<p>
-VWAP intraday traders के लिए सबसे important indicator है।
-</p>
-
----
-
-<h2>📊 Indicators for Intraday Trading</h2>
-
-<ul>
-<li>Moving Average</li>
-<li>RSI</li>
-<li>VWAP</li>
-<li>MACD</li>
-</ul>
-
-<p>
-👉 Learn indicators:
-<a href="indicators.html">Indicators Guide</a>
-</p>
-
----
-
-<h2>🧠 Trading Psychology in Intraday</h2>
-
-<p>
-Intraday trading में emotions control करना सबसे जरूरी है।
-</p>
-
-<ul>
-<li>Fear control</li>
-<li>Greed control</li>
-</ul>
-
-<p>
-👉 Learn psychology:
-<a href="trading-psychology.html">Trading Psychology</a>
-</p>
-
----
-
-<h2>📉 Risk Management (MOST IMPORTANT)</h2>
-
-<p>
-Intraday trading में loss control करना सबसे जरूरी है।
-</p>
-
-<ul>
-<li>1% risk rule</li>
-<li>Daily loss limit</li>
-<li>Capital protection</li>
-</ul>
-
-<p>
-👉 Full guide:
-<a href="risk-management.html">Risk Management</a>
-</p>
-
----
-
-<h2>📊 Real Life Trading Example</h2>
-
-<p>
-NIFTY 22000 पर resistance बना हुआ है।
-</p>
-
-<ul>
-<li>Breakout → Buy</li>
-<li>Target → 22100</li>
-<li>Stop Loss → 21950</li>
-</ul>
-
----
-
-<h2>⚠️ Biggest Mistakes in Intraday</h2>
-
-<ul>
-<li>Overtrading</li>
-<li>No stop loss</li>
-<li>Revenge trading</li>
-<li>Overconfidence</li>
-</ul>
-
----
-
-<h2>🚀 Pro Tips for Intraday Trading</h2>
-
-<ul>
-<li>First 15 min avoid करो</li>
-<li>Only high probability trades लो</li>
-<li>Discipline maintain करो</li>
-</ul>
-
----
-
-<h2>📊 Best Time for Intraday</h2>
-
-<ul>
-<li>9:30 – 11:00 AM</li>
-<li>2:00 – 3:00 PM</li>
-</ul>
-
----
-
-<h2>📈 Advanced Intraday Concepts</h2>
-
-<h3>1. Price Action Trading</h3>
-<p>Pure price movement से trade करना</p>
-
-<h3>2. Order Flow</h3>
-<p>Institution activity समझना</p>
-
-<h3>3. Volume Analysis</h3>
-<p>Strong move confirm करना</p>
-
----
-
-<h2>🎯 Final Conclusion</h2>
-
-<p>
-Intraday trading easy नहीं है, लेकिन सही तरीके से सीखने पर यह profitable बन सकता है।
-</p>
-
-<p>
-अगर आप BullBear Market जैसी platforms से सीखते हैं और discipline follow करते हैं,  
-तो आप long-term में successful trader बन सकते हैं।
-</p>
-
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <span>BullBear Market</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning.html" class="active">Learning</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <a href="learning.html">Learning Hub</a>
+  <span>›</span>
+  <span>Intraday Trading</span>
 </div>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">⚡ Learning Module</div>
+  <h1>Intraday Trading – Complete Guide Beginners to Advanced</h1>
+  <p>Same day में trade complete करके daily income बनाने का तरीका सीखो। Strategies, indicators, best time slots, real examples — सब कुछ detail में, free.</p>
+  <div class="hero-tags">
+    <span>📊 Breakout Strategy</span>
+    <span>⏰ Best Time Slots</span>
+    <span>📈 VWAP & RSI</span>
+    <span>🛡️ Risk Management</span>
+    <span>🇮🇳 NSE / BSE</span>
+  </div>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="content">
+
+  <!-- KEY STATS -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <span class="stat-num">9:15</span>
+      <div class="stat-label">AM — Indian market open time</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">3:30</span>
+      <div class="stat-label">PM — Market close, सब square off</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">1%</span>
+      <div class="stat-label">Max risk per trade — golden rule</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">2–3</span>
+      <div class="stat-label">Daily trades enough हैं beginners के लिए</div>
+    </div>
+  </div>
+
+  <!-- WHAT IS INTRADAY -->
+  <h2>📊 Intraday Trading क्या है?</h2>
+
+  <p>Intraday trading का मतलब है — <strong>एक ही दिन के अंदर stock, index या currency को buy करके sell कर देना।</strong> Market open होने के बाद position लो और market close (3:30 PM) होने से पहले exit कर दो।</p>
+
+  <p>इसे "Day Trading" भी कहते हैं। Intraday में आप overnight risk नहीं लेते — हर trade same day settle हो जाती है। इसी वजह से यह beginners के बीच popular है। लेकिन popular होने का मतलब आसान नहीं है।</p>
+
+  <img src="images/support-resistance-breakout.png" alt="Support Resistance Breakout Chart – Intraday Trading Setup" loading="lazy">
+
+  <div class="highlight-box">
+    <p>💡 <strong>Important fact:</strong> India में intraday traders को "MIS" (Margin Intraday Square-off) product type use करना होता है। Broker automatically 3:20–3:25 PM के बीच open positions square off कर देता है अगर आप खुद नहीं करते।</p>
+  </div>
+
+  <h3>Intraday vs Swing vs Investing — Difference</h3>
+
+  <table class="comp-table">
+    <tr>
+      <th>Feature</th>
+      <th>Intraday</th>
+      <th>Swing Trading</th>
+      <th>Long-term Investing</th>
+    </tr>
+    <tr>
+      <td>Holding Period</td>
+      <td class="td-gold">कुछ मिनट – 1 दिन</td>
+      <td>2 दिन – 4 हफ्ते</td>
+      <td>महीने – साल</td>
+    </tr>
+    <tr>
+      <td>Risk Level</td>
+      <td class="td-red">High</td>
+      <td class="td-gold">Medium</td>
+      <td class="td-green">Low (long-term)</td>
+    </tr>
+    <tr>
+      <td>Overnight Risk</td>
+      <td class="td-green">❌ नहीं</td>
+      <td class="td-red">✅ होता है</td>
+      <td class="td-red">✅ होता है</td>
+    </tr>
+    <tr>
+      <td>Time Required</td>
+      <td class="td-red">Full-time attention</td>
+      <td class="td-gold">Part-time OK</td>
+      <td class="td-green">Minimal</td>
+    </tr>
+    <tr>
+      <td>Profit Potential</td>
+      <td class="td-gold">Daily (छोटा)</td>
+      <td class="td-gold">Weekly (medium)</td>
+      <td class="td-green">Long-term (बड़ा)</td>
+    </tr>
+  </table>
+
+  <!-- WHY INTRADAY -->
+  <h2>🔥 Intraday Trading क्यों Popular है?</h2>
+
+  <p>Intraday trading इतनी popular क्यों है? क्योंकि इसमें <strong>daily earning का मौका</strong> मिलता है और overnight risk नहीं होती। लेकिन इसके साथ challenges भी बहुत हैं।</p>
+
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">💰</div>
+      <h4>Daily Earning Opportunity</h4>
+      <p>Market open होने से close होने तक multiple opportunities मिलती हैं। Consistent small profits daily income बना सकते हैं।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🌙</div>
+      <h4>No Overnight Risk</h4>
+      <p>Gap down/up का डर नहीं। Budget, news, global events — सब same day में handle हो जाते हैं।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🔄</div>
+      <h4>Quick Capital Rotation</h4>
+      <p>एक trade close होती है, capital release होता है, दूसरा opportunity पकड़ सकते हो — same day में।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📊</div>
+      <h4>Leverage Available</h4>
+      <p>Brokers intraday में extra leverage देते हैं (MIS margin)। लेकिन leverage double-edged sword है — सोच-समझकर use करो।</p>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <p>⚠️ <strong>Reality Check:</strong> Studies के अनुसार 80-90% intraday traders long-term में loss करते हैं। Intraday profitable है — लेकिन सिर्फ उन लोगों के लिए जो discipline, strategy और risk management seriously follow करते हैं।</p>
+  </div>
+
+  <!-- BEST TIME SLOTS -->
+  <h2>⏰ Intraday के लिए Best Time Slots</h2>
+
+  <p>Intraday trading में <strong>timing सबसे crucial factor</strong> है। पूरे दिन market एक जैसा behave नहीं करता। कुछ time slots high probability के होते हैं और कुछ में random movement होती है।</p>
+
+  <div class="time-grid">
+    <div class="time-card best">
+      <div class="t-time">9:30 – 11:00 AM</div>
+      <div class="t-label">Opening Session</div>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin:8px 0;">सबसे ज्यादा volume और volatility। Breakouts और trends यहीं set होते हैं।</p>
+      <span class="t-badge">⭐ BEST</span>
+    </div>
+    <div class="time-card avoid">
+      <div class="t-time">9:15 – 9:30 AM</div>
+      <div class="t-label">Opening 15 Minutes</div>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin:8px 0;">बहुत ज्यादा chaos। Retail traders को यह time avoid करना चाहिए।</p>
+      <span class="t-badge">❌ AVOID</span>
+    </div>
+    <div class="time-card ok">
+      <div class="t-time">11:00 – 1:00 PM</div>
+      <div class="t-label">Mid Session</div>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin:8px 0;">Volume कम होती है। Trend continuation trades possible हैं।</p>
+      <span class="t-badge">⚠️ MODERATE</span>
+    </div>
+    <div class="time-card best">
+      <div class="t-time">2:00 – 3:15 PM</div>
+      <div class="t-label">Power Hour</div>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin:8px 0;">Europe market open होता है। Volume बढ़ती है, strong moves आते हैं।</p>
+      <span class="t-badge">⭐ BEST</span>
+    </div>
+    <div class="time-card avoid">
+      <div class="t-time">3:15 – 3:30 PM</div>
+      <div class="t-label">Closing</div>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin:8px 0;">Square-off time। Random movements, avoid करो।</p>
+      <span class="t-badge">❌ AVOID</span>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <p>💡 <strong>Pro Tip:</strong> अगर तुम sirf 2 घंटे trade कर सकते हो, तो 9:30–11:00 AM choose करो। इस time में सबसे ज्यादा quality setups मिलते हैं और volume strong होती है।</p>
+  </div>
+
+  <!-- STRATEGIES -->
+  <h2>💰 Best Intraday Trading Strategies</h2>
+
+  <p>कोई एक "best" strategy नहीं होती। लेकिन ये <strong>3 strategies beginners के लिए सबसे practical और effective</strong> हैं। इन्हें समझो, practice करो, और जो तुम्हारे style से match करे उसे master करो।</p>
+
+  <!-- Strategy 1 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">01</div>
+      <div>
+        <div class="s-title">Breakout Strategy</div>
+        <div class="s-subtitle">सबसे popular intraday strategy</div>
+      </div>
+    </div>
+    <p>जब price एक important resistance level को <strong>strong volume के साथ break</strong> करता है, तो एक fast और strong move आता है। इसी को पकड़ना breakout strategy है।</p>
+    <p><strong>Logic:</strong> Resistance पर बहुत से sellers और buy stop orders होते हैं। जब resistance break होती है, तो sellers की short covering और buyers की aggressive buying एक साथ होती है — इससे fast move आता है।</p>
+    <ul>
+      <li>Pre-market में key resistance levels identify करो (previous day high, round numbers)</li>
+      <li>Market open के बाद price को observe करो — जल्दी entry मत लो</li>
+      <li>Resistance break होने पर <strong>volume spike</strong> check करो — बिना volume breakout weak होता है</li>
+      <li>Breakout candle close होने के बाद entry लो (candle के ऊपर)</li>
+      <li>Stop Loss: Breakout level के नीचे 2-3 ticks</li>
+      <li>Target: Previous swing high या 1:2 risk reward minimum</li>
+    </ul>
+
+    <div class="info-box" style="margin-top:16px;">
+      <p>📍 <strong>Real Example:</strong> NIFTY 22000 पर resistance है। Price 9:45 AM पर high volume के साथ 22010 पर close करता है → Entry at 22015 | Stop Loss: 21980 | Target: 22080 (1:2 RR)</p>
+    </div>
+  </div>
+
+  <!-- Strategy 2 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">02</div>
+      <div>
+        <div class="s-title">Support & Resistance Reversal</div>
+        <div class="s-subtitle">High accuracy, beginner-friendly</div>
+      </div>
+    </div>
+    <p>Price जब एक strong support zone तक आकर reverse होता है, या resistance पर reject होता है — यह intraday में सबसे clean और predictable setup देता है।</p>
+    <p><strong>Logic:</strong> Support और resistance zones पर बड़े traders के orders होते हैं। Price इन zones पर आकर react करती है। यह reaction pattern बार-बार repeat होता है।</p>
+    <ul>
+      <li>Pre-market में daily chart पर key support/resistance mark करो</li>
+      <li>Price support पर आए तो bullish candlestick pattern wait करो</li>
+      <li>Price resistance पर आए तो bearish rejection pattern wait करो</li>
+      <li>Entry: Confirmation candle के बाद</li>
+      <li>Stop Loss: Support/Resistance zone के दूसरी तरफ</li>
+      <li>Target: अगला key level या 1:2 RR</li>
+    </ul>
+  </div>
+
+  <!-- Strategy 3 -->
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num">03</div>
+      <div>
+        <div class="s-title">VWAP Strategy</div>
+        <div class="s-subtitle">Institutional traders का favorite</div>
+      </div>
+    </div>
+    <p>VWAP (Volume Weighted Average Price) intraday का सबसे powerful indicator है। <strong>Institutions और large traders VWAP को benchmark</strong> की तरह use करते हैं।</p>
+    <p><strong>Logic:</strong> Price VWAP के ऊपर है तो market bullish है, नीचे है तो bearish है। VWAP पर pullback आने के बाद trend direction में trade लेना high probability setup होता है।</p>
+    <ul>
+      <li>Market open के बाद VWAP calculate होना शुरू होता है — पहले 30 min settle होने दो</li>
+      <li>Price VWAP के ऊपर है + VWAP पर pullback आया → Buy setup</li>
+      <li>Price VWAP के नीचे है + VWAP तक bounce आया → Sell setup</li>
+      <li>VWAP breakout (strong close above/below) → Momentum trade</li>
+      <li>Stop Loss: VWAP के दूसरी तरफ थोड़ा buffer</li>
+    </ul>
+
+    <div class="success-box" style="margin-top:16px;">
+      <p>✅ <strong>Best Combination:</strong> VWAP + RSI (oversold bounce on VWAP) = very high probability intraday setup। इसे master करने के लिए virtual trading में practice करो।</p>
+    </div>
+  </div>
+
+  <img src="images/trendline-breakout-concepts.png" alt="Trendline and Breakout Concepts for Intraday Trading" loading="lazy">
+
+  <!-- INDICATORS -->
+  <h2>📊 Best Indicators for Intraday Trading</h2>
+
+  <p>Indicators को आंख बंद करके follow नहीं करते — ये <strong>decision support tools</strong> हैं। Intraday में इन 4 indicators का combination काफी है।</p>
+
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">📈</div>
+      <h4>Moving Average (9 EMA & 21 EMA)</h4>
+      <p>9 EMA fast है, 21 EMA slow है। 9 EMA, 21 EMA के ऊपर → uptrend। Crossover पर momentum trades लो।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">💪</div>
+      <h4>RSI (14 period)</h4>
+      <p>Oversold (&lt;30) पर buy setup, overbought (&gt;70) पर sell setup। Divergence powerful signal देता है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">⚖️</div>
+      <h4>VWAP</h4>
+      <p>Intraday का सबसे important level। Price VWAP के ऊपर = bullish bias। Institutions इसे track करते हैं।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📉</div>
+      <h4>MACD (12,26,9)</h4>
+      <p>Trend + momentum दोनों दिखाता है। Bullish crossover zero line के पास = strong buy signal।</p>
+    </div>
+  </div>
+
+  <img src="images/03_moving-average-chart.png" alt="Moving Average Chart for Intraday Trading Strategy" loading="lazy">
+
+  <div class="warn-box">
+    <p>⚠️ <strong>Indicator Overload से बचो:</strong> बहुत से traders 5-6 indicators use करते हैं और confuse हो जाते हैं। 2-3 indicators enough हैं। VWAP + RSI या Moving Average + MACD — एक combination choose करो और उसे master करो।</p>
+  </div>
+
+  <!-- RISK MANAGEMENT -->
+  <h2>🛡️ Intraday Risk Management — Most Important</h2>
+
+  <p>Intraday में money बहुत fast move होता है। एक गलत trade बहुत quickly बड़ा loss दे सकता है। <strong>Risk management ही intraday में survival और success का secret है।</strong></p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>1% Rule — Never Break This</h4>
+        <p>एक trade में maximum 1% capital risk करो। ₹50,000 capital पर maximum ₹500 risk per trade। यह rule emotionally tough लगता है लेकिन यही account बचाता है।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Daily Loss Limit Fix करो</h4>
+        <p>एक दिन में 2-3% से ज्यादा loss हो तो trading बंद करो। "Bad day" accept करना सीखो। Forced recovery के attempts biggest losses देते हैं।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Stop Loss Entry से पहले Set करो</h4>
+        <p>Trade लेने से पहले stop loss decide करो — trade में जाने के बाद SL move नहीं करते (नीचे की तरफ)। यह सबसे बड़ी discipline है।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Max 2-3 Trades Per Day (Beginners)</h4>
+        <p>ज्यादा trades लेने से बेहतर नहीं होता — बेहतर trades लेना important है। 2-3 quality setups daily enough हैं।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Risk Reward Minimum 1:2</h4>
+        <p>₹500 risk पर minimum ₹1000 target। इससे 40% win rate पर भी overall profitable रह सकते हो।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PSYCHOLOGY -->
+  <h2>🧠 Intraday Trading Psychology</h2>
+
+  <p>Intraday में price बहुत fast move करता है। यह speed emotions को trigger करती है। <strong>Fear, greed और FOMO intraday में सबसे dangerous enemies हैं।</strong></p>
+
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">😨</div>
+      <h4>Fear of Loss</h4>
+      <p>Stop loss से पहले exit करना, या अच्छे setup में entry न लेना — डर से कभी profitable नहीं बनते।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🤑</div>
+      <h4>Greed</h4>
+      <p>Target hit होने के बाद भी hold करना। "थोड़ा और profit होगा" — यह सोच profits को losses में बदल देती है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">😤</div>
+      <h4>Revenge Trading</h4>
+      <p>Loss के बाद तुरंत बड़ा trade लेना — यह intraday में account wipe करने का fastest तरीका है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🏃</div>
+      <h4>FOMO</h4>
+      <p>Move देखकर बिना setup के entry लेना। Trade miss हो जाए — कोई बात नहीं। अगला opportunity आएगा।</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>🧘 <strong>Mindset Shift:</strong> Intraday trading को एक business की तरह treat करो। हर trade एक independent transaction है। एक loss पूरे दिन को affect नहीं करता — जब तक तुम उसे affect नहीं होने देते।</p>
+  </div>
+
+  <!-- PRE MARKET ROUTINE -->
+  <h2>📅 Daily Intraday Routine — Beginner के लिए</h2>
+
+  <p>Successful intraday traders random नहीं चलते। उनका एक <strong>structured daily routine</strong> होता है। यह routine follow करो:</p>
+
+  <div class="checklist">
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>8:00 – 9:00 AM:</strong> Global markets check करो (SGX NIFTY, US Futures, Dow Jones close)। FII/DII data देखो। Major news check करो।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>9:00 – 9:15 AM:</strong> Key levels mark करो — previous day high/low, weekly high/low, important support/resistance। Watchlist ready करो।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>9:15 – 9:30 AM:</strong> Market देखो — trade मत लो। Opening में चाos होती है। First 15 minutes observe करो।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>9:30 – 11:00 AM:</strong> Best time slot। Setup मिले तो trade लो। Plan follow करो — emotions नहीं।</div>
+    </div>
+    <div class="check-item">
+      <div class="check-icon">✅</div>
+      <div class="check-text"><strong>After 3:30 PM:</strong> Journal update करो। क्या सही हुआ, क्या गलत हुआ? Improvement areas note करो।</div>
+    </div>
+  </div>
+
+  <!-- REAL EXAMPLE -->
+  <h2>📊 Real Trade Example — Step by Step</h2>
+
+  <p>Theory समझ लिया — अब एक real example देखते हैं कि actual intraday trade कैसे plan और execute होती है।</p>
+
+  <div class="strategy-card">
+    <div class="s-header">
+      <div class="s-num" style="background: linear-gradient(135deg,#00ff88,#00b360);">📈</div>
+      <div>
+        <div class="s-title" style="color:var(--green);">NIFTY Breakout Trade Example</div>
+        <div class="s-subtitle">9:45 AM — Breakout Strategy</div>
+      </div>
+    </div>
+    <ul>
+      <li><strong>Pre-market:</strong> NIFTY का previous day high 22,000 था। यह strong resistance है।</li>
+      <li><strong>9:15 – 9:30 AM:</strong> Market open हुआ 21,950 पर। Observe किया।</li>
+      <li><strong>9:40 AM:</strong> Price 22,000 के पास consolidate हो रही है। Volume बढ़ रही है।</li>
+      <li><strong>9:44 AM:</strong> 5-min candle 22,015 पर strong close। Volume spike है। Setup confirmed।</li>
+      <li><strong>Entry:</strong> 22,020 पर buy (candle break पर)</li>
+      <li><strong>Stop Loss:</strong> 21,980 (resistance level के नीचे) → Risk = 40 points</li>
+      <li><strong>Target:</strong> 22,100 (1:2 RR) → Potential profit = 80 points</li>
+      <li><strong>Result:</strong> 10:15 AM — Price 22,100 hit। Trade exit। ✅</li>
+    </ul>
+    <div class="success-box" style="margin-top:16px;">
+      <p>✅ <strong>Key Lesson:</strong> Entry जल्दी नहीं ली, volume confirm किया, SL pre-defined था, target पर exit किया — greed नहीं की। यही perfect execution है।</p>
+    </div>
+  </div>
+
+  <!-- ADVANCED CONCEPTS -->
+  <h2>🚀 Advanced Intraday Concepts</h2>
+
+  <h3>1. Price Action Trading (No Indicators)</h3>
+  <p>Pure candlestick patterns और support/resistance से trade करना। कोई indicator नहीं — सिर्फ price movement पढ़ना। यह advanced traders का approach है जो market को directly समझते हैं।</p>
+
+  <h3>2. Order Flow Analysis</h3>
+  <p>Market में बड़े orders कहाँ place हो रहे हैं यह समझना। Level 2 data (bid/ask) और DOM (Depth of Market) use करके institutional activity track करना। यह professional intraday traders का tool है।</p>
+
+  <h3>3. Multi-Timeframe Analysis (MTF)</h3>
+  <p>Higher timeframe (15-min या 1-hour) पर trend देखो और lower timeframe (5-min) पर entry लो। यह false signals को काफी reduce करता है।</p>
+  <ul>
+    <li>15-min chart → overall intraday trend</li>
+    <li>5-min chart → exact entry timing</li>
+    <li>1-min chart → fine-tune entry (advanced)</li>
+  </ul>
+
+  <h3>4. Gap Analysis</h3>
+  <p>जब market previous day close से काफी ऊपर या नीचे open होता है — इसे "Gap" कहते हैं। Gap fill होने की tendency होती है। Experienced traders इसे intraday opportunity की तरह use करते हैं।</p>
+
+  <!-- COMMON MISTAKES -->
+  <h2>⚠️ Biggest Intraday Mistakes जो Beginners करते हैं</h2>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>पहले 15 Minutes में Trade लेना</h4>
+      <p>Market open होने के बाद पहले 15 minutes में chaos होती है। Price erratically move करता है, fake breakouts होते हैं। इस time में trade लेना professional traders को भी avoid करना चाहिए।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Without Setup Entry लेना</h4>
+      <p>"Price move हो रहा है, enter करते हैं" — यह random gambling है, trading नहीं। बिना clear setup (candlestick pattern + key level + volume confirmation) trade मत लो।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Overtrading</h4>
+      <p>हर move पकड़ने की कोशिश करना। ज्यादा trades = ज्यादा brokerage fees + emotional decisions + exhaustion। 2-3 quality trades daily enough हैं।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Stop Loss Move करना (Down)</h4>
+      <p>Trade loss में जाने पर "थोड़ा और wait करते हैं" — और SL हटा देते हैं। यही सबसे account-destroying habit है। Stop loss एक promise है — खुद से।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>News पर Blindly Trade करना</h4>
+      <p>Budget, RBI policy, earnings results — इन पर trade करना expert level काम है। Beginners के लिए news events के दौरान trading avoid करना best है।</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>Intraday trading के लिए minimum capital कितना होना चाहिए?</h4>
+    <p>Technically कोई minimum नहीं है, लेकिन practically ₹10,000–₹25,000 से start करना reasonable है। इससे कम capital में 1% risk rule follow करना मुश्किल हो जाता है क्योंकि per trade risk बहुत कम हो जाता है। याद रखो — यह capital वह होना चाहिए जिसे आप lose कर सकते हो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Intraday trading में कौन सा stock choose करना चाहिए?</h4>
+    <p>Intraday के लिए high liquidity stocks choose करो — जैसे NIFTY 50 के stocks (Reliance, TCS, Infosys, HDFC Bank, SBI, Tata Motors आदि)। Index (NIFTY, BANKNIFTY) भी intraday के लिए excellent हैं। Low volume penny stocks से बिल्कुल बचो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>क्या Intraday trading beginners के लिए suitable है?</h4>
+    <p>Intraday बहुत fast-paced है और emotional control demand करती है जो beginners के लिए initially कठिन होता है। Ideally, पहले 6-12 महीने BullBear Market जैसे platform पर virtual trading practice करो, candlestick/indicators सीखो, फिर small capital से real intraday try करो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Intraday में कितना profit realistic है?</h4>
+    <p>Realistic expectation: Consistent intraday traders monthly 3-5% return target करते हैं। "रोज 1000 कमाऊंगा" — यह unrealistic goal है। Focus monthly consistency पर रखो, daily P&L पर नहीं। Compounding के साथ monthly 3-5% over time बड़ी wealth बनाती है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Intraday trading में कौन से indicators सबसे important हैं?</h4>
+    <p>Beginners के लिए: VWAP + RSI combination सबसे practical है। VWAP bias देता है (bullish/bearish), RSI entry timing देता है (oversold/overbought)। इसमें Moving Average add करो trend confirmation के लिए — यह three-indicator system intraday के लिए complete है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>क्या virtual trading से intraday सीख सकते हैं?</h4>
+    <p>हाँ, बिल्कुल। Virtual trading real market data पर होती है, इसलिए setups, timing, indicators — सब कुछ same experience मिलता है। Main difference सिर्फ emotions का होता है (real money नहीं होता)। BullBear Market पर virtual intraday practice करो और फिर real trading में जाओ।</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>⚡ Virtual Intraday Practice शुरू करो — Free</h2>
+    <p>Theory पढ़ लिया — अब BullBear Market पर virtual money से intraday strategies practice करो। Real market data, zero risk, real learning।</p>
+    <div class="cta-btns">
+      <a href="learning.html" class="btn-primary">📚 Learning Hub जाओ</a>
+      <a href="index.html" class="btn-outline">🏠 Home पर जाओ</a>
+    </div>
+  </div>
+
+  <!-- INTERLINKS -->
+  <div class="interlink-section">
+    <h2>📚 Intraday के साथ यह भी सीखो</h2>
+    <div class="interlink-grid">
+      <a href="candlestick.html" class="interlink-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Candlestick Patterns</div>
+        <div class="ic-desc">Intraday entry के लिए candlestick patterns जरूरी हैं — यहाँ से सीखो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="indicators.html" class="interlink-card">
+        <div class="ic-icon">📈</div>
+        <div class="ic-title">Indicators Guide</div>
+        <div class="ic-desc">RSI, MACD, VWAP, Moving Average — complete indicators guide.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="risk.html" class="interlink-card">
+        <div class="ic-icon">🛡️</div>
+        <div class="ic-title">Risk Management</div>
+        <div class="ic-desc">Intraday में capital बचाने का complete guide — must read.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="psychology.html" class="interlink-card">
+        <div class="ic-icon">🧠</div>
+        <div class="ic-title">Trading Psychology</div>
+        <div class="ic-desc">Fear, greed और FOMO control करना सीखो — intraday का असली challenge.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="breakout.html" class="interlink-card">
+        <div class="ic-icon">🚀</div>
+        <div class="ic-title">Breakout Strategy</div>
+        <div class="ic-desc">Intraday की most powerful strategy को deeply समझो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="swing.html" class="interlink-card">
+        <div class="ic-icon">🌊</div>
+        <div class="ic-title">Swing Trading</div>
+        <div class="ic-desc">Intraday से less stressful style — multi-day trades.</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- end .content -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <p>India's #1 free stock market learning & virtual trading platform. Learn, Practice, Compete, Grow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning Hub</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <h4>Learn Free</h4>
+      <a href="candlestick.html">Candlestick Patterns</a>
+      <a href="indicators.html">Indicators Guide</a>
+      <a href="risk.html">Risk Management</a>
+      <a href="intraday.html">Intraday Trading</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BullBear Market. All rights reserved. | Made with ❤️ in India</p>
+    <p>Educational Platform – No Real Money Trading | <a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</footer>
 
 </body>
 </html>
