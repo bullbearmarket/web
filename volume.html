@@ -1,245 +1,1094 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Volume Analysis in Trading – Complete Guide for Beginners to Advanced (2026)</title>
+<!-- Primary SEO -->
+<title>Volume Analysis in Trading – Complete Guide Beginners to Advanced 2026 | BullBear Market</title>
+<meta name="description" content="Volume analysis सीखो step by step — Price Volume Relationship, Volume Breakout, VWAP, OBV, Accumulation, Distribution और real examples के साथ। Free Hindi guide on BullBear Market.">
+<meta name="keywords" content="volume analysis trading, volume breakout strategy, VWAP indicator, OBV indicator, accumulation distribution, price volume relationship, stock market volume Hindi, volume analysis India, BullBear Market volume">
+<meta name="author" content="BullBear Market">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bullbearmarket.in/volume.html">
 
-<meta name="description" content="Learn volume analysis in stock market with strategies, indicators, volume patterns and real examples. Complete beginner to advanced guide.">
+<!-- Geo Tags -->
+<meta name="geo.region" content="IN">
+<meta name="geo.country" content="India">
+<meta name="language" content="hi-IN">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Volume Analysis in Trading – Complete Guide | BullBear Market">
+<meta property="og:description" content="Volume analysis की पूरी जानकारी — Price Volume Relationship, Breakout Validation, VWAP, OBV — free Hindi guide।">
+<meta property="og:url" content="https://bullbearmarket.in/volume.html">
+<meta property="og:site_name" content="BullBear Market">
+<meta property="og:image" content="https://bullbearmarket.in/images/06_support-resistance-chart.png">
+<meta property="og:locale" content="hi_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Volume Analysis Complete Guide | BullBear Market">
+<meta name="twitter:description" content="Volume analysis — price movement की असली strength जानो। Free Hindi & English guide।">
+<meta name="twitter:image" content="https://bullbearmarket.in/images/06_support-resistance-chart.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Volume Analysis in Trading – Complete Guide for Beginners to Advanced 2026",
+  "description": "Complete volume analysis guide covering Price Volume Relationship, Volume Breakout, VWAP, OBV, Accumulation and Distribution for Indian stock market beginners.",
+  "image": "https://bullbearmarket.in/images/06_support-resistance-chart.png",
+  "author": {"@type": "Organization", "name": "BullBear Market"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BullBear Market",
+    "logo": {"@type": "ImageObject", "url": "https://bullbearmarket.in/favicon.png"}
+  },
+  "url": "https://bullbearmarket.in/volume.html",
+  "inLanguage": "hi-IN",
+  "dateModified": "2026-04-05"
+}
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    --gold: #FFD700;
+    --gold-light: #FFE44D;
+    --cyan: #00e6ff;
+    --green: #00ff88;
+    --red: #ff5050;
+    --purple: #a78bfa;
+    --dark: #0B1220;
+    --dark3: #1a2235;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: rgba(255,215,0,0.15);
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
-  color: white;
-  line-height: 1.8;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
 
-h1 { color: gold; }
-h2 { color: #00e6ff; margin-top: 30px; }
-h3 { color: #00ffaa; }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none; z-index: 0;
+  }
 
-p { color: #ccc; }
+  /* NAVBAR */
+  nav {
+    position: sticky; top: 0;
+    background: #ffffff;
+    border-bottom: 2.5px solid var(--gold);
+    z-index: 1000; padding: 0 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: auto;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 10px 0; flex-wrap: wrap; gap: 8px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { width: 40px; height: 40px; border-radius: 8px; }
+  .nav-logo span { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: #111; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .nav-links a {
+    text-decoration: none; color: #333;
+    font-size: 0.85rem; font-weight: 600;
+    padding: 5px 10px; border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { background: var(--gold); color: #000; }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 20px 0;
-}
+  /* BREADCRUMB */
+  .breadcrumb {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 24px auto 0;
+    padding: 0 20px; font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
 
-a { color: gold; }
+  /* HERO */
+  .hero {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 20px auto 0;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(167,139,250,0.1);
+    border: 1px solid rgba(167,139,250,0.3);
+    color: var(--purple);
+    padding: 6px 18px; border-radius: 30px;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800; color: var(--gold);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 20px; }
+  .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .hero-tags span {
+    background: rgba(0,230,255,0.08);
+    border: 1px solid rgba(0,230,255,0.2);
+    color: var(--cyan); padding: 4px 14px;
+    border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+  }
 
+  /* STATS */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 14px; margin: 30px 0;
+  }
+  .stat-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 16px; text-align: center;
+  }
+  .stat-card .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.7rem; font-weight: 800;
+    color: var(--gold); display: block;
+  }
+  .stat-card .stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+  /* CONTENT */
+  .content {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--cyan); margin: 50px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,230,255,0.15);
+  }
+  .content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: #00ffaa; margin: 28px 0 10px;
+  }
+  .content p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.97rem; }
+  .content b, .content strong { color: var(--text); }
+  .content ul { padding-left: 0; list-style: none; margin-bottom: 16px; }
+  .content ul li {
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative; font-size: 0.97rem;
+  }
+  .content ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+  .content img {
+    width: 100%; border-radius: 12px;
+    margin: 24px 0; border: 1px solid var(--border); display: block;
+  }
+
+  /* BOXES */
+  .highlight-box {
+    background: rgba(255,215,0,0.06);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .highlight-box p { color: var(--text); margin: 0; }
+
+  .info-box {
+    background: rgba(0,230,255,0.05);
+    border: 1px solid rgba(0,230,255,0.15);
+    border-left: 4px solid var(--cyan);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .info-box p { color: var(--text); margin: 0; }
+
+  .warn-box {
+    background: rgba(255,100,0,0.06);
+    border: 1px solid rgba(255,100,0,0.2);
+    border-left: 4px solid #ff6400;
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .warn-box p { color: var(--text); margin: 0; }
+
+  .success-box {
+    background: rgba(0,255,136,0.05);
+    border: 1px solid rgba(0,255,136,0.15);
+    border-left: 4px solid var(--green);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .success-box p { color: var(--text); margin: 0; }
+
+  /* PV RELATIONSHIP GRID */
+  .pv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px; margin: 24px 0;
+  }
+  .pv-card {
+    border-radius: 12px; padding: 22px;
+    border: 1.5px solid;
+  }
+  .pv-card.bullish-strong { background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.3); }
+  .pv-card.bullish-weak   { background: rgba(255,215,0,0.04); border-color: rgba(255,215,0,0.2); }
+  .pv-card.bearish-strong { background: rgba(255,80,80,0.05); border-color: rgba(255,80,80,0.3); }
+  .pv-card.bearish-weak   { background: rgba(167,139,250,0.05); border-color: rgba(167,139,250,0.2); }
+
+  .pv-card .pv-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.82rem; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .pv-card.bullish-strong .pv-label { color: var(--green); }
+  .pv-card.bullish-weak   .pv-label { color: var(--gold); }
+  .pv-card.bearish-strong .pv-label { color: var(--red); }
+  .pv-card.bearish-weak   .pv-label { color: var(--purple); }
+
+  .pv-card .pv-condition {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--text); margin-bottom: 8px;
+  }
+  .pv-card p { font-size: 0.86rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+  /* INDICATOR CARDS */
+  .indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .indicator-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .indicator-card:hover { transform: translateY(-3px); border-color: rgba(0,230,255,0.4); }
+  .indicator-card .i-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .indicator-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; color: var(--cyan); margin-bottom: 8px; }
+  .indicator-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+  /* CONCEPT CARD */
+  .concept-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 14px; padding: 26px; margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+  .concept-card:hover { border-color: rgba(255,215,0,0.4); }
+  .concept-card .cc-header {
+    display: flex; align-items: center;
+    gap: 14px; margin-bottom: 14px;
+  }
+  .concept-card .cc-icon {
+    width: 46px; height: 46px;
+    border-radius: 10px; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 1.4rem; flex-shrink: 0;
+  }
+  .concept-card .cc-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem; font-weight: 700; color: var(--gold);
+  }
+  .concept-card .cc-sub { font-size: 0.82rem; color: var(--text-muted); }
+  .concept-card p { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 10px; }
+  .concept-card ul li { font-size: 0.9rem; }
+
+  /* REAL EXAMPLE */
+  .example-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 14px; padding: 26px; margin-bottom: 20px;
+  }
+  .example-card .ex-head {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--cyan); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .example-card p { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 8px; }
+  .example-card ul li { font-size: 0.9rem; }
+
+  /* MISTAKE */
+  .mistake-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--dark3);
+    border: 1px solid rgba(255,80,80,0.15);
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .mistake-icon { font-size: 1.4rem; }
+  .mistake-text h4 { font-family: 'Syne', sans-serif; color: var(--red); font-size: 0.9rem; margin-bottom: 4px; }
+  .mistake-text p { color: var(--text-muted); font-size: 0.86rem; margin: 0; }
+
+  /* COMPARISON TABLE */
+  .vol-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; border-radius: 10px; overflow: hidden;
+  }
+  .vol-table th {
+    background: rgba(255,215,0,0.12);
+    color: var(--gold); font-family: 'Syne', sans-serif;
+    font-size: 0.85rem; padding: 12px 14px;
+    text-align: left; border-bottom: 1px solid var(--border);
+  }
+  .vol-table td {
+    padding: 12px 14px; color: var(--text-muted);
+    font-size: 0.86rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: var(--dark3);
+  }
+  .vol-table tr:hover td { background: rgba(255,215,0,0.03); }
+  .td-green { color: var(--green) !important; font-weight: 600; }
+  .td-red { color: var(--red) !important; font-weight: 600; }
+  .td-gold { color: var(--gold) !important; font-weight: 600; }
+  .td-cyan { color: var(--cyan) !important; font-weight: 600; }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .step {
+    display: flex; align-items: flex-start;
+    gap: 16px; background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px;
+  }
+  .step-num {
+    min-width: 36px; height: 36px;
+    background: var(--gold); color: #000;
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+  }
+  .step-text h4 { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.95rem; margin-bottom: 4px; }
+  .step-text p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+  /* FAQ */
+  .faq-item {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 20px 22px; margin-bottom: 12px;
+  }
+  .faq-item h4 { font-family: 'Syne', sans-serif; color: var(--gold); font-size: 0.97rem; margin-bottom: 8px; }
+  .faq-item p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* INTERLINKS */
+  .interlink-section { margin: 60px 0 40px; border-top: 1px solid var(--border); padding-top: 40px; }
+  .interlink-section h2 {
+    font-family: 'Syne', sans-serif; font-size: 1.3rem;
+    color: var(--gold); margin-bottom: 20px; border: none; padding: 0;
+  }
+  .interlink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .interlink-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 18px;
+    text-decoration: none; transition: all 0.25s; display: block;
+  }
+  .interlink-card:hover { transform: translateY(-4px); border-color: var(--gold); background: rgba(255,215,0,0.05); }
+  .interlink-card .ic-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .interlink-card .ic-title { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+  .interlink-card .ic-desc { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; }
+  .interlink-card .ic-arrow { color: var(--gold); font-size: 0.85rem; margin-top: 10px; font-weight: 600; }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,230,255,0.05));
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 16px; padding: 40px 30px;
+    text-align: center; margin: 50px 0;
+  }
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 1.5rem; margin-bottom: 12px; border: none; padding: 0;
+  }
+  .cta-section p { color: var(--text-muted); margin-bottom: 24px; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: #000; padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--cyan); padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; border: 1.5px solid var(--cyan); transition: all 0.2s;
+  }
+  .btn-outline:hover { background: rgba(0,230,255,0.1); transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    position: relative; z-index: 1;
+    background: #060d18; border-top: 2px solid var(--gold);
+    padding: 50px 20px 30px; margin-top: 60px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; margin-bottom: 40px;
+  }
+  .footer-brand img { width: 44px; margin-bottom: 12px; border-radius: 8px; }
+  .footer-brand p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 0.9rem; font-weight: 700; margin-bottom: 14px;
+  }
+  .footer-col a {
+    display: block; color: var(--text-muted); text-decoration: none;
+    font-size: 0.85rem; padding: 4px 0; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1100px; margin: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 20px; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { color: var(--text-muted); font-size: 0.8rem; }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .nav-links a { font-size: 0.78rem; padding: 4px 7px; }
+    .pv-grid { grid-template-columns: 1fr; }
+    .interlink-grid { grid-template-columns: 1fr 1fr; }
+    .cta-section { padding: 30px 20px; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .vol-table th, .vol-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <span>BullBear Market</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning.html" class="active">Learning</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</nav>
 
-<a href="learning.html">⬅ Back to Learning</a>
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <a href="learning.html">Learning Hub</a>
+  <span>›</span>
+  <span>Volume Analysis</span>
+</div>
 
-<h1>Volume Analysis in Trading – Complete Guide</h1>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📊 Learning Module</div>
+  <h1>Volume Analysis – Price Movement की असली Strength जानो</h1>
+  <p>Volume वह hidden truth है जो price chart नहीं बता सकता। सीखो कैसे volume से fake breakouts पहचानें, smart money को track करें और high probability trades लें।</p>
+  <div class="hero-tags">
+    <span>📊 Volume Breakout</span>
+    <span>⚖️ VWAP</span>
+    <span>📈 OBV Indicator</span>
+    <span>🧠 Accumulation</span>
+    <span>🇮🇳 Hindi + English</span>
+  </div>
+</div>
 
-<img src="https://via.placeholder.com/800x400">
+<!-- CONTENT -->
+<div class="content">
 
-<p>
-Volume analysis trading का सबसे powerful tool है जो price movement के पीछे की strength दिखाता है।
-</p>
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <span class="stat-num">2x+</span>
+      <div class="stat-label">Average volume से ज्यादा = Valid breakout signal</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">90%</span>
+      <div class="stat-label">Fake breakouts में volume low होती है</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">VWAP</span>
+      <div class="stat-label">Institutional traders का #1 intraday level</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">OBV</span>
+      <div class="stat-label">Price move से पहले signal देता है</div>
+    </div>
+  </div>
 
-<p>
-अगर price movement के साथ volume सही तरीके से समझ लिया जाए,  
-तो trader market की direction accurately पकड़ सकता है।
-</p>
+  <!-- WHAT IS VOLUME -->
+  <h2>📊 Volume क्या है? (Simple भाषा में)</h2>
 
----
+  <p>Volume का मतलब है — <strong>एक specific time period में कितने shares buy और sell हुए।</strong> अगर किसी stock में एक दिन में 50 लाख shares trade हुए, तो उस दिन का volume 50 लाख है।</p>
 
-<h2>🌐 Learn More</h2>
+  <p>Volume को एक crowd की तरह सोचो। अगर बहुत ज्यादा लोग एक direction में move कर रहे हैं तो movement strong है। अगर सिर्फ कुछ लोग हैं तो movement weak हो सकती है।</p>
 
-<p>
-👉 Visit:
-<a href="https://bullbearmarket.in">BullBear Market</a>
-</p>
+  <img src="images/06_support-resistance-chart.png" alt="Volume Analysis with Support Resistance Chart" loading="lazy">
 
-<p>
-👉 Privacy Policy:
-<a href="https://bullbearmarket.in/privacy.html">Privacy Policy</a>
-</p>
+  <div class="highlight-box">
+    <p>💡 <strong>Golden Rule:</strong> Price बताता है <em>"क्या हो रहा है"</em> — Volume बताता है <em>"कितनी conviction के साथ हो रहा है।"</em> एक बिना volume के price move खाली शोर है। Volume के साथ price move = real market action।</p>
+  </div>
 
----
+  <h3>Volume क्यों जरूरी है?</h3>
+  <ul>
+    <li><strong>Trend Confirmation:</strong> Uptrend में high volume = strong buying। यह confirm करता है trend real है।</li>
+    <li><strong>Breakout Validation:</strong> High volume breakout = genuine move। Low volume breakout = fake-out trap।</li>
+    <li><strong>Smart Money Track करना:</strong> Institutions बड़ी quantity में buy/sell करते हैं जो volume spike में दिखता है।</li>
+    <li><strong>Reversal Signal:</strong> Trend के end में climax volume आता है — यह trend change का early signal होता है।</li>
+    <li><strong>Divergence:</strong> Price ऊपर जाए और volume घटे — यह weakness दिखाता है, reversal possible है।</li>
+  </ul>
 
-<h2>📊 What is Volume?</h2>
+  <!-- PRICE VOLUME RELATIONSHIP -->
+  <h2>📈 Price + Volume Relationship — सबसे Important Concept</h2>
 
-<p>
-Volume का मतलब है एक निश्चित समय में कितने shares trade हुए।
-</p>
+  <p>Price और volume का relationship volume analysis का core है। <strong>ये 4 combinations समझ लो — trading की clarity बहुत बढ़ जाएगी।</strong></p>
 
-<ul>
-<li>High volume → Strong interest</li>
-<li>Low volume → Weak movement</li>
-</ul>
+  <div class="pv-grid">
+    <div class="pv-card bullish-strong">
+      <div class="pv-label">✅ Most Bullish</div>
+      <div class="pv-condition">📈 Price Up + 📊 Volume Up</div>
+      <p>सबसे strong bullish signal। Buyers बहुत aggressive हैं। Uptrend continue होने की probability सबसे ज्यादा है। इस setup में buy trades लो।</p>
+    </div>
+    <div class="pv-card bullish-weak">
+      <div class="pv-label">⚠️ Weak Bullish</div>
+      <div class="pv-condition">📈 Price Up + 📉 Volume Down</div>
+      <p>Price ऊपर जा रहा है लेकिन participation कम है। यह trend exhaustion या temporary bounce हो सकता है। Reversal possible — caution रखो।</p>
+    </div>
+    <div class="pv-card bearish-strong">
+      <div class="pv-label">❌ Most Bearish</div>
+      <div class="pv-condition">📉 Price Down + 📊 Volume Up</div>
+      <p>सबसे strong bearish signal। Sellers बहुत aggressive हैं। Downtrend continue होने की probability सबसे ज्यादा है। Short trades या exit करो।</p>
+    </div>
+    <div class="pv-card bearish-weak">
+      <div class="pv-label">🔍 Watch Carefully</div>
+      <div class="pv-condition">📉 Price Down + 📉 Volume Down</div>
+      <p>Price गिर रहा है लेकिन sellers weak हैं। यह healthy correction हो सकता है uptrend में। अगला bounce strong हो सकता है — watch करो।</p>
+    </div>
+  </div>
 
----
+  <div class="info-box">
+    <p>💡 <strong>Key Insight:</strong> सबसे ज्यादा important यह है कि volume और price एक direction में हों — इसे <strong>"Volume Confirmation"</strong> कहते हैं। जब दोनों aligned नहीं होते, तो move में weakness है।</p>
+  </div>
 
-<h2>🔥 Why Volume is Important</h2>
+  <!-- VOLUME INDICATORS -->
+  <h2>📊 Best Volume Indicators — Detail में</h2>
 
-<ul>
-<li>Trend confirmation</li>
-<li>Breakout validation</li>
-<li>Fake move पहचानना</li>
-</ul>
+  <p>सिर्फ volume bars देखना enough नहीं है। ये indicators volume को और better तरीके से analyze करने में help करते हैं:</p>
 
----
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">📊</div>
+      <h4>Volume Bars (Basic)</h4>
+      <p>Chart के नीचे दिखने वाले simple bars। Green bar = उस candle में buying ज्यादा। Red bar = selling ज्यादा। Bar जितनी लंबी, उतना ज्यादा participation।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">⚖️</div>
+      <h4>VWAP (Volume Weighted Average Price)</h4>
+      <p>Volume के हिसाब से weighted average price। Intraday का सबसे important level। Institutions इसे benchmark मानते हैं। Price VWAP के ऊपर = bullish bias।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📈</div>
+      <h4>OBV (On Balance Volume)</h4>
+      <p>Cumulative volume indicator। Price rise पर volume add होता है, price fall पर minus होता है। OBV price से पहले diverge करता है — early signal देता है।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">📉</div>
+      <h4>Volume Moving Average</h4>
+      <p>20-day average volume। इससे compare करके पता चलता है कि current volume high है या low। Breakout पर 2x average volume = strong signal।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🌊</div>
+      <h4>Chaikin Money Flow (CMF)</h4>
+      <p>Accumulation और distribution measure करता है। Positive CMF = buying pressure। Negative CMF = selling pressure। OBV का advanced version।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🔥</div>
+      <h4>Volume Profile</h4>
+      <p>Price level पर कितना volume trade हुआ — यह दिखाता है। High Volume Node (HVN) = strong support/resistance। Advanced traders का tool।</p>
+    </div>
+  </div>
 
-<h2>📈 Price + Volume Relationship</h2>
+  <img src="images/03_moving-average-chart.png" alt="Volume Moving Average Analysis Chart" loading="lazy">
 
-<h3>1. Price Up + Volume Up</h3>
-<p>Strong bullish signal</p>
+  <!-- VWAP DEEP DIVE -->
+  <h2>⚖️ VWAP — Intraday का Most Powerful Level</h2>
 
-<h3>2. Price Up + Volume Down</h3>
-<p>Weak trend (reversal possible)</p>
+  <p>VWAP (Volume Weighted Average Price) एक average price होता है जो volume को consider करके calculate होता है। <strong>यह सिर्फ एक indicator नहीं — यह institutional traders का benchmark है।</strong></p>
 
-<h3>3. Price Down + Volume Up</h3>
-<p>Strong bearish</p>
+  <div class="concept-card">
+    <div class="cc-header">
+      <div class="cc-icon" style="background: rgba(0,230,255,0.1);">⚖️</div>
+      <div>
+        <div class="cc-title">VWAP कैसे Use करें?</div>
+        <div class="cc-sub">Intraday trading का complete VWAP system</div>
+      </div>
+    </div>
+    <p>VWAP हर trading day market open होने पर नए सिरे से calculate होना शुरू होता है। यह intraday traders के लिए dynamic support-resistance की तरह काम करता है।</p>
+    <ul>
+      <li><strong>Price VWAP के ऊपर है:</strong> Market bullish है। Buy trades prefer करो। Pullback to VWAP = buy opportunity।</li>
+      <li><strong>Price VWAP के नीचे है:</strong> Market bearish है। Sell trades prefer करो। Bounce to VWAP = sell opportunity।</li>
+      <li><strong>VWAP Breakout:</strong> Price strong candle के साथ VWAP को break करे और उसके ऊपर close करे → Strong momentum trade।</li>
+      <li><strong>VWAP Rejection:</strong> Price VWAP पर आकर reject हो जाए → Trend continuation trade।</li>
+      <li><strong>Opening पहले 30 minutes:</strong> VWAP establish होने दो। पहले 30 minutes में VWAP trades avoid करो।</li>
+    </ul>
+    <div class="info-box" style="margin-top:14px;">
+      <p>📍 <strong>Pro Tip:</strong> Standard VWAP के साथ ±1 और ±2 Standard Deviation bands use करो। Price ±2 SD band पर आने पर mean reversion की probability बढ़ जाती है। यह advanced VWAP strategy है।</p>
+    </div>
+  </div>
 
-<h3>4. Price Down + Volume Low</h3>
-<p>Weak selling</p>
+  <!-- OBV DEEP DIVE -->
+  <h2>📈 OBV — Price से पहले Signal देने वाला Indicator</h2>
 
----
+  <p>OBV (On Balance Volume) एक cumulative indicator है जो यह बताता है कि overall volume किस direction में flow हो रही है। <strong>OBV का सबसे powerful use है — price से पहले divergence दिखाना।</strong></p>
 
-<h2>📊 Volume Breakout Strategy</h2>
+  <div class="concept-card">
+    <div class="cc-header">
+      <div class="cc-icon" style="background: rgba(0,255,136,0.1);">📈</div>
+      <div>
+        <div class="cc-title">OBV कैसे Calculate होता है?</div>
+        <div class="cc-sub">Simple logic, powerful result</div>
+      </div>
+    </div>
+    <p><strong>Logic:</strong> अगर आज की closing price कल से ज्यादा है → आज का volume OBV में add होता है। अगर कम है → आज का volume OBV से minus होता है।</p>
+    <ul>
+      <li><strong>OBV Rising + Price Rising:</strong> Strong uptrend confirmation। Buyers control में हैं।</li>
+      <li><strong>OBV Falling + Price Falling:</strong> Strong downtrend confirmation। Sellers control में हैं।</li>
+      <li><strong>OBV Rising + Price Flat/Falling (Bullish Divergence):</strong> Smart money secretly accumulate कर रहा है। Price soon ऊपर जा सकती है।</li>
+      <li><strong>OBV Falling + Price Rising (Bearish Divergence):</strong> Distribution हो रही है। Price जल्द गिर सकती है। Exit signal।</li>
+    </ul>
+  </div>
 
-<p>
-जब price resistance तोड़ता है और volume बढ़ता है  
-→ Strong breakout
-</p>
+  <div class="highlight-box">
+    <p>🔍 <strong>OBV Divergence — Hidden Signal:</strong> जब stock की price नए highs बना रही हो लेकिन OBV नए highs नहीं बना रहा — यह warning है कि move में strength कम हो रही है। Institutions sell कर रहे हैं retail को। यह bearish divergence होती है।</p>
+  </div>
 
----
+  <!-- ADVANCED CONCEPTS -->
+  <h2>🔥 Advanced Volume Concepts</h2>
 
-<h2>📉 Fake Breakout कैसे पहचानें</h2>
+  <!-- Accumulation -->
+  <div class="concept-card">
+    <div class="cc-header">
+      <div class="cc-icon" style="background: rgba(0,255,136,0.1);">🏦</div>
+      <div>
+        <div class="cc-title">Accumulation — Smart Money Buying</div>
+        <div class="cc-sub">Institutions quietly position build करते हैं</div>
+      </div>
+    </div>
+    <p>Accumulation वह phase है जब <strong>smart money (institutions, big traders) quietly किसी stock में buy करते हैं।</strong> वे इसे इस तरह करते हैं कि price ज्यादा ऊपर न जाए — ताकि retail traders को पता न चले।</p>
+    <p><strong>Accumulation को कैसे पहचानें:</strong></p>
+    <ul>
+      <li>Stock एक tight range में trade कर रहा है — कोई बड़ा move नहीं</li>
+      <li>Range में volume gradually increase हो रही है</li>
+      <li>Price support level पर बार-बार bounce कर रहा है लेकिन crash नहीं हो रहा</li>
+      <li>OBV quietly ऊपर जा रहा है जबकि price flat है (bullish divergence)</li>
+      <li>Dips पर volume high होती है (institutions buy कर रहे हैं)</li>
+    </ul>
+    <div class="success-box" style="margin-top:14px;">
+      <p>✅ <strong>Trading Opportunity:</strong> Accumulation phase identify करो → Wait करो जब तक price breakout न करे high volume के साथ → फिर entry लो। यह swing trading का सबसे powerful setup है।</p>
+    </div>
+  </div>
 
-<ul>
-<li>Price breakout लेकिन volume low</li>
-<li>Immediate reversal</li>
-</ul>
+  <!-- Distribution -->
+  <div class="concept-card">
+    <div class="cc-header">
+      <div class="cc-icon" style="background: rgba(255,80,80,0.1);">🏚️</div>
+      <div>
+        <div class="cc-title">Distribution — Smart Money Selling</div>
+        <div class="cc-sub">Institutions retail को stock बेचते हैं</div>
+      </div>
+    </div>
+    <p>Distribution वह phase है जब <strong>institutions और smart money धीरे-धीरे अपनी position sell करते हैं।</strong> यह अक्सर तब होता है जब retail traders excited होते हैं और FOMO में buy कर रहे होते हैं।</p>
+    <p><strong>Distribution को कैसे पहचानें:</strong></p>
+    <ul>
+      <li>Stock ऊपर गया है और अब एक range में chop कर रहा है</li>
+      <li>Range में volume high है लेकिन price ऊपर नहीं जा रहा (sellers हर ऊंचाई पर sell कर रहे हैं)</li>
+      <li>Rallies पर volume कम होती है (buying weak है)</li>
+      <li>OBV गिरने लगता है जबकि price still high है (bearish divergence)</li>
+      <li>News और positive sentiment के बावजूद stock ऊपर नहीं जाता</li>
+    </ul>
+    <div class="warn-box" style="margin-top:14px;">
+      <p>⚠️ <strong>Warning Signal:</strong> अगर तुम किसी stock में excited हो और सब "bullish" बात कर रहे हैं लेकिन OBV गिर रहा है और volume pattern distribution दिखा रहा है — यह exit signal है, entry नहीं।</p>
+    </div>
+  </div>
 
----
+  <!-- Volume Climax -->
+  <div class="concept-card">
+    <div class="cc-header">
+      <div class="cc-icon" style="background: rgba(255,215,0,0.1);">🌋</div>
+      <div>
+        <div class="cc-title">Volume Climax — Trend End का Signal</div>
+        <div class="cc-sub">Exhaustion move — reversal possible</div>
+      </div>
+    </div>
+    <p>Volume Climax तब होता है जब <strong>volume extremely high हो जाती है — average से 5x, 10x या उससे भी ज्यादा।</strong> यह panic selling या euphoric buying का result होता है।</p>
+    <ul>
+      <li><strong>Buying Climax:</strong> Stock तेजी से ऊपर जाए, extreme high volume आए → Price अगले दिन reverse हो जाए। यह sellers का "trap" है जो buyers को catch out करता है।</li>
+      <li><strong>Selling Climax:</strong> Stock crash में extreme high volume पर एक big red candle → अगले दिन bounce। यह buyers का opportunity है — smart money "load up" कर रहा है।</li>
+      <li>Climax candle के बाद अक्सर consolidation या reversal आती है — trend continuation rarely होता है।</li>
+    </ul>
+  </div>
 
-<h2>📊 Volume Indicators</h2>
+  <!-- VOLUME BREAKOUT STRATEGY -->
+  <h2>🚀 Volume Breakout Strategy — Complete System</h2>
 
-<h3>1. Volume Bars</h3>
-<p>Basic volume display</p>
+  <p>Volume breakout strategy trading की सबसे reliable और beginner-friendly strategies में से एक है। <strong>इसे सही से use करने पर fake breakouts 80% तक avoid हो जाते हैं।</strong></p>
 
-<h3>2. VWAP</h3>
-<p>Average price based on volume</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Key Resistance Level Identify करो</h4>
+        <p>Daily या Weekly chart पर एक important resistance level mark करो — जहाँ price कई बार reject हुई हो। यह multiple timeframe पर visible होनी चाहिए।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Average Volume Calculate करो</h4>
+        <p>Stock की 20-day average daily volume note करो। यह आपका benchmark है। Breakout के दिन volume इससे कम से कम 1.5x–2x ज्यादा होनी चाहिए।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Breakout Candle Wait करो</h4>
+        <p>Price resistance को touch करे — immediately entry मत लो। Wait करो कि candle resistance के ऊपर close करे। Closing confirmation = genuine breakout।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Volume Confirm करो</h4>
+        <p>Breakout candle की volume check करो। Average से 2x+ volume? → Strong breakout। Average से कम volume? → Possible fake breakout। Wait करो।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Entry, SL और Target Set करो</h4>
+        <p>Breakout candle close पर या next day market open पर entry। Stop Loss: Resistance level के नीचे (3-5%)। Target: Measured move या next key level।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-text">
+        <h4>Retest Entry (Safer Option)</h4>
+        <p>Breakout के बाद price resistance पर pullback करके retest करे → Volume कम हो और price hold करे → यहाँ entry और safer होती है। Stop Loss previous resistance के नीचे।</p>
+      </div>
+    </div>
+  </div>
 
-<h3>3. OBV (On Balance Volume)</h3>
-<p>Buying vs selling pressure</p>
+  <!-- FAKE BREAKOUT -->
+  <h2>🚨 Fake Breakout पहचानना — Volume से</h2>
 
----
+  <p>Fake breakout trading में सबसे common trap है। <strong>Volume analysis से आप 80%+ fake breakouts avoid कर सकते हो।</strong></p>
 
-<h2>📊 Advanced Concepts</h2>
+  <table class="vol-table">
+    <tr>
+      <th>Feature</th>
+      <th>✅ Real Breakout</th>
+      <th>❌ Fake Breakout</th>
+    </tr>
+    <tr>
+      <td>Volume</td>
+      <td class="td-green">Average से 2x+ ज्यादा</td>
+      <td class="td-red">Average से कम या equal</td>
+    </tr>
+    <tr>
+      <td>Candle Close</td>
+      <td class="td-green">Resistance के clearly ऊपर</td>
+      <td class="td-red">Resistance के पास या barely ऊपर</td>
+    </tr>
+    <tr>
+      <td>Next Day</td>
+      <td class="td-green">Price hold करती है या ऊपर जाती है</td>
+      <td class="td-red">Price वापस resistance के नीचे</td>
+    </tr>
+    <tr>
+      <td>OBV</td>
+      <td class="td-green">OBV नया high बनाता है</td>
+      <td class="td-red">OBV flat या नीचे</td>
+    </tr>
+    <tr>
+      <td>Candle Body</td>
+      <td class="td-green">Large body, small wick</td>
+      <td class="td-red">Small body, large upper wick</td>
+    </tr>
+    <tr>
+      <td>Market Sentiment</td>
+      <td class="td-gold">Sector और index support करते हैं</td>
+      <td class="td-red">Stock अकेले move कर रहा है</td>
+    </tr>
+  </table>
 
-<h3>1. Volume Climax</h3>
-<p>Trend end signal</p>
+  <!-- REAL EXAMPLES -->
+  <h2>📊 Real Life Examples — Volume in Action</h2>
 
-<h3>2. Accumulation</h3>
-<p>Smart money buying</p>
+  <div class="example-card">
+    <div class="ex-head">✅ Example 1: Volume Breakout — Reliance Industries</div>
+    <p><strong>Situation:</strong> Reliance 2,500 पर strong resistance था। Stock 3 महीने से इस level को break करने की कोशिश कर रहा था।</p>
+    <ul>
+      <li><strong>Monday:</strong> Price 2,480 → 2,490 → Volume average (normal day)</li>
+      <li><strong>Tuesday:</strong> Price 2,510 पर strong close। Volume = Average का 3x! → Real Breakout Signal</li>
+      <li><strong>OBV:</strong> नया 3-month high बना → Confirmation</li>
+      <li><strong>Wednesday:</strong> Price 2,520 पर hold किया। Retest entry opportunity।</li>
+      <li><strong>Entry:</strong> 2,520 पर | <strong>SL:</strong> 2,490 | <strong>Target:</strong> 2,650</li>
+      <li><strong>Result:</strong> 2 हफ्ते में 2,650 reached। <span style="color:var(--green)">Profit ✅</span></li>
+    </ul>
+    <div class="success-box" style="margin-top:12px;">
+      <p>✅ <strong>Volume ने confirm किया</strong> कि यह real breakout है। बिना volume के यह entry नहीं लेते।</p>
+    </div>
+  </div>
 
-<h3>3. Distribution</h3>
-<p>Smart money selling</p>
+  <div class="example-card">
+    <div class="ex-head">❌ Example 2: Fake Breakout — Volume ने बचाया</div>
+    <p><strong>Situation:</strong> एक midcap stock 500 की resistance break करता है। Retail traders excited होकर buy कर लेते हैं।</p>
+    <ul>
+      <li><strong>Breakout candle:</strong> Price 505 पर close। लेकिन volume = Average का सिर्फ 0.6x (बहुत कम!)</li>
+      <li><strong>OBV:</strong> नया high नहीं बना — flat रहा</li>
+      <li><strong>अगले दिन:</strong> Price वापस 490 पर। Fake breakout confirmed।</li>
+      <li><strong>जो volume check नहीं किया:</strong> 505 पर buy किया → 490 पर stop hit → Loss</li>
+      <li><strong>जो volume check किया:</strong> Volume कम देखकर wait किया → Saved from fake breakout ✅</li>
+    </ul>
+    <div class="warn-box" style="margin-top:12px;">
+      <p>⚠️ <strong>Lesson:</strong> Volume confirmation skip करना = fake breakout में फँसने का सबसे बड़ा reason। हर breakout पर volume check mandatory है।</p>
+    </div>
+  </div>
 
----
+  <img src="images/support-resistance-breakout.png" alt="Volume Breakout with Support Resistance Analysis" loading="lazy">
 
-<h2>🧠 Psychology Behind Volume</h2>
+  <!-- PSYCHOLOGY -->
+  <h2>🧠 Volume और Market Psychology</h2>
 
-<p>
-Volume crowd behavior दिखाता है।
-</p>
+  <p>Volume असल में <strong>market participants की emotions और actions</strong> को reflect करता है। इसे समझना professional trading की एक key skill है।</p>
 
-<ul>
-<li>High volume → Fear or greed</li>
-<li>Low volume → Confusion</li>
-</ul>
+  <div class="indicator-grid">
+    <div class="indicator-card">
+      <div class="i-icon">😱</div>
+      <h4>Panic Selling Volume</h4>
+      <p>Market crash में extreme high volume के साथ big red candles → Retail panic में sell कर रहे हैं। Smart money यहाँ buy करता है। Selling climax = potential bottom।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🤑</div>
+      <h4>FOMO Buying Volume</h4>
+      <p>Bull run में extreme high volume के साथ big green candles। Retail FOMO में buy कर रहे हैं। Smart money यहाँ sell करता है। Buying climax = potential top।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">😴</div>
+      <h4>Low Volume Sideways</h4>
+      <p>Market range में low volume के साथ consolidate कर रहा है। कोई conviction नहीं। Breakout का wait करो — जब volume आएगी तभी direction clear होगी।</p>
+    </div>
+    <div class="indicator-card">
+      <div class="i-icon">🏦</div>
+      <h4>Institutional Volume</h4>
+      <p>Suddenly normal से 3x-5x volume आए लेकिन price ज्यादा move न करे → Institutions accumulate कर रहे हैं। यह powerful bullish signal है आने वाले हफ्तों के लिए।</p>
+    </div>
+  </div>
 
----
+  <!-- COMMON MISTAKES -->
+  <h2>⚠️ Volume Analysis में Common Mistakes</h2>
 
-<h2>📊 Volume + Price Strategy</h2>
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Volume बिल्कुल Ignore करना</h4>
+      <p>सबसे बड़ी गलती। बहुत से traders सिर्फ price देखते हैं और volume को ignore करते हैं। इससे fake breakouts में फँसना और real moves miss करना — दोनों होते हैं। Volume को price analysis का mandatory part बनाओ।</p>
+    </div>
+  </div>
 
-<ul>
-<li>Breakout + volume spike → Entry</li>
-<li>Low volume → Avoid</li>
-</ul>
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Context के बिना Volume देखना</h4>
+      <p>हर high volume candle same नहीं होती। High volume on support = bullish। High volume on resistance = bearish। High volume at top = distribution। Context देखे बिना सिर्फ "volume high है तो buy" — यह गलत है।</p>
+    </div>
+  </div>
 
----
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Absolute Volume vs Relative Volume Confusion</h4>
+      <p>एक stock में हमेशा ज्यादा volume होती है और दूसरे में कम — यह उनका nature है। हमेशा stock की अपनी average volume से compare करो। Infosys में 50 लाख volume "high" हो सकती है, SBI में 50 लाख "low" हो सकती है।</p>
+    </div>
+  </div>
 
-<h2>⚠️ Common Mistakes</h2>
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Low Volume Days में Trading करना</h4>
+      <p>Public holidays के आसपास, month end, या expiry के दिनों में volume कम होती है। Low volume markets में price manipulation आसान होती है और false signals ज्यादा आते हैं। इन दिनों trading कम करो।</p>
+    </div>
+  </div>
 
-<ul>
-<li>Volume ignore करना</li>
-<li>Fake breakout में फँसना</li>
-<li>Single indicator use करना</li>
-</ul>
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Single Indicator पर Depend करना</h4>
+      <p>सिर्फ OBV या सिर्फ VWAP पर dependent रहना। Volume analysis को candlestick patterns, support-resistance और trend के साथ combine करने पर accuracy बढ़ती है। Single indicator = limited view।</p>
+    </div>
+  </div>
 
----
+  <!-- FAQ -->
+  <h2>❓ Frequently Asked Questions</h2>
 
-<h2>🚀 Pro Tips</h2>
+  <div class="faq-item">
+    <h4>Volume analysis सीखने के लिए कहाँ से शुरू करें?</h4>
+    <p>पहले basic price-volume relationship के 4 combinations याद करो। फिर अपने trading platform पर daily charts open करके volume bars observe करो — देखो कि big volume candles कहाँ आ रहे हैं। इसके बाद OBV indicator add करो और price के साथ compare करो। धीरे-धीरे VWAP intraday charts पर practice करो। यह practical approach सबसे effective है।</p>
+  </div>
 
-<ul>
-<li>Volume हमेशा check करो</li>
-<li>Breakout बिना volume मत लो</li>
-<li>Smart money follow करो</li>
-</ul>
+  <div class="faq-item">
+    <h4>VWAP और Moving Average में क्या difference है?</h4>
+    <p>Moving Average सिर्फ price का average होता है — volume को consider नहीं करता। VWAP price का volume-weighted average है — यानी जिन levels पर ज्यादा trading हुई उन्हें ज्यादा weight मिलता है। VWAP intraday trading के लिए ज्यादा accurate है क्योंकि यह actual trading activity reflect करता है। Moving Average swing और long-term trading के लिए better है।</p>
+  </div>
 
----
+  <div class="faq-item">
+    <h4>OBV divergence कब reliable होती है?</h4>
+    <p>OBV divergence तब ज्यादा reliable होती है जब: (1) यह major support या resistance level पर हो, (2) Divergence कम से कम 2-4 हफ्ते की हो, (3) Price एक clear trend में हो, (4) OBV divergence के साथ candlestick reversal pattern भी हो। Single divergence पर blindly trade नहीं करते — confirmation जरूरी है।</p>
+  </div>
 
-<h2>📈 Learn More Trading Concepts</h2>
+  <div class="faq-item">
+    <h4>Breakout पर कितनी volume होनी चाहिए?</h4>
+    <p>Minimum standard यह है कि breakout की volume उस stock की 20-day average daily volume से कम से कम 1.5x–2x ज्यादा हो। Strong breakouts में यह 3x–5x तक होती है। अगर volume average से कम है या average के बराबर है, तो breakout को doubtful मानो और confirmation का wait करो।</p>
+  </div>
 
-<p>
-👉 Intraday:
-<a href="intraday-trading.html">Intraday Trading</a>
-</p>
+  <div class="faq-item">
+    <h4>Accumulation और Distribution phase कितने समय तक चलता है?</h4>
+    <p>यह stock और market conditions पर depend करता है। Large cap stocks में accumulation weeks से महीनों तक चल सकती है। Midcap stocks में यह faster हो सकता है। Important बात यह है कि जल्दबाजी नहीं करनी — जब तक clear volume breakout या breakdown न हो, wait करो। Patience यहाँ सबसे ज्यादा जरूरी है।</p>
+  </div>
 
-<p>
-👉 Swing:
-<a href="swing-trading.html">Swing Trading</a>
-</p>
+  <div class="faq-item">
+    <h4>NSE/BSE पर volume data कहाँ देखें?</h4>
+    <p>Volume data सभी major trading platforms पर available है — Zerodha Kite, Upstox, Angel One, TradingView। NSE की official website (nseindia.com) पर free में volume data मिलता है। TradingView पर OBV और Volume indicators free में add कर सकते हो। screener.in पर stocks को volume spike के basis पर filter भी कर सकते हो।</p>
+  </div>
 
-<p>
-👉 Risk:
-<a href="risk-management.html">Risk Management</a>
-</p>
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>📊 Virtual Trading में Volume Practice शुरू करो — Free</h2>
+    <p>Theory पढ़ लिया — अब BullBear Market पर virtual trading में volume analysis practice करो। Real market charts, zero risk, असली learning।</p>
+    <div class="cta-btns">
+      <a href="learning.html" class="btn-primary">📚 Learning Hub जाओ</a>
+      <a href="index.html" class="btn-outline">🏠 Home पर जाओ</a>
+    </div>
+  </div>
 
-<p>
-👉 Psychology:
-<a href="trading-psychology.html">Trading Psychology</a>
-</p>
-
----
-
-<h2>🎯 Final Conclusion</h2>
-
-<p>
-Volume analysis trading का backbone है।
-</p>
-
-<p>
-अगर आप volume + price combine कर लेते हैं,  
-तो आपकी trading accuracy काफी improve हो सकती है।
-</p>
+  <!-- INTERLINKS -->
+  <div class="interlink-section">
+    <h2>📚 Volume के साथ यह भी सीखो</h2>
+    <div class="interlink-grid">
+      <a href="candlestick.html" class="interlink-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Candlestick Patterns</div>
+        <div class="ic-desc">Volume + Candlestick = Most powerful combination।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="breakout.html" class="interlink-card">
+        <div class="ic-icon">🚀</div>
+        <div class="ic-title">Breakout Strategy</div>
+        <div class="ic-desc">Volume breakout strategy को depth में सीखो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="indicators.html" class="interlink-card">
+        <div class="ic-icon">📈</div>
+        <div class="ic-title">Indicators Guide</div>
+        <div class="ic-desc">RSI, MACD — volume के साथ combine करो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="intraday.html" class="interlink-card">
+        <div class="ic-icon">⚡</div>
+        <div class="ic-title">Intraday Trading</div>
+        <div class="ic-desc">VWAP intraday trading में कैसे use होता है।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="swing.html" class="interlink-card">
+        <div class="ic-icon">🌊</div>
+        <div class="ic-title">Swing Trading</div>
+        <div class="ic-desc">Accumulation-Distribution swing setups में।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="risk.html" class="interlink-card">
+        <div class="ic-icon">🛡️</div>
+        <div class="ic-title">Risk Management</div>
+        <div class="ic-desc">Volume signals के साथ proper risk management।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+    </div>
+  </div>
 
 </div>
 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <p>India's #1 free stock market learning & virtual trading platform. Learn, Practice, Compete, Grow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning Hub</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <h4>Learn Free</h4>
+      <a href="volume.html">Volume Analysis</a>
+      <a href="breakout.html">Breakout Strategy</a>
+      <a href="intraday.html">Intraday Trading</a>
+      <a href="candlestick.html">Candlestick Patterns</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BullBear Market. All rights reserved. | Made with ❤️ in India</p>
+    <p>Educational Platform – No Real Money Trading | <a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
 </body>
-</html>
+  </html>
