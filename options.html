@@ -1,223 +1,1074 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Options Trading – Call, Put, Premium Complete Guide</title>
+<!-- Primary SEO -->
+<title>Options Trading – Call, Put, Premium Complete Guide Beginners 2026 | BullBear Market</title>
+<meta name="description" content="Options trading सीखो आसान भाषा में — Call option, Put option, Premium, Strike Price, Theta, Greeks सब कुछ detail में। Beginners के लिए free Hindi guide on BullBear Market.">
+<meta name="keywords" content="options trading beginners, call option kya hai, put option kya hai, options trading Hindi, options premium, strike price, theta decay, NIFTY options trading, options trading India, BullBear Market options">
+<meta name="author" content="BullBear Market">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bullbearmarket.in/options.html">
 
-<meta name="description" content="Learn Options trading basics like Call, Put, Premium, Strike Price with simple explanation. Complete beginner guide.">
+<!-- Geo Tags -->
+<meta name="geo.region" content="IN">
+<meta name="geo.country" content="India">
+<meta name="language" content="hi-IN">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Options Trading – Call, Put, Premium Complete Guide | BullBear Market">
+<meta property="og:description" content="Options trading की पूरी जानकारी — Call, Put, Premium, Strike Price, Greeks — beginners के लिए free Hindi guide।">
+<meta property="og:url" content="https://bullbearmarket.in/options.html">
+<meta property="og:site_name" content="BullBear Market">
+<meta property="og:image" content="https://bullbearmarket.in/images/call-vs-put-options.png">
+<meta property="og:locale" content="hi_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Options Trading Complete Guide | BullBear Market">
+<meta name="twitter:description" content="Call, Put, Premium, Strike Price — options trading की A to Z जानकारी Hindi में।">
+<meta name="twitter:image" content="https://bullbearmarket.in/images/call-vs-put-options.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Options Trading – Call, Put, Premium Complete Guide for Beginners 2026",
+  "description": "Complete options trading guide covering Call option, Put option, Premium, Strike Price, Greeks, Theta decay and basic strategies for Indian stock market beginners.",
+  "image": "https://bullbearmarket.in/images/call-vs-put-options.png",
+  "author": {"@type": "Organization", "name": "BullBear Market"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BullBear Market",
+    "logo": {"@type": "ImageObject", "url": "https://bullbearmarket.in/favicon.png"}
+  },
+  "url": "https://bullbearmarket.in/options.html",
+  "inLanguage": "hi-IN",
+  "dateModified": "2026-04-05"
+}
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    --gold: #FFD700;
+    --gold-light: #FFE44D;
+    --cyan: #00e6ff;
+    --green: #00ff88;
+    --red: #ff5050;
+    --blue: #60a5fa;
+    --dark: #0B1220;
+    --dark3: #1a2235;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: rgba(255,215,0,0.15);
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0B1220;
-  color: white;
-  line-height: 1.8;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
 
-h1 { color: gold; }
-h2 { color: #00e6ff; margin-top: 30px; }
-h3 { color: #00ffaa; }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none; z-index: 0;
+  }
 
-p { color: #ccc; }
+  /* ── NAVBAR ── */
+  nav {
+    position: sticky; top: 0;
+    background: #ffffff;
+    border-bottom: 2.5px solid var(--gold);
+    z-index: 1000; padding: 0 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: auto;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 10px 0; flex-wrap: wrap; gap: 8px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { width: 40px; height: 40px; border-radius: 8px; }
+  .nav-logo span { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: #111; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .nav-links a {
+    text-decoration: none; color: #333;
+    font-size: 0.85rem; font-weight: 600;
+    padding: 5px 10px; border-radius: 6px;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .nav-links a:hover, .nav-links a.active { background: var(--gold); color: #000; }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 20px 0;
-}
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 24px auto 0;
+    padding: 0 20px; font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
 
-a { color: gold; }
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 20px auto 0;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(96,165,250,0.1);
+    border: 1px solid rgba(96,165,250,0.3);
+    color: var(--blue);
+    padding: 6px 18px; border-radius: 30px;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800; color: var(--gold);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 20px; }
+  .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .hero-tags span {
+    background: rgba(0,230,255,0.08);
+    border: 1px solid rgba(0,230,255,0.2);
+    color: var(--cyan); padding: 4px 14px;
+    border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+  }
 
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 14px; margin: 30px 0;
+  }
+  .stat-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 16px; text-align: center;
+  }
+  .stat-card .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.7rem; font-weight: 800;
+    color: var(--gold); display: block;
+  }
+  .stat-card .stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+  /* ── CONTENT ── */
+  .content {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--cyan); margin: 50px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,230,255,0.15);
+  }
+  .content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: #00ffaa; margin: 28px 0 10px;
+  }
+  .content p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.97rem; }
+  .content b, .content strong { color: var(--text); }
+  .content ul { padding-left: 0; list-style: none; margin-bottom: 16px; }
+  .content ul li {
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative; font-size: 0.97rem;
+  }
+  .content ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+  .content img {
+    width: 100%; border-radius: 12px;
+    margin: 24px 0; border: 1px solid var(--border); display: block;
+  }
+
+  /* ── BOXES ── */
+  .highlight-box {
+    background: rgba(255,215,0,0.06);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .highlight-box p { color: var(--text); margin: 0; }
+
+  .info-box {
+    background: rgba(0,230,255,0.05);
+    border: 1px solid rgba(0,230,255,0.15);
+    border-left: 4px solid var(--cyan);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .info-box p { color: var(--text); margin: 0; }
+
+  .warn-box {
+    background: rgba(255,100,0,0.06);
+    border: 1px solid rgba(255,100,0,0.2);
+    border-left: 4px solid #ff6400;
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .warn-box p { color: var(--text); margin: 0; }
+
+  .success-box {
+    background: rgba(0,255,136,0.05);
+    border: 1px solid rgba(0,255,136,0.15);
+    border-left: 4px solid var(--green);
+    border-radius: 10px; padding: 18px 22px; margin: 24px 0;
+  }
+  .success-box p { color: var(--text); margin: 0; }
+
+  /* ── CALL vs PUT SPLIT ── */
+  .option-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px; margin: 24px 0;
+  }
+  .option-card {
+    border-radius: 14px; padding: 24px; text-align: center;
+  }
+  .option-card.call {
+    background: rgba(0,255,136,0.05);
+    border: 1.5px solid rgba(0,255,136,0.25);
+  }
+  .option-card.put {
+    background: rgba(255,80,80,0.05);
+    border: 1.5px solid rgba(255,80,80,0.25);
+  }
+  .option-card .opt-icon { font-size: 2.4rem; margin-bottom: 10px; }
+  .option-card.call h3 { color: var(--green); margin: 0 0 10px; font-size: 1.2rem; }
+  .option-card.put h3 { color: var(--red); margin: 0 0 10px; font-size: 1.2rem; }
+  .option-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; }
+  .option-card ul { text-align: left; }
+  .option-card ul li { font-size: 0.86rem; }
+  .option-card.call ul li::before { color: var(--green); }
+  .option-card.put ul li::before { color: var(--red); }
+
+  /* ── TERMS GRID ── */
+  .terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px; margin: 24px 0;
+  }
+  .term-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .term-card:hover { transform: translateY(-3px); border-color: rgba(255,215,0,0.4); }
+  .term-card .t-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .term-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; color: var(--gold); margin-bottom: 8px; }
+  .term-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+  /* ── GREEKS TABLE ── */
+  .greeks-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; border-radius: 10px; overflow: hidden;
+  }
+  .greeks-table th {
+    background: rgba(255,215,0,0.12);
+    color: var(--gold); font-family: 'Syne', sans-serif;
+    font-size: 0.85rem; padding: 12px 16px;
+    text-align: left; border-bottom: 1px solid var(--border);
+  }
+  .greeks-table td {
+    padding: 12px 16px; color: var(--text-muted);
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: var(--dark3);
+  }
+  .greeks-table tr:hover td { background: rgba(255,215,0,0.03); }
+  .td-cyan { color: var(--cyan) !important; font-weight: 600; }
+  .td-green { color: var(--green) !important; font-weight: 600; }
+  .td-red { color: var(--red) !important; font-weight: 600; }
+  .td-gold { color: var(--gold) !important; font-weight: 600; }
+
+  /* ── EXAMPLE CARD ── */
+  .example-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px; margin-bottom: 22px;
+    transition: border-color 0.2s;
+  }
+  .example-card:hover { border-color: rgba(255,215,0,0.4); }
+  .example-card .ex-header {
+    display: flex; align-items: center;
+    gap: 14px; margin-bottom: 16px;
+  }
+  .example-card .ex-num {
+    min-width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--cyan), #0099cc);
+    color: #000; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem;
+  }
+  .example-card .ex-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700; color: var(--cyan);
+  }
+  .example-card .ex-sub { font-size: 0.82rem; color: var(--text-muted); }
+  .example-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px; }
+  .example-card ul li { font-size: 0.92rem; }
+
+  /* ── STRATEGY CARD ── */
+  .strategy-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px; margin-bottom: 18px;
+    transition: border-color 0.2s;
+  }
+  .strategy-card:hover { border-color: rgba(0,230,255,0.3); }
+  .strategy-card h4 {
+    font-family: 'Syne', sans-serif;
+    color: var(--gold); font-size: 1rem; margin-bottom: 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .strategy-card p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 8px; }
+  .strategy-card ul li { font-size: 0.9rem; }
+
+  /* ── MISTAKE ITEMS ── */
+  .mistake-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--dark3);
+    border: 1px solid rgba(255,80,80,0.15);
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .mistake-icon { font-size: 1.4rem; }
+  .mistake-text h4 { font-family: 'Syne', sans-serif; color: var(--red); font-size: 0.9rem; margin-bottom: 4px; }
+  .mistake-text p { color: var(--text-muted); font-size: 0.86rem; margin: 0; }
+
+  /* ── STEPS ── */
+  .steps { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .step {
+    display: flex; align-items: flex-start;
+    gap: 16px; background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px;
+  }
+  .step-num {
+    min-width: 36px; height: 36px;
+    background: var(--gold); color: #000;
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+  }
+  .step-text h4 { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.95rem; margin-bottom: 4px; }
+  .step-text p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+  /* ── FAQ ── */
+  .faq-item {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 20px 22px; margin-bottom: 12px;
+  }
+  .faq-item h4 { font-family: 'Syne', sans-serif; color: var(--gold); font-size: 0.97rem; margin-bottom: 8px; }
+  .faq-item p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* ── INTERLINKS ── */
+  .interlink-section { margin: 60px 0 40px; border-top: 1px solid var(--border); padding-top: 40px; }
+  .interlink-section h2 {
+    font-family: 'Syne', sans-serif; font-size: 1.3rem;
+    color: var(--gold); margin-bottom: 20px; border: none; padding: 0;
+  }
+  .interlink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .interlink-card {
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 18px;
+    text-decoration: none; transition: all 0.25s; display: block;
+  }
+  .interlink-card:hover { transform: translateY(-4px); border-color: var(--gold); background: rgba(255,215,0,0.05); }
+  .interlink-card .ic-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .interlink-card .ic-title { font-family: 'Syne', sans-serif; color: var(--text); font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+  .interlink-card .ic-desc { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; }
+  .interlink-card .ic-arrow { color: var(--gold); font-size: 0.85rem; margin-top: 10px; font-weight: 600; }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,230,255,0.05));
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 16px; padding: 40px 30px;
+    text-align: center; margin: 50px 0;
+  }
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 1.5rem; margin-bottom: 12px; border: none; padding: 0;
+  }
+  .cta-section p { color: var(--text-muted); margin-bottom: 24px; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: #000; padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--cyan); padding: 12px 26px;
+    border-radius: 50px; text-decoration: none;
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 0.9rem; border: 1.5px solid var(--cyan); transition: all 0.2s;
+  }
+  .btn-outline:hover { background: rgba(0,230,255,0.1); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative; z-index: 1;
+    background: #060d18; border-top: 2px solid var(--gold);
+    padding: 50px 20px 30px; margin-top: 60px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; margin-bottom: 40px;
+  }
+  .footer-brand img { width: 44px; margin-bottom: 12px; border-radius: 8px; }
+  .footer-brand p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif; color: var(--gold);
+    font-size: 0.9rem; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.5px;
+  }
+  .footer-col a {
+    display: block; color: var(--text-muted); text-decoration: none;
+    font-size: 0.85rem; padding: 4px 0; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1100px; margin: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 20px; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { color: var(--text-muted); font-size: 0.8rem; }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .nav-links a { font-size: 0.78rem; padding: 4px 7px; }
+    .option-split { grid-template-columns: 1fr; }
+    .interlink-grid { grid-template-columns: 1fr 1fr; }
+    .cta-section { padding: 30px 20px; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .greeks-table th, .greeks-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <span>BullBear Market</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning.html" class="active">Learning</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</nav>
 
-<a href="learning.html">⬅ Back to Learning</a>
-
-<h1>Options Trading – Complete Guide for Beginners</h1>
-
-<img src="https://via.placeholder.com/800x400">
-
-<p>
-Options trading stock market का एक advanced लेकिन powerful हिस्सा है।  
-अगर सही तरीके से समझ लिया जाए, तो यह कम पैसे में बड़ा profit दे सकता है।
-</p>
-
-<p>
-लेकिन बिना knowledge के options trading करना बहुत risky भी हो सकता है।
-</p>
-
----
-
-<h2>📊 What is Options Trading?</h2>
-
-<p>
-Options एक contract होता है जो आपको future में किसी asset को buy या sell करने का right देता है।
-</p>
-
-<p>
-👉 Important:
-</p>
-
-<ul>
-<li>Right होता है, obligation नहीं</li>
-<li>Fixed price (Strike Price) पर trade होता है</li>
-<li>Limited risk (buyer के लिए)</li>
-</ul>
-
----
-
-<h2>📈 Types of Options</h2>
-
-<h3>1. Call Option</h3>
-
-<p>
-Call option तब खरीदा जाता है जब आपको लगता है कि market ऊपर जाएगा।
-</p>
-
-<ul>
-<li>Price बढ़े → Profit</li>
-<li>Price गिरे → Loss (premium तक)</li>
-</ul>
-
----
-
-<h3>2. Put Option</h3>
-
-<p>
-Put option तब खरीदा जाता है जब आपको लगता है कि market नीचे जाएगा।
-</p>
-
-<ul>
-<li>Price गिरे → Profit</li>
-<li>Price बढ़े → Loss</li>
-</ul>
-
----
-
-<h2>💰 Important Terms in Options</h2>
-
-<h3>1. Strike Price</h3>
-<p>जिस price पर option contract होता है</p>
-
-<h3>2. Premium</h3>
-<p>
-Option खरीदने की cost को premium कहते हैं।
-</p>
-
-<h3>3. Expiry Date</h3>
-<p>
-हर option की expiry होती है (weekly / monthly)
-</p>
-
----
-
-<h2>🔥 How Profit Works</h2>
-
-<p>
-Profit price movement और premium change पर depend करता है।
-</p>
-
-<ul>
-<li>Market direction सही होना चाहिए</li>
-<li>Time decay (Theta) को समझना जरूरी है</li>
-</ul>
-
----
-
-<h2>📊 Example (Simple)</h2>
-
-<p>
-मान लो NIFTY 22000 पर है।
-</p>
-
-<ul>
-<li>आपने 22100 Call खरीदा</li>
-<li>Premium = ₹100</li>
-</ul>
-
-<p>
-अगर market 22300 गया → profit  
-अगर market नहीं चला → premium zero हो सकता है
-</p>
-
----
-
-<h2>⚠️ Risk in Options</h2>
-
-<ul>
-<li>Time decay (premium घटता है)</li>
-<li>Volatility impact</li>
-<li>Wrong direction = loss</li>
-</ul>
-
----
-
-<h2>📈 Basic Strategies</h2>
-
-<h3>1. Buy Call</h3>
-<p>Bullish market में</p>
-
-<h3>2. Buy Put</h3>
-<p>Bearish market में</p>
-
----
-
-<h2>💡 Pro Tips</h2>
-
-<ul>
-<li>Always stop loss use करो</li>
-<li>Overtrading मत करो</li>
-<li>Expiry day से बचो (beginner हो तो)</li>
-</ul>
-
----
-
-<h2>🚀 Best Way to Learn Options</h2>
-
-<ul>
-<li>Theory सीखो</li>
-<li>Paper trading करो</li>
-<li>Real money बाद में लगाओ</li>
-</ul>
-
-<p>
-👉 Practice करने के लिए:
-<a href="best-stock-market-learning-app.html">
-Best Trading Learning App
-</a>
-</p>
-
----
-
-<h2>🎯 Conclusion</h2>
-
-<p>
-Options trading powerful है लेकिन risky भी है।
-</p>
-
-<p>
-अगर आप सही knowledge + discipline के साथ trade करते हो,  
-तो यह आपके लिए game changer बन सकता है।
-</p>
-
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <a href="learning.html">Learning Hub</a>
+  <span>›</span>
+  <span>Options Trading</span>
 </div>
 
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">📋 Learning Module — Advanced</div>
+  <h1>Options Trading – Call, Put, Premium Complete Guide</h1>
+  <p>Options trading को हमेशा complicated समझा जाता है — लेकिन इस guide के बाद आपको सब कुछ crystal clear हो जाएगा। Call, Put, Premium, Strike Price, Greeks — सब कुछ बिल्कुल simple Hindi में।</p>
+  <div class="hero-tags">
+    <span>📞 Call Option</span>
+    <span>📉 Put Option</span>
+    <span>💸 Premium & Theta</span>
+    <span>🎯 Strike Price</span>
+    <span>🇮🇳 NIFTY & BANKNIFTY</span>
+  </div>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="content">
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <span class="stat-num">Weekly</span>
+      <div class="stat-label">India में options का expiry — हर Thursday</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">0 दिन</span>
+      <div class="stat-label">Expiry day पर option zero हो सकता है</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">75</span>
+      <div class="stat-label">NIFTY options का lot size (1 lot)</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">⚠️</span>
+      <div class="stat-label">Beginner को पहले virtual trading से सीखना चाहिए</div>
+    </div>
+  </div>
+
+  <!-- WHAT IS OPTIONS -->
+  <h2>📋 Options Trading क्या है? (आसान भाषा में)</h2>
+
+  <p>Options एक financial contract होता है जो आपको किसी stock या index को <strong>एक fixed price पर एक fixed date तक buy या sell करने का सिर्फ right देता है — obligation नहीं।</strong></p>
+
+  <p>इसे एक real life example से समझो। मान लो तुम एक घर खरीदना चाहते हो जिसकी कीमत अभी ₹50 लाख है। तुमने seller को ₹1 लाख देकर एक agreement किया — "मैं 3 महीने बाद ₹50 लाख में यह घर खरीदूंगा।"</p>
+
+  <p>अब दो scenarios हो सकते हैं:</p>
+
+  <ul>
+    <li><strong>अगर 3 महीने बाद घर की कीमत ₹60 लाख हो गई</strong> → तुम ₹50 लाख में खरीदोगे और ₹10 लाख फायदा होगा। Right exercise करोगे।</li>
+    <li><strong>अगर घर की कीमत ₹40 लाख हो गई</strong> → तुम right exercise नहीं करोगे। सिर्फ ₹1 लाख (premium) जाएगा। Agreement expire हो जाएगा।</li>
+  </ul>
+
+  <p>यही options trading का basic concept है। <strong>Premium = option खरीदने की cost। Right = obligation नहीं।</strong></p>
+
+  <img src="images/call-vs-put-options.png" alt="Call vs Put Options Explained – BullBear Market" loading="lazy">
+
+  <div class="highlight-box">
+    <p>💡 <strong>Key Difference from Futures:</strong> Futures में obligation होती है — चाहे loss हो या profit, trade settle करनी पड़ती है। Options में आपको maximum premium से ज्यादा loss नहीं हो सकता (buyer के लिए)। यही options को relatively safer बनाता है beginners के लिए।</p>
+  </div>
+
+  <!-- CALL AND PUT -->
+  <h2>📞 Call Option और 📉 Put Option — Detailed समझ</h2>
+
+  <p>Options दो types के होते हैं — <strong>Call और Put।</strong> इन्हें समझना options trading की नींव है।</p>
+
+  <div class="option-split">
+    <div class="option-card call">
+      <div class="opt-icon">📞</div>
+      <h3>Call Option (CE)</h3>
+      <p>जब आपको लगता है कि <strong>market ऊपर जाएगा</strong> तो Call Option खरीदते हैं।</p>
+      <ul>
+        <li>Market ऊपर गया → Profit बढ़ता है</li>
+        <li>Market नहीं चला → Premium धीरे-धीरे घटता है</li>
+        <li>Market नीचे गया → Max loss = Premium paid</li>
+        <li>Unlimited profit potential</li>
+        <li>Limited loss (premium तक)</li>
+      </ul>
+    </div>
+    <div class="option-card put">
+      <div class="opt-icon">📉</div>
+      <h3>Put Option (PE)</h3>
+      <p>जब आपको लगता है कि <strong>market नीचे जाएगा</strong> तो Put Option खरीदते हैं।</p>
+      <ul>
+        <li>Market नीचे गया → Profit बढ़ता है</li>
+        <li>Market नहीं चला → Premium धीरे-धीरे घटता है</li>
+        <li>Market ऊपर गया → Max loss = Premium paid</li>
+        <li>High profit potential in crash</li>
+        <li>Limited loss (premium तक)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <p>💡 <strong>याद करने का तरीका:</strong> <strong>C</strong>all = <strong>C</strong>harhna (ऊपर चढ़ना) — जब market चढ़ेगा तो Call खरीदो। <strong>P</strong>ut = <strong>P</strong>atna (नीचे पड़ना) — जब market गिरेगा तो Put खरीदो।</p>
+  </div>
+
+  <!-- IMPORTANT TERMS -->
+  <h2>💰 Options के Important Terms — सब एक जगह</h2>
+
+  <p>Options trading में इन terms को समझना जरूरी है। इनके बिना options chain नहीं समझ सकते।</p>
+
+  <div class="terms-grid">
+    <div class="term-card">
+      <div class="t-icon">🎯</div>
+      <h4>Strike Price</h4>
+      <p>वह fixed price जिस पर आपका option contract है। उदाहरण: NIFTY 22000 CE का मतलब आपको 22000 पर NIFTY buy करने का right है।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">💸</div>
+      <h4>Premium</h4>
+      <p>Option खरीदने की कीमत। यह market में हर second change होती है। Premium = Intrinsic Value + Time Value।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">📅</div>
+      <h4>Expiry Date</h4>
+      <p>जिस date को option expire होता है। India में NIFTY का weekly expiry हर Thursday होता है। Expiry पर option या तो profit देगा या zero हो जाएगा।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">📊</div>
+      <h4>In The Money (ITM)</h4>
+      <p>Call के लिए: Strike price &lt; Current price। Put के लिए: Strike price &gt; Current price। ITM options में intrinsic value होती है।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">⚖️</div>
+      <h4>At The Money (ATM)</h4>
+      <p>जब strike price और current market price लगभग बराबर हो। सबसे ज्यादा liquidity ATM options में होती है।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">📤</div>
+      <h4>Out of The Money (OTM)</h4>
+      <p>Call के लिए: Strike price &gt; Current price। Put के लिए: Strike price &lt; Current price। OTM options सस्ते होते हैं लेकिन expire होने का risk ज्यादा होता है।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">📦</div>
+      <h4>Lot Size</h4>
+      <p>Options में एक lot में fixed number of shares होते हैं। NIFTY = 75 shares/lot, BANKNIFTY = 15 shares/lot। आप lot में ही buy/sell कर सकते हो।</p>
+    </div>
+    <div class="term-card">
+      <div class="t-icon">🔒</div>
+      <h4>Open Interest (OI)</h4>
+      <p>Market में कितने open contracts हैं — यह दिखाता है। High OI = ज्यादा interest। OI analysis से market direction का hint मिलता है।</p>
+    </div>
+  </div>
+
+  <!-- GREEKS -->
+  <h2>🔬 Options Greeks — Premium क्यों बदलता है?</h2>
+
+  <p>Options premium कई factors पर depend करता है। इन factors को <strong>"Greeks"</strong> कहते हैं। Beginners के लिए Delta और Theta सबसे important हैं।</p>
+
+  <table class="greeks-table">
+    <tr>
+      <th>Greek</th>
+      <th>Symbol</th>
+      <th>क्या बताता है?</th>
+      <th>Beginner के लिए</th>
+    </tr>
+    <tr>
+      <td><strong>Delta</strong></td>
+      <td class="td-cyan">Δ</td>
+      <td>Market 1 point move होने पर option premium कितना change होगा। ATM options का delta ~0.5 होता है।</td>
+      <td class="td-gold">⭐⭐⭐ Very Important</td>
+    </tr>
+    <tr>
+      <td><strong>Theta</strong></td>
+      <td class="td-red">Θ</td>
+      <td>Time decay — हर दिन option premium automatically कितना घटता है। Expiry नजदीक = Theta ज्यादा।</td>
+      <td class="td-gold">⭐⭐⭐ Very Important</td>
+    </tr>
+    <tr>
+      <td><strong>Gamma</strong></td>
+      <td class="td-green">Γ</td>
+      <td>Delta कितनी तेजी से change होता है। Expiry के पास Gamma बढ़ता है — बड़े moves possible।</td>
+      <td class="td-cyan">⭐⭐ Important</td>
+    </tr>
+    <tr>
+      <td><strong>Vega</strong></td>
+      <td class="td-cyan">V</td>
+      <td>Volatility change होने पर premium कितना बदलता है। High VIX = High premium।</td>
+      <td class="td-cyan">⭐⭐ Important</td>
+    </tr>
+    <tr>
+      <td><strong>Rho</strong></td>
+      <td>ρ</td>
+      <td>Interest rate change का premium पर effect। India में इसका impact कम होता है।</td>
+      <td>⭐ Less Important</td>
+    </tr>
+  </table>
+
+  <div class="warn-box">
+    <p>⚠️ <strong>Theta (Time Decay) — Buyer का सबसे बड़ा दुश्मन:</strong> अगर NIFTY 22000 CE खरीदी और market sideways रहा, तो हर दिन आपका premium automatically घटता रहेगा — even if market नहीं गिरा। इसीलिए options में "time is money" literally सच है। Expiry जितनी पास, उतना तेज premium घटता है।</p>
+  </div>
+
+  <!-- REAL EXAMPLES -->
+  <h2>📊 Real Life Examples — NIFTY Options Trade</h2>
+
+  <p>Theory समझ लिया — अब actual examples देखते हैं कि options trade कैसे काम करती है।</p>
+
+  <!-- Example 1: Call -->
+  <div class="example-card">
+    <div class="ex-header">
+      <div class="ex-num" style="background: linear-gradient(135deg,#00ff88,#00b360);">📞</div>
+      <div>
+        <div class="ex-title" style="color: var(--green);">Example 1: Call Option Profit</div>
+        <div class="ex-sub">NIFTY Bullish View — Call Buy</div>
+      </div>
+    </div>
+    <p><strong>Situation:</strong> NIFTY अभी 22,000 पर है। तुम्हें लग रहा है कि यह इस हफ्ते 22,300 तक जाएगा।</p>
+    <ul>
+      <li><strong>Action:</strong> NIFTY 22100 CE (Call) खरीदा</li>
+      <li><strong>Premium paid:</strong> ₹120 per share</li>
+      <li><strong>Lot size:</strong> 75 shares → Total cost = ₹120 × 75 = <strong>₹9,000</strong></li>
+      <li><strong>NIFTY 22,350 गया expiry से पहले:</strong></li>
+      <li>Premium ₹120 से बढ़कर ₹290 हो गया</li>
+      <li><strong>Profit:</strong> (₹290 - ₹120) × 75 = ₹170 × 75 = <strong>₹12,750 profit ✅</strong></li>
+    </ul>
+    <div class="success-box" style="margin-top:16px;">
+      <p>✅ <strong>Key Point:</strong> सिर्फ ₹9,000 लगाकर ₹12,750 profit। यही options का leverage power है। लेकिन अगर NIFTY नहीं चला या नीचे गया, तो max loss = ₹9,000 (premium paid)।</p>
+    </div>
+  </div>
+
+  <!-- Example 2: Put -->
+  <div class="example-card">
+    <div class="ex-header">
+      <div class="ex-num" style="background: linear-gradient(135deg,#ff5050,#cc0000);">📉</div>
+      <div>
+        <div class="ex-title" style="color: var(--red);">Example 2: Put Option Profit</div>
+        <div class="ex-sub">NIFTY Bearish View — Put Buy</div>
+      </div>
+    </div>
+    <p><strong>Situation:</strong> Budget announcement है। NIFTY 22,000 पर है। तुम्हें लग रहा है बाजार गिरेगा।</p>
+    <ul>
+      <li><strong>Action:</strong> NIFTY 21900 PE (Put) खरीदा</li>
+      <li><strong>Premium paid:</strong> ₹90 per share</li>
+      <li><strong>Lot size:</strong> 75 shares → Total cost = ₹90 × 75 = <strong>₹6,750</strong></li>
+      <li><strong>NIFTY 21,600 गया:</strong></li>
+      <li>Premium ₹90 से बढ़कर ₹350 हो गया</li>
+      <li><strong>Profit:</strong> (₹350 - ₹90) × 75 = ₹260 × 75 = <strong>₹19,500 profit ✅</strong></li>
+    </ul>
+    <div class="success-box" style="margin-top:16px;">
+      <p>✅ <strong>Key Point:</strong> Market गिरने पर भी profit कमाया — यही options की power है। Bearish view पर आप Put buy करके market crash से भी earn कर सकते हो।</p>
+    </div>
+  </div>
+
+  <!-- Example 3: Loss -->
+  <div class="example-card">
+    <div class="ex-header">
+      <div class="ex-num" style="background: linear-gradient(135deg,#ff6400,#cc5000);">⚠️</div>
+      <div>
+        <div class="ex-title" style="color: #ff9500;">Example 3: Option Expire Worthless</div>
+        <div class="ex-sub">Theta का Effect — Premium Zero होना</div>
+      </div>
+    </div>
+    <p><strong>Situation:</strong> NIFTY 22,000 पर है। तुमने 22200 CE खरीदा ₹50 premium पर।</p>
+    <ul>
+      <li><strong>Monday को:</strong> NIFTY 22,050 पर — थोड़ा ऊपर गया</li>
+      <li><strong>Tuesday–Wednesday:</strong> NIFTY 22,000-22,100 range में रहा — sideways</li>
+      <li><strong>Thursday expiry:</strong> NIFTY 22,150 पर बंद हुआ — लेकिन 22200 CE तक नहीं पहुँचा</li>
+      <li><strong>Result:</strong> 22200 CE expire worthless — Premium ₹50 → ₹0</li>
+      <li><strong>Loss:</strong> ₹50 × 75 = <strong>₹3,750 loss ❌</strong></li>
+    </ul>
+    <div class="warn-box" style="margin-top:16px;">
+      <p>⚠️ <strong>Lesson:</strong> Market direction सही थी (ऊपर गया) लेकिन strike price तक नहीं पहुँचा। OTM options में यह risk होता है — market सही direction में जाए लेकिन enough नहीं जाए। इसीलिए ATM या slightly ITM options safer होते हैं beginners के लिए।</p>
+    </div>
+  </div>
+
+  <img src="images/options-trading-strategies-overview.png" alt="Options Trading Strategies Overview – Call Put Premium" loading="lazy">
+
+  <!-- BASIC STRATEGIES -->
+  <h2>📈 Beginners के लिए Basic Options Strategies</h2>
+
+  <p>Options में सैकड़ों strategies हैं। Beginners के लिए पहले <strong>सिर्फ ये 4 basic strategies</strong> सीखो। Complex strategies बाद में।</p>
+
+  <div class="strategy-card">
+    <h4>🟢 Strategy 1: Buy Call (Long Call)</h4>
+    <p><strong>कब use करें:</strong> जब आपको strongly लगे कि market ऊपर जाएगा।</p>
+    <ul>
+      <li>ATM या slightly OTM call option खरीदो</li>
+      <li>Expiry कम से कम 1 हफ्ते दूर हो (theta decay कम होगी)</li>
+      <li>Stop loss: Premium का 40-50% loss होने पर exit करो</li>
+      <li>Target: 80-100% premium profit पर exit करो</li>
+      <li>Maximum loss: Premium paid | Maximum profit: Unlimited (theoretically)</li>
+    </ul>
+  </div>
+
+  <div class="strategy-card">
+    <h4>🔴 Strategy 2: Buy Put (Long Put)</h4>
+    <p><strong>कब use करें:</strong> जब आपको strongly लगे कि market नीचे जाएगा या आप अपना portfolio hedge करना चाहते हो।</p>
+    <ul>
+      <li>ATM या slightly OTM put option खरीदो</li>
+      <li>Market crash, bad news, या technical breakdown पर use करो</li>
+      <li>Stop loss: Premium का 40-50% loss होने पर exit</li>
+      <li>Maximum loss: Premium paid | Maximum profit: High (market जितना गिरे)</li>
+    </ul>
+  </div>
+
+  <div class="strategy-card">
+    <h4>🛡️ Strategy 3: Protective Put (Hedging)</h4>
+    <p><strong>कब use करें:</strong> आपके पास stocks हैं और आप downside protect करना चाहते हो बिना sell किए।</p>
+    <ul>
+      <li>जितने stocks हो उनके equivalent put options खरीदो</li>
+      <li>Market गिरा → Put profit करेगा, stock loss को offset करेगा</li>
+      <li>Market बढ़ा → Stocks profit करेंगे, put expire होगा (premium loss)</li>
+      <li>यह insurance policy की तरह है — थोड़ा premium देकर बड़े loss से बचाव</li>
+    </ul>
+  </div>
+
+  <div class="strategy-card">
+    <h4>📊 Strategy 4: Straddle (Advanced — Market Move पकड़ो)</h4>
+    <p><strong>कब use करें:</strong> जब बड़ा event हो (Budget, RBI policy, Earnings) और आपको लगे market बहुत move करेगा लेकिन direction नहीं पता।</p>
+    <ul>
+      <li>ATM Call और ATM Put दोनों same strike पर खरीदो</li>
+      <li>Market किसी भी direction में बड़ा move करे → Profit</li>
+      <li>Market sideways रहे → दोनों options expire → Double loss (premium)</li>
+      <li>यह costly strategy है — बड़े event से पहले ही setup लो</li>
+    </ul>
+  </div>
+
+  <img src="images/advanced-options-strategies-guide.png" alt="Advanced Options Strategies Guide – BullBear Market" loading="lazy">
+
+  <!-- HOW TO LEARN -->
+  <h2>🚀 Options Trading सीखने का Correct तरीका</h2>
+
+  <p>Options trading profitable है लेकिन <strong>बिना proper knowledge के यह account wipe कर देती है।</strong> यह correct learning path follow करो:</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>पहले Stock Market Basics सीखो</h4>
+        <p>Options में जाने से पहले candlestick, support-resistance, RSI, trend analysis — इन सबका basic knowledge होना चाहिए। Options सिखने के लिए यह foundation जरूरी है।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Options Theory Complete करो</h4>
+        <p>Call, Put, Premium, Strike, Expiry, ITM/OTM/ATM, Greeks (Delta और Theta minimum) — यह सब clearly समझो। Paper पर examples solve करो।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Virtual Trading से Practice करो</h4>
+        <p>BullBear Market पर virtual trading करो। Options chain पढ़ना practice करो। Real market hours में observe करो — trade करो, results note करो।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Options Chain पढ़ना सीखो</h4>
+        <p>NSE website पर NIFTY options chain daily देखो। OI (Open Interest), Change in OI, Volume, PCR ratio — इन्हें समझने से market direction का hint मिलता है।</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Small Capital से Real Options Start करो</h4>
+        <p>6-12 महीने virtual practice के बाद, small capital (₹10,000-₹25,000) से 1 lot में trade करना शुरू करो। धीरे-धीरे confidence और understanding बनाओ।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RISK WARNING -->
+  <h2>⚠️ Options Trading के Risks — Honestly बताते हैं</h2>
+
+  <p>Options बहुत powerful है — लेकिन risk भी उतनी ही ज्यादा है। <strong>Honest advice यह है कि पहले basics master करो।</strong></p>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Theta Decay — Premium हर रोज घटता है</h4>
+      <p>आप Call खरीदकर बैठे हो और market sideways है। हर दिन आपका premium automatically घटता जाएगा — भले ही market move नहीं किया। Expiry जितनी पास, उतना तेज premium घटेगा। यह options का सबसे underrated risk है।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>OTM Options खरीदना (सस्ते लालच में)</h4>
+      <p>₹5-₹10 के OTM options बहुत सस्ते लगते हैं। लेकिन इनके expire होने की probability बहुत ज्यादा होती है। "सस्ता है तो ज्यादा खरीदते हैं" — यह thinking account destroy करती है।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Expiry Day पर Heavy Trading</h4>
+      <p>Expiry (Thursday) के दिन options की volatility extreme होती है। Premiums बहुत fast move होते हैं। Beginners के लिए expiry day पर options में नई positions नहीं लेनी चाहिए।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>Options Selling बिना Margin (Beginners)</h4>
+      <p>Options writing/selling में unlimited loss का risk होता है। Selling strategy advanced traders के लिए है। Beginners को सिर्फ Options Buying से शुरू करना चाहिए — यहाँ loss premium तक limited है।</p>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-icon">❌</div>
+    <div class="mistake-text">
+      <h4>बिना Stop Loss के Hold करना</h4>
+      <p>Options में "recover होगा" का wait मत करो। अगर position against है, तो theta decay भी नुकसान कर रही है। Stop loss mandatory है — premium का 40-50% loss पर exit।</p>
+    </div>
+  </div>
+
+  <!-- PCR AND OI -->
+  <h2>📊 PCR और Open Interest — Market Direction का Hint</h2>
+
+  <p>Options chain में दो important indicators हैं जो experienced traders market direction समझने के लिए use करते हैं:</p>
+
+  <h3>PCR (Put Call Ratio)</h3>
+  <p>PCR = Total Put OI ÷ Total Call OI</p>
+  <ul>
+    <li><strong>PCR &gt; 1.2:</strong> Market में ज्यादा Puts हैं → Bearish sentiment। लेकिन contrarian view: बहुत ज्यादा bearishness = potential reversal upwards</li>
+    <li><strong>PCR &lt; 0.7:</strong> Market में ज्यादा Calls हैं → Bullish sentiment। Contrarian: Potential reversal downwards</li>
+    <li><strong>PCR 0.8–1.2:</strong> Balanced market — कोई strong directional signal नहीं</li>
+  </ul>
+
+  <h3>Open Interest Analysis</h3>
+  <ul>
+    <li><strong>Maximum Call OI level</strong> = Strong Resistance (market वहाँ जाने में struggle करेगा)</li>
+    <li><strong>Maximum Put OI level</strong> = Strong Support (market वहाँ से bounce कर सकता है)</li>
+    <li>यही level "Max Pain" theory से संबंधित है — options writers इस level पर maximum buyers को expire करवाना चाहते हैं</li>
+  </ul>
+
+  <div class="info-box">
+    <p>📍 <strong>Practical Tip:</strong> NSE की official website (nseindia.com) पर NIFTY Options Chain हर Friday open करो। Maximum Call OI और Maximum Put OI level note करो — ये अगले हफ्ते के key support-resistance levels होते हैं।</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>Options trading किसके लिए suitable है?</h4>
+    <p>Options trading उनके लिए suitable है जिन्होंने पहले कम से कम 6-12 महीने stock market basics, candlestick patterns, technical analysis और risk management सीखा हो। बिना foundation के options में जाना account wipe का fastest तरीका है। पहले BullBear Market पर virtual trading से basics strong करो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Options trading में कितना पैसा लगाना चाहिए?</h4>
+    <p>शुरुआत में सिर्फ वह capital लगाओ जिसे आप पूरा lose करने के लिए prepared हो। ₹10,000-₹25,000 से शुरू करना reasonable है — एक NIFTY lot खरीद सकते हो। कभी भी EMI, loan या savings का पैसा options में मत लगाओ। Options में पूरा premium zero होने का real risk होता है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Call और Put में से कौन better है?</h4>
+    <p>न Call better है न Put — दोनों market direction के हिसाब से use होते हैं। Market bullish लगे तो Call, bearish लगे तो Put। लेकिन both में Theta decay का risk है। जो direction market में होगी उसके हिसाब से सही option choose करो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>ATM, ITM और OTM में से कौन सा option खरीदना चाहिए?</h4>
+    <p>Beginners के लिए ATM (At The Money) options सबसे balanced choice है। ITM options ज्यादा expensive होते हैं लेकिन expire होने का risk कम होता है। OTM options सस्ते होते हैं लेकिन expire होने की probability बहुत ज्यादा होती है। ATM से शुरू करो — यहाँ liquidity भी सबसे ज्यादा होती है।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Options की expiry से पहले exit करना चाहिए?</h4>
+    <p>हाँ, ज्यादातर cases में expiry से 1-2 दिन पहले exit करना better है। Expiry के करीब Theta decay बहुत तेज हो जाती है — premium rapidly घटती है। साथ ही expiry day पर extreme volatility होती है जो unpredictable होती है। Profit book करो और exit करो — greedy मत बनो।</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Options trading में stop loss कैसे लगाएं?</h4>
+    <p>Options में traditional stop loss point नहीं होता जैसे stocks में होता है। इसके बजाय premium-based stop loss use करो। अगर premium ₹100 पर खरीदा है तो ₹50-60 पर stop loss रखो (40-50% loss)। Market जो direction में जाना चाहिए वह नहीं जा रहा — premium ₹50 से नीचे आए तो exit करो।</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>📋 पहले Virtual Trading से Practice करो — Free</h2>
+    <p>Options में real money लगाने से पहले BullBear Market पर virtual practice करो। Market को observe करो, options chain पढ़ो, theory को practically apply करो — zero risk के साथ।</p>
+    <div class="cta-btns">
+      <a href="learning.html" class="btn-primary">📚 Learning Hub जाओ</a>
+      <a href="index.html" class="btn-outline">🏠 Home पर जाओ</a>
+    </div>
+  </div>
+
+  <!-- INTERLINKS -->
+  <div class="interlink-section">
+    <h2>📚 Options के साथ यह भी सीखो</h2>
+    <div class="interlink-grid">
+      <a href="candlestick.html" class="interlink-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Candlestick Patterns</div>
+        <div class="ic-desc">Options entry के लिए price action और candlestick patterns जरूरी हैं।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="indicators.html" class="interlink-card">
+        <div class="ic-icon">📈</div>
+        <div class="ic-title">Indicators Guide</div>
+        <div class="ic-desc">RSI, MACD — options direction decide करने के लिए।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="risk.html" class="interlink-card">
+        <div class="ic-icon">🛡️</div>
+        <div class="ic-title">Risk Management</div>
+        <div class="ic-desc">Options में capital protect करना — सबसे पहले यह सीखो।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="psychology.html" class="interlink-card">
+        <div class="ic-icon">🧠</div>
+        <div class="ic-title">Trading Psychology</div>
+        <div class="ic-desc">Options में FOMO और fear को control करना — crucial skill।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="intraday.html" class="interlink-card">
+        <div class="ic-icon">⚡</div>
+        <div class="ic-title">Intraday Trading</div>
+        <div class="ic-desc">Options और intraday trading का combination — advanced strategy।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+      <a href="volume.html" class="interlink-card">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Volume Analysis</div>
+        <div class="ic-desc">Options OI और Volume analysis — market direction hint।</div>
+        <div class="ic-arrow">Learn Now →</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- end .content -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="favicon.png" alt="BullBear Market Logo">
+      <p>India's #1 free stock market learning & virtual trading platform. Learn, Practice, Compete, Grow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning Hub</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="blog/">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <h4>Learn Free</h4>
+      <a href="options.html">Options Trading</a>
+      <a href="candlestick.html">Candlestick Patterns</a>
+      <a href="risk.html">Risk Management</a>
+      <a href="intraday.html">Intraday Trading</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BullBear Market. All rights reserved. | Made with ❤️ in India</p>
+    <p>Educational Platform – No Real Money Trading | <a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
 </body>
-</html>
+  </html>
