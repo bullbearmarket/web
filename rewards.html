@@ -25,7 +25,6 @@ window.loadData = async function(type){
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
   document.getElementById("tab-" + type).classList.add("active");
 
-  // loading state
   document.getElementById("top3").innerHTML = `<div class="loading-state"><div class="spin"></div><span>Loading leaderboard…</span></div>`;
   document.getElementById("list").innerHTML = "";
 
@@ -47,7 +46,7 @@ window.loadData = async function(type){
 function render(data, type){
   const medal = ["👑","🥈","🥉"];
   const cardClass = ["podium-gold","podium-silver","podium-bronze"];
-  const order = [1, 0, 2]; // silver | gold | bronze visual order
+  const order = [1, 0, 2];
 
   let podiumHTML = `<div class="podium-wrap">`;
   order.forEach(i => {
@@ -148,30 +147,42 @@ body{
   background-size:52px 52px;
 }
 
-/* ── NAV ── */
+/* ══════════════════════════════════════
+   NAV — White style like homepage
+══════════════════════════════════════ */
 nav{
   position:sticky; top:0; z-index:100;
-  background:rgba(5,8,16,.9);
+  background:#ffffff;
   backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid #e5e7eb;
   padding:0 20px;
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 .nav-inner{
   max-width:1100px; margin:0 auto;
-  display:flex; align-items:center; gap:6px;
-  height:58px; flex-wrap:wrap; padding:6px 0;
+  display:flex; align-items:center; gap:4px;
+  height:62px; flex-wrap:wrap; padding:6px 0;
 }
 .nav-logo{
-  font-family:'Syne',sans-serif; font-weight:800; font-size:1.05rem;
-  color:var(--gold); text-decoration:none; margin-right:12px; white-space:nowrap;
+  display:flex; align-items:center; gap:8px;
+  font-family:'Syne',sans-serif; font-weight:800; font-size:1rem;
+  color:#1a1a1a; text-decoration:none; margin-right:14px; white-space:nowrap;
+}
+.nav-logo img{
+  width:34px; height:34px; border-radius:8px;
+  object-fit:contain;
 }
 nav a{
-  color:var(--muted); text-decoration:none; font-size:.8rem; font-weight:500;
-  padding:4px 10px; border-radius:6px;
+  color:#4b5563; text-decoration:none; font-size:.82rem; font-weight:500;
+  padding:5px 11px; border-radius:8px;
   transition:color .2s, background .2s; white-space:nowrap;
 }
-nav a:hover{ color:var(--text); background:var(--card); }
-nav a.active{ color:var(--gold); }
+nav a:hover{ color:#111; background:#f3f4f6; }
+nav a.active{
+  color:#d97706;
+  font-weight:700;
+  background:#fef9eb;
+}
 
 /* ── HERO ── */
 .hero{
@@ -207,12 +218,72 @@ nav a.active{ color:var(--gold); }
 }
 .hero .tagline-row{
   display:flex; align-items:center; justify-content:center; gap:10px;
-  flex-wrap:wrap; margin-bottom:32px;
+  flex-wrap:wrap; margin-bottom:28px;
 }
 .hero .tagline-row span{
   background:var(--card); border:1px solid var(--border2);
   padding:6px 14px; border-radius:100px;
   font-size:.82rem; font-weight:500; color:var(--text);
+}
+
+/* ══════════════════════════════════════
+   PLAY STORE DOWNLOAD BUTTON
+══════════════════════════════════════ */
+.playstore-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:28px;
+}
+.playstore-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  background:linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  border:1.5px solid rgba(255,215,0,.4);
+  border-radius:14px;
+  padding:11px 22px;
+  text-decoration:none;
+  color:#fff;
+  box-shadow:0 4px 20px rgba(0,0,0,.35), 0 0 24px rgba(255,215,0,.1);
+  transition:transform .25s, box-shadow .25s, border-color .25s;
+  width:auto;
+  max-width:280px;
+}
+.playstore-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 28px rgba(0,0,0,.45), 0 0 36px rgba(255,215,0,.2);
+  border-color:rgba(255,215,0,.65);
+}
+.playstore-btn:active{ transform:translateY(0); }
+
+.ps-icon{
+  width:36px; height:36px; flex-shrink:0;
+  background:linear-gradient(135deg, #01875f, #34a853);
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.1rem;
+}
+.ps-text{
+  display:flex; flex-direction:column; align-items:flex-start; gap:1px;
+}
+.ps-top{
+  font-size:.62rem; font-weight:700; color:var(--gold);
+  letter-spacing:.04em; text-transform:uppercase;
+}
+.ps-main{
+  font-family:'Syne',sans-serif;
+  font-size:.92rem; font-weight:800;
+  color:#ffffff; line-height:1.15;
+}
+.ps-sub{
+  font-size:.63rem; color:rgba(255,255,255,.6); font-weight:500;
+  display:flex; align-items:center; gap:3px;
+}
+.ps-sub::before{
+  content:'★★★★★'; font-size:.6rem; color:var(--gold);
+}
+.ps-arrow{
+  display:none;
 }
 
 /* countdown */
@@ -359,8 +430,6 @@ nav a.active{ color:var(--gold); }
   background:var(--green-dim); border:1px solid rgba(34,197,94,.2);
   border-radius:12px; padding:14px 20px;
 }
-.pool-left{ font-size:.85rem; color:var(--muted); }
-.pool-val{ font-family:'Syne',sans-serif; font-size:1.2rem; font-weight:800; color:var(--green); }
 
 /* ── REWARD LIST ── */
 .list-section{
@@ -472,7 +541,6 @@ nav a.active{ color:var(--gold); }
   transform:translateY(-2px);
 }
 .link-icon{ font-size:1.5rem; flex-shrink:0; }
-.link-info {}
 .link-title{ font-family:'Syne',sans-serif; font-weight:700; font-size:.9rem; margin-bottom:3px; }
 .link-desc{ font-size:.75rem; color:var(--muted); }
 
@@ -558,11 +626,14 @@ footer a:hover{ color:var(--gold); }
 .stat-pill:nth-child(3){ animation-delay:.16s; }
 .stat-pill:nth-child(4){ animation-delay:.24s; }
 
-/* mobile */
+/* ── MOBILE ── */
 @media(max-width:500px){
   .podium-reward{ font-size:1.3rem; }
   .countdown-bar{ gap:10px; padding:12px 18px; }
   .cd-item .cd-num{ font-size:1.3rem; }
+  .playstore-btn{ padding:12px 20px; }
+  .ps-main{ font-size:.95rem; }
+  nav a{ font-size:.75rem; padding:4px 8px; }
 }
 </style>
 </head>
@@ -572,10 +643,16 @@ footer a:hover{ color:var(--gold); }
 <div class="bg-layer"></div>
 <div class="grid-overlay"></div>
 
-<!-- ── NAV ── -->
+<!-- ══════════════════════════════════════
+     NAV — White style like homepage
+══════════════════════════════════════ -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="https://bullbearmarket.in/index.html"> BullBear Market</a>
+    <!-- Logo with favicon.png -->
+    <a class="nav-logo" href="https://bullbearmarket.in/index.html">
+      <img src="favicon.png" alt="BullBear Market Logo" onerror="this.style.display='none'"/>
+      BullBear Market
+    </a>
     <a href="https://bullbearmarket.in/index.html">Home</a>
     <a href="https://bullbearmarket.in/learning.html">Learning</a>
     <a href="https://bullbearmarket.in/rewards.html" class="active">Rewards</a>
@@ -597,6 +674,24 @@ footer a:hover{ color:var(--gold); }
     <span>🏅 Top 50 Win Prizes</span>
     <span>📅 Weekly + Monthly</span>
     <span>🇮🇳 Made in India</span>
+  </div>
+
+  <!-- ══ PLAY STORE DOWNLOAD BUTTON (where red line was) ══ -->
+  <div class="playstore-wrap">
+    <a
+      href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app"
+      class="playstore-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="ps-icon">▶</div>
+      <div class="ps-text">
+        <span class="ps-top">Download Free</span>
+        <span class="ps-main">On Play Store</span>
+        <span class="ps-sub">Join Now &amp; Win</span>
+      </div>
+      <span class="ps-arrow"></span>
+    </a>
   </div>
 
   <!-- Countdown Timer -->
@@ -830,9 +925,8 @@ footer a:hover{ color:var(--gold); }
 <script>
 function updateCountdown(){
   const now = new Date();
-  // Next Sunday 5PM
   const target = new Date(now);
-  const day = target.getDay(); // 0=Sun
+  const day = target.getDay();
   const daysUntilSun = day === 0 ? 7 : 7 - day;
   target.setDate(target.getDate() + daysUntilSun);
   target.setHours(17, 0, 0, 0);
@@ -852,4 +946,4 @@ setInterval(updateCountdown, 1000);
 </script>
 
 </body>
-  </html>
+</html>
