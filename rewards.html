@@ -238,27 +238,27 @@ nav a.active{
   display:inline-flex;
   align-items:center;
   gap:12px;
-  background:linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-  border:1.5px solid rgba(255,215,0,.4);
+  background:linear-gradient(135deg, #6b0f1a 0%, #a2182b 45%, #d4a017 100%);
+  border:1.5px solid rgba(255,215,0,.55);
   border-radius:14px;
   padding:11px 22px;
   text-decoration:none;
   color:#fff;
-  box-shadow:0 4px 20px rgba(0,0,0,.35), 0 0 24px rgba(255,215,0,.1);
+  box-shadow:0 4px 20px rgba(0,0,0,.35), 0 0 24px rgba(255,95,109,.22);
   transition:transform .25s, box-shadow .25s, border-color .25s;
   width:auto;
   max-width:280px;
 }
 .playstore-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 6px 28px rgba(0,0,0,.45), 0 0 36px rgba(255,215,0,.2);
-  border-color:rgba(255,215,0,.65);
+  box-shadow:0 8px 30px rgba(0,0,0,.45), 0 0 38px rgba(255,215,0,.28);
+  border-color:rgba(255,215,0,.8);
 }
 .playstore-btn:active{ transform:translateY(0); }
 
 .ps-icon{
   width:36px; height:36px; flex-shrink:0;
-  background:linear-gradient(135deg, #01875f, #34a853);
+  background:linear-gradient(135deg, #ff4d4f, #ffb300);
   border-radius:10px;
   display:flex; align-items:center; justify-content:center;
   font-size:1.1rem;
@@ -627,13 +627,44 @@ footer a:hover{ color:var(--gold); }
 .stat-pill:nth-child(4){ animation-delay:.24s; }
 
 /* ── MOBILE ── */
+  @media(max-width:900px){
+  .nav-inner{ justify-content:center; height:auto; row-gap:8px; padding:10px 0; }
+  .nav-logo{ width:100%; justify-content:center; margin-right:0; }
+}
+@media(max-width:700px){
+  .hero{ padding:44px 16px 14px; }
+  .hero .sub{ font-size:.96rem; margin-bottom:22px; }
+  .countdown-bar{ width:100%; max-width:100%; gap:8px; padding:12px 10px; border-radius:12px; }
+  .cd-item{ min-width:0; flex:1; }
+  .cd-item .cd-num{ font-size:1.2rem; }
+  .cd-sep{ font-size:1.05rem; }
+  .tabs-wrap{ margin:0 14px 30px; }
+  .tab-btn{ flex:1; min-width:0; padding:10px 12px; font-size:.82rem; }
+  .podium-wrap{ gap:8px; }
+  .podium-card{ padding:16px 10px 0; border-radius:16px 16px 0 0; }
+  .podium-reward{ font-size:1.2rem; }
+  .reward-row{ padding:12px 12px; }
+  .rank-badge{ width:32px; height:32px; }
+  .reward-amt{ font-size:1rem; }
+  .why-card{ padding:24px 18px; }
+  .footer-cta-inner{ padding:30px 18px; }
+}
 @media(max-width:500px){
-  .podium-reward{ font-size:1.3rem; }
-  .countdown-bar{ gap:10px; padding:12px 18px; }
-  .cd-item .cd-num{ font-size:1.3rem; }
-  .playstore-btn{ padding:12px 20px; }
-  .ps-main{ font-size:.95rem; }
-  nav a{ font-size:.75rem; padding:4px 8px; }
+   nav{ padding:0 8px; }
+  nav a{ font-size:.74rem; padding:4px 6px; }
+  .playstore-wrap{ width:100%; padding:0 2px; }
+  .playstore-btn{ width:100%; max-width:100%; justify-content:center; padding:12px 14px; }
+  .ps-main{ font-size:.9rem; }
+  .ps-sub{ font-size:.6rem; }
+  .stats-strip{ padding:0 12px; }
+  .stat-pill{ min-width:50%; }
+  .stat-pill:first-child{ border-radius:16px 0 0 0; }
+  .stat-pill:nth-child(2){ border-radius:0 16px 0 0; border-right:1px solid var(--border); }
+  .stat-pill:nth-child(3){ border-radius:0 0 0 16px; }
+  .stat-pill:last-child{ border-radius:0 0 16px 0; }
+  .stat-pill:nth-child(odd){ border-right:none; }
+  .row-title{ font-size:.82rem; }
+  .row-sub{ font-size:.68rem; }
 }
 </style>
 </head>
