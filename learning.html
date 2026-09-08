@@ -69,7 +69,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <!-- Core 3D Stylesheet -->
-<link rel="stylesheet" href="css/worldclass-3d.css"/>
+<link rel="stylesheet" href="css/worldclass-3d.css?v=2026.3"/>
 
 <style>
 :root {
@@ -698,6 +698,104 @@ body {
   .pillar-section { padding: 28px 18px; }
   .roadmap-grid { grid-template-columns: 1fr; }
 }
+
+/* Topbar & Mobile Nav */
+.bbm-nav-links, .bbm-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bbm-burger {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #FFD700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 22px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.bbm-mobile-drawer {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100vw;
+  background: rgba(5, 8, 17, 0.98);
+  border-bottom: 2px solid #FFD700;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 16px 20px 36px;
+  z-index: 1000;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+  max-height: calc(100vh - 65px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.bbm-mobile-drawer.open {
+  display: block !important;
+}
+.bbm-mobile-drawer a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 14px;
+  border-radius: 10px;
+  color: #F1F5F9;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.bbm-mobile-drawer a:hover, .bbm-mobile-drawer a.active {
+  background: rgba(255, 215, 0, 0.1);
+  color: #FFD700;
+}
+
+@media (max-width: 1024px) {
+  .bbm-nav-links, .bbm-menu {
+    display: none !important;
+  }
+  .bbm-burger {
+    display: flex !important;
+  }
+}
+@media (max-width: 768px) {
+  .bbm-ecosystem-bar {
+    flex-direction: column !important;
+    gap: 4px !important;
+    padding: 7px 12px !important;
+    font-size: 11px !important;
+    text-align: center !important;
+  }
+  .bbm-topbar-inner, .bbm-nav-inner {
+    padding: 8px 16px !important;
+  }
+  .bbm-brand-logo, .bbm-logo-img {
+    height: 34px !important;
+    width: 34px !important;
+  }
+  .bbm-brand-text, .bbm-brand-name {
+    font-size: 16px !important;
+  }
+  .stats-strip-3d {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .topics-grid-3d, .roadmap-grid, .pillar-grid, .ecosystem-grid-3d {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1451,6 +1549,6 @@ document.querySelectorAll('.filter-btn-3d').forEach(btn => {
 });
 </script>
 
-<script src="js/unified-header.js"></script>
+<script src="js/unified-header.js?v=2026.3"></script>
 </body>
 </html>
