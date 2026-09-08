@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://bullbearmarket.in/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- MASTER PILLAR GUIDES FOR #1 RANKING -->
+  <url>
+    <loc>https://bullbearmarket.in/blog/best-paper-trading-app-india-guide.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bullbearmarket.in/blog/bull-bear-market-definitive-guide.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- CORE PLATFORM PAGES -->
+  <url><loc>https://bullbearmarket.in/learning.html</loc><priority>0.9</priority></url>
+  <url><loc>https://bullbearmarket.in/rewards.html</loc><priority>0.9</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/</loc><priority>0.9</priority></url>
+  <url><loc>https://bullbearmarket.in/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/faq.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/support.html</loc><priority>0.7</priority></url>
+
+  <!-- TRADING EDUCATION PAGES -->
+  <url><loc>https://bullbearmarket.in/candlestick.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/indicators.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/intraday.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/options.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/swing.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/scalping.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/patterns.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/psychology.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/risk.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/support-resistance.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/trend.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/volume.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/structure.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/strategy.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/investing.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/futures.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/breakout.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/gap.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/news.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/orders.html</loc><priority>0.7</priority></url>
+
+  <!-- BLOG ARTICLES -->
+  <url><loc>https://bullbearmarket.in/blog/best-stock-market-learning-app.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/how-to-learn-trading-for-beginners.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/stock-market-guide.html</loc><priority>0.8</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/learn-trading.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/risk-management.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/risk-management-part2.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/trading-for-beginners.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/trading-for-beginners-part2.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/ultimate-guide.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bullbearmarket.in/blog/ultimate-trading-guide.html</loc><priority>0.7</priority></url>
+
+  <!-- LEGAL & COMPLIANCE -->
+  <url><loc>https://bullbearmarket.in/privacy-policy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://bullbearmarket.in/terms.html</loc><priority>0.5</priority></url>
+  <url><loc>https://bullbearmarket.in/disclaimer.html</loc><priority>0.5</priority></url>
+  <url><loc>https://bullbearmarket.in/delete-account.html</loc><priority>0.4</priority></url>
+  <url><loc>https://bullbearmarket.in/reset-password.html</loc><priority>0.4</priority></url>
+
+</urlset>

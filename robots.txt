@@ -1,0 +1,35 @@
+# robots.txt for BullBear Market (https://bullbearmarket.in/)
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /learning.html
+Allow: /rewards.html
+Allow: /faq.html
+Allow: /about.html
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Explicit permissions for AI Search Crawlers & Overviews
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block sensitive or system paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?replytocom
+
+# XML Sitemap
+Sitemap: https://bullbearmarket.in/sitemap.xml

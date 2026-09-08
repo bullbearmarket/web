@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk Management Guide – Part 1 | BullBear Market Blog</title>
+<meta name="description" content="Learn risk management in stock trading. Protect your capital with stop loss, position sizing and risk reward formulas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bullbearmarket.in/blog/risk-management.html">
+<link rel="stylesheet" href="../css/worldclass-3d.css">
+<style>
+body { font-family: 'Sora', sans-serif; background: #050811; color: #f1f5f9; line-height: 1.8; margin: 0; padding: 0; }
+.blog-content-wrap { max-width: 1000px; margin: 40px auto 80px; padding: 0 20px; }
+.box { background: rgba(13,20,36,0.85); border: 1px solid rgba(255,215,0,0.2); border-radius: 18px; padding: 30px; margin: 24px 0; }
+h1 { color: #FFD700; font-size: clamp(26px, 4vw, 38px); text-align: center; margin-bottom: 24px; }
+h2 { color: #00E5FF; font-size: 24px; margin-top: 20px; }
+h3 { color: #00FF88; font-size: 20px; margin-top: 18px; }
+p, li { color: #cbd5e1; font-size: 15px; }
+.highlight { color: #00FF88; font-weight: 700; }
+.tip { background: rgba(0,255,136,0.1); border-left: 4px solid #00FF88; padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══ ECOSYSTEM BAR ═══ -->
+<div class="bbm-ecosystem-bar">
+  <span class="pill-badge">🚀 Official Ecosystem</span>
+  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
+  <span class="sep">•</span>
+  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
+  <span class="sep">•</span>
+  <span>🏆 India's #1 Free Virtual Trading App</span>
+</div>
+
+<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
+<nav class="bbm-topbar" role="navigation" aria-label="Main Navigation">
+  <div class="bbm-topbar-inner">
+    <a href="../index.html" class="bbm-brand">
+      <img src="../images/bullbear-logo.jpg" alt="BullBear Market Logo" class="bbm-brand-logo">
+      <div class="bbm-brand-text">
+        <span class="bbm-brand-title">BullBear Market</span>
+        <span class="bbm-brand-subtitle">Learn • Practice • Win</span>
+      </div>
+    </a>
+    
+    <ul class="bbm-nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../learning.html">Learning</a></li>
+      <li><a href="../rewards.html">Rewards</a></li>
+      <li><a href="../blog/" class="active">Blog</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy-policy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../support.html">Support</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" class="bbm-nav-cta">⬇ Download App</a></li>
+    </ul>
+    
+    <button class="bbm-burger" aria-label="Toggle navigation menu">☰</button>
+  </div>
+</nav>
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="bbm-mobile-drawer" id="bbmMobileDrawer">
+  <a href="../index.html">🏠 Home</a>
+  <a href="../learning.html">📚 Free Learning</a>
+  <a href="../rewards.html">🏆 Leaderboard & Rewards</a>
+  <a href="../blog/" class="active">✍️ Trading Blog & Guides</a>
+  <a href="../blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+  <a href="../blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+  <a href="../faq.html">❓ FAQ</a>
+  <a href="../about.html">ℹ️ About Us</a>
+  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
+  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
+  <a href="../privacy-policy.html">🔒 Privacy Policy</a>
+  <a href="../terms.html">📜 Terms of Use</a>
+  <a href="../support.html">💬 Support</a>
+  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+</div>
+
+<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
+<div class="bbm-ticker-wrap" aria-hidden="true">
+  <div class="bbm-ticker">
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span>📉 <strong>Technical Analysis</strong></span>
+    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
+    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
+    <!-- Repeat for smooth scroll -->
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+  </div>
+</div>
+
+
+<main class="blog-content-wrap card-3d">
+<!-- ================= RISK MANAGEMENT BLOCK ================= -->
+
+<section class="section">
+
+<style>
+.section{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+  font-family:'Segoe UI',sans-serif;
+  color:#e5e7eb;
+}
+
+.box{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:16px;
+  margin-top:25px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+h1{
+  text-align:center;
+  color:#facc15;
+}
+
+h2{
+  color:#00ffcc;
+}
+
+h3{
+  color:#22c55e;
+}
+
+h4{
+  color:#facc15;
+}
+
+p{
+  color:#d1d5db;
+}
+
+ul{
+  padding-left:20px;
+}
+
+.highlight{
+  color:#22c55e;
+  font-weight:bold;
+}
+
+a{
+  color:#22c55e;
+  text-decoration:none;
+}
+
+.tip{
+  background:rgba(34,197,94,0.1);
+  padding:12px;
+  border-left:4px solid #22c55e;
+  margin-top:15px;
+  border-radius:8px;
+}
+
+</style>
+
+<h1>💰 Ultimate Risk Management Guide (Pro Level)</h1>
+
+<!-- ================= ENGLISH ================= -->
+
+<div class="box">
+
+<h2>📘 ENGLISH VERSION</h2>
+
+<h3>What is Risk Management in Trading?</h3>
+
+<p>
+Risk management is the backbone of trading. It is not about making money — it is about 
+<span class="highlight">protecting your capital first</span>.
+</p>
+
+<p>
+Most beginners focus on profit, but professional traders focus on risk control.
+</p>
+
+<div class="tip">
+👉 If you protect your capital, profits will follow automatically.
+</div>
+
+<hr>
+
+<h3>🔥 PART 1 – CORE FUNDAMENTALS</h3>
+
+<h4>1. Capital Protection Mindset</h4>
+
+<p>
+If you lose 50% of your capital, you need 100% return to recover.
+That’s why capital protection is the first priority.
+</p>
+
+<h4>2. The 1% Risk Rule</h4>
+
+<p>
+Professional traders risk only 1–2% per trade.
+</p>
+
+<p>
+Example:<br>
+Capital = ₹10,000<br>
+Risk = ₹100
+</p>
+
+<h4>3. Stop Loss – Survival Tool</h4>
+
+<p>
+Stop loss defines your maximum loss before entering trade.
+</p>
+
+<p>
+Without stop loss → account destruction ❌
+</p>
+
+<h4>4. Risk-Reward Ratio</h4>
+
+<p>
+Always aim for at least 1:2 ratio.
+</p>
+
+<p>
+Risk ₹100 → Target ₹200
+</p>
+
+<h4>5. Position Sizing</h4>
+
+<p>
+Never risk full capital in one trade.
+Calculate position based on stop loss.
+</p>
+
+<hr>
+
+<h3>⚡ PART 2 – ADVANCED SYSTEM</h3>
+
+<h4>6. Capital Allocation Strategy</h4>
+
+<p>
+Divide your capital into multiple positions.
+</p>
+
+<h4>7. Avoid Overtrading</h4>
+
+<p>
+More trades = more mistakes = more losses
+</p>
+
+<h4>8. Emotional Discipline</h4>
+
+<ul>
+<li>Fear → early exit</li>
+<li>Greed → late exit</li>
+<li>Revenge → account damage</li>
+</ul>
+
+<h4>9. Real Scenario</h4>
+
+<p>
+Trader A risks 20% → account crash  
+Trader B risks 1% → survives & grows
+</p>
+
+<h4>10. Pro Golden Rules</h4>
+
+<ul>
+<li>Always use stop loss</li>
+<li>Never risk more than 2%</li>
+<li>Follow system, not emotions</li>
+<li>Consistency over profit</li>
+</ul>
+
+<div class="tip">
+💡 Trading success = Survival + Discipline + Risk Control
+</div>
+
+</div>
+
+<!-- ================= HINDI ================= -->
+
+<div class="box">
+
+<h2>🇮🇳 हिंदी संस्करण</h2>
+
+<h3>रिस्क मैनेजमेंट क्या है?</h3>
+
+<p>
+रिस्क मैनेजमेंट ट्रेडिंग की सबसे जरूरी स्किल है।
+यह आपके पैसे को बचाने का सिस्टम है।
+</p>
+
+<p>
+प्रो ट्रेडर पहले नुकसान को कंट्रोल करते हैं, profit बाद में आता है।
+</p>
+
+<div class="tip">
+👉 पहले पैसा बचाओ, फिर पैसा कमाओ।
+</div>
+
+<hr>
+
+<h3>🔥 भाग 1 – बेसिक फंडामेंटल्स</h3>
+
+<h4>1. कैपिटल प्रोटेक्शन</h4>
+
+<p>
+अगर आप 50% loss करते हैं तो recovery के लिए 100% profit चाहिए।
+</p>
+
+<h4>2. 1% नियम</h4>
+
+<p>
+हर ट्रेड में सिर्फ 1–2% risk लो।
+</p>
+
+<h4>3. स्टॉप लॉस</h4>
+
+<p>
+स्टॉप लॉस आपकी सुरक्षा है।
+</p>
+
+<h4>4. रिस्क-रिवार्ड</h4>
+
+<p>
+कम से कम 1:2 ratio रखें।
+</p>
+
+<h4>5. पोजिशन साइजिंग</h4>
+
+<p>
+पूरे पैसे एक trade में मत लगाओ।
+</p>
+
+<hr>
+
+<h3>⚡ भाग 2 – एडवांस सिस्टम</h3>
+
+<h4>6. कैपिटल डिवीजन</h4>
+
+<p>
+पैसे को अलग-अलग trades में बाँटो।
+</p>
+
+<h4>7. ओवर ट्रेडिंग से बचो</h4>
+
+<p>
+ज्यादा trades = ज्यादा नुकसान
+</p>
+
+<h4>8. इमोशन कंट्रोल</h4>
+
+<p>
+Fear और Greed सबसे बड़े दुश्मन हैं।
+</p>
+
+<h4>9. रियल उदाहरण</h4>
+
+<p>
+Trader A → 20% risk → खत्म  
+Trader B → 1% risk → safe  
+</p>
+
+<h4>10. गोल्डन रूल्स</h4>
+
+<ul>
+<li>Stop loss जरूरी</li>
+<li>2% से ज्यादा risk नहीं</li>
+<li>Discipline follow करो</li>
+</ul>
+
+<div class="tip">
+📌 Trading में जीतने से ज्यादा जरूरी है टिके रहना।
+</div>
+
+</div>
+
+<!-- ================= BACKLINKS ================= -->
+
+<div class="box">
+
+<h2>🔗 Related Learning</h2>
+
+<p>
+👉 <a href="best-stock-market-learning-app.html">Best Stock Market Learning App</a>
+</p>
+
+<p>
+👉 <a href="risk-management-part2.html">Advanced Risk Management Part 2</a>
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#030508;border-top:1px solid rgba(255,215,0,0.18);padding:40px 20px 20px;text-align:center;font-size:13px;color:#94a3b8;">
+  <p>© 2026 BullBear Market (bullbearmarket.in). In technical partnership with <a href="https://aviraajdigitech.com" target="_blank" rel="noopener" style="color:#ffd700;">Aviraaj Digitech</a> & <a href="https://bearbullmarket.in" target="_blank" rel="noopener" style="color:#00e5ff;">BearBullMarket.in</a>.</p>
+</footer>
+
+<script src="../js/unified-header.js"></script>
+</body>
+</html>

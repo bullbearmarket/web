@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Types in Trading - Complete Guide</title>
+<meta name="description" content="Learn all types of trading orders including Market, Limit, Stop Loss with real examples. Beginner to advanced guide.">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+h1, h2, h3 {
+    color: #22c55e;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+.box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+</style>
+<link rel="stylesheet" href="css/worldclass-3d.css">
+</head>
+
+<body>
+<!-- ═══ ECOSYSTEM BAR ═══ -->
+<div class="bbm-ecosystem-bar">
+  <span class="pill-badge">🚀 Official Ecosystem</span>
+  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
+  <span class="sep">•</span>
+  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
+  <span class="sep">•</span>
+  <span>🏆 India's #1 Free Virtual Trading App</span>
+</div>
+
+<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
+<!-- ═══ ECOSYSTEM BAR ═══ -->
+<div class="bbm-ecosystem-bar">
+  <span class="pill-badge">🚀 Official Ecosystem</span>
+  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
+  <span class="sep">•</span>
+  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
+  <span class="sep">•</span>
+  <span>🏆 India's #1 Free Virtual Trading App</span>
+</div>
+
+<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
+<nav class="bbm-topbar" role="navigation" aria-label="Main Navigation">
+  <div class="bbm-topbar-inner">
+    <a href="index.html" class="bbm-brand">
+      <img src="images/bullbear-logo.jpg" alt="BullBear Market Logo" class="bbm-brand-logo">
+      <div class="bbm-brand-text">
+        <span class="bbm-brand-title">BullBear Market</span>
+        <span class="bbm-brand-subtitle">Learn • Practice • Win</span>
+      </div>
+    </a>
+    
+    <ul class="bbm-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learning.html">Learning</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="blog/">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy-policy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" class="bbm-nav-cta">⬇ Download App</a></li>
+    </ul>
+    
+    <button class="bbm-burger" aria-label="Toggle navigation menu">☰</button>
+  </div>
+</nav>
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="bbm-mobile-drawer" id="bbmMobileDrawer">
+  <a href="index.html">🏠 Home</a>
+  <a href="learning.html">📚 Free Learning</a>
+  <a href="rewards.html">🏆 Leaderboard & Rewards</a>
+  <a href="blog/">✍️ Trading Blog & Guides</a>
+  <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+  <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
+  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
+  <a href="privacy-policy.html">🔒 Privacy Policy</a>
+  <a href="terms.html">📜 Terms of Use</a>
+  <a href="support.html">💬 Support</a>
+  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+</div>
+
+<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
+<div class="bbm-ticker-wrap" aria-hidden="true">
+  <div class="bbm-ticker">
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span>📉 <strong>Technical Analysis</strong></span>
+    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
+    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
+    <!-- Repeat for smooth scroll -->
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+  </div>
+</div>
+
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="bbm-mobile-drawer" id="bbmMobileDrawer">
+  <a href="index.html">🏠 Home</a>
+  <a href="learning.html">📚 Free Learning</a>
+  <a href="rewards.html">🏆 Leaderboard & Rewards</a>
+  <a href="blog/">✍️ Trading Blog & Guides</a>
+  <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+  <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
+  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
+  <a href="privacy-policy.html">🔒 Privacy Policy</a>
+  <a href="terms.html">📜 Terms of Use</a>
+  <a href="support.html">💬 Support</a>
+  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+</div>
+
+<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
+<div class="bbm-ticker-wrap" aria-hidden="true">
+  <div class="bbm-ticker">
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span>📉 <strong>Technical Analysis</strong></span>
+    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
+    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
+    <!-- Repeat for smooth scroll -->
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+  </div>
+</div>
+
+
+<div class="container">
+
+<h1>Order Types in Trading – Complete Beginner to Advanced Guide</h1>
+
+<div class="box">
+<p>
+Agar tum trading start kar rahe ho ya already kar rahe ho, to ek cheez sabse important hoti hai — 
+<strong>Order Types</strong>. Yeh decide karta hai ki tum market me entry kaise loge aur exit kaise karoge.
+</p>
+</div>
+
+<h2>📌 What is Order in Trading?</h2>
+<div class="box">
+<p>
+Simple language me samjho — order ka matlab hota hai broker ko instruction dena ki 
+tum kis price par buy ya sell karna chahte ho.
+</p>
+
+<p>
+Example:
+Agar tum bolte ho “Mujhe Reliance ka share abhi ke abhi lena hai” → yeh ek order hai.
+</p>
+</div>
+
+<h2>🔥 Types of Orders</h2>
+
+<h3>1. Market Order</h3>
+<div class="box">
+<p>
+Market order sabse simple hota hai. Isme tum current market price par instantly buy ya sell karte ho.
+</p>
+
+<p><strong>Example:</strong><br>
+Stock price = ₹100<br>
+Tumne market order diya → trade instantly ₹100 ke around execute ho jayega.
+</p>
+
+<p><strong>Use kab kare?</strong><br>
+✔ Jab tumhe immediate entry chahiye<br>
+✔ Fast market me
+</p>
+
+<p><strong>Risk:</strong><br>
+❌ Slippage ho sakta hai (price thoda upar/neeche mil sakta hai)
+</p>
+</div>
+
+<h3>2. Limit Order</h3>
+<div class="box">
+<p>
+Limit order me tum apna price set karte ho.
+</p>
+
+<p><strong>Example:</strong><br>
+Stock price = ₹100<br>
+Tum bolte ho → “Mujhe ₹95 par hi buy karna hai”
+</p>
+
+<p>
+Agar price ₹95 tak aata hai tabhi order execute hoga.
+</p>
+
+<p><strong>Best for:</strong><br>
+✔ Controlled entry<br>
+✔ Swing trading
+</p>
+</div>
+
+<h3>3. Stop Loss Order</h3>
+<div class="box">
+<p>
+Stop loss tumhari safety hai.
+</p>
+
+<p><strong>Example:</strong><br>
+Buy price = ₹100<br>
+Stop loss = ₹90
+</p>
+
+<p>
+Agar price ₹90 tak girta hai → automatic sell ho jayega.
+</p>
+
+<p><strong>Important:</strong><br>
+Trading me survive karna hai to stop loss mandatory hai.
+</p>
+</div>
+
+<h3>4. Stop Limit Order</h3>
+<div class="box">
+<p>
+Yeh advanced version hai stop loss ka.
+</p>
+
+<p>
+Isme tum 2 price set karte ho:
+- Trigger price
+- Limit price
+</p>
+
+<p>
+Example:
+Trigger = ₹95<br>
+Limit = ₹94
+</p>
+</div>
+
+<h2>💡 Real Life Strategy Example</h2>
+<div class="box">
+<p>
+Agar tum beginner ho to yeh simple rule follow karo:
+</p>
+
+<ul>
+<li>Entry → Limit Order</li>
+<li>Exit → Stop Loss</li>
+<li>Fast trade → Market Order</li>
+</ul>
+
+<p>
+Yeh combination tumhe safe rakhega.
+</p>
+</div>
+
+<h2>⚠️ Common Mistakes</h2>
+<div class="box">
+<ul>
+<li>Stop loss use na karna</li>
+<li>Market order blindly use karna</li>
+<li>Emotions me trade lena</li>
+</ul>
+</div>
+
+<h2>📈 Pro Tips</h2>
+<div class="box">
+<ul>
+<li>Always risk manage karo</li>
+<li>Small capital se start karo</li>
+<li>Learning pe focus karo, earning pe nahi</li>
+</ul>
+</div>
+
+<h2>🧠 Conclusion</h2>
+<div class="box">
+<p>
+Order types trading ka foundation hai. Agar tumhe yeh samajh aa gaya, to tum trading me 
+90% beginners se aage ho.
+</p>
+
+<p>
+Simple rakho, disciplined raho aur har trade me stop loss lagao.
+</p>
+</div>
+
+</div>
+
+<script src="js/unified-header.js"></script>
+</body>
+</html>

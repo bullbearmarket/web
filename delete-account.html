@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account - BullBear Market</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#020617;
+    color:#e2e8f0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 40px;
+    background:#020617;
+    border-bottom:1px solid #1e293b;
+}
+
+.logo{
+    font-size:18px;
+    font-weight:600;
+    color:#22c55e;
+}
+
+.nav-links a{
+    margin-left:20px;
+    color:#cbd5f5;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#22c55e;
+}
+
+/* ===== HERO ===== */
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:750px;
+    margin:auto;
+    padding:20px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:#0f172a;
+    padding:22px;
+    border-radius:14px;
+    margin-top:20px;
+    border:1px solid #1e293b;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+/* ===== TEXT ===== */
+h3{
+    margin-bottom:10px;
+}
+
+.step{
+    margin:8px 0;
+}
+
+.note{
+    font-size:13px;
+    color:#94a3b8;
+    margin-top:10px;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:#000;
+}
+
+.email{
+    background:#3b82f6;
+    color:#fff;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+/* ===== LIST ===== */
+ul{
+    padding-left:18px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:1px solid #1e293b;
+    color:#64748b;
+    font-size:13px;
+}
+
+.footer a{
+    color:#22c55e;
+    text-decoration:none;
+}
+
+</style>
+<link rel="stylesheet" href="css/worldclass-3d.css">
+</head>
+
+<body>
+<!-- ═══ ECOSYSTEM BAR ═══ -->
+<div class="bbm-ecosystem-bar">
+  <span class="pill-badge">🚀 Official Ecosystem</span>
+  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
+  <span class="sep">•</span>
+  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
+  <span class="sep">•</span>
+  <span>🏆 India's #1 Free Virtual Trading App</span>
+</div>
+
+<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
+<!-- ═══ ECOSYSTEM BAR ═══ -->
+<div class="bbm-ecosystem-bar">
+  <span class="pill-badge">🚀 Official Ecosystem</span>
+  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
+  <span class="sep">•</span>
+  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
+  <span class="sep">•</span>
+  <span>🏆 India's #1 Free Virtual Trading App</span>
+</div>
+
+<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
+<nav class="bbm-topbar" role="navigation" aria-label="Main Navigation">
+  <div class="bbm-topbar-inner">
+    <a href="index.html" class="bbm-brand">
+      <img src="images/bullbear-logo.jpg" alt="BullBear Market Logo" class="bbm-brand-logo">
+      <div class="bbm-brand-text">
+        <span class="bbm-brand-title">BullBear Market</span>
+        <span class="bbm-brand-subtitle">Learn • Practice • Win</span>
+      </div>
+    </a>
+    
+    <ul class="bbm-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learning.html">Learning</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="blog/">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy-policy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" class="bbm-nav-cta">⬇ Download App</a></li>
+    </ul>
+    
+    <button class="bbm-burger" aria-label="Toggle navigation menu">☰</button>
+  </div>
+</nav>
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="bbm-mobile-drawer" id="bbmMobileDrawer">
+  <a href="index.html">🏠 Home</a>
+  <a href="learning.html">📚 Free Learning</a>
+  <a href="rewards.html">🏆 Leaderboard & Rewards</a>
+  <a href="blog/">✍️ Trading Blog & Guides</a>
+  <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+  <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
+  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
+  <a href="privacy-policy.html">🔒 Privacy Policy</a>
+  <a href="terms.html">📜 Terms of Use</a>
+  <a href="support.html">💬 Support</a>
+  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+</div>
+
+<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
+<div class="bbm-ticker-wrap" aria-hidden="true">
+  <div class="bbm-ticker">
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span>📉 <strong>Technical Analysis</strong></span>
+    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
+    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
+    <!-- Repeat for smooth scroll -->
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+  </div>
+</div>
+
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="bbm-mobile-drawer" id="bbmMobileDrawer">
+  <a href="index.html">🏠 Home</a>
+  <a href="learning.html">📚 Free Learning</a>
+  <a href="rewards.html">🏆 Leaderboard & Rewards</a>
+  <a href="blog/">✍️ Trading Blog & Guides</a>
+  <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+  <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
+  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
+  <a href="privacy-policy.html">🔒 Privacy Policy</a>
+  <a href="terms.html">📜 Terms of Use</a>
+  <a href="support.html">💬 Support</a>
+  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+</div>
+
+<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
+<div class="bbm-ticker-wrap" aria-hidden="true">
+  <div class="bbm-ticker">
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span>📉 <strong>Technical Analysis</strong></span>
+    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
+    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
+    <!-- Repeat for smooth scroll -->
+    <span>📊 <strong>Stock Market App India</strong></span>
+    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
+    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+    <span>📚 <strong>Stock Market for Beginners</strong></span>
+    <span class="green">🇮🇳 <strong>Made in India</strong></span>
+    <span>💯 <strong>100% Free Forever</strong></span>
+    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+  </div>
+</div>
+
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+    <div class="logo">BullBear Market</div>
+    <div class="nav-links">
+        <a href="https://bullbearmarket.in/">Home</a>
+        <a href="https://bullbearmarket.in/learning.html">Learning</a>
+        <a href="https://bullbearmarket.in/rewards.html">Rewards</a>
+        <a href="https://bullbearmarket.in/blog">Blog</a>
+        <a href="https://bullbearmarket.in/privacy">Privacy</a>
+        <a href="https://bullbearmarket.in/terms">Terms</a>
+        <a href="https://bullbearmarket.in/support">Support</a>
+    </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+    <h1>Delete Your Account</h1>
+    <p>You can permanently delete your account anytime. Follow the steps below.</p>
+</div>
+
+<div class="container">
+
+<!-- OPTION 1 -->
+<div class="card">
+<h3>Delete from App (Recommended)</h3>
+
+<div class="step">1. Open BullBear Market App</div>
+<div class="step">2. Go to Account Settings</div>
+<div class="step">3. Tap "Delete My Account"</div>
+<div class="step">4. Confirm deletion</div>
+
+<p class="note">✔ Instant deletion when done through the app.</p>
+</div>
+
+<!-- OPTION 2 -->
+<div class="card">
+<h3>Request via WhatsApp or Email</h3>
+
+<p>If you cannot access the app, you can request deletion manually:</p>
+
+<a href="https://wa.me/918410625142" class="btn whatsapp">Chat on WhatsApp</a>
+<br><br>
+<a href="mailto:moneymaker.earnmoney@gmail.com" class="btn email">Send Email</a>
+
+<p class="note">Include your registered email or username.</p>
+</div>
+
+<!-- DATA INFO -->
+<div class="card">
+<h3>What happens when you delete your account?</h3>
+
+<ul>
+<li>Your account is permanently deleted</li>
+<li>Personal data (name, email) is removed</li>
+<li>Financial/withdrawal data is deleted</li>
+<li>Some data may be retained for legal/security purposes (up to 90 days)</li>
+</ul>
+</div>
+
+<!-- NOTES -->
+<div class="card">
+<h3>Important Notes</h3>
+
+<ul>
+<li>This action cannot be undone</li>
+<li>App deletion = instant</li>
+<li>Manual request = up to 48 hours</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 BullBear Market • 
+<a href="https://bullbearmarket.in/privacy">Privacy Policy</a>
+</div>
+
+<script src="js/unified-header.js"></script>
+</body>
+</html>
