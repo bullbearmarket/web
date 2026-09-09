@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-<title>🏆 Rewards & Leaderboard – BullBear Market | Win Real Cash Prizes India</title>
-<meta name="description" content="BullBear Market Rewards – Top 50 virtual traders win real cash rewards every week and month. Compete on India's best stock market learning leaderboard and earn real money."/>
-<meta name="keywords" content="BullBear Market rewards, trading contest India, stock market leaderboard, virtual trading rewards, win money trading India, trading competition India"/>
+<title>Leaderboard & Real Cash Rewards — Weekly ₹2,500 & Monthly ₹25,000 | BullBear Market</title>
+<meta name="description" content="Compete in BullBear Market's free paper trading tournaments. Every trader starts with ₹1,00,000 virtual balance with fair monthly reset on 1st of every month. Win up to ₹2,500 weekly & ₹25,000 monthly cash rewards."/>
+<meta name="keywords" content="paper trading cash rewards India, virtual trading tournament, win cash trading simulator, BullBear Market leaderboard, free trading contest India, UPI cash rewards trading app"/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+<meta name="author" content="BullBear Market"/>
+<meta name="publisher" content="Aviraaj Digitech"/>
+<meta name="geo.region" content="IN"/>
+<meta name="geo.placename" content="India"/>
+<meta name="theme-color" content="#050813"/>
 <link rel="canonical" href="https://bullbearmarket.in/rewards.html"/>
+<link rel="icon" type="image/jpeg" href="images/BullBear logo.jpg"/>
+<link rel="apple-touch-icon" href="images/BullBear logo.jpg"/>
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://bullbearmarket.in/sitemap.xml"/>
 
+<!-- Open Graph & Social Cards -->
+<meta property="og:title" content="Leaderboard & Cash Rewards — Weekly ₹2,500 & Monthly ₹25,000 | BullBear Market"/>
+<meta property="og:description" content="Top 50 virtual traders win real cash prizes directly sent to UPI. 100% Free with ₹1,00,000 starting virtual capital and fair 1st of month reset."/>
+<meta property="og:url" content="https://bullbearmarket.in/rewards.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://bullbearmarket.in/images/bullbear1.png"/>
+<meta property="og:site_name" content="BullBear Market"/>
+<meta property="og:locale" content="en_IN"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BullBear Market Leaderboard & Cash Rewards"/>
+<meta name="twitter:description" content="Win up to ₹25,000 monthly cash free with ₹1,00,000 virtual trading money. Monthly reset on 1st."/>
+<meta name="twitter:image" content="https://bullbearmarket.in/images/bullbear1.png"/>
+
+<!-- Google Fonts (Space Grotesk + Plus Jakarta Sans + Space Mono) -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 
-<!-- ═══════════════ FIREBASE (unchanged) ═══════════════ -->
+<!-- Google AdSense (Zero-Footprint Mode) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5614208601638283" crossorigin="anonymous"></script>
+
+<!-- ═════════════════════════════════════════════════════════════
+     FIREBASE REALTIME DATABASE (100% UNCHANGED LOGIC)
+     ═════════════════════════════════════════════════════════════ -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
@@ -23,24 +52,32 @@ const db = getDatabase(app);
 
 window.loadData = async function(type){
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-  document.getElementById("tab-" + type).classList.add("active");
+  const activeTab = document.getElementById("tab-" + type);
+  if (activeTab) activeTab.classList.add("active");
 
-  document.getElementById("top3").innerHTML = `<div class="loading-state"><div class="spin"></div><span>Loading leaderboard…</span></div>`;
-  document.getElementById("list").innerHTML = "";
+  const top3Elem = document.getElementById("top3");
+  const listElem = document.getElementById("list");
+  if (top3Elem) top3Elem.innerHTML = `<div class="loading-state"><div class="spin"></div><span>Loading live leaderboard…</span></div>`;
+  if (listElem) listElem.innerHTML = "";
 
-  const snapshot = await get(ref(db, "contestRewards/" + type));
+  try {
+    const snapshot = await get(ref(db, "contestRewards/" + type));
 
-  if(!snapshot.exists()){
-    document.getElementById("top3").innerHTML = `<p class="empty-msg">No data available yet. Contest starting soon! 🚀</p>`;
-    document.getElementById("list").innerHTML = "";
-    return;
+    if(!snapshot.exists()){
+      if (top3Elem) top3Elem.innerHTML = `<p class="empty-msg">No data available yet. Next tournament starting soon! 🚀</p>`;
+      if (listElem) listElem.innerHTML = "";
+      return;
+    }
+
+    const data = snapshot.val();
+    let arr = [];
+    for(let r in data){ arr.push({ rank: parseInt(r), reward: data[r] }); }
+    arr.sort((a,b) => a.rank - b.rank);
+    render(arr, type);
+  } catch (err) {
+    console.error("Firebase load error:", err);
+    if (top3Elem) top3Elem.innerHTML = `<p class="empty-msg">Unable to load live leaderboard. Please check your internet connection.</p>`;
   }
-
-  const data = snapshot.val();
-  let arr = [];
-  for(let r in data){ arr.push({ rank: parseInt(r), reward: data[r] }); }
-  arr.sort((a,b) => a.rank - b.rank);
-  render(arr, type);
 }
 
 function render(data, type){
@@ -55,14 +92,15 @@ function render(data, type){
     podiumHTML += `
     <div class="podium-card ${cardClass[i]} ${i===0?'podium-center':''}">
       <div class="podium-medal">${medal[i]}</div>
-      <div class="podium-rank">#${d.rank}</div>
+      <div class="podium-rank">Rank #${d.rank}</div>
       <div class="podium-reward">₹${Number(d.reward).toLocaleString('en-IN')}</div>
       <div class="podium-label">${type==='monthly'?'Monthly':'Weekly'} Prize</div>
       <div class="podium-bar" style="height:${i===0?'90px':i===1?'60px':'45px'}"></div>
     </div>`;
   });
   podiumHTML += `</div>`;
-  document.getElementById("top3").innerHTML = podiumHTML;
+  const top3Elem = document.getElementById("top3");
+  if (top3Elem) top3Elem.innerHTML = podiumHTML;
 
   let rows = "";
   data.slice(0, 50).forEach((u, idx) => {
@@ -73,7 +111,7 @@ function render(data, type){
         ${badge}
         <div class="row-info">
           <span class="row-title">Rank #${u.rank}</span>
-          <span class="row-sub">${type==='monthly'?'Monthly':'Weekly'} Trader</span>
+          <span class="row-sub">${type==='monthly'?'Monthly Championship':'Weekly Tournament'} Trader</span>
         </div>
       </div>
       <div class="row-right">
@@ -83,960 +121,1457 @@ function render(data, type){
   });
 
   const total = data.slice(0,50).reduce((s,d) => s + Number(d.reward), 0);
-  document.getElementById("total-pool").textContent = "₹" + total.toLocaleString('en-IN');
-  document.getElementById("total-block").style.display = "flex";
-  document.getElementById("list").innerHTML = rows;
+  const totalPoolElem = document.getElementById("total-pool");
+  const totalBlockElem = document.getElementById("total-block");
+  if (totalPoolElem) totalPoolElem.textContent = "₹" + total.toLocaleString('en-IN');
+  if (totalBlockElem) totalBlockElem.style.display = "flex";
+  const listElem = document.getElementById("list");
+  if (listElem) listElem.innerHTML = rows;
 }
 
 window.onload = () => loadData("monthly");
 </script>
 
 <style>
-:root{
-  --bg:        #050810;
-  --bg2:       #0a0f1e;
-  --card:      #0e1529;
-  --card2:     #121c35;
-  --border:    #1a2640;
-  --border2:   #233050;
-  --gold:      #FFD700;
-  --gold2:     #f0a500;
-  --gold-glow: rgba(255,215,0,.18);
-  --silver:    #C8D6E5;
-  --bronze:    #e8956d;
-  --green:     #22c55e;
-  --green-dim: rgba(34,197,94,.12);
-  --text:      #e8edf8;
-  --muted:     #6b7fa0;
-  --dim:       #374461;
-  --red:       #f43f5e;
-  --accent:    #3b82f6;
+/* ═════════════════════════════════════════════════════════════
+   WORLD-CLASS REWARDS & LEADERBOARD DESIGN SYSTEM
+   ═════════════════════════════════════════════════════════════ */
+:root {
+  --bg-core: #050813;
+  --bg-card: rgba(13, 20, 42, 0.75);
+  --bg-card-hover: rgba(20, 31, 64, 0.88);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(255, 215, 0, 0.3);
+  --border-emerald: rgba(0, 242, 152, 0.3);
+  --gold: #FFD700;
+  --gold-glow: rgba(255, 215, 0, 0.35);
+  --emerald: #00F298;
+  --cyan: #00F2FE;
+  --purple: #9D4EDD;
+  --red: #FF3B69;
+  --text-primary: #FFFFFF;
+  --text-body: #94A3B8;
+  --text-muted: #64748B;
 }
 
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
-
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  min-height:100vh;
-  overflow-x:hidden;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ── PARTICLE BG ── */
-.bg-layer{
-  position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
-}
-.bg-layer::before{
-  content:'';
-  position:absolute; inset:-50%;
-  background:
-    radial-gradient(ellipse 60% 50% at 20% 30%, rgba(255,215,0,.06) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(59,130,246,.07) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 50% 10%, rgba(34,197,94,.05) 0%, transparent 70%);
-  animation: rotateBg 20s linear infinite;
-}
-@keyframes rotateBg{ to{ transform:rotate(360deg); } }
-
-.grid-overlay{
-  position:fixed; inset:0; z-index:0; pointer-events:none;
-  background-image:
-    linear-gradient(rgba(255,215,0,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,215,0,.025) 1px, transparent 1px);
-  background-size:52px 52px;
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+  background-color: var(--bg-core);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ══════════════════════════════════════
-   NAV — White style like homepage
-══════════════════════════════════════ */
-nav{
-  position:sticky; top:0; z-index:100;
-  background:#ffffff;
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid #e5e7eb;
-  padding:0 20px;
-  box-shadow:0 2px 12px rgba(0,0,0,.08);
-}
-.nav-inner{
-  max-width:1100px; margin:0 auto;
-  display:flex; align-items:center; gap:4px;
-  height:62px; flex-wrap:wrap; padding:6px 0;
-}
-.nav-logo{
-  display:flex; align-items:center; gap:8px;
-  font-family:'Syne',sans-serif; font-weight:800; font-size:1rem;
-  color:#1a1a1a; text-decoration:none; margin-right:14px; white-space:nowrap;
-}
-.nav-logo img{
-  width:34px; height:34px; border-radius:8px;
-  object-fit:contain;
-}
-nav a{
-  color:#4b5563; text-decoration:none; font-size:.82rem; font-weight:500;
-  padding:5px 11px; border-radius:8px;
-  transition:color .2s, background .2s; white-space:nowrap;
-}
-nav a:hover{ color:#111; background:#f3f4f6; }
-nav a.active{
-  color:#d97706;
-  font-weight:700;
-  background:#fef9eb;
+#fintechCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
 }
 
-/* ── HERO ── */
-.hero{
-  position:relative; z-index:1;
-  text-align:center; padding:60px 20px 20px;
-}
-.hero-badge{
-  display:inline-flex; align-items:center; gap:8px;
-  background:var(--gold-glow);
-  border:1px solid rgba(255,215,0,.3);
-  color:var(--gold); font-size:.75rem; font-weight:700;
-  letter-spacing:.1em; text-transform:uppercase;
-  padding:6px 18px; border-radius:100px; margin-bottom:20px;
-  animation:pulse 2s ease infinite;
-}
-@keyframes pulse{
-  0%,100%{ box-shadow:0 0 0 0 rgba(255,215,0,.25); }
-  50%{ box-shadow:0 0 0 8px rgba(255,215,0,0); }
-}
-.hero h1{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(2.2rem,6vw,3.8rem);
-  font-weight:800; line-height:1.1; margin-bottom:14px;
-  background:linear-gradient(135deg, #FFD700 0%, #ffffff 50%, #FFD700 100%);
-  background-size:200%;
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-  background-clip:text;
-  animation:shimmer 3s linear infinite;
-}
-@keyframes shimmer{ to{ background-position:200% center; } }
-.hero .sub{
-  color:var(--muted); font-size:1.05rem; max-width:520px; margin:0 auto 30px;
-}
-.hero .tagline-row{
-  display:flex; align-items:center; justify-content:center; gap:10px;
-  flex-wrap:wrap; margin-bottom:28px;
-}
-.hero .tagline-row span{
-  background:var(--card); border:1px solid var(--border2);
-  padding:6px 14px; border-radius:100px;
-  font-size:.82rem; font-weight:500; color:var(--text);
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ══════════════════════════════════════
-   PLAY STORE DOWNLOAD BUTTON
-══════════════════════════════════════ */
-.playstore-wrap{
-  display:flex;
-  justify-content:center;
-  margin-bottom:28px;
-}
-.playstore-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  background:linear-gradient(135deg, #6b0f1a 0%, #a2182b 45%, #d4a017 100%);
-  border:1.5px solid rgba(255,215,0,.55);
-  border-radius:14px;
-  padding:11px 22px;
-  text-decoration:none;
-  color:#fff;
-  box-shadow:0 4px 20px rgba(0,0,0,.35), 0 0 24px rgba(255,95,109,.22);
-  transition:transform .25s, box-shadow .25s, border-color .25s;
-  width:auto;
-  max-width:280px;
-}
-.playstore-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 30px rgba(0,0,0,.45), 0 0 38px rgba(255,215,0,.28);
-  border-color:rgba(255,215,0,.8);
-}
-.playstore-btn:active{ transform:translateY(0); }
-
-.ps-icon{
-  width:36px; height:36px; flex-shrink:0;
-  background:linear-gradient(135deg, #ff4d4f, #ffb300);
-  border-radius:10px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:1.1rem;
-}
-.ps-text{
-  display:flex; flex-direction:column; align-items:flex-start; gap:1px;
-}
-.ps-top{
-  font-size:.62rem; font-weight:700; color:var(--gold);
-  letter-spacing:.04em; text-transform:uppercase;
-}
-.ps-main{
-  font-family:'Syne',sans-serif;
-  font-size:.92rem; font-weight:800;
-  color:#ffffff; line-height:1.15;
-}
-.ps-sub{
-  font-size:.63rem; color:rgba(255,255,255,.6); font-weight:500;
-  display:flex; align-items:center; gap:3px;
-}
-.ps-sub::before{
-  content:'★★★★★'; font-size:.6rem; color:var(--gold);
-}
-.ps-arrow{
-  display:none;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* countdown */
-.countdown-bar{
-  display:inline-flex; gap:16px; justify-content:center;
-  background:var(--card); border:1px solid var(--border2);
-  padding:16px 28px; border-radius:16px;
-  margin-bottom:8px;
+/* ═════════════════════════════════════════════════════════════
+   PRISTINE FLOATING NAVBAR (MATCHING HOME & LEARNING)
+   ═════════════════════════════════════════════════════════════ */
+.bbm-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(5, 8, 19, 0.88);
+  border-bottom: 1px solid var(--border-glass);
 }
-.cd-item{ text-align:center; min-width:50px; }
-.cd-item .cd-num{
-  font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:800; color:var(--gold);
-  display:block; line-height:1;
+.nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.cd-item .cd-lbl{ font-size:.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
-.cd-sep{ font-size:1.4rem; color:var(--dim); align-self:center; }
-
-/* stats */
-.stats-strip{
-  position:relative; z-index:1;
-  display:flex; justify-content:center; gap:0; flex-wrap:wrap;
-  max-width:720px; margin:0 auto 50px; padding:0 20px;
+.brand-anchor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
-.stat-pill{
-  flex:1; min-width:130px;
-  background:var(--card); border:1px solid var(--border);
-  padding:18px 14px; text-align:center;
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.25);
 }
-.stat-pill:first-child{ border-radius:16px 0 0 16px; }
-.stat-pill:last-child{ border-radius:0 16px 16px 0; }
-.stat-pill:not(:last-child){ border-right:none; }
-.stat-pill .s-val{
-  font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; color:var(--gold);
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
 }
-.stat-pill .s-key{ font-size:.72rem; color:var(--muted); margin-top:2px; }
-
-/* ── TABS ── */
-.tabs-wrap{
-  position:relative; z-index:1;
-  display:flex; justify-content:center; gap:10px; margin:0 20px 40px;
+.brand-h1-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
-.tab-btn{
-  padding:11px 32px; border-radius:100px;
-  border:1px solid var(--border2);
-  background:var(--card); color:var(--muted);
-  font-size:.9rem; font-weight:600;
-  cursor:pointer; transition:all .25s;
-  font-family:'DM Sans',sans-serif;
-}
-.tab-btn:hover{ border-color:var(--gold2); color:var(--text); }
-.tab-btn.active{
-  background:linear-gradient(135deg, var(--gold2), var(--gold));
-  color:#000; border-color:transparent;
-  box-shadow:0 0 24px rgba(255,215,0,.3);
-}
-
-/* ── PODIUM ── */
-.podium-section{
-  position:relative; z-index:1;
-  max-width:700px; margin:0 auto 50px; padding:0 20px;
-}
-.section-label{
-  text-align:center;
-  font-family:'Syne',sans-serif; font-size:.7rem; font-weight:700;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
-  margin-bottom:28px;
-  display:flex; align-items:center; gap:12px;
-}
-.section-label::before,.section-label::after{
-  content:''; flex:1; height:1px; background:var(--border);
+.brand-h1-title span { color: var(--gold); }
+.brand-tag-small {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--emerald);
+  font-family: 'Space Mono', monospace;
 }
 
-.podium-wrap{
-  display:flex; justify-content:center; align-items:flex-end; gap:14px;
+.nav-links-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
 }
-.podium-card{
-  flex:1; max-width:180px;
-  border-radius:20px 20px 0 0; padding:22px 14px 0;
-  text-align:center; position:relative;
-  border:1px solid var(--border);
-  background:var(--card2);
-  transition:transform .3s;
-  overflow:hidden;
+.nav-links-menu a {
+  color: var(--text-body);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
-.podium-card::before{
-  content:''; position:absolute; inset:0;
-  background:inherit; opacity:.4; z-index:0;
+.nav-links-menu a:hover,
+.nav-links-menu a.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.06);
 }
-.podium-card > *{ position:relative; z-index:1; }
-.podium-card:hover{ transform:translateY(-4px); }
-
-.podium-gold{
-  background:linear-gradient(160deg, rgba(255,215,0,.15), rgba(255,180,0,.05));
-  border-color:rgba(255,215,0,.45);
-  box-shadow:0 0 40px rgba(255,215,0,.2);
+.nav-links-menu a.active {
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  background: rgba(255, 215, 0, 0.08);
 }
-.podium-silver{
-  background:linear-gradient(160deg, rgba(200,214,229,.1), rgba(200,214,229,.03));
-  border-color:rgba(200,214,229,.3);
+.btn-nav-play {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #050813 !important;
+  font-weight: 700 !important;
+  border-radius: 8px;
+  padding: 8px 18px !important;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.podium-bronze{
-  background:linear-gradient(160deg, rgba(232,149,109,.1), rgba(232,149,109,.03));
-  border-color:rgba(232,149,109,.3);
-}
-.podium-center{ transform:scale(1.08); z-index:2; }
-.podium-center:hover{ transform:scale(1.08) translateY(-4px); }
-
-.podium-medal{ font-size:2rem; margin-bottom:4px; }
-.podium-rank{
-  font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:var(--muted);
-  margin-bottom:4px;
-}
-.podium-gold .podium-rank{ color:var(--gold); }
-.podium-reward{
-  font-family:'Syne',sans-serif; font-size:1.7rem; font-weight:800;
-  color:var(--text); margin-bottom:4px;
-}
-.podium-gold .podium-reward{ color:var(--gold); }
-.podium-label{ font-size:.68rem; color:var(--muted); margin-bottom:12px; }
-.podium-bar{
-  width:100%; background:var(--border); border-radius:0;
-  margin-top:auto;
-}
-.podium-gold .podium-bar{ background:rgba(255,215,0,.2); }
-
-/* loading */
-.loading-state{
-  display:flex; align-items:center; justify-content:center;
-  gap:12px; padding:40px; color:var(--muted); font-size:.9rem; width:100%;
-}
-.spin{
-  width:22px; height:22px; border-radius:50%;
-  border:2px solid var(--border2); border-top-color:var(--gold);
-  animation:spin .8s linear infinite;
-}
-@keyframes spin{ to{ transform:rotate(360deg); } }
-.empty-msg{ text-align:center; padding:40px; color:var(--muted); width:100%; }
-
-/* ── TOTAL POOL ── */
-#total-block{
-  display:none; z-index:1; position:relative;
-  max-width:700px; margin:0 auto 12px; padding:0 20px;
-  justify-content:space-between; align-items:center;
-  background:var(--green-dim); border:1px solid rgba(34,197,94,.2);
-  border-radius:12px; padding:14px 20px;
+.btn-nav-play:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
 }
 
-/* ── REWARD LIST ── */
-.list-section{
-  position:relative; z-index:1;
-  max-width:700px; margin:0 auto 50px; padding:0 20px;
+.burger-toggle-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-glass);
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
 }
-.reward-row{
-  display:flex; justify-content:space-between; align-items:center;
-  padding:14px 16px; margin-bottom:8px; border-radius:14px;
-  background:var(--card); border:1px solid var(--border);
-  transition:all .2s;
+.mobile-nav-panel {
+  display: none;
+  background: rgba(8, 13, 29, 0.98);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 16px 24px;
 }
-.reward-row:hover{
-  border-color:var(--border2);
-  background:var(--card2);
-  transform:translateX(3px);
+.mobile-nav-panel.open { display: block; }
+.mobile-nav-panel a {
+  display: block;
+  padding: 12px 0;
+  color: var(--text-body);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-.row-highlight{
-  border-color:rgba(255,215,0,.25);
-  background:linear-gradient(135deg, rgba(255,215,0,.05), var(--card));
+.mobile-nav-panel a.active { color: var(--gold); }
+
+/* ═════════════════════════════════════════════════════════════
+   ANNOUNCEMENT TICKER (PROMOTING SISTER SITES & REAL F&O)
+   ═════════════════════════════════════════════════════════════ */
+.market-strip-bar {
+  background: linear-gradient(90deg, #050812, #0b1228, #050812);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 9px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
 }
-.row-left{ display:flex; align-items:center; gap:12px; }
-.rank-badge{
-  width:36px; height:36px; border-radius:50%;
-  background:var(--bg2); border:1px solid var(--border2);
-  display:flex; align-items:center; justify-content:center;
-  font-size:.7rem; font-weight:700; color:var(--muted);
-  flex-shrink:0;
+.strip-track {
+  display: inline-flex;
+  animation: stripScroll 45s linear infinite;
 }
-.rank-top{ font-size:1rem; background:var(--gold-glow); border-color:rgba(255,215,0,.3); }
-.row-info{ display:flex; flex-direction:column; gap:2px; }
-.row-title{ font-weight:600; font-size:.9rem; color:var(--text); }
-.row-sub{ font-size:.72rem; color:var(--muted); }
-.reward-amt{
-  font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800;
-  color:var(--green);
+.strip-track:hover { animation-play-state: paused; }
+.strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 22px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-body);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.strip-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.strip-item a:hover { color: #FFFFFF; }
+.strip-item strong { color: #FFFFFF; font-weight: 700; }
+.strip-item .up { color: var(--emerald); font-weight: 700; }
+.strip-item .cyan { color: var(--cyan); font-weight: 700; }
+.strip-item .gold { color: var(--gold); font-weight: 700; }
+.strip-tag {
+  background: rgba(255, 215, 0, 0.12);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: var(--gold);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.strip-tag.cyan {
+  background: rgba(0, 242, 254, 0.12);
+  border-color: rgba(0, 242, 254, 0.3);
+  color: var(--cyan);
+}
+.strip-tag.emerald {
+  background: rgba(0, 242, 152, 0.12);
+  border-color: rgba(0, 242, 152, 0.3);
+  color: var(--emerald);
+}
+@keyframes stripScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* ── HOW IT WORKS ── */
-.section-wrap{
-  position:relative; z-index:1;
-  max-width:900px; margin:0 auto 60px; padding:0 20px;
+/* ═════════════════════════════════════════════════════════════
+   HERO HEADER (WITH ACCURATE USER PLATFORM ECONOMICS)
+   ═════════════════════════════════════════════════════════════ */
+.rewards-hero-deck {
+  padding: 60px 0 35px;
+  text-align: center;
+  position: relative;
 }
-.how-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px;
+.rewards-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 215, 0, 0.12);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
-.how-card{
-  background:var(--card); border:1px solid var(--border);
-  border-radius:18px; padding:24px 18px;
-  transition:border-color .2s, transform .2s;
+.rewards-main-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
 }
-.how-card:hover{
-  border-color:rgba(255,215,0,.3);
-  transform:translateY(-3px);
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #00F298 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.how-step{
-  font-family:'Syne',sans-serif; font-size:.65rem; font-weight:800;
-  letter-spacing:.12em; text-transform:uppercase; color:var(--gold2);
-  margin-bottom:8px;
-}
-.how-icon{ font-size:1.8rem; margin-bottom:10px; }
-.how-title{ font-family:'Syne',sans-serif; font-weight:700; font-size:.95rem; margin-bottom:8px; }
-.how-desc{ font-size:.82rem; color:var(--muted); line-height:1.6; }
-
-/* ── WHY BOX ── */
-.why-wrap{
-  position:relative; z-index:1;
-  max-width:900px; margin:0 auto 60px; padding:0 20px;
-}
-.why-card{
-  background:linear-gradient(135deg, rgba(255,215,0,.06), rgba(59,130,246,.05));
-  border:1px solid rgba(255,215,0,.18);
-  border-radius:22px; padding:36px 32px;
-  display:grid; grid-template-columns:1fr 1fr; gap:24px;
-}
-@media(max-width:600px){ .why-card{ grid-template-columns:1fr; } }
-.why-left h2{
-  font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800;
-  color:var(--gold); margin-bottom:12px;
-}
-.why-left p{ color:var(--muted); font-size:.9rem; line-height:1.7; margin-bottom:10px; }
-.why-right{ display:flex; flex-direction:column; gap:12px; }
-.why-item{
-  display:flex; gap:12px; align-items:flex-start;
-  background:rgba(255,255,255,.03); padding:14px; border-radius:12px;
-  border:1px solid var(--border);
-}
-.why-item-icon{ font-size:1.2rem; flex-shrink:0; }
-.why-item-text strong{ display:block; font-size:.88rem; margin-bottom:3px; }
-.why-item-text span{ font-size:.78rem; color:var(--muted); }
-
-/* ── INTER-LINKS ── */
-.links-section{
-  position:relative; z-index:1;
-  max-width:900px; margin:0 auto 60px; padding:0 20px;
-}
-.links-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;
-}
-.link-card{
-  background:var(--card); border:1px solid var(--border);
-  border-radius:16px; padding:20px;
-  text-decoration:none; color:var(--text);
-  transition:all .25s;
-  display:flex; gap:12px; align-items:center;
-}
-.link-card:hover{
-  background:var(--card2); border-color:var(--border2);
-  transform:translateY(-2px);
-}
-.link-icon{ font-size:1.5rem; flex-shrink:0; }
-.link-title{ font-family:'Syne',sans-serif; font-weight:700; font-size:.9rem; margin-bottom:3px; }
-.link-desc{ font-size:.75rem; color:var(--muted); }
-
-/* ── FAQ MINI ── */
-.faq-mini{
-  position:relative; z-index:1;
-  max-width:700px; margin:0 auto 60px; padding:0 20px;
-}
-.faq-mini-item{
-  background:var(--card); border:1px solid var(--border);
-  border-radius:14px; padding:18px 20px; margin-bottom:10px;
-}
-.faq-mini-q{
-  font-weight:600; font-size:.9rem; color:var(--text); margin-bottom:8px;
-  display:flex; gap:8px; align-items:flex-start;
-}
-.faq-mini-q span.q-icon{ color:var(--gold); font-size:1rem; flex-shrink:0; }
-.faq-mini-a{ font-size:.83rem; color:var(--muted); line-height:1.65; padding-left:22px; }
-
-/* ── FOOTER CTA ── */
-.footer-cta{
-  position:relative; z-index:1;
-  max-width:900px; margin:0 auto 60px; padding:0 20px;
-}
-.footer-cta-inner{
-  background:linear-gradient(135deg, rgba(255,215,0,.08), rgba(34,197,94,.06));
-  border:1px solid rgba(255,215,0,.2);
-  border-radius:22px; padding:40px 32px; text-align:center;
-  position:relative; overflow:hidden;
-}
-.footer-cta-inner::before{
-  content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%);
-  width:300px; height:160px;
-  background:radial-gradient(ellipse, rgba(255,215,0,.12) 0%, transparent 70%);
-  pointer-events:none;
-}
-.footer-cta-inner h2{
-  font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:800;
-  margin-bottom:10px;
-  background:linear-gradient(135deg,#FFD700,#ffffff);
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-}
-.footer-cta-inner p{ color:var(--muted); max-width:480px; margin:0 auto 24px; font-size:.9rem; }
-.btn-row{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-.btn-gold{
-  background:linear-gradient(135deg,#f0a500,#FFD700);
-  color:#000; font-weight:700; font-size:.9rem;
-  padding:13px 30px; border-radius:12px;
-  text-decoration:none; transition:opacity .2s, transform .2s;
-  font-family:'DM Sans',sans-serif;
-}
-.btn-gold:hover{ opacity:.88; transform:translateY(-2px); }
-.btn-ghost{
-  background:transparent; color:var(--text); font-weight:600; font-size:.9rem;
-  padding:13px 30px; border-radius:12px; border:1px solid var(--border2);
-  text-decoration:none; transition:all .2s; font-family:'DM Sans',sans-serif;
-}
-.btn-ghost:hover{ border-color:var(--gold2); color:var(--gold); }
-
-/* ── FOOTER ── */
-footer{
-  position:relative; z-index:1;
-  border-top:1px solid var(--border);
-  text-align:center; padding:26px 20px;
-  color:var(--dim); font-size:.78rem;
-}
-footer a{ color:var(--muted); text-decoration:none; margin:0 6px; }
-footer a:hover{ color:var(--gold); }
-.footer-note-inline{
-  position:relative; z-index:1;
-  text-align:center; color:var(--muted); font-size:.78rem;
-  padding:0 20px 40px; max-width:600px; margin:0 auto;
+.rewards-subtext {
+  max-width: 800px;
+  margin: 0 auto 36px;
+  font-size: 1.1rem;
+  color: var(--text-body);
+  line-height: 1.65;
 }
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{
-  from{ opacity:0; transform:translateY(22px); }
-  to  { opacity:1; transform:translateY(0); }
+/* 4-Item 3D Stats Strip */
+.rewards-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 35px;
 }
-.hero    { animation:fadeUp .6s ease both; }
-.stat-pill { animation:fadeUp .5s ease both; }
-.stat-pill:nth-child(2){ animation-delay:.08s; }
-.stat-pill:nth-child(3){ animation-delay:.16s; }
-.stat-pill:nth-child(4){ animation-delay:.24s; }
+.rewards-stat-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 18px;
+  padding: 18px 12px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+}
+.rewards-stat-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.15);
+}
+.stat-digit {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+.stat-digit.gold { color: var(--gold); }
+.stat-digit.emerald { color: var(--emerald); }
+.stat-digit.cyan { color: var(--cyan); }
+.stat-label-text {
+  font-size: 0.8rem;
+  color: var(--text-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-/* ── MOBILE ── */
-  @media(max-width:900px){
-  .nav-inner{ justify-content:center; height:auto; row-gap:8px; padding:10px 0; }
-  .nav-logo{ width:100%; justify-content:center; margin-right:0; }
+/* ═════════════════════════════════════════════════════════════
+   LIVE COUNTDOWN TERMINAL BAR
+   ═════════════════════════════════════════════════════════════ */
+.countdown-terminal-card {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  background: linear-gradient(145deg, rgba(16, 26, 56, 0.9), rgba(8, 14, 32, 0.95));
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 22px 28px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.15);
 }
-@media(max-width:700px){
-  .hero{ padding:44px 16px 14px; }
-  .hero .sub{ font-size:.96rem; margin-bottom:22px; }
-  .countdown-bar{ width:100%; max-width:100%; gap:8px; padding:12px 10px; border-radius:12px; }
-  .cd-item{ min-width:0; flex:1; }
-  .cd-item .cd-num{ font-size:1.2rem; }
-  .cd-sep{ font-size:1.05rem; }
-  .tabs-wrap{ margin:0 14px 30px; }
-  .tab-btn{ flex:1; min-width:0; padding:10px 12px; font-size:.82rem; }
-  .podium-wrap{ gap:8px; }
-  .podium-card{ padding:16px 10px 0; border-radius:16px 16px 0 0; }
-  .podium-reward{ font-size:1.2rem; }
-  .reward-row{ padding:12px 12px; }
-  .rank-badge{ width:32px; height:32px; }
-  .reward-amt{ font-size:1rem; }
-  .why-card{ padding:24px 18px; }
-  .footer-cta-inner{ padding:30px 18px; }
+.cd-header-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
 }
-@media(max-width:500px){
-   nav{ padding:0 8px; }
-  nav a{ font-size:.74rem; padding:4px 6px; }
-  .playstore-wrap{ width:100%; padding:0 2px; }
-  .playstore-btn{ width:100%; max-width:100%; justify-content:center; padding:12px 14px; }
-  .ps-main{ font-size:.9rem; }
-  .ps-sub{ font-size:.6rem; }
-  .stats-strip{ padding:0 12px; }
-  .stat-pill{ min-width:50%; }
-  .stat-pill:first-child{ border-radius:16px 0 0 0; }
-  .stat-pill:nth-child(2){ border-radius:0 16px 0 0; border-right:1px solid var(--border); }
-  .stat-pill:nth-child(3){ border-radius:0 0 0 16px; }
-  .stat-pill:last-child{ border-radius:0 0 16px 0; }
-  .stat-pill:nth-child(odd){ border-right:none; }
-  .row-title{ font-size:.82rem; }
-  .row-sub{ font-size:.68rem; }
+.countdown-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.cd-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  padding: 10px 16px;
+  min-width: 72px;
+}
+.cd-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1;
+}
+.cd-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-body);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-top: 4px;
+}
+.cd-sep {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   CONTEST TABS (MONTHLY VS WEEKLY)
+   ═════════════════════════════════════════════════════════════ */
+.tabs-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+.tab-btn {
+  background: rgba(13, 20, 42, 0.85);
+  border: 1px solid var(--border-glass);
+  color: var(--text-body);
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.tab-btn:hover {
+  color: #FFFFFF;
+  border-color: rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+}
+.tab-btn.active {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.25));
+  border-color: var(--gold);
+  color: #FFFFFF;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+/* ═════════════════════════════════════════════════════════════
+   PODIUM SECTION (#top3 CONTAINER)
+   ═════════════════════════════════════════════════════════════ */
+.podium-section {
+  max-width: 820px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.section-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.podium-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 0 10px;
+}
+.podium-card {
+  flex: 1;
+  max-width: 230px;
+  border-radius: 24px 24px 0 0;
+  padding: 26px 18px 0;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--border-glass);
+  background: linear-gradient(180deg, rgba(16, 26, 56, 0.95) 0%, rgba(9, 14, 28, 0.98) 100%);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+}
+.podium-card:hover {
+  transform: translateY(-6px);
+}
+.podium-gold {
+  border-color: var(--gold);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.25), 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+.podium-silver {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.15);
+}
+.podium-bronze {
+  border-color: rgba(232, 149, 109, 0.4);
+  box-shadow: 0 0 30px rgba(232, 149, 109, 0.15);
+}
+.podium-center {
+  transform: scale(1.08);
+  z-index: 2;
+}
+.podium-center:hover {
+  transform: scale(1.08) translateY(-6px);
+}
+
+.podium-medal {
+  font-size: 2.5rem;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.podium-rank {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-body);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.podium-gold .podium-rank { color: var(--gold); }
+.podium-reward {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+.podium-gold .podium-reward { color: var(--gold); }
+.podium-silver .podium-reward { color: var(--cyan); }
+.podium-bronze .podium-reward { color: #E8956D; }
+.podium-label {
+  font-size: 0.78rem;
+  color: var(--text-body);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.podium-bar {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.05) 100%);
+  margin: 0 auto;
+}
+.podium-silver .podium-bar {
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.25) 0%, rgba(0, 242, 254, 0.05) 100%);
+}
+.podium-bronze .podium-bar {
+  background: linear-gradient(180deg, rgba(232, 149, 109, 0.25) 0%, rgba(232, 149, 109, 0.05) 100%);
+}
+
+/* Loading & Empty States */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 45px 0;
+  color: var(--gold);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+.spin {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255, 215, 0, 0.2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.empty-msg {
+  padding: 35px 20px;
+  color: var(--text-body);
+  font-size: 1.05rem;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   TOTAL PRIZE POOL STRIP (#total-block CONTAINER)
+   ═════════════════════════════════════════════════════════════ */
+#total-block {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  padding: 0 16px;
+  display: none;
+}
+.total-pool-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(0, 242, 152, 0.12), rgba(13, 20, 42, 0.95));
+  border: 1px solid rgba(0, 242, 152, 0.35);
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.total-pool-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#total-pool {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--emerald);
+  letter-spacing: 0.5px;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   REWARD LIST SECTION (#list CONTAINER)
+   ═════════════════════════════════════════════════════════════ */
+.list-section {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  padding: 0 16px;
+}
+.reward-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  background: rgba(13, 20, 42, 0.8);
+  border: 1px solid var(--border-glass);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+.reward-row:hover {
+  border-color: rgba(255, 215, 0, 0.35);
+  background: rgba(20, 31, 64, 0.9);
+  transform: translateX(4px);
+}
+.row-highlight {
+  border-color: rgba(255, 215, 0, 0.35);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(13, 20, 42, 0.95));
+}
+.row-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.rank-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  font-family: 'Space Mono', monospace;
+  color: var(--text-body);
+  flex-shrink: 0;
+}
+.rank-top {
+  font-size: 1.2rem;
+  background: rgba(255, 215, 0, 0.15);
+  border-color: var(--gold);
+}
+.row-info {
+  display: flex;
+  flex-direction: column;
+}
+.row-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.row-sub {
+  font-size: 0.76rem;
+  color: var(--text-body);
+}
+.row-right {
+  text-align: right;
+}
+.reward-amt {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--emerald);
+}
+
+/* ═════════════════════════════════════════════════════════════
+   HOW IT WORKS & FAIR PLAY PROTOCOLS
+   ═════════════════════════════════════════════════════════════ */
+.how-it-works-deck {
+  margin-bottom: 70px;
+}
+.how-grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.how-step-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 26px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.how-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.15);
+}
+.how-step-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--gold);
+  background: rgba(255, 215, 0, 0.12);
+  padding: 2px 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.how-icon-sym {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.how-h4-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+.how-p-desc {
+  font-size: 0.86rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+.fair-play-deck {
+  background: linear-gradient(145deg, rgba(16, 26, 56, 0.9), rgba(8, 14, 32, 0.95));
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 24px;
+  padding: 36px 32px;
+  margin-bottom: 70px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+.fair-play-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 24px;
+}
+.fair-card-item {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+}
+.fair-card-item h5 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+.fair-card-item p {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   GOOGLE ADSENSE (ZERO-FOOTPRINT STYLING)
+   ═════════════════════════════════════════════════════════════ */
+.clean-ads-slot {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 50px;
+  text-align: center;
+  background: transparent !important;
+  border: none !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+.clean-ads-slot ins.adsbygoogle {
+  display: block !important;
+  background: transparent !important;
+}
+.clean-ads-slot:empty,
+.clean-ads-slot ins[data-ad-status="unfilled"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   GRAND CTA & ECOSYSTEM
+   ═════════════════════════════════════════════════════════════ */
+.rewards-cta-deck {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.12) 0%, rgba(5, 8, 19, 0.95) 75%);
+  border: 1px solid var(--border-gold);
+  border-radius: 28px;
+  padding: 50px 32px;
+  text-align: center;
+  margin-bottom: 70px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+.cta-h2-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.cta-sub-p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  max-width: 660px;
+  margin: 0 auto 28px;
+}
+.btn-cta-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #050813;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  transition: all 0.25s ease;
+}
+.btn-cta-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 45px rgba(255, 215, 0, 0.6);
+}
+
+.ecosystem-two-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+.eco-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+}
+.eco-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.eco-box h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+.eco-box p {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  margin-bottom: 12px;
+}
+.eco-link-arrow {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #03050c;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 65px 0 35px;
+}
+.footer-inner-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 45px;
+}
+.footer-brand h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+.footer-col h5 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a {
+  color: var(--text-body);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+.footer-col ul li a:hover { color: #FFFFFF; }
+.sebi-disclaimer-p {
+  font-size: 0.76rem;
+  color: #64748B;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS (100% FLUID)
+   ═════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .nav-links-menu { display: none !important; }
+  .burger-toggle-btn { display: block !important; }
+  .rewards-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .how-grid-four { grid-template-columns: repeat(2, 1fr); }
+  .fair-play-grid { grid-template-columns: 1fr; }
+  .ecosystem-two-grid { grid-template-columns: 1fr; }
+  .footer-inner-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 16px !important; }
+  .rewards-hero-deck { padding: 40px 0 25px !important; }
+  .rewards-main-title { font-size: 2.1rem !important; }
+  .rewards-stats-row { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .stat-digit { font-size: 1.5rem !important; }
+  .countdown-terminal-card { padding: 18px 14px !important; }
+  .cd-item { min-width: 58px !important; padding: 8px 10px !important; }
+  .cd-num { font-size: 1.5rem !important; }
+  .cd-sep { font-size: 1.4rem !important; }
+  .tabs-wrap { flex-direction: column; align-items: stretch; }
+  .tab-btn { justify-content: center; }
+  .podium-wrap { gap: 8px !important; }
+  .podium-card { padding: 18px 10px 0 !important; }
+  .podium-reward { font-size: 1.3rem !important; }
+  .how-grid-four { grid-template-columns: 1fr !important; }
+  .footer-inner-grid { grid-template-columns: 1fr !important; }
+  .rewards-cta-deck { padding: 36px 18px !important; }
 }
 </style>
-<link rel="stylesheet" href="css/worldclass-3d.css?v=2026.3">
 </head>
+
 <body>
 
-<!-- BG LAYERS -->
-<div class="bg-layer"></div>
-<div class="grid-overlay"></div>
+<!-- Background Interactive FinTech Constellation Canvas -->
+<canvas id="fintechCanvas"></canvas>
 
-<!-- ══════════════════════════════════════
-     NAV — White style like homepage
-══════════════════════════════════════ -->
-<!-- ═══ ECOSYSTEM BAR ═══ -->
-<div class="bbm-ecosystem-bar">
-  <span class="pill-badge">🚀 Official Ecosystem</span>
-  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
-  <span class="sep">•</span>
-  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
-  <span class="sep">•</span>
-  <span>🏆 India's #1 Free Virtual Trading App</span>
-</div>
+<div class="page-wrapper">
 
-<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
-<!-- ═══ ECOSYSTEM BAR ═══ -->
+  <!-- ═══════════════════════════════════════════════════════════
+       PRISTINE FLOATING NAVBAR (MATCHING HOMEPAGE & LEARNING)
+       ═══════════════════════════════════════════════════════════ -->
+  <nav class="bbm-navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-anchor">
+        <img src="images/BullBear logo.jpg" alt="BullBear Market Official Logo" class="brand-logo-img" width="44" height="44"/>
+        <div class="brand-text-block">
+          <span class="brand-h1-title">BullBear<span>Market</span></span>
+          <span class="brand-tag-small">Rewards Arena</span>
+        </div>
+      </a>
 
+      <ul class="nav-links-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learning.html">Learning Academy</a></li>
+        <li><a href="rewards.html" class="active">Leaderboard &amp; Rewards</a></li>
+        <li><a href="blog/">Trading Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-nav-play">📱 Get App</a></li>
+      </ul>
 
-<!-- ═══ UNIFIED TOPBAR NAV ═══ -->
-<nav class="bbm-topbar" role="navigation" aria-label="Main Navigation">
-  <div class="bbm-topbar-inner">
-    <a href="index.html" class="bbm-brand">
-      <img src="images/bullbear-logo.jpg" alt="BullBear Market Logo" class="bbm-brand-logo">
-      <div class="bbm-brand-text">
-        <span class="bbm-brand-title">BullBear Market</span>
-        <span class="bbm-brand-subtitle">Learn • Practice • Win</span>
+      <button class="burger-toggle-btn" id="burgerBtn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+
+    <div class="mobile-nav-panel" id="mobileNav">
+      <a href="index.html">🏠 Home</a>
+      <a href="learning.html">🎓 Learning Academy (20 Topics)</a>
+      <a href="rewards.html" class="active">🏆 Leaderboard &amp; Cash Rewards</a>
+      <a href="blog/">✍️ Trading Blog &amp; Guides</a>
+      <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+      <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+      <a href="faq.html">❓ FAQ</a>
+      <a href="about.html">ℹ️ About Us</a>
+      <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700;">📱 Install Android App (Free ₹1 Lakh)</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ANNOUNCEMENT TICKER (PROMOTING SISTER SITES & REAL F&O)
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="market-strip-bar" aria-label="Ecosystem Announcements">
+    <div class="strip-track">
+      <!-- 1: Sister Platform Promo -->
+      <div class="strip-item">
+        <a href="https://bearbullmarket.in" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">🌐 SISTER PLATFORM</span>
+          <strong>BearBullMarket.in</strong>
+          <span class="cyan">Explore Sister Trading Hub ↗</span>
+        </a>
       </div>
-    </a>
-    
-    <ul class="bbm-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="learning.html">Learning</a></li>
-      <li><a href="rewards.html" class="active">Rewards</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="privacy-policy.html">Privacy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" class="bbm-nav-cta">⬇ Download App</a></li>
-    </ul>
-    
-    <button class="bbm-burger" aria-label="Toggle navigation menu">☰</button>
-  </div>
-</nav>
 
-<!-- ═══ MOBILE DRAWER ═══ -->
-<div class="bbm-mobile-drawer" id="bbmMobileDrawer">
-  <a href="index.html">🏠 Home</a>
-  <a href="learning.html">📚 Free Learning</a>
-  <a href="rewards.html" class="active">🏆 Leaderboard & Rewards</a>
-  <a href="blog/">✍️ Trading Blog & Guides</a>
-  <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
-  <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
-  <a href="faq.html">❓ FAQ</a>
-  <a href="about.html">ℹ️ About Us</a>
-  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
-  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
-  <a href="privacy-policy.html">🔒 Privacy Policy</a>
-  <a href="terms.html">📜 Terms of Use</a>
-  <a href="support.html">💬 Support</a>
-  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
-</div>
-
-<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
-<div class="bbm-ticker-wrap" aria-hidden="true">
-  <div class="bbm-ticker">
-    <span>📊 <strong>Stock Market App India</strong></span>
-    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
-    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
-    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
-    <span>📚 <strong>Stock Market for Beginners</strong></span>
-    <span class="green">🇮🇳 <strong>Made in India</strong></span>
-    <span>💯 <strong>100% Free Forever</strong></span>
-    <span>📉 <strong>Technical Analysis</strong></span>
-    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
-    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
-    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
-    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
-    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
-    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
-    <!-- Repeat for smooth scroll -->
-    <span>📊 <strong>Stock Market App India</strong></span>
-    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
-    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
-    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
-    <span>📚 <strong>Stock Market for Beginners</strong></span>
-    <span class="green">🇮🇳 <strong>Made in India</strong></span>
-    <span>💯 <strong>100% Free Forever</strong></span>
-    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
-    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
-    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
-  </div>
-</div>
-
-
-<!-- ═══ MOBILE DRAWER ═══ -->
-
-
-<!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
-
-
-
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-badge">🔴 LIVE · Contest Active</div>
-  <h1>🏆 Win Real Rewards</h1>
-  <p class="sub">India's only free stock market platform where your virtual trading skills earn <strong>real cash prizes</strong>. No entry fee. Zero real money risk.</p>
-
-  <div class="tagline-row">
-    <span>✅ Free to Compete</span>
-    <span>🏅 Top 50 Win Prizes</span>
-    <span>📅 Weekly + Monthly</span>
-    <span>🇮🇳 Made in India</span>
-  </div>
-
-  <!-- ══ PLAY STORE DOWNLOAD BUTTON (where red line was) ══ -->
-  <div class="playstore-wrap">
-    <a
-      href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app"
-      class="playstore-btn"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div class="ps-icon">▶</div>
-      <div class="ps-text">
-        <span class="ps-top">Download Free</span>
-        <span class="ps-main">On Play Store</span>
-        <span class="ps-sub">Join Now &amp; Win</span>
+      <!-- 2: Real F&O Data without risk -->
+      <div class="strip-item">
+        <span class="strip-tag emerald">📈 REAL F&amp;O DATA</span>
+        <strong>Live NIFTY &amp; Bank Nifty Options</strong>
+        <span class="up">100% Risk-Free Trading Practice</span>
       </div>
-      <span class="ps-arrow"></span>
-    </a>
+
+      <!-- 3: Tech Partner Promo -->
+      <div class="strip-item">
+        <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">
+          <span class="strip-tag">💻 TECH PARTNER</span>
+          <strong>Aviraaj Digitech</strong>
+          <span class="gold">Fintech Engineering Partner ↗</span>
+        </a>
+      </div>
+
+      <!-- 4: Virtual Wallet & Monthly Reset -->
+      <div class="strip-item">
+        <span class="strip-tag emerald">💰 VIRTUAL CAPITAL</span>
+        <strong>₹1,00,000 Free Wallet</strong>
+        <span class="up">Monthly Fair Reset on 1st Date</span>
+      </div>
+
+      <!-- 5: Android App on Play Store -->
+      <div class="strip-item">
+        <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">📱 ANDROID APP</span>
+          <strong>BullBear Market on Play Store</strong>
+          <span class="cyan">Install Free Now ↗</span>
+        </a>
+      </div>
+
+      <!-- 6: Live Market Tick Data -->
+      <div class="strip-item">
+        <span class="strip-tag">⚡ LIVE TICK FEEDS</span>
+        <strong>NSE &amp; BSE Real-Time Execution</strong>
+        <span class="up">Zero Delay Scalping</span>
+      </div>
+
+      <!-- 7: Cash Rewards Highlights -->
+      <div class="strip-item">
+        <span class="strip-tag">🏆 TOURNAMENTS</span>
+        <strong>Weekly ₹2,500 &amp; Monthly ₹25,000</strong>
+        <span class="gold">100% Free Entry</span>
+      </div>
+
+      <!-- ════ REPEAT EXACTLY FOR SEAMLESS 50% INFINITE LOOP ════ -->
+      <div class="strip-item">
+        <a href="https://bearbullmarket.in" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">🌐 SISTER PLATFORM</span>
+          <strong>BearBullMarket.in</strong>
+          <span class="cyan">Explore Sister Trading Hub ↗</span>
+        </a>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag emerald">📈 REAL F&amp;O DATA</span>
+        <strong>Live NIFTY &amp; Bank Nifty Options</strong>
+        <span class="up">100% Risk-Free Trading Practice</span>
+      </div>
+      <div class="strip-item">
+        <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">
+          <span class="strip-tag">💻 TECH PARTNER</span>
+          <strong>Aviraaj Digitech</strong>
+          <span class="gold">Fintech Engineering Partner ↗</span>
+        </a>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag emerald">💰 VIRTUAL CAPITAL</span>
+        <strong>₹1,00,000 Free Wallet</strong>
+        <span class="up">Monthly Fair Reset on 1st Date</span>
+      </div>
+      <div class="strip-item">
+        <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">📱 ANDROID APP</span>
+          <strong>BullBear Market on Play Store</strong>
+          <span class="cyan">Install Free Now ↗</span>
+        </a>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag">⚡ LIVE TICK FEEDS</span>
+        <strong>NSE &amp; BSE Real-Time Execution</strong>
+        <span class="up">Zero Delay Scalping</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag">🏆 TOURNAMENTS</span>
+        <strong>Weekly ₹2,500 &amp; Monthly ₹25,000</strong>
+        <span class="gold">100% Free Entry</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Countdown Timer -->
-  <div class="countdown-bar">
-    <div class="cd-item"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Days</span></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-item"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Hours</span></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-item"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Mins</span></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-item"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">Secs</span></div>
-  </div>
-  <p style="font-size:.72rem;color:var(--muted);margin-top:8px;">⏱ Time remaining until next Sunday 5 PM reward distribution</p>
-</section>
+  <main class="container">
 
-<!-- STATS -->
-<div class="stats-strip">
-  <div class="stat-pill"><div class="s-val">50</div><div class="s-key">Winners Per Contest</div></div>
-  <div class="stat-pill"><div class="s-val">2×</div><div class="s-key">Weekly + Monthly</div></div>
-  <div class="stat-pill"><div class="s-val">₹0</div><div class="s-key">Entry Fee</div></div>
-  <div class="stat-pill"><div class="s-val">🏅</div><div class="s-key">Real Prizes</div></div>
-</div>
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO SECTION (CORRECTED PLATFORM NUMBERS)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="rewards-hero-deck">
+      <div class="rewards-hero-badge">
+        <span>🏆 Official Tournament Arena — Free Cash Rewards</span>
+      </div>
+      <h1 class="rewards-main-title">
+        Compete, Rank #1 &amp; Win Real Cash<br/>
+        <span class="gradient-text">100% Free With ₹1 Lakh Virtual Capital</span>
+      </h1>
+      <p class="rewards-subtext">
+        Trade live NSE/BSE stocks, futures, and options with zero financial risk. Top the leaderboard to win up to <strong>₹25,000 monthly</strong> and <strong>₹2,500 weekly</strong> cash prizes sent directly to your UPI or Bank Account.
+      </p>
 
-<!-- ── TABS ── -->
-<div class="tabs-wrap">
-  <button id="tab-monthly" class="tab-btn active" onclick="loadData('monthly')">📅 Monthly Contest</button>
-  <button id="tab-weekly"  class="tab-btn"        onclick="loadData('weekly')">⚡ Weekly Contest</button>
-</div>
-
-<!-- ── PODIUM ── -->
-<section class="podium-section">
-  <div class="section-label">🥇 Top 3 Prize Pool</div>
-  <div id="top3" class="podium-wrap">
-    <div class="loading-state"><div class="spin"></div><span>Loading leaderboard…</span></div>
-  </div>
-</section>
-
-<!-- TOTAL POOL -->
-<div id="total-block" style="max-width:700px;margin:0 auto 16px;padding:0 20px;">
-  <div style="position:relative;z-index:1;width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--green-dim);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:14px 20px;">
-    <span style="font-size:.85rem;color:var(--muted);">💰 Total Prize Pool (Top 50)</span>
-    <span id="total-pool" style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:var(--green);">—</span>
-  </div>
-</div>
-
-<!-- ── REWARD LIST ── -->
-<section class="list-section">
-  <div class="section-label">🎯 Full Rewards — Rank 1 to 50</div>
-  <div id="list"></div>
-</section>
-
-<!-- ── HOW IT WORKS ── -->
-<section class="section-wrap">
-  <div class="section-label">⚡ How It Works</div>
-  <div class="how-grid">
-    <div class="how-card">
-      <div class="how-step">Step 01</div>
-      <div class="how-icon">📚</div>
-      <div class="how-title">Learn the Market</div>
-      <div class="how-desc">Complete our free stock market course — candlesticks, indicators, strategies — all in Hindi & English.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-step">Step 02</div>
-      <div class="how-icon">📈</div>
-      <div class="how-title">Trade Virtually</div>
-      <div class="how-desc">Practice daily with virtual money. Build a profitable strategy — zero real money risk.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-step">Step 03</div>
-      <div class="how-icon">🏆</div>
-      <div class="how-title">Climb Leaderboard</div>
-      <div class="how-desc">Compete weekly and monthly. Your virtual trading performance earns you a leaderboard rank.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-step">Step 04</div>
-      <div class="how-icon">🎁</div>
-      <div class="how-title">Win Real Prizes</div>
-      <div class="how-desc">Top 50 traders win real rewards distributed every Sunday 5 PM and month-end.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHY REWARDS ── -->
-<section class="why-wrap">
-  <div class="section-label">💡 Why We Give Rewards</div>
-  <div class="why-card">
-    <div class="why-left">
-      <h2>Learn → Practice → Win → Trade Real</h2>
-      <p>Most beginners lose money in real markets because they jump in without knowledge or practice. BullBear Market flips that script.</p>
-      <p>By competing on our leaderboard, you build real trading discipline. Our rewards can serve as starting capital for your real trading journey.</p>
-      <p>After 6–12 months of practice here, you enter real markets with skill, not luck.</p>
-    </div>
-    <div class="why-right">
-      <div class="why-item">
-        <div class="why-item-icon">🛡️</div>
-        <div class="why-item-text">
-          <strong>Zero Financial Risk</strong>
-          <span>Practice with virtual coins. No real money involved at any stage.</span>
+      <!-- 4-Item 3D Stats Strip -->
+      <div class="rewards-stats-row">
+        <div class="rewards-stat-box">
+          <div class="stat-digit gold">₹1,00,000</div>
+          <div class="stat-label-text">Starting Virtual Capital</div>
+        </div>
+        <div class="rewards-stat-box">
+          <div class="stat-digit emerald">1st of Month</div>
+          <div class="stat-label-text">Fair Balance Reset</div>
+        </div>
+        <div class="rewards-stat-box">
+          <div class="stat-digit cyan">Top 50</div>
+          <div class="stat-label-text">Cash Winners Per Contest</div>
+        </div>
+        <div class="rewards-stat-box">
+          <div class="stat-digit gold">₹25,000</div>
+          <div class="stat-label-text">Max Monthly Reward</div>
         </div>
       </div>
-      <div class="why-item">
-        <div class="why-item-icon">⚖️</div>
-        <div class="why-item-text">
-          <strong>Fair Competition</strong>
-          <span>Rankings based purely on virtual trading performance. Manipulation = instant ban.</span>
+
+      <!-- Live Digital Countdown Terminal -->
+      <div class="countdown-terminal-card">
+        <div class="cd-header-label">⏱ Next Sunday 5:00 PM Reward Distribution In:</div>
+        <div class="countdown-bar">
+          <div class="cd-item"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Days</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Hours</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Mins</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">Secs</span></div>
         </div>
       </div>
-      <div class="why-item">
-        <div class="why-item-icon">🚀</div>
-        <div class="why-item-text">
-          <strong>Real Capital for Real Trading</strong>
-          <span>Use your winnings as starting capital on Zerodha, Upstox, Angel One etc.</span>
-        </div>
+
+      <!-- Contest Tabs (Monthly vs Weekly) -->
+      <div class="tabs-wrap">
+        <button id="tab-monthly" class="tab-btn active" onclick="loadData('monthly')">📅 Monthly Championship (Up to ₹25,000)</button>
+        <button id="tab-weekly"  class="tab-btn"        onclick="loadData('weekly')">⚡ Weekly Tournament (Up to ₹2,500)</button>
       </div>
-      <div class="why-item">
-        <div class="why-item-icon">🧠</div>
-        <div class="why-item-text">
-          <strong>Builds Discipline</strong>
-          <span>Competing keeps you consistent — daily practice, better decisions, less emotion.</span>
+    </section>
+
+    <!-- Google AdSense Placement 1 (Zero-Footprint Mode) -->
+    <div class="clean-ads-slot">
+      <ins class="adsbygoogle"
+           data-ad-client="ca-pub-5614208601638283"
+           data-ad-slot="9823412358"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         LIVE PODIUM SECTION (POPULATED BY FIREBASE)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="podium-section">
+      <div class="section-label">🥇 Top 3 Podium Champions</div>
+      <div id="top3" class="podium-wrap">
+        <div class="loading-state"><div class="spin"></div><span>Loading live leaderboard…</span></div>
+      </div>
+    </section>
+
+    <!-- Total Prize Pool Strip (Calculated by Firebase) -->
+    <div id="total-block">
+      <div class="total-pool-card">
+        <div class="total-pool-title">
+          <span>💰 Total Live Prize Pool (Top 50 Winners):</span>
         </div>
+        <div id="total-pool">—</div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ── FAQ MINI ── -->
-<section class="faq-mini">
-  <div class="section-label">❓ Rewards FAQ</div>
+    <!-- ═══════════════════════════════════════════════════════════
+         FULL REWARD LIST (RANKS 1 TO 50 POPULATED BY FIREBASE)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="list-section">
+      <div style="text-align:center;margin-bottom:20px;">
+        <span class="section-label">🎯 Leaderboard Payout Ranks (Top 50)</span>
+      </div>
+      <div id="list"></div>
+    </section>
 
-  <div class="faq-mini-item">
-    <div class="faq-mini-q"><span class="q-icon">Q</span>Rewards कैसे मिलती हैं?</div>
-    <div class="faq-mini-a">हर हफ्ते और महीने के अंत में top 50 performers को rewards distribute होती हैं। Weekly — हर Sunday 5 PM, Monthly — हर महीने के आखिर में।</div>
-  </div>
-  <div class="faq-mini-item">
-    <div class="faq-mini-q"><span class="q-icon">Q</span>क्या contest में participate करना free है?</div>
-    <div class="faq-mini-a">100% Free! कोई entry fee नहीं है। बस platform पर virtual trading करो और leaderboard में automatically rank होते जाओ।</div>
-  </div>
-  <div class="faq-mini-item">
-    <div class="faq-mini-q"><span class="q-icon">Q</span>Rewards real life में use हो सकती हैं?</div>
-    <div class="faq-mini-a">हाँ! Rewards real cash prizes हैं जिन्हें आप real trading platforms पर starting capital के रूप में use कर सकते हो।</div>
-  </div>
-  <div class="faq-mini-item">
-    <div class="faq-mini-q"><span class="q-icon">Q</span>Leaderboard rank कैसे improve करें?</div>
-    <div class="faq-mini-a">Daily virtual trading practice करो, सही strategy use करो, risk management सीखो और consistent profitable trades लो। More learning = better ranks.</div>
-  </div>
-</section>
+    <!-- ═══════════════════════════════════════════════════════════
+         HOW REWARDS WORK (4-STEP PROCESS)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="how-it-works-deck">
+      <div style="text-align:center;margin-bottom:30px;">
+        <div class="rewards-hero-badge">⚡ Transparent Process</div>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;">How to Earn Real Cash Rewards</h2>
+      </div>
 
-<!-- ── INTER-LINKS ── -->
-<section class="links-section">
-  <div class="section-label">🔗 Explore BullBear Market</div>
-  <div class="links-grid">
-    <a href="https://bullbearmarket.in/learning.html" class="link-card">
-      <span class="link-icon">📚</span>
-      <div class="link-info">
-        <div class="link-title">Free Learning Hub</div>
-        <div class="link-desc">20+ topics — candlestick, RSI, strategies, psychology</div>
-      </div>
-    </a>
-    <a href="https://bullbearmarket.in/candlestick.html" class="link-card">
-      <span class="link-icon">📊</span>
-      <div class="link-info">
-        <div class="link-title">Candlestick Guide</div>
-        <div class="link-desc">Master patterns that top traders use daily</div>
-      </div>
-    </a>
-    <a href="https://bullbearmarket.in/risk.html" class="link-card">
-      <span class="link-icon">🛡️</span>
-      <div class="link-info">
-        <div class="link-title">Risk Management</div>
-        <div class="link-desc">The skill that separates winners from losers</div>
-      </div>
-    </a>
-    <a href="https://bullbearmarket.in/psychology.html" class="link-card">
-      <span class="link-icon">🧠</span>
-      <div class="link-info">
-        <div class="link-title">Trading Psychology</div>
-        <div class="link-desc">Control fear & greed — build a winning mindset</div>
-      </div>
-    </a>
-    <a href="https://bullbearmarket.in/blog/" class="link-card">
-      <span class="link-icon">📝</span>
-      <div class="link-info">
-        <div class="link-title">Trading Blog</div>
-        <div class="link-desc">In-depth articles for Indian stock market traders</div>
-      </div>
-    </a>
-    <a href="https://bullbearmarket.in/faq.html" class="link-card">
-      <span class="link-icon">❓</span>
-      <div class="link-info">
-        <div class="link-title">FAQ</div>
-        <div class="link-desc">All your questions about BullBear answered</div>
-      </div>
-    </a>
-  </div>
-</section>
+      <div class="how-grid-four">
+        <div class="how-step-card">
+          <span class="how-step-num">STEP 01</span>
+          <div class="how-icon-sym">💰</div>
+          <h4 class="how-h4-title">₹1 Lakh Virtual Capital</h4>
+          <p class="how-p-desc">Get ₹1,00,000 virtual balance instantly when you install the BullBear Market app. Zero deposit or investment required.</p>
+        </div>
 
-<!-- ── FOOTER CTA ── -->
-<section class="footer-cta">
-  <div class="footer-cta-inner">
-    <h2>Ready to Win? 🏆</h2>
-    <p>Join thousands of Indian traders who are learning, practicing, and winning on BullBear Market — completely free.</p>
-    <div class="btn-row">
-      <a href="https://bullbearmarket.in/learning.html" class="btn-gold">📚 Start Learning Free</a>
-      <a href="https://bullbearmarket.in/faq.html" class="btn-ghost">❓ Read FAQ</a>
+        <div class="how-step-card">
+          <span class="how-step-num">STEP 02</span>
+          <div class="how-icon-sym">📈</div>
+          <h4 class="how-h4-title">Trade Live NSE/BSE Markets</h4>
+          <p class="how-p-desc">Execute real-time options, futures, and stock trades with live tick data. Maximize your P&amp;L through disciplined trading.</p>
+        </div>
+
+        <div class="how-step-card">
+          <span class="how-step-num">STEP 03</span>
+          <div class="how-icon-sym">🏆</div>
+          <h4 class="how-h4-title">Climb to Top 50</h4>
+          <p class="how-p-desc">Compete on the weekly and monthly leaderboards. Rankings update in real time based on genuine trading performance.</p>
+        </div>
+
+        <div class="how-step-card">
+          <span class="how-step-num">STEP 04</span>
+          <div class="how-icon-sym">💸</div>
+          <h4 class="how-h4-title">Direct UPI Cash Payout</h4>
+          <p class="how-p-desc">Prizes are distributed every Sunday at 5:00 PM and month-end directly to your UPI ID or Bank Account with zero deductions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FAIR PLAY & INTEGRITY PROTOCOL (USER ECONOMICS HIGHLIGHTED)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="fair-play-deck">
+      <div style="text-align:center;">
+        <span class="strip-tag emerald">🛡️ Zero Bias &amp; 100% Fair Play</span>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;color:#FFF;margin:12px 0 6px;">Guaranteed Equal Opportunity For All</h3>
+        <p style="color:var(--text-body);font-size:0.96rem;max-width:700px;margin:0 auto;">We designed BullBear Market tournaments to reward pure trading skill, eliminating any unfair advantage.</p>
+      </div>
+
+      <div class="fair-play-grid">
+        <div class="fair-card-item">
+          <h5>🔄 1st of Every Month Reset</h5>
+          <p>On the 1st date of each month, everyone's balance resets back to ₹1,00,000. New traders and veterans compete on an identical playing field.</p>
+        </div>
+
+        <div class="fair-card-item">
+          <h5>🚫 Anti-Cheat Multi-Account Shield</h5>
+          <p>Advanced device fingerprinting and IP checks prevent duplicate accounts or artificial volume manipulation, keeping tournaments fair.</p>
+        </div>
+
+        <div class="fair-card-item">
+          <h5>⚡ Live Market Tick Validation</h5>
+          <p>All trades are matched against real NSE/BSE ticks. You cannot buy at unrealistic prices or exploit delayed feeds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google AdSense Placement 2 (Zero-Footprint Mode) -->
+    <div class="clean-ads-slot">
+      <ins class="adsbygoogle"
+           data-ad-client="ca-pub-5614208601638283"
+           data-ad-slot="9823412359"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </div>
-</section>
 
-<!-- DISTRIBUTION NOTE -->
-<div class="footer-note-inline">
-  ⏰ Rewards distributed every <strong>Sunday 5 PM</strong> (Weekly) and <strong>Month End</strong> (Monthly).
-  Stay active, trade smart & climb the leaderboard 🚀
+    <!-- ═══════════════════════════════════════════════════════════
+         GRAND PRACTICE CALL TO ACTION (CTA)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="rewards-cta-deck">
+      <span class="rewards-hero-badge">🚀 Join the Championship</span>
+      <h2 class="cta-h2-title">Ready to Win Real Cash Without Any Risk?</h2>
+      <p class="cta-sub-p">Download the app, claim your free ₹1,00,000 virtual balance, and start climbing today's leaderboard.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-cta-gold">
+        📱 Install Android App &amp; Start Trading ➔
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         ECOSYSTEM & TECHNOLOGY PARTNERS
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="ecosystem-two-grid">
+      <a href="https://bearbullmarket.in" target="_blank" rel="noopener" class="eco-box">
+        <span class="strip-tag cyan">🌐 Sister Platform</span>
+        <h4>BearBullMarket.in</h4>
+        <p>Explore our companion trading ecosystem with multi-asset market analytics and strategy simulations.</p>
+        <span class="eco-link-arrow">Visit BearBullMarket.in ↗</span>
+      </a>
+
+      <a href="https://aviraajdigitech.com" target="_blank" rel="noopener" class="eco-box">
+        <span class="strip-tag">💻 Technology Partner</span>
+        <h4>Aviraaj Digitech</h4>
+        <p>Enterprise fintech software architecture, real-time market data streaming, and scalable mobile systems.</p>
+        <span class="eco-link-arrow">Visit Aviraaj Digitech ↗</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       COMPREHENSIVE INSTITUTIONAL FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner-grid">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <img src="images/BullBear logo.jpg" alt="BullBear Market Logo" width="36" height="36" style="border-radius:8px;border:1px solid var(--gold);"/>
+            <h4>BullBear Market</h4>
+          </div>
+          <p>India's premier virtual trading simulator and paper trading rewards tournament platform. 100% Free educational competitions with real skill-based cash incentives.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Tournaments</h5>
+          <ul>
+            <li><a href="rewards.html">Monthly Championship</a></li>
+            <li><a href="rewards.html">Weekly Tournament</a></li>
+            <li><a href="rewards.html">Top 50 Leaderboard</a></li>
+            <li><a href="faq.html">Payout FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <ul>
+            <li><a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></li>
+            <li><a href="https://aviraajdigitech.com" target="_blank" rel="noopener">Aviraaj Digitech</a></li>
+            <li><a href="learning.html">Learning Academy</a></li>
+            <li><a href="blog/">Research Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal &amp; Compliance</h5>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">SEBI Regulatory Disclaimer</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sebi-disclaimer-p">
+        <strong>SEBI Educational Compliance Disclaimer:</strong> BullBear Market is strictly an educational financial market simulation and paper trading platform. All portfolio balances, orders, and P&amp;L representations are 100% virtual and do not involve real money transactions, real depository holdings, or real brokerage accounts. Rewards are skill-based performance incentives sponsored for educational benchmarking. This platform does not provide investment advice or stock tips.
+      </p>
+    </div>
+  </footer>
+
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <p style="margin-bottom:10px;">
-    <a href="https://bullbearmarket.in/index.html">Home</a>
-    <a href="https://bullbearmarket.in/learning.html">Learning</a>
-    <a href="https://bullbearmarket.in/blog/">Blog</a>
-    <a href="https://bullbearmarket.in/faq.html">FAQ</a>
-    <a href="https://bullbearmarket.in/about.html">About</a>
-    <a href="https://bullbearmarket.in/privacy-policy.html">Privacy Policy</a>
-    <a href="https://bullbearmarket.in/terms.html">Terms</a>
-    <a href="https://bullbearmarket.in/support.html">Support</a>
-  </p>
-  <p>© 2026 BullBear Market. All rights reserved. | 🇮🇳 Made in India | Educational Platform – No Real Money Trading</p>
-</footer>
-
-<!-- COUNTDOWN SCRIPT -->
+<!-- ═══════════════════════════════════════════════════════════
+     INTERACTIVE JAVASCRIPT: CANVAS, COUNTDOWN & MOBILE NAV
+     ═══════════════════════════════════════════════════════════ -->
 <script>
+// 1. Mobile Navigation Toggle
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileNav = document.getElementById('mobileNav');
+if (burgerBtn && mobileNav) {
+  burgerBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+}
+
+// 2. High-Tech Constellation Mesh Canvas
+const canvas = document.getElementById('fintechCanvas');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let particles = [];
+
+  function resizeCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    particles = [];
+    const count = Math.min(Math.floor((width * height) / 16000), 75);
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        radius: Math.random() * 1.6 + 1,
+        color: Math.random() > 0.4 ? 'rgba(255, 215, 0, ' : 'rgba(0, 242, 152, '
+      });
+    }
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  function animateCanvas() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < particles.length; i++) {
+      let p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color + '0.6)';
+      ctx.fill();
+
+      for (let j = i + 1; j < particles.length; j++) {
+        let p2 = particles[j];
+        let dx = p.x - p2.x;
+        let dy = p.y - p2.y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = 'rgba(255, 215, 0, ' + (0.15 - dist / 700) + ')';
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(animateCanvas);
+  }
+  animateCanvas();
+}
+
+// 3. Live Countdown Timer to Next Sunday 5:00 PM
 function updateCountdown(){
   const now = new Date();
   const target = new Date(now);
@@ -1045,20 +1580,28 @@ function updateCountdown(){
   target.setDate(target.getDate() + daysUntilSun);
   target.setHours(17, 0, 0, 0);
   const diff = target - now;
-  if(diff <= 0){ document.getElementById('cd-d').textContent='00'; return; }
+  if(diff <= 0){
+    const dElem = document.getElementById('cd-d');
+    if (dElem) dElem.textContent = '00';
+    return;
+  }
   const d = Math.floor(diff/86400000);
   const h = Math.floor((diff%86400000)/3600000);
   const m = Math.floor((diff%3600000)/60000);
   const s = Math.floor((diff%60000)/1000);
-  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  
+  const dElem = document.getElementById('cd-d');
+  const hElem = document.getElementById('cd-h');
+  const mElem = document.getElementById('cd-m');
+  const sElem = document.getElementById('cd-s');
+  if (dElem) dElem.textContent = String(d).padStart(2,'0');
+  if (hElem) hElem.textContent = String(h).padStart(2,'0');
+  if (mElem) mElem.textContent = String(m).padStart(2,'0');
+  if (sElem) sElem.textContent = String(s).padStart(2,'0');
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
 </script>
 
-<script src="js/unified-header.js?v=2026.3"></script>
 </body>
 </html>
