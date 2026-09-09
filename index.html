@@ -360,22 +360,55 @@ img, video, iframe, canvas, svg {
 .strip-item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 0 20px;
-  font-size: 0.78rem;
-  font-weight: 700;
+  gap: 8px;
+  padding: 0 22px;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-body);
   border-right: 1px solid rgba(255, 255, 255, 0.08);
-  font-family: 'Space Mono', monospace;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
-.strip-item .up { color: var(--emerald); font-weight: 800; }
-.strip-item .down { color: var(--red); font-weight: 800; }
+.strip-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.strip-item a:hover {
+  color: #FFFFFF;
+}
+.strip-item a:hover .strip-tag {
+  background: rgba(255, 215, 0, 0.25);
+  color: #FFF;
+}
+.strip-item strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.strip-item .up { color: var(--emerald); font-weight: 700; }
+.strip-item .cyan { color: var(--cyan); font-weight: 700; }
+.strip-item .gold { color: var(--gold); font-weight: 700; }
 .strip-tag {
   background: rgba(255, 215, 0, 0.12);
+  border: 1px solid rgba(255, 215, 0, 0.3);
   color: var(--gold);
-  padding: 1px 6px;
-  border-radius: 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
   font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.strip-tag.cyan {
+  background: rgba(0, 242, 254, 0.12);
+  border-color: rgba(0, 242, 254, 0.3);
+  color: var(--cyan);
+}
+.strip-tag.emerald {
+  background: rgba(0, 242, 152, 0.12);
+  border-color: rgba(0, 242, 152, 0.3);
+  color: var(--emerald);
 }
 @keyframes stripScroll {
   0% { transform: translateX(0); }
@@ -1258,21 +1291,108 @@ img, video, iframe, canvas, svg {
   <!-- ═══════════════════════════════════════════════════════════
        BLOOMBERG-STYLE LIVE FINANCIAL TICKER
        ═══════════════════════════════════════════════════════════ -->
-  <div class="market-strip-bar" aria-hidden="true">
+  <!-- ═══════════════════════════════════════════════════════════
+       ECOSYSTEM ANNOUNCEMENTS & LIVE PROMOTIONS TICKER
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="market-strip-bar" aria-label="Ecosystem Announcements">
     <div class="strip-track">
-      <div class="strip-item"><span class="strip-tag">NSE</span> NIFTY 50 <strong>24,852.40</strong> <span class="up">▲ +142.10 (+0.58%)</span></div>
-      <div class="strip-item"><span class="strip-tag">NSE</span> BANK NIFTY <strong>52,430.15</strong> <span class="up">▲ +380.50 (+0.73%)</span></div>
-      <div class="strip-item"><span class="strip-tag">BSE</span> SENSEX <strong>81,420.80</strong> <span class="up">▲ +410.20 (+0.51%)</span></div>
-      <div class="strip-item"><span class="strip-tag">FREE</span> ₹1,00,000 VIRTUAL WALLET <span class="up">EACH USER</span></div>
-      <div class="strip-item"><span class="strip-tag">RESET</span> 1ST OF EVERY MONTH <span class="up">FAIR EQUAL BALANCE</span></div>
-      <div class="strip-item"><span class="strip-tag">WIN</span> WEEKLY MAX ₹2,500 <span class="up">MONTHLY ₹25,000 CASH</span></div>
-      <div class="strip-item"><span class="strip-tag">SEBI</span> 100% RISK-FREE SIMULATOR <span class="up">NO INVESTMENT</span></div>
-      <!-- Repeat -->
-      <div class="strip-item"><span class="strip-tag">NSE</span> NIFTY 50 <strong>24,852.40</strong> <span class="up">▲ +142.10 (+0.58%)</span></div>
-      <div class="strip-item"><span class="strip-tag">NSE</span> BANK NIFTY <strong>52,430.15</strong> <span class="up">▲ +380.50 (+0.73%)</span></div>
-      <div class="strip-item"><span class="strip-tag">FREE</span> ₹1,00,000 VIRTUAL WALLET <span class="up">EACH USER</span></div>
-      <div class="strip-item"><span class="strip-tag">RESET</span> 1ST OF EVERY MONTH <span class="up">FAIR EQUAL BALANCE</span></div>
-      <div class="strip-item"><span class="strip-tag">WIN</span> WEEKLY MAX ₹2,500 <span class="up">MONTHLY ₹25,000 CASH</span></div>
+      <!-- 1: Sister Platform Promo -->
+      <div class="strip-item">
+        <a href="https://bearbullmarket.in" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">🌐 SISTER PLATFORM</span>
+          <strong>BearBullMarket.in</strong>
+          <span class="cyan">Explore Sister Trading Hub ↗</span>
+        </a>
+      </div>
+
+      <!-- 2: Real F&O Data without risk -->
+      <div class="strip-item">
+        <span class="strip-tag emerald">📈 REAL F&amp;O DATA</span>
+        <strong>Live NIFTY &amp; Bank Nifty Options</strong>
+        <span class="up">100% Risk-Free Trading Practice</span>
+      </div>
+
+      <!-- 3: Tech Partner Promo -->
+      <div class="strip-item">
+        <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">
+          <span class="strip-tag">💻 TECH PARTNER</span>
+          <strong>Aviraaj Digitech</strong>
+          <span class="gold">Fintech Engineering Partner ↗</span>
+        </a>
+      </div>
+
+      <!-- 4: Virtual Wallet & Monthly Reset -->
+      <div class="strip-item">
+        <span class="strip-tag emerald">💰 VIRTUAL CAPITAL</span>
+        <strong>₹1,00,000 Free Wallet</strong>
+        <span class="up">Monthly Fair Reset on 1st Date</span>
+      </div>
+
+      <!-- 5: Android App on Play Store -->
+      <div class="strip-item">
+        <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">📱 ANDROID APP</span>
+          <strong>BullBear Market on Play Store</strong>
+          <span class="cyan">Install Free Now ↗</span>
+        </a>
+      </div>
+
+      <!-- 6: Live Market Tick Data -->
+      <div class="strip-item">
+        <span class="strip-tag">⚡ LIVE TICK FEEDS</span>
+        <strong>NSE &amp; BSE Real-Time Execution</strong>
+        <span class="up">Zero Delay Scalping</span>
+      </div>
+
+      <!-- 7: Zero Risk Commitment -->
+      <div class="strip-item">
+        <span class="strip-tag emerald">🛡️ ZERO RISK</span>
+        <strong>Zero Investment, Zero Brokerage</strong>
+        <span class="up">Learn Before You Risk Real Money</span>
+      </div>
+
+      <!-- ════ REPEAT EXACTLY FOR SEAMLESS 50% INFINITE LOOP ════ -->
+      <div class="strip-item">
+        <a href="https://bearbullmarket.in" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">🌐 SISTER PLATFORM</span>
+          <strong>BearBullMarket.in</strong>
+          <span class="cyan">Explore Sister Trading Hub ↗</span>
+        </a>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag emerald">📈 REAL F&amp;O DATA</span>
+        <strong>Live NIFTY &amp; Bank Nifty Options</strong>
+        <span class="up">100% Risk-Free Trading Practice</span>
+      </div>
+      <div class="strip-item">
+        <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">
+          <span class="strip-tag">💻 TECH PARTNER</span>
+          <strong>Aviraaj Digitech</strong>
+          <span class="gold">Fintech Engineering Partner ↗</span>
+        </a>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag emerald">💰 VIRTUAL CAPITAL</span>
+        <strong>₹1,00,000 Free Wallet</strong>
+        <span class="up">Monthly Fair Reset on 1st Date</span>
+      </div>
+      <div class="strip-item">
+        <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <span class="strip-tag cyan">📱 ANDROID APP</span>
+          <strong>BullBear Market on Play Store</strong>
+          <span class="cyan">Install Free Now ↗</span>
+        </a>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag">⚡ LIVE TICK FEEDS</span>
+        <strong>NSE &amp; BSE Real-Time Execution</strong>
+        <span class="up">Zero Delay Scalping</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-tag emerald">🛡️ ZERO RISK</span>
+        <strong>Zero Investment, Zero Brokerage</strong>
+        <span class="up">Learn Before You Risk Real Money</span>
+      </div>
     </div>
   </div>
 
@@ -1672,8 +1792,8 @@ img, video, iframe, canvas, svg {
     <section>
       <div class="section-headline-box">
         <div class="section-badge-pill">⚖️ Feature Comparison</div>
-        <h2 class="section-main-title">Why BullBear Market Is #1 in India</h2>
-        <p class="section-subtext">See why over 50,000 traders choose our free simulator over paid alternatives.</p>
+        <h2 class="section-main-title">Why BullBear Market Is #1 for Indian Traders</h2>
+        <p class="section-subtext">Real market tick feeds, live F&amp;O options simulation, zero capital risk, and lightning-fast execution.</p>
       </div>
 
       <div class="comp-matrix-container">
@@ -1681,48 +1801,54 @@ img, video, iframe, canvas, svg {
           <table class="comp-table">
             <thead>
               <tr>
-                <th>Feature / Parameter</th>
+                <th>Feature / Trading Parameter</th>
                 <th class="our-col">⚡ BullBear Market</th>
                 <th>Traditional Paper Apps</th>
-                <th>Paid Brokers</th>
+                <th>Real-Money Brokers (Zerodha / Groww)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Pricing & Access</strong></td>
-                <td class="our-col">✅ 100% Free Forever</td>
-                <td>⚠️ Freemium / Paid Plans</td>
-                <td>❌ Brokerage & AMC Fees</td>
+                <td><strong>Real Market Tick Data Feeds</strong></td>
+                <td class="our-col">✅ Real-Time Tick-by-Tick (Live NSE &amp; BSE)</td>
+                <td>❌ 15-Minute Delayed or Static Demo Data</td>
+                <td>✅ Real-Time (Requires Active Demat)</td>
               </tr>
               <tr>
-                <td><strong>Starting Virtual Money</strong></td>
-                <td class="our-col">✅ ₹1,00,000 (Free)</td>
-                <td>⚠️ Limited / ₹50,000</td>
-                <td>❌ None (Real Cash Only)</td>
+                <td><strong>Real F&amp;O Trading (Options &amp; Futures)</strong></td>
+                <td class="our-col">✅ Live NIFTY &amp; Bank Nifty Options Chain &amp; Greeks</td>
+                <td>❌ Equity Cash Stocks Only (No Live Options)</td>
+                <td>✅ Full F&amp;O (High Margin &amp; Strict Segment Rules)</td>
               </tr>
               <tr>
-                <td><strong>Fair Monthly Balance Reset</strong></td>
-                <td class="our-col">✅ 1st of Every Month</td>
-                <td>❌ No Reset (Unfair Ranks)</td>
-                <td>❌ Not Applicable</td>
+                <td><strong>Capital Risk &amp; Financial Loss</strong></td>
+                <td class="our-col">✅ 100% Zero Risk (₹1,00,000 Virtual Practice Capital)</td>
+                <td>✅ Zero Risk (Very Basic &amp; Restricted Features)</td>
+                <td>❌ 100% Real Money Risk (93% Traders Lose Capital)</td>
               </tr>
               <tr>
-                <td><strong>Cash Rewards</strong></td>
-                <td class="our-col">✅ Up to ₹25,000 Monthly</td>
-                <td>❌ Virtual Badges Only</td>
-                <td>❌ None</td>
+                <td><strong>Fast Scalper Mode (1-Click Order Execution)</strong></td>
+                <td class="our-col">✅ Built-in 1-Click Fast Scalper for Index Options</td>
+                <td>❌ No Scalper Mode (Slow Multi-Step Screens)</td>
+                <td>⚠️ Standard Trading Screen (Multiple Confirmations)</td>
               </tr>
               <tr>
-                <td><strong>Live NSE/BSE Feeds</strong></td>
-                <td class="our-col">✅ Real-Time (0ms)</td>
-                <td>❌ 15-Minute Delayed</td>
-                <td>✅ Real-Time</td>
+                <td><strong>Pricing, AMC &amp; Brokerage Fees</strong></td>
+                <td class="our-col">✅ ₹0 Free Forever (Zero Brokerage, Zero AMC)</td>
+                <td>⚠️ Freemium (₹499 - ₹1,999/mo for Pro Features)</td>
+                <td>❌ ₹20/order Brokerage + STT + Stamp Duty + GST + AMC</td>
               </tr>
               <tr>
-                <td><strong>1-Click Fast Scalper</strong></td>
-                <td class="our-col">✅ Built-in for Nifty/BankNifty</td>
-                <td>❌ No Scalper Mode</td>
-                <td>⚠️ Complex Interface</td>
+                <td><strong>Demat &amp; KYC Documentation</strong></td>
+                <td class="our-col">✅ No Demat, No KYC, No Bank Linking Needed</td>
+                <td>⚠️ Email Required, Regular Sales Upsells</td>
+                <td>❌ Mandatory PAN, Aadhaar, Bank Statement &amp; CKYC</td>
+              </tr>
+              <tr>
+                <td><strong>Fair Monthly Reset for Equal Skill Testing</strong></td>
+                <td class="our-col">✅ 1st of Every Month Reset to ₹1,00,000 for All</td>
+                <td>❌ No Reset (Early Accounts Hoard Distorted Ranks)</td>
+                <td>❌ Real Drawdowns Reduce Trading Capital</td>
               </tr>
             </tbody>
           </table>
