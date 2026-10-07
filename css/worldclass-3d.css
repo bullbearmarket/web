@@ -15,17 +15,17 @@
   --bbm-cyan: #00E5FF;
   --bbm-cyan-dim: rgba(0, 229, 255, 0.15);
   --bbm-red: #FF3B3B;
-  --bbm-bg: #050811;
-  --bbm-bg-surface: #0a0f1d;
-  --bbm-card: #0d1424;
-  --bbm-card-hover: #121c33;
-  --bbm-card-glass: rgba(13, 20, 36, 0.75);
-  --bbm-border: rgba(255, 215, 0, 0.18);
+  --bbm-bg: #F8FAFC;
+  --bbm-bg-surface: #F1F5F9;
+  --bbm-card: #FFFFFF;
+  --bbm-card-hover: #F1F5F9;
+  --bbm-card-glass: rgba(255, 255, 255, 0.9);
+  --bbm-border: rgba(0, 0, 0, 0.08);
   --bbm-border-strong: rgba(255, 215, 0, 0.4);
   --bbm-border-green: rgba(0, 255, 136, 0.3);
   --bbm-border-cyan: rgba(0, 229, 255, 0.3);
-  --bbm-text: #F1F5F9;
-  --bbm-text-muted: #94A3B8;
+  --bbm-text: #0F172A;
+  --bbm-text-muted: #475569;
   --bbm-text-dim: #64748B;
   --bbm-radius-sm: 8px;
   --bbm-radius-md: 14px;
@@ -125,7 +125,7 @@ table {
   gap: 14px;
 }
 .bbm-ecosystem-bar a {
-  color: #ffffff;
+  color: #0F172A;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -185,7 +185,7 @@ table {
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.5px;
-  color: #FFFFFF;
+  color: #0F172A;
   line-height: 1.1;
 }
 .bbm-brand-title {
@@ -225,7 +225,7 @@ table {
   gap: 4px;
 }
 .bbm-nav-links a:hover, .bbm-menu a:hover {
-  color: #ffffff;
+  color: #0F172A;
   background: rgba(255, 215, 0, 0.08);
 }
 .bbm-nav-links a.active, .bbm-menu a.active {

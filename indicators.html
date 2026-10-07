@@ -1,15 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-
+<meta charset="utf-8"/>
 <title>Indicators in Trading – RSI, MACD, Moving Average Guide</title>
-
-<meta name="description" content="Learn stock market indicators like RSI, MACD, Moving Average with simple explanation. Complete guide for beginners.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-
+<meta content="Learn stock market indicators like RSI, MACD, Moving Average with simple explanation. Complete guide for beginners." name="description"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
 <style>
 
 body {
@@ -41,126 +37,138 @@ img {
 a { color: gold; }
 
 </style>
-
-<link rel="stylesheet" href="css/worldclass-3d.css?v=2026.3">
-</head>
-
+<link href="css/worldclass-3d.css?v=2026.3" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script></head>
 <body>
 <!-- ═══ ECOSYSTEM BAR ═══ -->
 <div class="bbm-ecosystem-bar">
-  <span class="pill-badge">🚀 Official Ecosystem</span>
-  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
-  <span class="sep">•</span>
-  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
-  <span class="sep">•</span>
-  <span>🏆 India's #1 Free Virtual Trading App</span>
+<span class="pill-badge">🚀 Official Ecosystem</span>
+<span>Sister Trading Platform: <a href="https://bearbullmarket.in" rel="noopener" target="_blank">BearBullMarket.in</a></span>
+<span class="sep">•</span>
+<span>Engineering &amp; Development: <a href="https://aviraajdigitech.com" rel="noopener" target="_blank">AviraajDigitech.com</a></span>
+<span class="sep">•</span>
+<span>🏆 India's #1 Free Virtual Trading App</span>
 </div>
-
 <!-- ═══ UNIFIED TOPBAR NAV ═══ -->
 <!-- ═══ ECOSYSTEM BAR ═══ -->
-
-
 <!-- ═══ UNIFIED TOPBAR NAV ═══ -->
-<nav class="bbm-topbar" role="navigation" aria-label="Main Navigation">
-  <div class="bbm-topbar-inner">
-    <a href="index.html" class="bbm-brand">
-      <img src="images/bullbear-logo.jpg" alt="BullBear Market Logo" class="bbm-brand-logo">
-      <div class="bbm-brand-text">
-        <span class="bbm-brand-title">BullBear Market</span>
-        <span class="bbm-brand-subtitle">Learn • Practice • Win</span>
-      </div>
-    </a>
-    
-    <ul class="bbm-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="learning.html">Learning</a></li>
-      <li><a href="rewards.html">Rewards</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="privacy-policy.html">Privacy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" class="bbm-nav-cta">⬇ Download App</a></li>
-    </ul>
-    
-    <button class="bbm-burger" aria-label="Toggle navigation menu">☰</button>
-  </div>
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center">
+<a class="flex items-center gap-3 group" href="index.html" style="text-decoration:none;">
+<img alt="BullBear Market Logo" class="h-12 w-12 rounded-xl border border-gray-200 shadow-sm transition-transform" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.05)'" src="images/BullBear logo.jpg" style="transform: scale(1);"/>
+<div class="flex flex-col">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-xl tracking-tight text-slate-900">BullBear<span class="text-amber-500">Market</span></span>
+<span class="text-[0.65rem] font-bold tracking-wider text-emerald-500 uppercase">Virtual Trading Terminal</span>
+</div>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-1 font-['Plus_Jakarta_Sans']" id="desktop-menu-items" style="display:none;">
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="index.html" style="text-decoration:none;">Home</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="learning.html" style="text-decoration:none;">Learning</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="rewards.html" style="text-decoration:none;">Rewards</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="blog/index.html" style="text-decoration:none;">Blog</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="about.html" style="text-decoration:none;">About Us</a>
+<a class="ml-4 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-transform hover:scale-105" href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app" style="text-decoration:none; background: linear-gradient(to right, #fbbf24, #f59e0b); color: #0f172a; border-radius: 9999px; padding: 0.625rem 1.5rem; font-weight: 700; box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);">Download App</a>
+</div>
+<div class="flex items-center" id="mobile-menu-btn-container" style="display:flex;">
+<button class="text-slate-600 hover:text-slate-900 p-2" id="mobile-menu-btn" style="background:transparent; border:none; cursor:pointer;" type="button">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="hidden bg-white border-t border-gray-100" id="mobile-menu" style="display:none;">
+<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-['Plus_Jakarta_Sans']">
+<a class="block px-3 py-2 text-base font-semibold text-slate-900" href="index.html" style="text-decoration:none; color: #0f172a; padding: 0.5rem 0.75rem; display:block;">Home</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="learning.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">Learning</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="rewards.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">Rewards</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="blog/index.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">Blog</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="about.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">About Us</a>
+<a class="block px-3 py-2 mt-4 text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-full" href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app" style="text-decoration:none; background: linear-gradient(to right, #fbbf24, #f59e0b); color: #0f172a; border-radius: 9999px; padding: 0.5rem 0.75rem; display:block; text-align:center; font-weight:bold; margin-top:1rem;">Download App</a>
+</div>
+</div>
+<style>
+    @media (min-width: 768px) {
+      #desktop-menu-items { display: flex !important; }
+      #mobile-menu-btn-container { display: none !important; }
+    }
+  </style>
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      if(menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
 </nav>
-
 <!-- ═══ MOBILE DRAWER ═══ -->
 <div class="bbm-mobile-drawer" id="bbmMobileDrawer">
-  <a href="index.html">🏠 Home</a>
-  <a href="learning.html">📚 Free Learning</a>
-  <a href="rewards.html">🏆 Leaderboard & Rewards</a>
-  <a href="blog/">✍️ Trading Blog & Guides</a>
-  <a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
-  <a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
-  <a href="faq.html">❓ FAQ</a>
-  <a href="about.html">ℹ️ About Us</a>
-  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
-  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
-  <a href="privacy-policy.html">🔒 Privacy Policy</a>
-  <a href="terms.html">📜 Terms of Use</a>
-  <a href="support.html">💬 Support</a>
-  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+<a href="index.html">🏠 Home</a>
+<a href="learning.html">📚 Free Learning</a>
+<a href="rewards.html">🏆 Leaderboard &amp; Rewards</a>
+<a href="blog/">✍️ Trading Blog &amp; Guides</a>
+<a href="blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+<a href="blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+<a href="faq.html">❓ FAQ</a>
+<a href="about.html">ℹ️ About Us</a>
+<a href="https://bearbullmarket.in" rel="noopener" target="_blank">⚡ Sister App: BearBullMarket.in</a>
+<a href="https://aviraajdigitech.com" rel="noopener" target="_blank">🌐 Developer: Aviraaj Digitech</a>
+<a href="privacy-policy.html">🔒 Privacy Policy</a>
+<a href="terms.html">📜 Terms of Use</a>
+<a href="support.html">💬 Support</a>
+<a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&amp;pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
 </div>
-
 <!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
-<div class="bbm-ticker-wrap" aria-hidden="true">
-  <div class="bbm-ticker">
-    <span>📊 <strong>Stock Market App India</strong></span>
-    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
-    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
-    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
-    <span>📚 <strong>Stock Market for Beginners</strong></span>
-    <span class="green">🇮🇳 <strong>Made in India</strong></span>
-    <span>💯 <strong>100% Free Forever</strong></span>
-    <span>📉 <strong>Technical Analysis</strong></span>
-    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
-    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
-    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
-    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
-    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
-    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
-    <!-- Repeat for smooth scroll -->
-    <span>📊 <strong>Stock Market App India</strong></span>
-    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
-    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
-    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
-    <span>📚 <strong>Stock Market for Beginners</strong></span>
-    <span class="green">🇮🇳 <strong>Made in India</strong></span>
-    <span>💯 <strong>100% Free Forever</strong></span>
-    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
-    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
-    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
-  </div>
+<div aria-hidden="true" class="bbm-ticker-wrap">
+<div class="bbm-ticker">
+<span>📊 <strong>Stock Market App India</strong></span>
+<span class="green">📈 <strong>Free Stock Market Course</strong></span>
+<span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+<span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+<span>📚 <strong>Stock Market for Beginners</strong></span>
+<span class="green">🇮🇳 <strong>Made in India</strong></span>
+<span>💯 <strong>100% Free Forever</strong></span>
+<span>📉 <strong>Technical Analysis</strong></span>
+<span>🔥 <strong>Share Market Learning Hindi</strong></span>
+<span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+<span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+<span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+<span>🧠 <strong>Fast Scalper &amp; Candlestick Charts</strong></span>
+<span>💬 <strong>Community Chat &amp; Live Sentiment</strong></span>
+<!-- Repeat for smooth scroll -->
+<span>📊 <strong>Stock Market App India</strong></span>
+<span class="green">📈 <strong>Free Stock Market Course</strong></span>
+<span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+<span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+<span>📚 <strong>Stock Market for Beginners</strong></span>
+<span class="green">🇮🇳 <strong>Made in India</strong></span>
+<span>💯 <strong>100% Free Forever</strong></span>
+<span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+<span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+<span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
 </div>
-
-
+</div>
 <!-- ═══ MOBILE DRAWER ═══ -->
-
-
 <!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
-
-
-
 <div class="container">
-
 <a href="learning.html">⬅ Back to Learning</a>
-
 <h1>Indicators in Trading – Complete Guide for Beginners</h1>
 <p>
 Stock market में successful trader बनने के लिए सिर्फ candlestick patterns समझना काफी नहीं होता।  
 Candlestick आपको price behavior दिखाता है, लेकिन indicators आपको उस behavior के पीछे की strength, momentum और direction समझने में help करते हैं।
 </p>
-
 <p>
 Simple language में समझें तो —  
 Candlestick बताता है “क्या हो रहा है”  
 Indicators बताते हैं “क्यों हो रहा है और आगे क्या हो सकता है”
 </p>
-
 <p>
 जब आप दोनों को combine करते हैं, तभी real trading understanding develop होती है।
 </p>
@@ -168,26 +176,21 @@ Indicators बताते हैं “क्यों हो रहा है 
 ---
 
 <h2>📊 Indicators क्या होते हैं? (What are Indicators)</h2>
-
 <p>
 Indicators mathematical calculations होते हैं जो price, volume और time के आधार पर बनते हैं।  
 ये charts पर lines, graphs या signals के form में दिखाई देते हैं।
 </p>
-
 <p>
 इनका main purpose होता है trader को confusion से निकालना और clear direction देना।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>Market ऊपर जा रहा है या नीचे → Trend indicator बताएगा</li>
 <li>Market strong है या weak → Momentum indicator बताएगा</li>
 <li>Buyers strong हैं या sellers → Volume indicator बताएगा</li>
 </ul>
-
 <p>
 इसलिए indicators trading का brain माने जाते हैं।
 </p>
@@ -195,30 +198,24 @@ Example:
 ---
 
 <h2>📈 Indicators क्यों जरूरी हैं?</h2>
-
 <p>
 बहुत सारे beginner traders सिर्फ देखकर trade करते हैं —  
 लेकिन market guessing से नहीं चलता।
 </p>
-
 <p>
 Indicators आपको data based decision लेने में help करते हैं।
 </p>
-
 <p>
 जब आप बिना indicator के trade करते हो:
 </p>
-
 <ul>
 <li>Emotions ज्यादा काम करते हैं</li>
 <li>गलत entry हो जाती है</li>
 <li>Loss increase हो जाता है</li>
 </ul>
-
 <p>
 लेकिन indicators use करने पर:
 </p>
-
 <ul>
 <li>Clear signals मिलते हैं</li>
 <li>Confidence बढ़ता है</li>
@@ -228,26 +225,21 @@ Indicators आपको data based decision लेने में help कर�
 ---
 
 <h2>⚙️ Indicators कैसे काम करते हैं?</h2>
-
 <p>
 Indicators market के past data को analyze करते हैं और उसी के आधार पर signals देते हैं।
 </p>
-
 <p>
 Important बात:
 Indicators future predict नहीं करते —  
 ये probability बताते हैं।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>RSI 70 के ऊपर है → Market overbought है (लेकिन तुरंत गिरना जरूरी नहीं)</li>
 <li>Moving Average crossover हुआ → Trend change का signal (लेकिन confirmation जरूरी)</li>
 </ul>
-
 <p>
 इसलिए हमेशा indicator को समझकर use करना चाहिए, blindly follow नहीं करना चाहिए।
 </p>
@@ -255,24 +247,19 @@ Example:
 ---
 
 <h2>📊 Indicators के Major Types</h2>
-
 <h3>1. Trend Indicators</h3>
-
 <p>
 Trend indicators आपको market की direction बताते हैं —  
 कि market ऊपर जा रहा है, नीचे जा रहा है या sideways है।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>Moving Average</li>
 <li>EMA</li>
 <li>Supertrend</li>
 </ul>
-
 <p>
 अगर trend clear नहीं है, तो trade avoid करना सबसे सही decision होता है।
 </p>
@@ -280,26 +267,21 @@ Example:
 ---
 
 <h3>2. Momentum Indicators</h3>
-
 <p>
 Momentum indicators बताते हैं कि market की speed कितनी है।
 </p>
-
 <p>
 Simple words:
 Market तेजी से चल रहा है या slow हो रहा है।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>RSI</li>
 <li>MACD</li>
 <li>Stochastic</li>
 </ul>
-
 <p>
 Momentum weak हो जाए तो trend reverse होने के chances बढ़ जाते हैं।
 </p>
@@ -307,20 +289,16 @@ Momentum weak हो जाए तो trend reverse होने के chances 
 ---
 
 <h3>3. Volume Indicators</h3>
-
 <p>
 Volume indicators बताते हैं कि market में कितना participation है।
 </p>
-
 <p>
 अगर price move हो रहा है लेकिन volume नहीं है —  
 तो move weak हो सकता है।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>Volume bar</li>
 <li>On Balance Volume</li>
@@ -329,22 +307,18 @@ Example:
 ---
 
 <h2>🔥 Beginner को कौन से indicators से start करना चाहिए?</h2>
-
 <p>
 बहुत सारे indicators available हैं —  
 लेकिन beginner को confuse होने की जरूरत नहीं है।
 </p>
-
 <p>
 आपको सिर्फ 3 indicators से start करना चाहिए:
 </p>
-
 <ul>
 <li>Moving Average</li>
 <li>RSI</li>
 <li>MACD</li>
 </ul>
-
 <p>
 अगर आप इन तीनों को सही से समझ लेते हो, तो 80% trading clear हो जाती है।
 </p>
@@ -352,37 +326,29 @@ Example:
 ---
 
 <h2>📊 Moving Average (MA) – Basic समझ</h2>
-
 <p>
 Moving Average price का average होता है जो market noise को हटाकर smooth trend दिखाता है।
 </p>
-
 <p>
 यह सबसे simple और powerful indicator है।
 </p>
-
 <p>
 Types:
 </p>
-
 <ul>
 <li>SMA (Simple Moving Average)</li>
 <li>EMA (Exponential Moving Average)</li>
 </ul>
-
 <p>
 EMA ज्यादा fast react करता है जबकि SMA slow होता है।
 </p>
-
 <p>
 Basic समझ:
 </p>
-
 <ul>
 <li>Price MA के ऊपर → Uptrend</li>
 <li>Price MA के नीचे → Downtrend</li>
 </ul>
-
 <p>
 यह trend identify करने के लिए best indicator माना जाता है।
 </p>
@@ -390,25 +356,20 @@ Basic समझ:
 ---
 
 <h2>💡 Moving Average की Deep Understanding</h2>
-
 <p>
 Moving Average सिर्फ line नहीं है —  
 यह market की direction का foundation है।
 </p>
-
 <p>
 जब price बार-बार MA को respect करता है, तो इसका मतलब trend strong है।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>Price बार-बार MA से bounce कर रहा है → Strong trend</li>
 <li>Price MA को बार-बार cross कर रहा है → Sideways market</li>
 </ul>
-
 <p>
 इसलिए moving average को support/resistance की तरह भी use किया जाता है।
 </p>
@@ -416,22 +377,18 @@ Example:
 ---
 
 <h2>⚠️ Moving Average की गलती (Beginners)</h2>
-
 <ul>
 <li>हर crossover पर trade लेना</li>
 <li>Timeframe ignore करना</li>
 <li>Confirmation के बिना entry लेना</li>
 </ul>
-
 <p>
 इन गलतियों से बचना बहुत जरूरी है।
 </p>
 <h2>📊 RSI (Relative Strength Index) – Complete Guide</h2>
-
 <p>
 RSI एक momentum indicator है जो market की strength और weakness को measure करता है।
 </p>
-
 <p>
 यह 0 से 100 के बीच move करता है और बताता है कि market overbought है या oversold।
 </p>
@@ -439,15 +396,12 @@ RSI एक momentum indicator है जो market की strength और weakne
 ---
 
 <h3>RSI कैसे काम करता है?</h3>
-
 <p>
 RSI पिछले price movements को analyze करके calculate होता है।
 </p>
-
 <p>
 Simple समझ:
 </p>
-
 <ul>
 <li>RSI बढ़ रहा है → Buying strength बढ़ रही है</li>
 <li>RSI गिर रहा है → Selling pressure बढ़ रहा है</li>
@@ -456,12 +410,10 @@ Simple समझ:
 ---
 
 <h3>RSI Levels (बहुत important)</h3>
-
 <ul>
 <li>RSI above 70 → Overbought (Market महंगा है)</li>
 <li>RSI below 30 → Oversold (Market सस्ता है)</li>
 </ul>
-
 <p>
 लेकिन ध्यान रखो —  
 Overbought का मतलब यह नहीं कि तुरंत market गिरेगा  
@@ -471,16 +423,13 @@ Overbought का मतलब यह नहीं कि तुरंत market
 ---
 
 <h3>RSI का सही use कैसे करें?</h3>
-
 <p>
 RSI को अकेले use करना risky हो सकता है।  
 इसे हमेशा context के साथ use करना चाहिए।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>Uptrend में RSI 40-60 के बीच रहता है → Healthy trend</li>
 <li>Downtrend में RSI 40 से नीचे रहता है → Weak market</li>
@@ -489,16 +438,13 @@ Example:
 ---
 
 <h3>RSI Divergence (Advanced Concept)</h3>
-
 <p>
 Divergence एक powerful signal है जो trend reversal दिखाता है।
 </p>
-
 <ul>
 <li>Price ऊपर जा रहा है लेकिन RSI नीचे → Bearish divergence</li>
 <li>Price नीचे जा रहा है लेकिन RSI ऊपर → Bullish divergence</li>
 </ul>
-
 <p>
 यह signal बताता है कि market की strength कम हो रही है।
 </p>
@@ -506,13 +452,11 @@ Divergence एक powerful signal है जो trend reversal दिखात�
 ---
 
 <h2>⚠️ RSI में common mistakes</h2>
-
 <ul>
 <li>हर बार RSI 70 पर sell करना</li>
 <li>हर बार RSI 30 पर buy करना</li>
 <li>Trend ignore करना</li>
 </ul>
-
 <p>
 RSI signal तभी strong होता है जब वह trend के साथ match करता है।
 </p>
@@ -520,11 +464,9 @@ RSI signal तभी strong होता है जब वह trend के स�
 ---
 
 <h2>📊 MACD (Moving Average Convergence Divergence)</h2>
-
 <p>
 MACD एक combination indicator है जो trend और momentum दोनों को दिखाता है।
 </p>
-
 <p>
 यह थोड़ा complex लगता है लेकिन समझने के बाद बहुत powerful हो जाता है।
 </p>
@@ -532,13 +474,11 @@ MACD एक combination indicator है जो trend और momentum दोन�
 ---
 
 <h3>MACD के components</h3>
-
 <ul>
 <li>MACD Line</li>
 <li>Signal Line</li>
 <li>Histogram</li>
 </ul>
-
 <p>
 इन तीनों के combination से signals बनते हैं।
 </p>
@@ -546,15 +486,12 @@ MACD एक combination indicator है जो trend और momentum दोन�
 ---
 
 <h3>MACD कैसे काम करता है?</h3>
-
 <p>
 MACD दो moving averages के difference से बनता है।
 </p>
-
 <p>
 Simple समझ:
 </p>
-
 <ul>
 <li>MACD line signal line के ऊपर → Bullish</li>
 <li>MACD line signal line के नीचे → Bearish</li>
@@ -563,16 +500,13 @@ Simple समझ:
 ---
 
 <h3>MACD Crossover Strategy</h3>
-
 <p>
 यह सबसे common strategy है:
 </p>
-
 <ul>
 <li>MACD line signal line को ऊपर cross करे → Buy</li>
 <li>MACD line signal line को नीचे cross करे → Sell</li>
 </ul>
-
 <p>
 लेकिन false signals से बचने के लिए confirmation जरूरी है।
 </p>
@@ -580,16 +514,13 @@ Simple समझ:
 ---
 
 <h3>MACD Histogram समझ</h3>
-
 <p>
 Histogram momentum दिखाता है।
 </p>
-
 <ul>
 <li>Histogram बड़ा हो रहा है → Trend strong</li>
 <li>Histogram छोटा हो रहा है → Trend weak</li>
 </ul>
-
 <p>
 यह early signal देता है कि trend change हो सकता है।
 </p>
@@ -597,11 +528,9 @@ Histogram momentum दिखाता है।
 ---
 
 <h3>MACD Divergence</h3>
-
 <p>
 RSI की तरह MACD में भी divergence आता है।
 </p>
-
 <ul>
 <li>Price ऊपर लेकिन MACD नीचे → Weak uptrend</li>
 <li>Price नीचे लेकिन MACD ऊपर → Weak downtrend</li>
@@ -610,13 +539,11 @@ RSI की तरह MACD में भी divergence आता है।
 ---
 
 <h2>⚠️ MACD में mistakes</h2>
-
 <ul>
 <li>Sideways market में use करना</li>
 <li>हर crossover पर trade लेना</li>
 <li>Confirmation ignore करना</li>
 </ul>
-
 <p>
 MACD trend market में ज्यादा accurate होता है।
 </p>
@@ -624,16 +551,13 @@ MACD trend market में ज्यादा accurate होता है।
 ---
 
 <h2>📊 RSI vs MACD (Comparison)</h2>
-
 <ul>
 <li>RSI → Overbought / Oversold</li>
 <li>MACD → Trend + Momentum</li>
 </ul>
-
 <p>
 दोनों indicators अलग-अलग purpose serve करते हैं।
 </p>
-
 <p>
 Best result तब आता है जब आप दोनों को combine करते हो।
 </p>
@@ -641,27 +565,21 @@ Best result तब आता है जब आप दोनों को combine
 ---
 
 <h2>💡 Combined समझ</h2>
-
 <p>
 अगर RSI oversold है और MACD bullish crossover देता है  
 → Strong buy signal बन सकता है
 </p>
-
 <p>
 अगर RSI overbought है और MACD bearish crossover देता है  
 → Strong sell signal बन सकता है
 </p>
-
 <p>
 लेकिन हमेशा confirmation जरूरी है।
 </p>
-
 <h2>📊 Bollinger Bands – Complete Understanding</h2>
-
 <p>
 Bollinger Bands एक volatility indicator है जो market की range और movement को समझने में मदद करता है।
 </p>
-
 <p>
 यह indicator दिखाता है कि price normal range में है या ज्यादा ऊपर/नीचे चला गया है।
 </p>
@@ -669,13 +587,11 @@ Bollinger Bands एक volatility indicator है जो market की range �
 ---
 
 <h3>Bollinger Bands के components</h3>
-
 <ul>
 <li>Middle Band (Moving Average)</li>
 <li>Upper Band</li>
 <li>Lower Band</li>
 </ul>
-
 <p>
 Middle band एक average होता है और बाकी दो bands उसके ऊपर और नीचे बनते हैं।
 </p>
@@ -683,12 +599,10 @@ Middle band एक average होता है और बाकी दो bands 
 ---
 
 <h3>Bollinger Bands कैसे काम करता है?</h3>
-
 <p>
 जब market शांत होता है, bands narrow हो जाते हैं  
 जब market में movement ज्यादा होता है, bands expand हो जाते हैं
 </p>
-
 <p>
 यह volatility को दिखाता है।
 </p>
@@ -696,12 +610,10 @@ Middle band एक average होता है और बाकी दो bands 
 ---
 
 <h3>Basic Understanding</h3>
-
 <ul>
 <li>Price upper band के पास → Market overbought हो सकता है</li>
 <li>Price lower band के पास → Market oversold हो सकता है</li>
 </ul>
-
 <p>
 लेकिन हर बार reversal जरूरी नहीं होता।
 </p>
@@ -709,16 +621,13 @@ Middle band एक average होता है और बाकी दो bands 
 ---
 
 <h3>Bollinger Bands Squeeze</h3>
-
 <p>
 जब bands बहुत ज्यादा narrow हो जाते हैं, उसे squeeze कहते हैं।
 </p>
-
 <p>
 👉 इसका मतलब:
 Market में बड़ी movement आने वाली है
 </p>
-
 <p>
 Squeeze के बाद breakout होने के chances ज्यादा होते हैं।
 </p>
@@ -726,12 +635,10 @@ Squeeze के बाद breakout होने के chances ज्यादा
 ---
 
 <h3>Bollinger Bands Breakout</h3>
-
 <p>
 जब price upper band को strong तरीके से break करता है → strong up move  
 जब price lower band break करता है → strong down move  
 </p>
-
 <p>
 लेकिन false breakout से बचने के लिए confirmation जरूरी है।
 </p>
@@ -739,7 +646,6 @@ Squeeze के बाद breakout होने के chances ज्यादा
 ---
 
 <h2>⚠️ Bollinger Bands में mistakes</h2>
-
 <ul>
 <li>हर touch पर reversal मान लेना</li>
 <li>Trend ignore करना</li>
@@ -749,11 +655,9 @@ Squeeze के बाद breakout होने के chances ज्यादा
 ---
 
 <h2>📊 Indicators को combine कैसे करें?</h2>
-
 <p>
 Single indicator पर depend करना risky होता है।
 </p>
-
 <p>
 Best approach है multiple indicators का combination use करना।
 </p>
@@ -761,13 +665,11 @@ Best approach है multiple indicators का combination use करना।
 ---
 
 <h3>Basic Combination Strategy</h3>
-
 <ul>
 <li>Trend → Moving Average</li>
 <li>Momentum → RSI</li>
 <li>Confirmation → MACD</li>
 </ul>
-
 <p>
 यह simple और effective strategy है।
 </p>
@@ -775,17 +677,14 @@ Best approach है multiple indicators का combination use करना।
 ---
 
 <h3>Example Setup</h3>
-
 <p>
 Step-by-step:
 </p>
-
 <ul>
 <li>Price MA के ऊपर है → Uptrend</li>
 <li>RSI oversold zone से ऊपर आ रहा है</li>
 <li>MACD bullish crossover देता है</li>
 </ul>
-
 <p>
 👉 यह strong buy setup बन सकता है
 </p>
@@ -793,13 +692,11 @@ Step-by-step:
 ---
 
 <h3>Sell Setup Example</h3>
-
 <ul>
 <li>Price MA के नीचे है → Downtrend</li>
 <li>RSI overbought से नीचे आ रहा है</li>
 <li>MACD bearish crossover देता है</li>
 </ul>
-
 <p>
 👉 यह strong sell setup बन सकता है
 </p>
@@ -807,24 +704,19 @@ Step-by-step:
 ---
 
 <h2>🎯 Entry और Exit समझ</h2>
-
 <p>
 Indicators का main use entry और exit timing improve करना है।
 </p>
-
 <p>
 Entry rules:
 </p>
-
 <ul>
 <li>Confirmation मिलने के बाद ही entry लो</li>
 <li>जल्दीबाजी में trade मत लो</li>
 </ul>
-
 <p>
 Exit rules:
 </p>
-
 <ul>
 <li>Target पहले decide करो</li>
 <li>Stop loss हमेशा रखो</li>
@@ -833,15 +725,12 @@ Exit rules:
 ---
 
 <h2>🛑 Stop Loss का importance</h2>
-
 <p>
 Indicators perfect नहीं होते।
 </p>
-
 <p>
 इसलिए stop loss जरूरी है।
 </p>
-
 <ul>
 <li>Capital protect करता है</li>
 <li>Emotional trading से बचाता है</li>
@@ -850,16 +739,13 @@ Indicators perfect नहीं होते।
 ---
 
 <h2>📊 Real Practical Understanding</h2>
-
 <p>
 Indicators को सिर्फ पढ़ना काफी नहीं है —  
 उन्हें chart पर use करना जरूरी है।
 </p>
-
 <p>
 जब आप practice करते हो:
 </p>
-
 <ul>
 <li>Confidence बढ़ता है</li>
 <li>गलतियाँ समझ आती हैं</li>
@@ -869,7 +755,6 @@ Indicators को सिर्फ पढ़ना काफी नहीं ह�
 ---
 
 <h2>⚠️ Biggest mistakes (Advanced)</h2>
-
 <ul>
 <li>Too many indicators use करना</li>
 <li>हर signal पर trade लेना</li>
@@ -880,26 +765,20 @@ Indicators को सिर्फ पढ़ना काफी नहीं ह�
 ---
 
 <h2>💡 Simple Rule (Golden Rule)</h2>
-
 <p>
 Indicators को simple रखो।
 </p>
-
 <p>
 Complex strategy से profit नहीं बढ़ता — confusion बढ़ता है।
 </p>
-
 <p>
 👉 Simple + consistent approach = success
 </p>
-
 <h2>🧠 Advanced Indicator Understanding</h2>
-
 <p>
 अब तक आपने indicators के basics और strategies समझ लिए हैं।  
 अब हम उस level पर आते हैं जहाँ trader beginner से advanced बनता है।
 </p>
-
 <p>
 यहाँ focus सिर्फ signals पर नहीं बल्कि understanding पर होता है।
 </p>
@@ -907,26 +786,21 @@ Complex strategy से profit नहीं बढ़ता — confusion बढ
 ---
 
 <h2>📊 Indicator Lag (Delay Concept)</h2>
-
 <p>
 एक बहुत important बात जो beginners नहीं समझते —  
 Indicators हमेशा lag करते हैं।
 </p>
-
 <p>
 मतलब:
 Indicator हमेशा past data पर based होता है।
 </p>
-
 <p>
 इसलिए:
 </p>
-
 <ul>
 <li>Indicator signal हमेशा थोड़ा late आता है</li>
 <li>Perfect entry rarely मिलती है</li>
 </ul>
-
 <p>
 👉 Solution:
 Indicators को confirmation tool की तरह use करो, prediction tool की तरह नहीं
@@ -935,15 +809,12 @@ Indicators को confirmation tool की तरह use करो, prediction t
 ---
 
 <h2>📉 Market Phases समझना</h2>
-
 <p>
 Market हमेशा एक जैसा behave नहीं करता।
 </p>
-
 <p>
 Market के 3 phases होते हैं:
 </p>
-
 <ul>
 <li>Trending Market</li>
 <li>Sideways Market</li>
@@ -953,15 +824,12 @@ Market के 3 phases होते हैं:
 ---
 
 <h3>Trending Market</h3>
-
 <p>
 जब market एक direction में clear move करता है
 </p>
-
 <p>
 👉 Best indicators:
 </p>
-
 <ul>
 <li>Moving Average</li>
 <li>MACD</li>
@@ -970,15 +838,12 @@ Market के 3 phases होते हैं:
 ---
 
 <h3>Sideways Market</h3>
-
 <p>
 जब market range में चलता है
 </p>
-
 <p>
 👉 Best indicators:
 </p>
-
 <ul>
 <li>RSI</li>
 <li>Bollinger Bands</li>
@@ -987,15 +852,12 @@ Market के 3 phases होते हैं:
 ---
 
 <h3>Volatile Market</h3>
-
 <p>
 जब market में sudden fast movements होते हैं
 </p>
-
 <p>
 👉 Caution:
 </p>
-
 <ul>
 <li>False signals ज्यादा होते हैं</li>
 <li>Risk बढ़ जाता है</li>
@@ -1004,26 +866,21 @@ Market के 3 phases होते हैं:
 ---
 
 <h2>📊 Indicator Overload Problem</h2>
-
 <p>
 बहुत सारे traders एक बड़ी गलती करते हैं —  
 बहुत ज्यादा indicators use करना।
 </p>
-
 <p>
 इससे होता क्या है:
 </p>
-
 <ul>
 <li>Confusion बढ़ता है</li>
 <li>Signals contradict करते हैं</li>
 <li>Decision लेने में delay होता है</li>
 </ul>
-
 <p>
 👉 सही तरीका:
 </p>
-
 <ul>
 <li>2-3 indicators enough हैं</li>
 <li>हर indicator का role clear होना चाहिए</li>
@@ -1032,17 +889,14 @@ Market के 3 phases होते हैं:
 ---
 
 <h2>🎯 Indicator Role Clarity</h2>
-
 <p>
 हर indicator का एक specific काम होता है:
 </p>
-
 <ul>
 <li>Trend → Moving Average</li>
 <li>Momentum → RSI</li>
 <li>Confirmation → MACD</li>
 </ul>
-
 <p>
 अगर आप roles mix कर देते हो, तो गलत signals मिलते हैं।
 </p>
@@ -1050,11 +904,9 @@ Market के 3 phases होते हैं:
 ---
 
 <h2>🧠 Trading Psychology (सबसे important)</h2>
-
 <p>
 Indicators सीखना आसान है, लेकिन emotions control करना मुश्किल है।
 </p>
-
 <p>
 Trading में success का बड़ा हिस्सा psychology पर depend करता है।
 </p>
@@ -1062,7 +914,6 @@ Trading में success का बड़ा हिस्सा psychology प�
 ---
 
 <h3>Fear (डर)</h3>
-
 <p>
 Loss का डर trader को जल्दी exit करा देता है।
 </p>
@@ -1070,7 +921,6 @@ Loss का डर trader को जल्दी exit करा देता ह
 ---
 
 <h3>Greed (लालच)</h3>
-
 <p>
 Profit देखकर trader position hold करता रहता है और profit loss में बदल जाता है।
 </p>
@@ -1078,7 +928,6 @@ Profit देखकर trader position hold करता रहता है औ
 ---
 
 <h3>FOMO (Fear of Missing Out)</h3>
-
 <p>
 जब market move करता है, trader बिना सोचे entry ले लेता है।
 </p>
@@ -1086,7 +935,6 @@ Profit देखकर trader position hold करता रहता है औ
 ---
 
 <h2>💡 Emotional Control कैसे करें?</h2>
-
 <ul>
 <li>Pre-defined strategy follow करो</li>
 <li>Stop loss fix रखो</li>
@@ -1096,16 +944,13 @@ Profit देखकर trader position hold करता रहता है औ
 ---
 
 <h2>📊 Risk Management (Real Key to Success)</h2>
-
 <p>
 Indicators आपको entry दे सकते हैं,  
 लेकिन survival risk management से आता है।
 </p>
-
 <p>
 Golden rules:
 </p>
-
 <ul>
 <li>1 trade में limited risk लो</li>
 <li>Capital protect करो</li>
@@ -1115,21 +960,17 @@ Golden rules:
 ---
 
 <h2>📉 Win Rate vs Risk Reward</h2>
-
 <p>
 Beginners सोचते हैं कि high win rate ही success है —  
 लेकिन यह पूरी तरह सही नहीं है।
 </p>
-
 <p>
 Example:
 </p>
-
 <ul>
 <li>Win rate 50% + Risk Reward 1:2 → Profitable</li>
 <li>Win rate 80% + Risk Reward 1:0.5 → Loss possible</li>
 </ul>
-
 <p>
 👉 इसलिए risk reward ज्यादा important है
 </p>
@@ -1137,20 +978,16 @@ Example:
 ---
 
 <h2>📊 Backtesting (Hidden Secret)</h2>
-
 <p>
 Professional traders हमेशा strategy test करते हैं।
 </p>
-
 <p>
 Backtesting का मतलब:
 </p>
-
 <ul>
 <li>Past charts पर strategy apply करना</li>
 <li>Results observe करना</li>
 </ul>
-
 <p>
 इससे confidence और accuracy दोनों बढ़ते हैं।
 </p>
@@ -1158,7 +995,6 @@ Backtesting का मतलब:
 ---
 
 <h2>⚠️ Advanced Mistakes</h2>
-
 <ul>
 <li>Overconfidence</li>
 <li>High risk लेना</li>
@@ -1169,11 +1005,9 @@ Backtesting का मतलब:
 ---
 
 <h2>🏆 Professional Approach</h2>
-
 <p>
 Successful trader बनने के लिए:
 </p>
-
 <ul>
 <li>Consistency maintain करो</li>
 <li>Simple strategy follow करो</li>
@@ -1183,30 +1017,22 @@ Successful trader बनने के लिए:
 ---
 
 <h2>🎯 Final Conclusion</h2>
-
 <p>
 Indicators powerful tools हैं, लेकिन यह success guarantee नहीं करते।
 </p>
-
 <p>
 Real success आता है:
 </p>
-
 <ul>
 <li>Proper understanding</li>
 <li>Discipline</li>
 <li>Risk control</li>
 </ul>
-
 <p>
 अगर आप patience और consistency के साथ practice करते हो,  
 तो धीरे-धीरे trading आसान हो जाती है।
 </p>
-
-
-
 </div>
-
 <script src="js/unified-header.js?v=2026.3"></script>
 </body>
 </html>

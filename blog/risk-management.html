@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
 <title>Risk Management Guide – Part 1 | BullBear Market Blog</title>
-<meta name="description" content="Learn risk management in stock trading. Protect your capital with stop loss, position sizing and risk reward formulas.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://bullbearmarket.in/blog/risk-management.html">
-<link rel="stylesheet" href="../css/worldclass-3d.css?v=2026.3">
+<meta content="Learn risk management in stock trading. Protect your capital with stop loss, position sizing and risk reward formulas." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://bullbearmarket.in/blog/risk-management.html" rel="canonical"/>
+<link href="../css/worldclass-3d.css?v=2026.3" rel="stylesheet"/>
 <style>
-body { font-family: 'Sora', sans-serif; background: #050811; color: #f1f5f9; line-height: 1.8; margin: 0; padding: 0; }
+body { font-family: 'Sora', sans-serif; background: #050811; color: #1E293B; line-height: 1.8; margin: 0; padding: 0; }
 .blog-content-wrap { max-width: 1000px; margin: 40px auto 80px; padding: 0 20px; }
 .box { background: rgba(13,20,36,0.85); border: 1px solid rgba(255,215,0,0.2); border-radius: 18px; padding: 30px; margin: 24px 0; }
 h1 { color: #FFD700; font-size: clamp(26px, 4vw, 38px); text-align: center; margin-bottom: 24px; }
@@ -20,103 +21,125 @@ p, li { color: #cbd5e1; font-size: 15px; }
 .tip { background: rgba(0,255,136,0.1); border-left: 4px solid #00FF88; padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; }
 </style>
 <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5614208601638283" crossorigin="anonymous"></script>
-</head>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5614208601638283"></script>
+<script src="https://cdn.tailwindcss.com"></script></head>
 <body>
-
 <!-- ═══ ECOSYSTEM BAR ═══ -->
 <div class="bbm-ecosystem-bar">
-  <span class="pill-badge">🚀 Official Ecosystem</span>
-  <span>Sister Trading Platform: <a href="https://bearbullmarket.in" target="_blank" rel="noopener">BearBullMarket.in</a></span>
-  <span class="sep">•</span>
-  <span>Engineering & Development: <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">AviraajDigitech.com</a></span>
-  <span class="sep">•</span>
-  <span>🏆 India's #1 Free Virtual Trading App</span>
+<span class="pill-badge">🚀 Official Ecosystem</span>
+<span>Sister Trading Platform: <a href="https://bearbullmarket.in" rel="noopener" target="_blank">BearBullMarket.in</a></span>
+<span class="sep">•</span>
+<span>Engineering &amp; Development: <a href="https://aviraajdigitech.com" rel="noopener" target="_blank">AviraajDigitech.com</a></span>
+<span class="sep">•</span>
+<span>🏆 India's #1 Free Virtual Trading App</span>
 </div>
-
 <!-- ═══ UNIFIED TOPBAR NAV ═══ -->
-<nav class="bbm-topbar" role="navigation" aria-label="Main Navigation">
-  <div class="bbm-topbar-inner">
-    <a href="../index.html" class="bbm-brand">
-      <img src="../images/bullbear-logo.jpg" alt="BullBear Market Logo" class="bbm-brand-logo">
-      <div class="bbm-brand-text">
-        <span class="bbm-brand-title">BullBear Market</span>
-        <span class="bbm-brand-subtitle">Learn • Practice • Win</span>
-      </div>
-    </a>
-    
-    <ul class="bbm-nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../learning.html">Learning</a></li>
-      <li><a href="../rewards.html">Rewards</a></li>
-      <li><a href="../blog/" class="active">Blog</a></li>
-      <li><a href="../faq.html">FAQ</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../privacy-policy.html">Privacy</a></li>
-      <li><a href="../terms.html">Terms</a></li>
-      <li><a href="../support.html">Support</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" class="bbm-nav-cta">⬇ Download App</a></li>
-    </ul>
-    
-    <button class="bbm-burger" aria-label="Toggle navigation menu">☰</button>
-  </div>
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center">
+<a class="flex items-center gap-3 group" href="../index.html" style="text-decoration:none;">
+<img alt="BullBear Market Logo" class="h-12 w-12 rounded-xl border border-gray-200 shadow-sm transition-transform" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.05)'" src="../images/BullBear logo.jpg" style="transform: scale(1);"/>
+<div class="flex flex-col">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-xl tracking-tight text-slate-900">BullBear<span class="text-amber-500">Market</span></span>
+<span class="text-[0.65rem] font-bold tracking-wider text-emerald-500 uppercase">Virtual Trading Terminal</span>
+</div>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-1 font-['Plus_Jakarta_Sans']" id="desktop-menu-items" style="display:none;">
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="../index.html" style="text-decoration:none;">Home</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="../learning.html" style="text-decoration:none;">Learning</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="../rewards.html" style="text-decoration:none;">Rewards</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="../blog/index.html" style="text-decoration:none;">Blog</a>
+<a class="text-slate-600 hover:text-slate-900 hover:bg-slate-50 px-4 py-2 rounded-full text-sm font-semibold transition-colors" href="../about.html" style="text-decoration:none;">About Us</a>
+<a class="ml-4 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-transform hover:scale-105" href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app" style="text-decoration:none; background: linear-gradient(to right, #fbbf24, #f59e0b); color: #0f172a; border-radius: 9999px; padding: 0.625rem 1.5rem; font-weight: 700; box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);">Download App</a>
+</div>
+<div class="flex items-center" id="mobile-menu-btn-container" style="display:flex;">
+<button class="text-slate-600 hover:text-slate-900 p-2" id="mobile-menu-btn" style="background:transparent; border:none; cursor:pointer;" type="button">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="hidden bg-white border-t border-gray-100" id="mobile-menu" style="display:none;">
+<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-['Plus_Jakarta_Sans']">
+<a class="block px-3 py-2 text-base font-semibold text-slate-900" href="../index.html" style="text-decoration:none; color: #0f172a; padding: 0.5rem 0.75rem; display:block;">Home</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="../learning.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">Learning</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="../rewards.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">Rewards</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="../blog/index.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">Blog</a>
+<a class="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-slate-900" href="../about.html" style="text-decoration:none; color: #475569; padding: 0.5rem 0.75rem; display:block;">About Us</a>
+<a class="block px-3 py-2 mt-4 text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-full" href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app" style="text-decoration:none; background: linear-gradient(to right, #fbbf24, #f59e0b); color: #0f172a; border-radius: 9999px; padding: 0.5rem 0.75rem; display:block; text-align:center; font-weight:bold; margin-top:1rem;">Download App</a>
+</div>
+</div>
+<style>
+    @media (min-width: 768px) {
+      #desktop-menu-items { display: flex !important; }
+      #mobile-menu-btn-container { display: none !important; }
+    }
+  </style>
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      if(menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
 </nav>
-
 <!-- ═══ MOBILE DRAWER ═══ -->
 <div class="bbm-mobile-drawer" id="bbmMobileDrawer">
-  <a href="../index.html">🏠 Home</a>
-  <a href="../learning.html">📚 Free Learning</a>
-  <a href="../rewards.html">🏆 Leaderboard & Rewards</a>
-  <a href="../blog/" class="active">✍️ Trading Blog & Guides</a>
-  <a href="../blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
-  <a href="../blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
-  <a href="../faq.html">❓ FAQ</a>
-  <a href="../about.html">ℹ️ About Us</a>
-  <a href="https://bearbullmarket.in" target="_blank" rel="noopener">⚡ Sister App: BearBullMarket.in</a>
-  <a href="https://aviraajdigitech.com" target="_blank" rel="noopener">🌐 Developer: Aviraaj Digitech</a>
-  <a href="../privacy-policy.html">🔒 Privacy Policy</a>
-  <a href="../terms.html">📜 Terms of Use</a>
-  <a href="../support.html">💬 Support</a>
-  <a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
+<a href="../index.html">🏠 Home</a>
+<a href="../learning.html">📚 Free Learning</a>
+<a href="../rewards.html">🏆 Leaderboard &amp; Rewards</a>
+<a class="active" href="../blog/">✍️ Trading Blog &amp; Guides</a>
+<a href="../blog/best-paper-trading-app-india-guide.html">⭐ Best Paper Trading App Guide</a>
+<a href="../blog/bull-bear-market-definitive-guide.html">📈 Bull Bear Market Guide</a>
+<a href="../faq.html">❓ FAQ</a>
+<a href="../about.html">ℹ️ About Us</a>
+<a href="https://bearbullmarket.in" rel="noopener" target="_blank">⚡ Sister App: BearBullMarket.in</a>
+<a href="https://aviraajdigitech.com" rel="noopener" target="_blank">🌐 Developer: Aviraaj Digitech</a>
+<a href="../privacy-policy.html">🔒 Privacy Policy</a>
+<a href="../terms.html">📜 Terms of Use</a>
+<a href="../support.html">💬 Support</a>
+<a href="https://play.google.com/store/apps/details?id=com.bullbearmarket.app&amp;pcampaignid=web_share" style="background:var(--bbm-gold);color:#000;font-weight:700;margin-top:10px;text-align:center;justify-content:center;">⬇ Download App Free</a>
 </div>
-
 <!-- ═══ UNIFIED KEYWORD TICKER ═══ -->
-<div class="bbm-ticker-wrap" aria-hidden="true">
-  <div class="bbm-ticker">
-    <span>📊 <strong>Stock Market App India</strong></span>
-    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
-    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
-    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
-    <span>📚 <strong>Stock Market for Beginners</strong></span>
-    <span class="green">🇮🇳 <strong>Made in India</strong></span>
-    <span>💯 <strong>100% Free Forever</strong></span>
-    <span>📉 <strong>Technical Analysis</strong></span>
-    <span>🔥 <strong>Share Market Learning Hindi</strong></span>
-    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
-    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
-    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
-    <span>🧠 <strong>Fast Scalper & Candlestick Charts</strong></span>
-    <span>💬 <strong>Community Chat & Live Sentiment</strong></span>
-    <!-- Repeat for smooth scroll -->
-    <span>📊 <strong>Stock Market App India</strong></span>
-    <span class="green">📈 <strong>Free Stock Market Course</strong></span>
-    <span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
-    <span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
-    <span>📚 <strong>Stock Market for Beginners</strong></span>
-    <span class="green">🇮🇳 <strong>Made in India</strong></span>
-    <span>💯 <strong>100% Free Forever</strong></span>
-    <span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
-    <span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
-    <span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
-  </div>
+<div aria-hidden="true" class="bbm-ticker-wrap">
+<div class="bbm-ticker">
+<span>📊 <strong>Stock Market App India</strong></span>
+<span class="green">📈 <strong>Free Stock Market Course</strong></span>
+<span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+<span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+<span>📚 <strong>Stock Market for Beginners</strong></span>
+<span class="green">🇮🇳 <strong>Made in India</strong></span>
+<span>💯 <strong>100% Free Forever</strong></span>
+<span>📉 <strong>Technical Analysis</strong></span>
+<span>🔥 <strong>Share Market Learning Hindi</strong></span>
+<span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+<span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+<span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
+<span>🧠 <strong>Fast Scalper &amp; Candlestick Charts</strong></span>
+<span>💬 <strong>Community Chat &amp; Live Sentiment</strong></span>
+<!-- Repeat for smooth scroll -->
+<span>📊 <strong>Stock Market App India</strong></span>
+<span class="green">📈 <strong>Free Stock Market Course</strong></span>
+<span>🎯 <strong>Virtual Trading Practice ₹1,00,000</strong></span>
+<span class="cyan">🏆 <strong>Weekly Leaderboard Contests</strong></span>
+<span>📚 <strong>Stock Market for Beginners</strong></span>
+<span class="green">🇮🇳 <strong>Made in India</strong></span>
+<span>💯 <strong>100% Free Forever</strong></span>
+<span class="cyan">⚡ <strong>Sister Platform: bearbullmarket.in</strong></span>
+<span>🌐 <strong>Engineered by Aviraaj Digitech</strong></span>
+<span class="green">⭐ <strong>5-Star Rated Trading App</strong></span>
 </div>
-
-
+</div>
 <main class="blog-content-wrap card-3d">
 <!-- ================= RISK MANAGEMENT BLOCK ================= -->
-
 <section class="section">
-
 <style>
 .section{
   max-width:1000px;
@@ -178,249 +201,208 @@ a{
 }
 
 </style>
-
 <h1>💰 Ultimate Risk Management Guide (Pro Level)</h1>
-
 <!-- ================= ENGLISH ================= -->
-
 <div class="box">
-
 <h2>📘 ENGLISH VERSION</h2>
-
 <h3>What is Risk Management in Trading?</h3>
-
 <p>
 Risk management is the backbone of trading. It is not about making money — it is about 
 <span class="highlight">protecting your capital first</span>.
 </p>
-
 <p>
 Most beginners focus on profit, but professional traders focus on risk control.
 </p>
-
 <div class="tip">
 👉 If you protect your capital, profits will follow automatically.
 </div>
-
-<hr>
-
+<hr/>
 <h3>🔥 PART 1 – CORE FUNDAMENTALS</h3>
-
 <h4>1. Capital Protection Mindset</h4>
-
 <p>
 If you lose 50% of your capital, you need 100% return to recover.
 That’s why capital protection is the first priority.
 </p>
-
 <h4>2. The 1% Risk Rule</h4>
-
 <p>
 Professional traders risk only 1–2% per trade.
 </p>
-
 <p>
-Example:<br>
-Capital = ₹10,000<br>
+Example:<br/>
+Capital = ₹10,000<br/>
 Risk = ₹100
 </p>
-
 <h4>3. Stop Loss – Survival Tool</h4>
-
 <p>
 Stop loss defines your maximum loss before entering trade.
 </p>
-
 <p>
 Without stop loss → account destruction ❌
 </p>
-
 <h4>4. Risk-Reward Ratio</h4>
-
 <p>
 Always aim for at least 1:2 ratio.
 </p>
-
 <p>
 Risk ₹100 → Target ₹200
 </p>
-
 <h4>5. Position Sizing</h4>
-
 <p>
 Never risk full capital in one trade.
 Calculate position based on stop loss.
 </p>
-
-<hr>
-
+<hr/>
 <h3>⚡ PART 2 – ADVANCED SYSTEM</h3>
-
 <h4>6. Capital Allocation Strategy</h4>
-
 <p>
 Divide your capital into multiple positions.
 </p>
-
 <h4>7. Avoid Overtrading</h4>
-
 <p>
 More trades = more mistakes = more losses
 </p>
-
 <h4>8. Emotional Discipline</h4>
-
 <ul>
 <li>Fear → early exit</li>
 <li>Greed → late exit</li>
 <li>Revenge → account damage</li>
 </ul>
-
 <h4>9. Real Scenario</h4>
-
 <p>
 Trader A risks 20% → account crash  
-Trader B risks 1% → survives & grows
+Trader B risks 1% → survives &amp; grows
 </p>
-
 <h4>10. Pro Golden Rules</h4>
-
 <ul>
 <li>Always use stop loss</li>
 <li>Never risk more than 2%</li>
 <li>Follow system, not emotions</li>
 <li>Consistency over profit</li>
 </ul>
-
 <div class="tip">
 💡 Trading success = Survival + Discipline + Risk Control
 </div>
-
 </div>
-
 <!-- ================= HINDI ================= -->
-
 <div class="box">
-
 <h2>🇮🇳 हिंदी संस्करण</h2>
-
 <h3>रिस्क मैनेजमेंट क्या है?</h3>
-
 <p>
 रिस्क मैनेजमेंट ट्रेडिंग की सबसे जरूरी स्किल है।
 यह आपके पैसे को बचाने का सिस्टम है।
 </p>
-
 <p>
 प्रो ट्रेडर पहले नुकसान को कंट्रोल करते हैं, profit बाद में आता है।
 </p>
-
 <div class="tip">
 👉 पहले पैसा बचाओ, फिर पैसा कमाओ।
 </div>
-
-<hr>
-
+<hr/>
 <h3>🔥 भाग 1 – बेसिक फंडामेंटल्स</h3>
-
 <h4>1. कैपिटल प्रोटेक्शन</h4>
-
 <p>
 अगर आप 50% loss करते हैं तो recovery के लिए 100% profit चाहिए।
 </p>
-
 <h4>2. 1% नियम</h4>
-
 <p>
 हर ट्रेड में सिर्फ 1–2% risk लो।
 </p>
-
 <h4>3. स्टॉप लॉस</h4>
-
 <p>
 स्टॉप लॉस आपकी सुरक्षा है।
 </p>
-
 <h4>4. रिस्क-रिवार्ड</h4>
-
 <p>
 कम से कम 1:2 ratio रखें।
 </p>
-
 <h4>5. पोजिशन साइजिंग</h4>
-
 <p>
 पूरे पैसे एक trade में मत लगाओ।
 </p>
-
-<hr>
-
+<hr/>
 <h3>⚡ भाग 2 – एडवांस सिस्टम</h3>
-
 <h4>6. कैपिटल डिवीजन</h4>
-
 <p>
 पैसे को अलग-अलग trades में बाँटो।
 </p>
-
 <h4>7. ओवर ट्रेडिंग से बचो</h4>
-
 <p>
 ज्यादा trades = ज्यादा नुकसान
 </p>
-
 <h4>8. इमोशन कंट्रोल</h4>
-
 <p>
 Fear और Greed सबसे बड़े दुश्मन हैं।
 </p>
-
 <h4>9. रियल उदाहरण</h4>
-
 <p>
 Trader A → 20% risk → खत्म  
 Trader B → 1% risk → safe  
 </p>
-
 <h4>10. गोल्डन रूल्स</h4>
-
 <ul>
 <li>Stop loss जरूरी</li>
 <li>2% से ज्यादा risk नहीं</li>
 <li>Discipline follow करो</li>
 </ul>
-
 <div class="tip">
 📌 Trading में जीतने से ज्यादा जरूरी है टिके रहना।
 </div>
-
 </div>
-
 <!-- ================= BACKLINKS ================= -->
-
 <div class="box">
-
 <h2>🔗 Related Learning</h2>
-
 <p>
 👉 <a href="best-stock-market-learning-app.html">Best Stock Market Learning App</a>
 </p>
-
 <p>
 👉 <a href="risk-management-part2.html">Advanced Risk Management Part 2</a>
 </p>
-
 </div>
-
 </section>
-
 </main>
-
 <!-- FOOTER -->
-<footer style="background:#030508;border-top:1px solid rgba(255,215,0,0.18);padding:40px 20px 20px;text-align:center;font-size:13px;color:#94a3b8;">
-  <p>© 2026 BullBear Market (bullbearmarket.in). In technical partnership with <a href="https://aviraajdigitech.com" target="_blank" rel="noopener" style="color:#ffd700;">Aviraaj Digitech</a> & <a href="https://bearbullmarket.in" target="_blank" rel="noopener" style="color:#00e5ff;">BearBullMarket.in</a>.</p>
+<footer class="bg-slate-50 border-t border-gray-200 pt-16 pb-8 font-['Plus_Jakarta_Sans']" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding-top: 4rem; padding-bottom: 2rem; margin-top: 4rem;">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 80rem; margin: 0 auto; padding: 0 1rem;">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+<div class="col-span-1 md:col-span-1">
+<a class="flex items-center gap-3 mb-6" href="../index.html" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; text-decoration:none;">
+<img alt="BullBear Market Logo" class="h-10 w-10 rounded-xl border border-gray-200 shadow-sm" src="../images/BullBear logo.jpg" style="height: 2.5rem; width: 2.5rem; border-radius: 0.75rem; border: 1px solid #e2e8f0;"/>
+<span class="font-bold text-xl text-slate-900" style="font-weight: 700; font-size: 1.25rem; color: #0f172a;">BullBear<span class="text-amber-500" style="color: #f59e0b;">Market</span></span>
+</a>
+<p class="text-slate-500 text-sm leading-relaxed mb-6" style="color: #64748b; font-size: 0.875rem; line-height: 1.625; margin-bottom: 1.5rem;">India's leading paper trading and stock market learning platform. Practice trading with ₹1,00,000 virtual cash with zero risk.</p>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4" style="color: #0f172a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem;">Platform</h3>
+<ul class="space-y-3 text-sm" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../index.html" style="color: #64748b; text-decoration: none;">Home</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../learning.html" style="color: #64748b; text-decoration: none;">Learning Academy</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../rewards.html" style="color: #64748b; text-decoration: none;">Leaderboard Rewards</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../blog/index.html" style="color: #64748b; text-decoration: none;">Trading Blog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4" style="color: #0f172a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem;">Company</h3>
+<ul class="space-y-3 text-sm" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../about.html" style="color: #64748b; text-decoration: none;">About Us</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../support.html" style="color: #64748b; text-decoration: none;">Contact</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../privacy-policy.html" style="color: #64748b; text-decoration: none;">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="../terms.html" style="color: #64748b; text-decoration: none;">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4" style="color: #0f172a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem;">Network</h3>
+<ul class="space-y-3 text-sm" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-2" href="https://aviraajdigitech.com" style="color: #64748b; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" target="_blank">Aviraaj Digitech <svg fill="none" stroke="currentColor" style="width: 0.75rem; height: 0.75rem;" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-2" href="https://bullbearmarket.in" style="color: #64748b; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" target="_blank">BullBear Market <svg fill="none" stroke="currentColor" style="width: 0.75rem; height: 0.75rem;" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style="border-top: 1px solid #e2e8f0; padding-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+<p class="text-slate-500 text-sm" style="color: #64748b; font-size: 0.875rem; margin: 0;">© 2026 Aviraaj Digitech. All rights reserved.</p>
+<p class="text-slate-500 text-xs" style="color: #64748b; font-size: 0.75rem; margin: 0;">For official inquiries: <a class="text-amber-500 font-semibold hover:underline" href="mailto:official@aviraajdigitech.com" style="color: #f59e0b; font-weight: 600; text-decoration: none;">official@aviraajdigitech.com</a></p>
+</div>
+</div>
 </footer>
-
 <script src="../js/unified-header.js?v=2026.3"></script>
 </body>
 </html>
