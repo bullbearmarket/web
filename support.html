@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --bg:#050810;
+  --bg: #f8fafc;
   --bg2:#080d1a;
   --card: #FFFFFF;
   --card2: #F1F5F9;
@@ -56,13 +56,13 @@
   --orange-dim:rgba(251,146,60,.1);
   --red:#f43f5e;
   --red-dim:rgba(244,63,94,.08);
-  --text: #0F172A;
-  --muted:#6b7fa0;
+  --text: #0f172a;
+  --muted: #475569;
   --dim:#2d3d5c;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1.7;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1.7;}
 
 body::before{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
@@ -73,9 +73,7 @@ body::before{
 }
 .grid-bg{
   position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:
-    linear-gradient(rgba(0,230,255,.018) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,230,255,.018) 1px,transparent 1px);
+  background: #ffffff;
   background-size:52px 52px;
 }
 
@@ -97,7 +95,7 @@ nav{
   text-decoration:none;margin-right:16px;flex-shrink:0;
 }
 .nav-logo img{height:38px;width:38px;border-radius:8px;object-fit:contain;}
-.nav-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:#111;}
+.nav-logo-text{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;color:#111;}
 nav a.nav-link{
   color:#333;text-decoration:none;font-size:.82rem;font-weight:600;
   padding:5px 10px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap;
@@ -129,7 +127,7 @@ nav a.nav-link.support{color:var(--gold2);}
   padding:6px 18px;border-radius:100px;margin-bottom:18px;
 }
 .hero h1{
-  font-family:'Syne',sans-serif;
+  font-family:'Plus Jakarta Sans',sans-serif;
   font-size:clamp(2rem,4.5vw,2.9rem);font-weight:800;line-height:1.12;margin-bottom:14px;
   background:linear-gradient(135deg,var(--cyan) 0%,#ffffff 55%,var(--gold) 100%);
   background-size:200%;
@@ -157,20 +155,20 @@ nav a.nav-link.support{color:var(--gold2);}
   position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 50px;
 }
 .quick-card{
-  background:linear-gradient(135deg,rgba(0,230,255,.08),rgba(255,215,0,.05));
+  background: #ffffff;
   border:1px solid rgba(0,230,255,.22);border-radius:22px;
   padding:32px 28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;
 }
 @media(max-width:700px){.quick-card{grid-template-columns:1fr;text-align:center;}}
 .qc-left h2{
-  font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;
   color:var(--cyan);margin-bottom:10px;
 }
 .qc-left p{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:18px;}
 .btn-cyan{
   background:#f8fafc);color:#000;font-weight:700;
   font-size:.9rem;padding:13px 28px;border-radius:12px;text-decoration:none;
-  transition:opacity .2s,transform .2s;font-family:'DM Sans',sans-serif;display:inline-block;
+  transition:opacity .2s,transform .2s;font-family:'Plus Jakarta Sans',sans-serif;display:inline-block;
 }
 .btn-cyan:hover{opacity:.88;transform:translateY(-2px);}
 .qc-right{display:flex;flex-direction:column;gap:12px;}
@@ -186,7 +184,7 @@ nav a.nav-link.support{color:var(--gold2);}
 
 /* ══ SEC LABEL ══ */
 .sec-label{
-  font-family:'Syne',sans-serif;font-size:.67rem;font-weight:800;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.67rem;font-weight:800;
   letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
   display:flex;align-items:center;gap:12px;margin-bottom:24px;
 }
@@ -222,7 +220,7 @@ nav a.nav-link.support{color:var(--gold2);}
 .tc-red:hover{border-color:rgba(244,63,94,.28);}
 
 .tc-icon{font-size:1.8rem;margin-bottom:12px;}
-.tc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:8px;}
+.tc-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:8px;}
 .tc-desc{font-size:.82rem;color:var(--muted);line-height:1.65;}
 
 /* ══ HOW TO STEPS ══ */
@@ -243,9 +241,9 @@ nav a.nav-link.support{color:var(--gold2);}
   .step-card{border-right:none;border-bottom:1px solid var(--border);}
   .step-card:last-child{border-bottom:none;}
 }
-.step-num{font-family:'Syne',sans-serif;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
+.step-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
 .step-icon{font-size:1.7rem;margin-bottom:10px;}
-.step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:6px;}
+.step-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:6px;}
 .step-desc{font-size:.78rem;color:var(--muted);line-height:1.6;}
 
 /* ══ ACCOUNT ISSUES ══ */
@@ -267,7 +265,7 @@ nav a.nav-link.support{color:var(--gold2);}
 .ii-green{background:var(--green-dim);border:1px solid rgba(34,197,94,.18);}
 .ii-gold{background:var(--gold-glow);border:1px solid rgba(255,215,0,.18);}
 .ii-purple{background:var(--purple-dim);border:1px solid rgba(167,139,250,.18);}
-.ii-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:5px;}
+.ii-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:5px;}
 .ii-desc{font-size:.82rem;color:var(--muted);line-height:1.65;}
 .ii-desc a{color:var(--cyan);text-decoration:none;font-weight:500;}
 .ii-desc a:hover{text-decoration:underline;}
@@ -291,7 +289,7 @@ nav a.nav-link.support{color:var(--gold2);}
   background:var(--red-dim);border:1px solid rgba(244,63,94,.2);
   border-radius:18px;padding:28px 26px;
 }
-.delete-card h2{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:#f87171;margin-bottom:14px;}
+.delete-card h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:800;color:#f87171;margin-bottom:14px;}
 .delete-card p{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:10px;}
 .delete-card ul{margin:10px 0 10px 20px;}
 .delete-card ul li{color:var(--muted);font-size:.88rem;margin-bottom:7px;line-height:1.6;}
@@ -304,7 +302,7 @@ nav a.nav-link.support{color:var(--gold2);}
 .ds-num{
   width:24px;height:24px;border-radius:50%;background: #ffffff;
   border:1px solid rgba(244,63,94,.25);color:#f87171;
-  font-family:'Syne',sans-serif;font-size:.7rem;font-weight:800;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:800;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .ds-text{font-size:.83rem;color:var(--muted);line-height:1.55;}
@@ -321,7 +319,7 @@ nav a.nav-link.support{color:var(--gold2);}
 }
 .notice-card:hover{border-color:var(--border2);}
 .nc-icon{font-size:1.6rem;margin-bottom:10px;}
-.nc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:8px;}
+.nc-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:8px;}
 .nc-desc{font-size:.8rem;color:var(--muted);line-height:1.65;}
 .nc-desc a{color:var(--cyan);text-decoration:none;font-weight:500;}
 .nc-desc a:hover{text-decoration:underline;}
@@ -331,12 +329,12 @@ nav a.nav-link.support{color:var(--gold2);}
   position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 60px;
 }
 .contact-big{
-  background:linear-gradient(135deg,rgba(0,230,255,.07),rgba(255,215,0,.04));
+  background: #ffffff;
   border:1px solid rgba(0,230,255,.2);border-radius:22px;
   padding:36px 32px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;
 }
 @media(max-width:700px){.contact-big{grid-template-columns:1fr;}}
-.cb-left h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--cyan);margin-bottom:12px;}
+.cb-left h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--cyan);margin-bottom:12px;}
 .cb-left p{color:var(--muted);font-size:.9rem;line-height:1.72;margin-bottom:14px;}
 .cb-left strong{color:var(--text);}
 .email-display{
@@ -344,18 +342,18 @@ nav a.nav-link.support{color:var(--gold2);}
   padding:16px 18px;margin:16px 0;
 }
 .ed-label{font-size:.7rem;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;}
-.ed-email{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--cyan);}
+.ed-email{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:var(--cyan);}
 .btn-row{display:flex;gap:12px;flex-wrap:wrap;}
 .btn-gold{
   background:linear-gradient(135deg,var(--gold2),var(--gold));color:#000;font-weight:700;
   font-size:.9rem;padding:13px 28px;border-radius:12px;text-decoration:none;
-  transition:opacity .2s,transform .2s;font-family:'DM Sans',sans-serif;display:inline-block;
+  transition:opacity .2s,transform .2s;font-family:'Plus Jakarta Sans',sans-serif;display:inline-block;
 }
 .btn-gold:hover{opacity:.88;transform:translateY(-2px);}
 .btn-outline{
   background:transparent;color:var(--text);font-weight:600;font-size:.9rem;
   padding:13px 28px;border-radius:12px;border:1px solid var(--border2);
-  text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;display:inline-block;
+  text-decoration:none;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;display:inline-block;
 }
 .btn-outline:hover{border-color:var(--cyan);color:var(--cyan);}
 .cb-right{display:flex;flex-direction:column;gap:12px;}
@@ -364,10 +362,10 @@ nav a.nav-link.support{color:var(--gold2);}
   padding:16px 18px;display:flex;align-items:center;gap:14px;
 }
 .crs-icon{font-size:1.4rem;flex-shrink:0;}
-.crs-val{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--gold);}
+.crs-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--gold);}
 .crs-key{font-size:.72rem;color:var(--muted);margin-top:2px;}
 .email-tips{background:var(--card);border:1px solid var(--border2);border-radius:14px;padding:18px;}
-.et-title{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.et-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
 .et-item{font-size:.8rem;color:var(--muted);margin-bottom:7px;display:flex;gap:8px;line-height:1.5;}
 .et-icon{flex-shrink:0;color:var(--cyan);}
 
@@ -383,13 +381,13 @@ nav a.nav-link.support{color:var(--gold2);}
 }
 .link-card:hover{background:var(--card2);border-color:rgba(0,230,255,.25);transform:translateY(-2px);}
 .lc-icon{font-size:1.3rem;flex-shrink:0;}
-.lc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.84rem;margin-bottom:3px;}
+.lc-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.84rem;margin-bottom:3px;}
 .lc-desc{font-size:.7rem;color:var(--muted);}
 
 /* ══ CTA ══ */
 .cta-wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 70px;}
 .cta-inner{
-  background:linear-gradient(135deg,rgba(0,230,255,.07),rgba(255,215,0,.04));
+  background: #ffffff;
   border:1px solid rgba(0,230,255,.2);border-radius:20px;
   padding:42px 28px;text-align:center;position:relative;overflow:hidden;
 }
@@ -399,7 +397,7 @@ nav a.nav-link.support{color:var(--gold2);}
   background:radial-gradient(ellipse,rgba(0,230,255,.1),transparent 70%);pointer-events:none;
 }
 .cta-inner h2{
-  font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:10px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:10px;
   background:linear-gradient(135deg,var(--cyan),#ffffff);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
@@ -878,37 +876,37 @@ footer{
 <img alt="BullBear Market Logo" class="h-10 w-10 rounded-xl border border-gray-200 shadow-sm" src="images/BullBear logo.jpg" style="height: 2.5rem; width: 2.5rem; border-radius: 0.75rem; border: 1px solid #1e293b;"/>
 <span class="font-bold text-xl text-slate-900" style="font-weight: 700; font-size: 1.25rem; color: #0f172a;">BullBear<span class="text-amber-500" style="color: #f59e0b;">Market</span></span>
 </a>
-<p class="text-slate-500 text-sm leading-relaxed mb-6" style="color: #64748b; font-size: 0.875rem; line-height: 1.625; margin-bottom: 1.5rem;">India's leading paper trading and stock market learning platform. Practice trading with ₹1,00,000 virtual cash with zero risk.</p>
+<p class="text-slate-500 text-sm leading-relaxed mb-6" style="color: #475569; font-size: 0.875rem; line-height: 1.625; margin-bottom: 1.5rem;">India's leading paper trading and stock market learning platform. Practice trading with ₹1,00,000 virtual cash with zero risk.</p>
 </div>
 <div>
 <h3 class="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4" style="color: #0f172a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem;">Platform</h3>
 <ul class="space-y-3 text-sm" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="index.html" style="color: #64748b; text-decoration: none;">Home</a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="learning.html" style="color: #64748b; text-decoration: none;">Learning Academy</a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="rewards.html" style="color: #64748b; text-decoration: none;">Leaderboard Rewards</a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="blog/index.html" style="color: #64748b; text-decoration: none;">Trading Blog</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="index.html" style="color: #475569; text-decoration: none;">Home</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="learning.html" style="color: #475569; text-decoration: none;">Learning Academy</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="rewards.html" style="color: #475569; text-decoration: none;">Leaderboard Rewards</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="blog/index.html" style="color: #475569; text-decoration: none;">Trading Blog</a></li>
 </ul>
 </div>
 <div>
 <h3 class="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4" style="color: #0f172a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem;">Company</h3>
 <ul class="space-y-3 text-sm" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="about.html" style="color: #64748b; text-decoration: none;">About Us</a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="support.html" style="color: #64748b; text-decoration: none;">Contact</a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="privacy-policy.html" style="color: #64748b; text-decoration: none;">Privacy Policy</a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="terms.html" style="color: #64748b; text-decoration: none;">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="about.html" style="color: #475569; text-decoration: none;">About Us</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="support.html" style="color: #475569; text-decoration: none;">Contact</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="privacy-policy.html" style="color: #475569; text-decoration: none;">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors" href="terms.html" style="color: #475569; text-decoration: none;">Terms of Service</a></li>
 </ul>
 </div>
 <div>
 <h3 class="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4" style="color: #0f172a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem;">Network</h3>
 <ul class="space-y-3 text-sm" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-2" href="https://aviraajdigitech.com" style="color: #64748b; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" target="_blank">Aviraaj Digitech <svg fill="none" stroke="currentColor" style="width: 0.75rem; height: 0.75rem;" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></li>
-<li><a class="text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-2" href="https://bullbearmarket.in" style="color: #64748b; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" target="_blank">BullBear Market <svg fill="none" stroke="currentColor" style="width: 0.75rem; height: 0.75rem;" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-2" href="https://aviraajdigitech.com" style="color: #475569; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" target="_blank">Aviraaj Digitech <svg fill="none" stroke="currentColor" style="width: 0.75rem; height: 0.75rem;" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></li>
+<li><a class="text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-2" href="https://bullbearmarket.in" style="color: #475569; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" target="_blank">BullBear Market <svg fill="none" stroke="currentColor" style="width: 0.75rem; height: 0.75rem;" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></li>
 </ul>
 </div>
 </div>
 <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style="border-top: 1px solid #1e293b; padding-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
-<p class="text-slate-500 text-sm" style="color: #64748b; font-size: 0.875rem; margin: 0;">© 2026 Aviraaj Digitech. All rights reserved.</p>
-<p class="text-slate-500 text-xs" style="color: #64748b; font-size: 0.75rem; margin: 0;">For official inquiries: <a class="text-amber-500 font-semibold hover:underline" href="mailto:official@aviraajdigitech.com" style="color: #f59e0b; font-weight: 600; text-decoration: none;">official@aviraajdigitech.com</a></p>
+<p class="text-slate-500 text-sm" style="color: #475569; font-size: 0.875rem; margin: 0;">© 2026 Aviraaj Digitech. All rights reserved.</p>
+<p class="text-slate-500 text-xs" style="color: #475569; font-size: 0.75rem; margin: 0;">For official inquiries: <a class="text-amber-500 font-semibold hover:underline" href="mailto:official@aviraajdigitech.com" style="color: #f59e0b; font-weight: 600; text-decoration: none;">official@aviraajdigitech.com</a></p>
 </div>
 </div>
 </footer>

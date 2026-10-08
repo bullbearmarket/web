@@ -56,7 +56,7 @@ html, body {
   position: relative;
   background-color: var(--bbm-bg);
   color: var(--bbm-text);
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
 }
 
@@ -148,7 +148,7 @@ table {
   top: 0;
   z-index: 1001;
   border-bottom: 1px solid var(--bbm-border);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -181,7 +181,7 @@ table {
 .bbm-brand-text, .bbm-brand-name {
   display: flex;
   flex-direction: column;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.5px;
@@ -283,7 +283,7 @@ table {
   -webkit-backdrop-filter: blur(24px);
   padding: 16px 20px 36px;
   z-index: 1000;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   max-height: calc(100vh - 65px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -355,7 +355,7 @@ table {
   perspective: 1200px;
 }
 .card-3d, .topic-card-3d, .stat-card-3d, .review-card-3d, .bbm-eco-card, .pillar-card {
-  background: linear-gradient(135deg, rgba(13, 20, 36, 0.85) 0%, rgba(10, 15, 28, 0.95) 100%);
+  background: #ffffff;
   border: 1px solid var(--bbm-border);
   border-radius: var(--bbm-radius-lg);
   padding: 28px;
@@ -380,7 +380,7 @@ table {
 .card-3d:hover, .topic-card-3d:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: var(--bbm-border-strong);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.18);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 .card-3d:hover::before, .topic-card-3d:hover::before {
   opacity: 1;
@@ -396,27 +396,27 @@ table {
   margin-top: 40px;
 }
 .phone-mockup-card {
-  background: linear-gradient(145deg, rgba(17, 26, 46, 0.9), rgba(8, 12, 22, 0.95));
+  background: #ffffff;
   border: 1px solid var(--bbm-border);
   border-radius: 28px;
   padding: 16px 16px 22px;
   text-align: center;
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   perspective: 1000px;
 }
 .phone-mockup-card:hover {
   transform: translateY(-10px) scale(1.02);
   border-color: var(--bbm-gold);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 215, 0, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 .phone-frame {
   border-radius: 22px;
   overflow: hidden;
   border: 4px solid #1a233a;
   background: #ffffff;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   position: relative;
   margin-bottom: 16px;
 }
